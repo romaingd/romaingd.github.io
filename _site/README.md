@@ -1,2 +1,0 @@
-# romaingd.github.io
-Divergences
