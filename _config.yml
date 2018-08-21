@@ -17,8 +17,8 @@ about-author: > # add description
   and <strong>theoretical machine learning</strong>.
   <br><br>
   I graduated in 2018 from École polytechnique.
-  <br><br> I hold a MSc degree from the MVA (Mathématiques, Vision,
-  Apprentissage) master at ENS Paris-Saclay,
+  <br><br> I hold a M.Sc. degree from the MVA <i>(Mathématiques, Vision,
+  Apprentissage)</i> master at ENS Paris-Saclay,
   with an emphasis on machine learning and statistics.
 # social-twitter: # add your Twitter handle
 # social-facebook: # add your Facebook handle
@@ -33,7 +33,7 @@ social-email: # add your Email address
 # analytics: # Google Analytics
 
 # Build Settings
-markdown: redcarpet
+markdown: kramdown
 plugins:
   - jekyll-sitemap
   - jekyll-paginate

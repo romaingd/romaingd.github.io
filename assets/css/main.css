@@ -1001,6 +1001,11 @@ table tfoot td {
   margin: 0 0 10px;
 }
 
+.center-image {
+  margin: 0 auto;
+  display: block;
+}
+
 .content-box {
   padding: 20px;
   padding-left: 25%;
