@@ -9,7 +9,17 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Romain Girard # add your name
 author-img: profile-picture.jpg # add your photo
-about-author: I am a data scientist with a strong medical interest. # add description
+about-author: > # add description
+  I currently work as a <strong> data scientist </strong> at Implicity,
+  where I develop machine learning techniques to study strokes and heart failure.
+  <br><br>
+  I am strongly interested in both <strong>data science for healthcare</strong>
+  and <strong>theoretical machine learning</strong>.
+  <br><br>
+  I graduated in 2018 from École polytechnique.
+  <br><br> I hold a MSc degree from the MVA (Mathématiques, Vision,
+  Apprentissage) master at ENS Paris-Saclay,
+  with an emphasis on machine learning and statistics.
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: romaingd # add your Github handle
