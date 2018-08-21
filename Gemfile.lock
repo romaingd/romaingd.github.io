@@ -71,6 +71,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redcarpet (3.4.0)
     rouge (3.2.1)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
@@ -93,6 +94,7 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-theme-cayman
   jemoji
+  redcarpet
   tzinfo-data
 
 BUNDLED WITH

@@ -23,7 +23,7 @@ social-email: # add your Email address
 # analytics: # Google Analytics
 
 # Build Settings
-markdown: kramdown
+markdown: redcarpet
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
