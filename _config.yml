@@ -20,8 +20,8 @@ about-author: > # add description
   <br><br> I hold a MSc degree from the MVA (Mathématiques, Vision,
   Apprentissage) master at ENS Paris-Saclay,
   with an emphasis on machine learning and statistics.
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
+# social-twitter: # add your Twitter handle
+# social-facebook: # add your Facebook handle
 social-github: romaingd # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email: # add your Email address
