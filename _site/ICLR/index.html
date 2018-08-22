@@ -157,10 +157,12 @@ commented in an accessible way.</em></p>
 <p><br /></p>
 
 <p>If you asked people in the deep learning community what their favorite optimization
-algorithm is, you’d probably see Adam on top by a large margin, far ahead of
+algorithm is, you’d probably see <a href="https://arxiv.org/pdf/1412.6980.pdf">Adam</a>
+on top by a large margin, far ahead of
 alternatives like Adagrad, RMSProp or SGD with Nesterov momentum (we’ll come to
 all these names in a minute). <b>Adam has become completely dominant in deep
-learning since it came out in December 2014</b>. The reasons are easy to
+learning since it was proposed by Kingma &amp; Ba in December 2014</b>.
+The reasons are easy to
 understand: it exhibits impressive performance, uses many important ideas of
 previous works, and comes with predefined settings that already work very well
 in most optimization problems.
@@ -173,9 +175,9 @@ its job when required. This is a necessary sanity check, confirming by
 the maths that we can legitimately have faith in its correctness.</p>
 
 <p>The convergence proof was provided in the original Adam paper.
-However, it turns out that <strong>Adam does not pass this sanity
-test (and that the original convergence proof is flawed)</strong>, as stated by this
-theorem of the paper of Reddi et al.:</p>
+However, our authors show in their paper that <strong>this original proof is flawed,
+and Adam does not correctly converge in all problems</strong>, as illustrated by this
+theorem:</p>
 
 <blockquote>
   <p><strong>Theorem 3.</strong> [With mild assumptions on the parameters], there is a
@@ -183,12 +185,37 @@ stochastic convex optimization problem for which Adam does not converge to the
 optimal solution.</p>
 </blockquote>
 
+<p>How have we reached this point, where the most widely used
+optimization algorithm in deep learning does not converge in some simple
+convex problems? Let’s go back some years, and walk the path which lead us to
+Adam.</p>
+
+<p><br /><br /></p>
+
+<h2 id="in-the-beginning-was-gradient-descent">In the beginning was Gradient Descent</h2>
+
+<p><br /><br /></p>
+
+<h2 id="the-non-convergence-of-adam">The non-convergence of Adam</h2>
+
+<p><br /><br /></p>
+
+<h2 id="amsgrad-a-new-and-fixed-variant">AMSGrad, a new (and fixed) variant</h2>
+
+<p><br /><br /></p>
+
+<h2 id="does-it-matter">Does it matter?</h2>
+
+<p><br /><br /></p>
+
+<hr />
+
 <p>This finding is both very important, and not too worrisome in practice. It is
 very important that empirical observations of non-convergence are finally backed
 up by theoretical findings and justifications, and that <em>someone checked the
 maths</em>. However, this is not too worrisome, since Adam <em>does</em> nonetheless work
 very well in practice in most applications, especially real-world ones.
-Furthermore, the spotted issue can be easily patched up, and the authors
+Furthermore, the spotted issue can be easily patched, and the authors
 propose a variant of Adam with a more robust convergence proof, with the same
 performance level.</p>
 

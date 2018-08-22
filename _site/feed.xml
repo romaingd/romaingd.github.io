@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-22T23:29:10+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-23T00:09:37+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -20,10 +20,12 @@ commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you asked people in the deep learning community what their favorite optimization
-algorithm is, you’d probably see Adam on top by a large margin, far ahead of
+algorithm is, you’d probably see &lt;a href=&quot;https://arxiv.org/pdf/1412.6980.pdf&quot;&gt;Adam&lt;/a&gt;
+on top by a large margin, far ahead of
 alternatives like Adagrad, RMSProp or SGD with Nesterov momentum (we’ll come to
 all these names in a minute). &lt;b&gt;Adam has become completely dominant in deep
-learning since it came out in December 2014&lt;/b&gt;. The reasons are easy to
+learning since it was proposed by Kingma &amp;amp; Ba in December 2014&lt;/b&gt;.
+The reasons are easy to
 understand: it exhibits impressive performance, uses many important ideas of
 previous works, and comes with predefined settings that already work very well
 in most optimization problems.
@@ -36,9 +38,9 @@ its job when required. This is a necessary sanity check, confirming by
 the maths that we can legitimately have faith in its correctness.&lt;/p&gt;
 
 &lt;p&gt;The convergence proof was provided in the original Adam paper.
-However, it turns out that &lt;strong&gt;Adam does not pass this sanity
-test (and that the original convergence proof is flawed)&lt;/strong&gt;, as stated by this
-theorem of the paper of Reddi et al.:&lt;/p&gt;
+However, our authors show in their paper that &lt;strong&gt;this original proof is flawed,
+and Adam does not correctly converge in all problems&lt;/strong&gt;, as illustrated by this
+theorem:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Theorem 3.&lt;/strong&gt; [With mild assumptions on the parameters], there is a
@@ -46,12 +48,37 @@ stochastic convex optimization problem for which Adam does not converge to the
 optimal solution.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;How have we reached this point, where the most widely used
+optimization algorithm in deep learning does not converge in some simple
+convex problems? Let’s go back some years, and walk the path which lead us to
+Adam.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-beginning-was-gradient-descent&quot;&gt;In the beginning was Gradient Descent&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-non-convergence-of-adam&quot;&gt;The non-convergence of Adam&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;amsgrad-a-new-and-fixed-variant&quot;&gt;AMSGrad, a new (and fixed) variant&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;does-it-matter&quot;&gt;Does it matter?&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 &lt;p&gt;This finding is both very important, and not too worrisome in practice. It is
 very important that empirical observations of non-convergence are finally backed
 up by theoretical findings and justifications, and that &lt;em&gt;someone checked the
 maths&lt;/em&gt;. However, this is not too worrisome, since Adam &lt;em&gt;does&lt;/em&gt; nonetheless work
 very well in practice in most applications, especially real-world ones.
-Furthermore, the spotted issue can be easily patched up, and the authors
+Furthermore, the spotted issue can be easily patched, and the authors
 propose a variant of Adam with a more robust convergence proof, with the same
 performance level.&lt;/p&gt;
 
