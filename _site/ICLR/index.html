@@ -2,29 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>ICLR 2018 - 1 - Divergences</title>
+	<title>ADAM's convergence proof is flawed - Divergences</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Divergences" property="og:site_name">
   
-    <meta content="ICLR 2018 - 1" property="og:title">
+    <meta content="ADAM's convergence proof is flawed" property="og:title">
   
   
     <meta content="article" property="og:type">
   
   
-    <meta content="ICLR 2018 1st article" property="og:description">
+    <meta content="[ICLR 2018 - 1] "On the convergence of ADAM and beyond", Reddi et al., 2018
+" property="og:description">
   
   
     <meta content="http://localhost:4000/ICLR/" property="og:url">
   
   
-    <meta content="2018-08-21T01:00:00+02:00" property="article:published_time">
+    <meta content="2018-08-19T01:00:00+02:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/profile-picture.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/2018-08-19-ICLR-thumbnail.png" property="og:image">
   
   
     
@@ -41,19 +42,21 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@">
   
-    <meta name="twitter:title" content="ICLR 2018 - 1">
+    <meta name="twitter:title" content="ADAM's convergence proof is flawed">
   
   
     <meta name="twitter:url" content="http://localhost:4000/ICLR/">
   
   
-    <meta name="twitter:description" content="ICLR 2018 1st article">
+    <meta name="twitter:description" content="[ICLR 2018 - 1] "On the convergence of ADAM and beyond", Reddi et al., 2018
+">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/profile-picture.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/2018-08-19-ICLR-thumbnail.png">
   
 
-	<meta name="description" content="ICLR 2018 1st article">
+	<meta name="description" content="[ICLR 2018 - 1] "On the convergence of ADAM and beyond", Reddi et al., 2018
+">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -121,15 +124,29 @@
   <article class="article-page">
   <div class="page-content">
     
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/2018-08-19-ICLR-thumbnail.png alt="ADAM's convergence proof is flawed">
+        
+          <figcaption>An example where ADAM fails to converge to the true solution</figcaption>
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">ICLR 2018 - 1</h1>
-        <div class="page-date"><span>2018, Aug 21&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">ADAM's convergence proof is flawed</h1>
+        <div class="page-date"><span>2018, Aug 19&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <h1 id="on-the-convergence-of-adam-and-beyond">On the convergence of ADAM and beyond</h1>
+      <h4 id="iclr-2018---1st-article">ICLR 2018 - 1st article</h4>
 
-<h2 id="s-reddi-s-kale-s-kumar">S. Reddi, S. Kale, S. Kumar</h2>
+<p><em>In this series, we explore the 2018 edition of the International Conference
+on Learning Representations. Each oral paper is analyzed and
+commented in an accessible way.</em></p>
+
+<p><em>This article is based on the paper</em>
+<a href="https://openreview.net/pdf?id=ryQu7f-RZ">On the convergence of ADAM and beyond</a>
+<em>by Sashank J. Reddi, Satyen Kale, and Sanjiv Kumar.</em></p>
 
 <hr />
 
@@ -438,7 +455,7 @@ SGD.</strong></p>
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=ICLR 2018 - 1&url=http://localhost:4000/ICLR/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=ADAM's convergence proof is flawed&url=http://localhost:4000/ICLR/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
           <a href="https://facebook.com/sharer.php?u=http://localhost:4000/ICLR/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
           <a href="https://plus.google.com/share?url=http://localhost:4000/ICLR/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
@@ -483,7 +500,7 @@ SGD.</strong></p>
     },
     tex2jax: {
       inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
-      displayMath: [ ['$$','$$'], ['\[', '\]'] ],
+      displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
       processEscapes: true,
     }
   });
