@@ -166,12 +166,16 @@ previous works, and comes with predefined settings that already work very well
 in most optimization problems.
 <em>Better performance with less work, what more do you want?</em></p>
 
-<p>Naturally, we would like to have some theoretical guarantees on the convergence
-properties of the algorithm. This is a necessary sanity check, confirming by
-the maths that we can legitimately trust the algorithm to be useful in all
-situations covered. Well, it turns out that <strong>Adam does not pass this sanity
+<p>Naturally, great power comes with great responsibilities, even for optimization
+algorithms like Adam. At the very least, we expect some theoretical guarantees
+on the convergence properties, to make sure that the algorithm is actually doing
+its job when required. This is a necessary sanity check, confirming by
+the maths that we can legitimately have faith in its correctness.</p>
+
+<p>The convergence proof was provided in the original Adam paper.
+However, it turns out that <strong>Adam does not pass this sanity
 test (and that the original convergence proof is flawed)</strong>, as stated by this
-theorem of the paper:</p>
+theorem of the paper of Reddi et al.:</p>
 
 <blockquote>
   <p><strong>Theorem 3.</strong> [With mild assumptions on the parameters], there is a
