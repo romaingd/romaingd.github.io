@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-22T17:23:37+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-22T21:41:55+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -27,7 +27,29 @@ learning since it came out in December 2014&lt;/b&gt;. The reasons are easy to
 understand: it exhibits impressive performance, uses many important ideas of
 previous works, and comes with predefined settings that already work very well
 in most optimization problems.
-&lt;em&gt;Less work, better performance, what more do you want?&lt;/em&gt;&lt;/p&gt;
+&lt;em&gt;Better performance with less work, what more do you want?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Naturally, we would like to have some theoretical guarantees on the convergence
+properties of the algorithm. This is a necessary sanity check, confirming by
+the maths that we can legitimately trust the algorithm to be useful in all
+situations covered. Well, it turns out that &lt;strong&gt;Adam does not pass this sanity
+test (and that the original convergence proof is flawed)&lt;/strong&gt;, as stated by this
+theorem of the paper:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 3.&lt;/strong&gt; [With mild assumptions on the parameters], there is a
+stochastic convex optimization problem for which Adam does not converge to the
+optimal solution.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This finding is both very important, and not too worrisome in practice. It is
+very important that empirical observations of non-convergence are finally backed
+up by theoretical findings and justifications, and that &lt;em&gt;someone checked the
+maths&lt;/em&gt;. However, this is not too worrisome, since Adam &lt;em&gt;does&lt;/em&gt; nonetheless work
+very well in practice in most applications, especially real-world ones.
+Furthermore, the spotted issue can be easily patched up, and the authors
+propose a variant of Adam with a more robust convergence proof, with the same
+performance level.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

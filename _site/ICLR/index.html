@@ -164,7 +164,29 @@ learning since it came out in December 2014</b>. The reasons are easy to
 understand: it exhibits impressive performance, uses many important ideas of
 previous works, and comes with predefined settings that already work very well
 in most optimization problems.
-<em>Less work, better performance, what more do you want?</em></p>
+<em>Better performance with less work, what more do you want?</em></p>
+
+<p>Naturally, we would like to have some theoretical guarantees on the convergence
+properties of the algorithm. This is a necessary sanity check, confirming by
+the maths that we can legitimately trust the algorithm to be useful in all
+situations covered. Well, it turns out that <strong>Adam does not pass this sanity
+test (and that the original convergence proof is flawed)</strong>, as stated by this
+theorem of the paper:</p>
+
+<blockquote>
+  <p><strong>Theorem 3.</strong> [With mild assumptions on the parameters], there is a
+stochastic convex optimization problem for which Adam does not converge to the
+optimal solution.</p>
+</blockquote>
+
+<p>This finding is both very important, and not too worrisome in practice. It is
+very important that empirical observations of non-convergence are finally backed
+up by theoretical findings and justifications, and that <em>someone checked the
+maths</em>. However, this is not too worrisome, since Adam <em>does</em> nonetheless work
+very well in practice in most applications, especially real-world ones.
+Furthermore, the spotted issue can be easily patched up, and the authors
+propose a variant of Adam with a more robust convergence proof, with the same
+performance level.</p>
 
 <p><br /></p>
 
