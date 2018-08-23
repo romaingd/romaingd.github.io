@@ -98,7 +98,7 @@ pre {
  */
 a {
   background-color: transparent;
-  color: $blue;
+  color: cornflowerblue;
   text-decoration: none;
   /* 1 */
   -webkit-text-decoration-skip: objects;
@@ -107,7 +107,7 @@ a {
 
 a:visited {
   text-decoration: none;
-  color: blue;
+  color: cornflowerblue;
 }
 
 /**

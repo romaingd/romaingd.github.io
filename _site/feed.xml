@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-23T00:09:37+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-23T16:32:03+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -22,7 +22,7 @@ commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;If you asked people in the deep learning community what their favorite optimization
 algorithm is, you’d probably see &lt;a href=&quot;https://arxiv.org/pdf/1412.6980.pdf&quot;&gt;Adam&lt;/a&gt;
 on top by a large margin, far ahead of
-alternatives like Adagrad, RMSProp or SGD with Nesterov momentum (we’ll come to
+alternatives like Adagrad, RMSProp or SGD (we’ll come to
 all these names in a minute). &lt;b&gt;Adam has become completely dominant in deep
 learning since it was proposed by Kingma &amp;amp; Ba in December 2014&lt;/b&gt;.
 The reasons are easy to
@@ -50,12 +50,102 @@ optimal solution.&lt;/p&gt;
 
 &lt;p&gt;How have we reached this point, where the most widely used
 optimization algorithm in deep learning does not converge in some simple
-convex problems? Let’s go back some years, and walk the path which lead us to
-Adam.&lt;/p&gt;
+convex problems? Let’s go back some years, and see what lead us there.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;in-the-beginning-was-gradient-descent&quot;&gt;In the beginning was Gradient Descent&lt;/h2&gt;
+&lt;h2 id=&quot;gradient-descent-and-adaptive-methods&quot;&gt;Gradient descent and adaptive methods&lt;/h2&gt;
+
+&lt;p&gt;Let’s define our online optimization framework.
+At each time step $t$:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The algorithm picks a
+point $x_t$ (weights of the model) in the feasible set $\mathcal{F}$.&lt;/li&gt;
+  &lt;li&gt;We then
+get access to the next mini-batch, with the associated loss function $f_t$,
+and we incur the loss $f_t(x_t)$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usually, our goal is to find an optimal
+parameter $x$ such that the loss $f(x)$ on the entire training set is minimal
+(intermediate loss functions $f_t$ are used as stochastic approximations of
+$f$). Here, in the (equivalent) online setup, the goal
+is to &lt;strong&gt;minimize the total regret at time $T$&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;R_T = \sum_{i=1}^T f_t(x_t) - \min_{x \in
+\mathcal{F}} (\sum_{i=1}^T f_t(x))&lt;/script&gt;
+
+&lt;p&gt;A large number of optimization algorithms were proposed to achieve this goal.
+For a detailed and intuitive overview (and introduction to gradient descent),
+I recommend this excellent
+&lt;a href=&quot;http://ruder.io/optimizing-gradient-descent/index.html&quot;&gt;blog post&lt;/a&gt; by Sebastian
+Ruder. We will just quickly go over a couple major steps that lead us to Adam.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Mini-batch/Stochastic gradient descent&lt;/strong&gt; is the first variant of gradient
+descent that actually works decently well in deep learning. In our online setup,
+it is reframed as &lt;em&gt;online gradient descent&lt;/em&gt;, where the points $x_t$ are updated
+by moving in the opposite direction of the gradient $\nabla f_t(x_t)$,
+computed on the available mini-batch. The update size is determined by a
+learning rate $\alpha_t$ (typically $\alpha/\sqrt{t}$ for some $\alpha$). &lt;br /&gt;
+We thus get the &lt;strong&gt;update rule of SGD:
+$\ x_{t+1} = \Pi_\mathcal{F}(x_t - \alpha_t g_t)$&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Although the convergence of SGD requires a decreasing learning rate, choosing
+an adequate learning rate decrease schedule can be painful. Aggressive decays,
+such as $\alpha/\sqrt{t}$, or small learning rates, yield very slow convergence
+and mediocre performance. On the other hand, gentle decays and high learning
+rates yield very unstable training, even divergence sometimes. To overcome these
+issues, &lt;strong&gt;adaptive methods&lt;/strong&gt; build upon the key idea that &lt;strong&gt;each weight, that
+is each coordinate of $x_t$, should be updated using its own learning rate&lt;/strong&gt;.
+This way, parameters that are frequently updated take only small steps (to avoid
+divergence), while parameters that are rarely updated take rather huge steps
+(to speed up convergence). This is summed up in the generic adaptive framework
+below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-adaptive-methods.png&quot; alt=&quot;Adaptive methods&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We call $\alpha_t$ the step size, and $\alpha_t/\sqrt{V_t}$ the learning rate.
+Note that, using only diagonal variants $V_t = \text{diag}(v_t)$, this is
+essentially saying that the step size for a given parameter is scaled by some
+function of past gradients &lt;em&gt;of this specific parameter&lt;/em&gt;. Within this framework,
+we can see the evolution of adaptive methods in time:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;(SGD) Stochastic gradient descent&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t$ and
+$\psi_t(g_1, ..., g_t) = \mathbb{I}$&lt;/center&gt;
+    &lt;p&gt;SGD forgets everything about the past of each weight, and relies only on the
+current gradient to perform the update, with a step size
+(and learning rate) $\alpha_t = \alpha/\sqrt{t}$, an aggressive decay.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;(AdaGrad) Adaptive gradient descent&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t$ and
+$\psi_t(g_1, ..., g_t) = {\text{diag}(\frac{1}{t} \sum_{i=1}^t g_i^2)}$&lt;/center&gt;
+    &lt;p&gt;With the same step size $\alpha_t = \alpha/\sqrt{t}$, this yields an adaptive
+and much more reasonable learning rate of $\alpha/\sqrt{\sum_i g_{ij}}$ for
+a given parameter index $j$. When the gradients ${g_{ij}}$ are sparse, i.e.
+parameter $j$ is not frequently updated, this &lt;strong&gt;considerably speeds up
+convergence&lt;/strong&gt; (updates are still rare, but much bigger than with SGD).&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;(RMSProp)&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t$ and
+$\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta)\sum_{i=1}^t \beta^{t-i} g_i^2)}$&lt;/center&gt;
+    &lt;p&gt;RMSProp first considered restricting the average of past gradients to
+a fixed window, instead of the entire past. In practice, this is implemented
+by an exponentially moving average of past gradients.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;(Adam) Adaptive momentum estimation&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = (1-\beta_1)\sum_{i=1}^t \beta_1^{t-i} g_i^2{\ }$ and
+$\ \psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta_2)\sum_{i=1}^t \beta_2^{t-i} g_i^2)}$&lt;/center&gt;
+    &lt;p&gt;Adam adds to RMSProp the idea of momentum (see Ruder’s post) to further
+speed up convergence. The momentum parameter $\beta_1 &amp;gt; 0$ considerably
+improves the performance of the algorithm, especially in deep learning.
+Combining momentum with adaptive methods, Adam is very efficient, and
+immensely popular.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
