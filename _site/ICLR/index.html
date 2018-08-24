@@ -158,14 +158,14 @@ commented in an accessible way.</em></p>
 
 <p>If you asked people in the deep learning community what their favorite optimization
 algorithm is, you’d probably see <a href="https://arxiv.org/pdf/1412.6980.pdf">Adam</a>
-on top by a large margin, far ahead of
-alternatives like Adagrad, RMSProp or SGD (we’ll come to
-all these names in a minute). <b>Adam has become completely dominant in deep
+in the top 2 (with Stochastic gradient descent + momentum),
+far ahead of alternatives like Adagrad or RMSProp (we’ll come to
+these in a minute). <b>Adam has become very popular in deep
 learning since it was proposed by Kingma &amp; Ba in December 2014</b>.
 The reasons are easy to
 understand: it exhibits impressive performance, uses many important ideas of
-previous works, and comes with predefined settings that already work very well
-in most optimization problems.
+previous works, comes with predefined settings that already work very well,
+and does not require careful hyper-parameter tuning.
 <em>Better performance with less work, what more do you want?</em></p>
 
 <p>Naturally, great power comes with great responsibilities, even for optimization
@@ -234,8 +234,9 @@ an adequate learning rate decrease schedule can be painful. Aggressive decays,
 such as $\alpha/\sqrt{t}$, or small learning rates, yield very slow convergence
 and mediocre performance. On the other hand, gentle decays and high learning
 rates yield very unstable training, even divergence sometimes. To overcome these
-issues, <strong>adaptive methods</strong> build upon the key idea that <strong>each weight, that
-is each coordinate of $x_t$, should be updated using its own learning rate</strong>.
+issues, <strong>adaptive methods</strong> have been developed around the key idea that <strong>each
+weight, that is each coordinate of $x_t$, should be updated using its own
+learning rate</strong>, automatically computed based on the knowledge of past updates.
 This way, parameters that are frequently updated take only small steps (to avoid
 divergence), while parameters that are rarely updated take rather huge steps
 (to speed up convergence). This is summed up in the generic adaptive framework
@@ -243,23 +244,26 @@ below:</p>
 
 <p><img src="/assets/img/2018-08-19-adaptive-methods.png" alt="Adaptive methods" class="center-image" /></p>
 
-<p>We call $\alpha_t$ the step size, and $\alpha_t/\sqrt{V_t}$ the learning rate.
-Note that, using only diagonal variants $V_t = \text{diag}(v_t)$, this is
-essentially saying that the step size for a given parameter is scaled by some
-function of past gradients <em>of this specific parameter</em>. Within this framework,
-we can see the evolution of adaptive methods in time:</p>
+<p>We call $\alpha_t$ the step size, $\alpha_t/\sqrt{V_t}$ the learning rate,
+and restrict ourselves to diagonal variants $V_t = \text{diag}(v_t)$.
+This framework essentially allows us to compute a different learning rate for
+each weight, by rescaling the step size (common to all weights) with a function
+of past gradients (of the loss function with respect to the considered weight,
+thus <em>weight-specific</em>). Using this framework, we can follow the evolution of
+adaptive methods over time:</p>
 
 <ol>
   <li><strong>(SGD) Stochastic gradient descent</strong>
-    <center>$\phi_t(g_1, ..., g_t) = g_t$ and
-$\psi_t(g_1, ..., g_t) = \mathbb{I}$</center>
-    <p>SGD forgets everything about the past of each weight, and relies only on the
-current gradient to perform the update, with a step size
-(and learning rate) $\alpha_t = \alpha/\sqrt{t}$, an aggressive decay.<br /><br /></p>
+    <center>$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = \mathbb{I}$</center>
+    <p>SGD is also an adaptive method, with a specific strategy of not adapting at
+all: it forgets everything about the past of each weight, and relies only on
+the current gradient to perform the update, with a step size
+(and learning rate) $\alpha_t =\alpha/\sqrt{t}$, an aggressive decay.<br /><br /></p>
   </li>
   <li><strong>(AdaGrad) Adaptive gradient descent</strong>
-    <center>$\phi_t(g_1, ..., g_t) = g_t$ and
-$\psi_t(g_1, ..., g_t) = {\text{diag}(\frac{1}{t} \sum_{i=1}^t g_i^2)}$</center>
+    <center>$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}(\frac{1}{t} \sum_{i=1}^t g_i^2)}$</center>
     <p>With the same step size $\alpha_t = \alpha/\sqrt{t}$, this yields an adaptive
 and much more reasonable learning rate of $\alpha/\sqrt{\sum_i g_{ij}}$ for
 a given parameter index $j$. When the gradients ${g_{ij}}$ are sparse, i.e.
@@ -267,15 +271,16 @@ parameter $j$ is not frequently updated, this <strong>considerably speeds up
 convergence</strong> (updates are still rare, but much bigger than with SGD).<br /><br /></p>
   </li>
   <li><strong>(RMSProp)</strong>
-    <center>$\phi_t(g_1, ..., g_t) = g_t$ and
-$\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta)\sum_{i=1}^t \beta^{t-i} g_i^2)}$</center>
+    <center>$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta)\sum_{i=1}^t \beta^{t-i} g_i^2)}$</center>
     <p>RMSProp first considered restricting the average of past gradients to
-a fixed window, instead of the entire past. In practice, this is implemented
+a fixed window, instead of the entire past, to avoid shrinking the learning
+rates to virtually zero too quickly. In practice, this is implemented
 by an exponentially moving average of past gradients.<br /><br /></p>
   </li>
   <li><strong>(Adam) Adaptive momentum estimation</strong>
-    <center>$\phi_t(g_1, ..., g_t) = (1-\beta_1)\sum_{i=1}^t \beta_1^{t-i} g_i^2{\ }$ and
-$\ \psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta_2)\sum_{i=1}^t \beta_2^{t-i} g_i^2)}$</center>
+    <center>$\phi_t(g_1, ..., g_t) = (1-\beta_1)\sum_{i=1}^t \beta_1^{t-i} g_i^2{\ }\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta_2)\sum_{i=1}^t \beta_2^{t-i} g_i^2)}$</center>
     <p>Adam adds to RMSProp the idea of momentum (see Ruder’s post) to further
 speed up convergence. The momentum parameter $\beta_1 &gt; 0$ considerably
 improves the performance of the algorithm, especially in deep learning.
