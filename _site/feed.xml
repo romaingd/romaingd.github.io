@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-24T16:16:32+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-24T22:30:32+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -56,7 +56,7 @@ convex problems? Let’s go back some years, and see what lead us there.&lt;/p&g
 
 &lt;h2 id=&quot;gradient-descent-and-adaptive-methods&quot;&gt;Gradient descent and adaptive methods&lt;/h2&gt;
 
-&lt;p&gt;Let’s define our online optimization framework.
+&lt;p&gt;To facilitate analysis, let’s define our online optimization framework.
 At each time step $t$:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;The algorithm picks a
@@ -116,7 +116,7 @@ thus &lt;em&gt;weight-specific&lt;/em&gt;). Using this framework, we can follow 
 adaptive methods over time:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;(SGD) Stochastic gradient descent&lt;/strong&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;https://en.wikipedia.org/wiki/Stochastic_gradient_descent&quot;&gt;SGD&lt;/a&gt;) Stochastic gradient descent&lt;/strong&gt;
     &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
 $\text{  }\psi_t(g_1, ..., g_t) = \mathbb{I}$&lt;/center&gt;
     &lt;p&gt;SGD is also an adaptive method, with a specific strategy of not adapting at
@@ -124,28 +124,35 @@ all: it forgets everything about the past of each weight, and relies only on
 the current gradient to perform the update, with a step size
 (and learning rate) $\alpha_t =\alpha/\sqrt{t}$, an aggressive decay.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;(AdaGrad) Adaptive gradient descent&lt;/strong&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf&quot;&gt;AdaGrad&lt;/a&gt;) Adaptive gradient descent&lt;/strong&gt;
     &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
-$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}(\frac{1}{t} \sum_{i=1}^t g_i^2)}$&lt;/center&gt;
+$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}(\dfrac{1}{t} \sum_{i=1}^t g_i^2)}$&lt;/center&gt;
     &lt;p&gt;With the same step size $\alpha_t = \alpha/\sqrt{t}$, this yields an adaptive
 and much more reasonable learning rate of $\alpha/\sqrt{\sum_i g_{ij}}$ for
-a given parameter index $j$. When the gradients ${g_{ij}}$ are sparse, i.e.
-parameter $j$ is not frequently updated, this &lt;strong&gt;considerably speeds up
+a the $j$-th weight. When the gradients ${g_{ij}}$ are sparse, i.e.
+the $j$-th weight is not frequently updated, this &lt;strong&gt;considerably speeds up
 convergence&lt;/strong&gt; (updates are still rare, but much bigger than with SGD).&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;(RMSProp)&lt;/strong&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;https://www.coursera.org/lecture/neural-networks/rmsprop-divide-the-gradient-by-a-running-average-of-its-recent-magnitude-YQHki&quot;&gt;RMSProp&lt;/a&gt;)&lt;/strong&gt;
     &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
 $\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta)\sum_{i=1}^t \beta^{t-i} g_i^2)}$&lt;/center&gt;
-    &lt;p&gt;RMSProp first considered restricting the average of past gradients to
-a fixed window, instead of the entire past, to avoid shrinking the learning
-rates to virtually zero too quickly. In practice, this is implemented
-by an exponentially moving average of past gradients.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;Despite its huge benefits in some settings, AdaGrad tends to shrink the
+learning rates of frequently updated parameters, very quickly to virtually
+zero. To overcome this issue, RMSProp restricts the average of past gradients
+to a fixed window, instead of the entire past, to avoid shrinking the
+learning rates to virtually zero too quickly. In practice, this is
+implemented by an &lt;strong&gt;exponentially moving average of past gradients&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;(Adam) Adaptive momentum estimation&lt;/strong&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;https://arxiv.org/pdf/1412.6980.pdf&quot;&gt;Adam&lt;/a&gt;) Adaptive momentum estimation&lt;/strong&gt;
     &lt;center&gt;$\phi_t(g_1, ..., g_t) = (1-\beta_1)\sum_{i=1}^t \beta_1^{t-i} g_i^2{\ }\text{  }$ and
 $\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta_2)\sum_{i=1}^t \beta_2^{t-i} g_i^2)}$&lt;/center&gt;
-    &lt;p&gt;Adam adds to RMSProp the idea of momentum (see Ruder’s post) to further
-speed up convergence. The momentum parameter $\beta_1 &amp;gt; 0$ considerably
+    &lt;p&gt;To further speed up the convergence, Adam adds to RMSProp the idea of
+&lt;strong&gt;momentum&lt;/strong&gt; (instead of moving in the direction
+of the current gradient only, move in a direction that is a weighted average
+of current gradient and previous update, like a rolling ball’s movement is
+is influenced by the both the current slope and its momentum; see
+&lt;a href=&quot;http://ruder.io/optimizing-gradient-descent/index.html&quot;&gt;Ruder’s post&lt;/a&gt;).
+The momentum parameter $\beta_1&amp;gt;0$ considerably
 improves the performance of the algorithm, especially in deep learning.
 Combining momentum with adaptive methods, Adam is very efficient, and
 immensely popular.&lt;/p&gt;
@@ -155,6 +162,35 @@ immensely popular.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-non-convergence-of-adam&quot;&gt;The non-convergence of Adam&lt;/h2&gt;
+
+&lt;p&gt;So, what’s wrong with Adam? It turns out that in the convergence proof given
+by Kingma &amp;amp; Ba, a flaw resides in the consideration of a specific quantity,
+namely:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ \Gamma_{t+1} = \bigg(\dfrac{\sqrt{V_{t+1}}}{\alpha_{t+1}} -
+\dfrac{\sqrt{V_{t}}}{\alpha_{t}}\bigg)&lt;/script&gt;
+
+&lt;p&gt;Intuitively, $\Gamma_t$ measures the
+variations of the inverse of the learning rate. As we saw, convergence requires
+a &lt;strong&gt;non-increasing learning rate&lt;/strong&gt; (otherwise the algorithm oscillates too much,
+or even diverges), which directly translates to $\Gamma_t \succeq O$ (easy to
+see with a diagonal $V_t$). This is the case for both SGD ($v_t$ constant,
+$\alpha_t$ decreasing) and AdaGrad ($v_t$ non-decreasing,
+$\alpha_t$ decreasing). However, it is no longer the case for Adam (nor RMSProp)
+because of the exponentially moving average of past gradients.&lt;/p&gt;
+
+&lt;p&gt;This is actually a huge issue, meaning that in some cases Adam actually
+converges to the worst solution possible. Following the example provided by the
+authors, consider $C&amp;gt;2$ and $\mathcal{F} = [-1,1]$, and the following losses:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-ADAM_counterexample.png&quot; alt=&quot;ADAM counterexample&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The optimal solution would be $x=-1$. However, choosing $\beta_1 = 0$ and
+$\beta_2 = {1}/{(1+C^2)}$, Adam actually converges to the worst possible point
+$x = +1$. The intuition for this behavior is the following: although the large
+gradient $C$ is observed every $3$ steps, it is &lt;strong&gt;forgotten (scaled down)
+too quickly&lt;/strong&gt; (by the exponential weights) to counterbalance the wrong but most
+frequent updates.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
