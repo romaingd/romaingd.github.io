@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-24T22:30:32+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-25T23:34:45+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -187,10 +187,37 @@ authors, consider $C&amp;gt;2$ and $\mathcal{F} = [-1,1]$, and the following los
 
 &lt;p&gt;The optimal solution would be $x=-1$. However, choosing $\beta_1 = 0$ and
 $\beta_2 = {1}/{(1+C^2)}$, Adam actually converges to the worst possible point
-$x = +1$. The intuition for this behavior is the following: although the large
-gradient $C$ is observed every $3$ steps, it is &lt;strong&gt;forgotten (scaled down)
-too quickly&lt;/strong&gt; (by the exponential weights) to counterbalance the wrong but most
-frequent updates.&lt;/p&gt;
+$x = +1$. The intuition for this behavior is the following: although the
+algorithm observes a large gradient $C$ every $3$ steps,
+&lt;strong&gt;it forgets (scales down) this large gradient too quickly (due to the
+exponential weights)&lt;/strong&gt; to counterbalance the wrong but most frequent updates.&lt;/p&gt;
+
+&lt;p&gt;So you thought Adam was reliable in all convex (“easy”) cases? Well, no:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 1.&lt;/strong&gt; There is an online convex optimization problem where Adam has
+non-zero average regret.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Wait, but this is for a specific choice of parameters. We allowed the choice of
+a very small $\beta_2$, and to quote the paper, “this example also provides
+intuition for why large $\beta_2$ is advisable […], and indeed in practice
+using large $\beta_2$ helps”. So maybe we are safe when using correctly chosen
+parameters? Well, no:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 2.&lt;/strong&gt; For any constant $\beta_1,\beta_2 \in [0,1)$ such that $\beta_1
+&amp;lt; \sqrt{\beta_2}$ [typically satisfied by default settings], there is an online
+convex optimization problem where Adam has non-zero average regret.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;All right, but this was in online optimization, where one could carefully design
+a sequence of loss functions to specifically fool Adam. We should be fine with
+stochastic optimization where such a design is impossible, right? Well, no:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 3.&lt;/strong&gt; For any constant $\beta_1,\beta_2 \in [0,1)$ such that $\beta_1
+&amp;lt; \sqrt{\beta_2}$ [typically satisfied by default settings], there is
+a stochastic convex optimization problem for which Adam does not converge to the
+optimal solution.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 

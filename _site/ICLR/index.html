@@ -324,10 +324,37 @@ authors, consider $C&gt;2$ and $\mathcal{F} = [-1,1]$, and the following losses:
 
 <p>The optimal solution would be $x=-1$. However, choosing $\beta_1 = 0$ and
 $\beta_2 = {1}/{(1+C^2)}$, Adam actually converges to the worst possible point
-$x = +1$. The intuition for this behavior is the following: although the large
-gradient $C$ is observed every $3$ steps, it is <strong>forgotten (scaled down)
-too quickly</strong> (by the exponential weights) to counterbalance the wrong but most
-frequent updates.</p>
+$x = +1$. The intuition for this behavior is the following: although the
+algorithm observes a large gradient $C$ every $3$ steps,
+<strong>it forgets (scales down) this large gradient too quickly (due to the
+exponential weights)</strong> to counterbalance the wrong but most frequent updates.</p>
+
+<p>So you thought Adam was reliable in all convex (“easy”) cases? Well, no:</p>
+<blockquote>
+  <p><strong>Theorem 1.</strong> There is an online convex optimization problem where Adam has
+non-zero average regret.</p>
+</blockquote>
+
+<p>Wait, but this is for a specific choice of parameters. We allowed the choice of
+a very small $\beta_2$, and to quote the paper, “this example also provides
+intuition for why large $\beta_2$ is advisable […], and indeed in practice
+using large $\beta_2$ helps”. So maybe we are safe when using correctly chosen
+parameters? Well, no:</p>
+<blockquote>
+  <p><strong>Theorem 2.</strong> For any constant $\beta_1,\beta_2 \in [0,1)$ such that $\beta_1
+&lt; \sqrt{\beta_2}$ [typically satisfied by default settings], there is an online
+convex optimization problem where Adam has non-zero average regret.</p>
+</blockquote>
+
+<p>All right, but this was in online optimization, where one could carefully design
+a sequence of loss functions to specifically fool Adam. We should be fine with
+stochastic optimization where such a design is impossible, right? Well, no:</p>
+<blockquote>
+  <p><strong>Theorem 3.</strong> For any constant $\beta_1,\beta_2 \in [0,1)$ such that $\beta_1
+&lt; \sqrt{\beta_2}$ [typically satisfied by default settings], there is
+a stochastic convex optimization problem for which Adam does not converge to the
+optimal solution.</p>
+</blockquote>
 
 <p><br /><br /></p>
 
