@@ -185,7 +185,7 @@ stochastic convex optimization problem for which Adam does not converge to the
 optimal solution.</p>
 </blockquote>
 
-<p>How have we reached this point, where the most widely used
+<p>How did we reach this point, where the most widely used
 optimization algorithm in deep learning does not converge in some simple
 convex problems? Let’s go back some years, and see what lead us there.</p>
 
@@ -222,9 +222,11 @@ Ruder. We will just quickly go over a couple major steps that lead us to Adam.</
   <li><strong>Mini-batch/Stochastic gradient descent</strong> is the first variant of gradient
 descent that actually works decently well in deep learning. In our online setup,
 it is reframed as <em>online gradient descent</em>, where the points $x_t$ are updated
-by moving in the opposite direction of the gradient $\nabla f_t(x_t)$,
+by moving in the opposite direction of the gradient $g_t = \nabla f_t(x_t)$,
 computed on the available mini-batch. The update size is determined by a
-learning rate $\alpha_t$ (typically $\alpha/\sqrt{t}$ for some $\alpha$). <br />
+learning rate $\alpha_t$ (typically $\alpha/\sqrt{t}$ for some $\alpha$),
+and the result is projected back to the feasible set thanks to the projection
+operator $\Pi_{\mathcal{F}}$. <br />
 We thus get the <strong>update rule of SGD:
 $\ x_{t+1} = \Pi_\mathcal{F}(x_t - \alpha_t g_t)$</strong>.</li>
 </ol>
@@ -356,9 +358,27 @@ a stochastic convex optimization problem for which Adam does not converge to the
 optimal solution.</p>
 </blockquote>
 
+<p>Now this is actually a major concern, since stochastic convex optimization is
+actually one of the simplest problems that we expect Adam to be able to solve
+(and deep learning consists mostly of non-convex stochastic optimization,
+which is reputed much harder). In practice, “fixing Adam” in cases of bad
+convergence behavior would typically require using different hyper-parameters
+for each dimension which, well, makes you wonder why you’re using adaptive
+methods in the first place.</p>
+
+<p>Another important note is that this analysis remains valid for <strong>any adaptive
+method that is based on exponentially weighted moving averages (EWMA) of the
+gradients</strong>, including RMSProp, AdaDelta and NAdam, which are therefore also
+flawed.</p>
+
 <p><br /><br /></p>
 
 <h2 id="amsgrad-a-new-and-fixed-variant">AMSGrad, a new (and fixed) variant</h2>
+
+<p>Now that the maths have spoken, what can be done? EWMA-based algorithms
+have actually brought a lot in terms of performance improvement and robustness
+to hyper-parameters choice, and it would be quite a pity to simply throw it all
+away for just a hole discovered in the proof.</p>
 
 <p><br /><br /></p>
 
@@ -649,9 +669,9 @@ there exists an online convex optimization problem where ADAM fails.</strong></p
 <p><br /></p>
 
 <ul>
-  <li>This means one has to use “problem-dependent” update hyperparameters ;
+  <li>This means one has to use “problem-dependent” update hyper-parameters ;
 in high-dimensional settings, this typically means using different
-hyperparameters for each dimension, which defeats the purpose of adaptive
+hyper-parameters for each dimension, which defeats the purpose of adaptive
 algorithms.</li>
 </ul>
 
