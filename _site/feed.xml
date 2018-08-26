@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-26T21:48:25+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-26T22:58:42+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -238,10 +238,27 @@ flawed.&lt;/p&gt;
 
 &lt;h2 id=&quot;amsgrad-a-new-and-fixed-variant&quot;&gt;AMSGrad, a new (and fixed) variant&lt;/h2&gt;
 
-&lt;p&gt;Now that the maths have spoken, what can be done? EWMA-based algorithms
+&lt;p&gt;Now that the maths have spoken and revealed the problem with Adam,
+what can be done? EWMA-based algorithms
 have actually brought a lot in terms of performance improvement and robustness
 to hyper-parameters choice, and it would be quite a pity to simply throw it all
 away for just a hole discovered in the proof.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-AMSGRAD.png&quot; alt=&quot;AMSGrad&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To overcome this issue, the authors propose a new variant, AMSGrad, described
+in the algorithm above, that we explain in the next few lines.
+Remember that the issue with Adam resides in $\Gamma_t$, which should be
+semi-definite positive, while in some cases it is not because
+$\frac{v_{t+1, j}}{\alpha_{t+1}} - \frac{v_{t, j}}{\alpha_{t}} &amp;lt; 0$ for some
+index $j$. Well, a quick hotfix would be to replace $v_{t+1}$ by $\max(v_t,
+v_{t+1})$, which would ensure $\Gamma_t \succeq 0$. But this would bias our
+computations of the EWMA…
+However we can decouple the two processes by keeping
+two running variables: one “true” running variable $v_{t+1}$ used to accurately
+compute the EWMA (correctly accounting for the past), and one “used-in-updates”
+running variable ${\hat v_{t+1}} = {\max(v_{t+1}, \hat v_t)}$ used to ensure
+a non-increasing learning rate (hence the correctness of the algorithm). &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 

@@ -375,10 +375,27 @@ flawed.</p>
 
 <h2 id="amsgrad-a-new-and-fixed-variant">AMSGrad, a new (and fixed) variant</h2>
 
-<p>Now that the maths have spoken, what can be done? EWMA-based algorithms
+<p>Now that the maths have spoken and revealed the problem with Adam,
+what can be done? EWMA-based algorithms
 have actually brought a lot in terms of performance improvement and robustness
 to hyper-parameters choice, and it would be quite a pity to simply throw it all
 away for just a hole discovered in the proof.</p>
+
+<p><img src="/assets/img/2018-08-19-AMSGRAD.png" alt="AMSGrad" class="center-image" /></p>
+
+<p>To overcome this issue, the authors propose a new variant, AMSGrad, described
+in the algorithm above, that we explain in the next few lines.
+Remember that the issue with Adam resides in $\Gamma_t$, which should be
+semi-definite positive, while in some cases it is not because
+$\frac{v_{t+1, j}}{\alpha_{t+1}} - \frac{v_{t, j}}{\alpha_{t}} &lt; 0$ for some
+index $j$. Well, a quick hotfix would be to replace $v_{t+1}$ by $\max(v_t,
+v_{t+1})$, which would ensure $\Gamma_t \succeq 0$. But this would bias our
+computations of the EWMA…
+However we can decouple the two processes by keeping
+two running variables: one “true” running variable $v_{t+1}$ used to accurately
+compute the EWMA (correctly accounting for the past), and one “used-in-updates”
+running variable ${\hat v_{t+1}} = {\max(v_{t+1}, \hat v_t)}$ used to ensure
+a non-increasing learning rate (hence the correctness of the algorithm). <br /></p>
 
 <p><br /><br /></p>
 
