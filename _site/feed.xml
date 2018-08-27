@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-27T17:02:46+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-27T22:46:02+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -227,7 +227,8 @@ actually one of the simplest problems that we expect Adam to be able to solve
 which is reputed much harder). In practice, “fixing Adam” in cases of bad
 convergence behavior would typically require using different hyper-parameters
 for each dimension which, well, makes you wonder why you’re using adaptive
-methods in the first place.&lt;/p&gt;
+methods in the first place (especially given the very high number of dimensions
+in typical deep learning applications).&lt;/p&gt;
 
 &lt;p&gt;Another important note is that this analysis remains valid for &lt;strong&gt;any adaptive
 method that is based on exponentially weighted moving averages (EWMA) of the
@@ -297,6 +298,30 @@ accuracy (what we care about in the end) he gets for both algorithm on CIFAR-10.
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;does-it-matter&quot;&gt;Does it matter?&lt;/h2&gt;
+
+&lt;p&gt;In my opinion, it seems pretty clear that the main interest of the paper lies
+in pointing out the flaw in Adam’s proof, and how it affects the convergence
+behavior in some cases. AMSGrad sounded somewhat more like a hotfix than a real
+replacement, providing a sounder algorithm while maintaining Adam’s good
+performance. AMSGrad will not change the course of stochastic optimization’s
+(nor deep learning’s) history, may it even come to eventually replace Adam
+in practice. &lt;em&gt;In the end, it doesn’t even matter (that much)&lt;/em&gt; ; a true
+“breakthrough” replacement is yet to come.&lt;/p&gt;
+
+&lt;p&gt;What is more interesting is the meta-aspect of the proof-checking side of this
+paper. It is in my opinion very important that empirical observations of bad
+convergence behavior are finally backed up by theoretical justifications, in
+other words, that &lt;em&gt;someone finally checked the maths&lt;/em&gt;. I find it actually
+surprising that despite its “reasonable” length of 4 pages, no one checked the
+proof and spotted this mistake, while in the meantime Adam got increasingly
+popular and widely used. Note that I barely ever read the proofs myself. I would
+tend to link this phenomenon to a deeper trend in the machine/deep learning
+community: people (and scientists are people too) get really excited about the
+results, the performance and the new opportunities brought by an exponentially
+growing field, and we just forget how to do good science along the way. The
+reproducibility crisis denounced by researchers like Joëlle Pineau
+(especially in reinforcement learning) is one example; the fact that everyone
+skips the proofs to go straight to the next exciting paper is another.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
