@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-27T22:46:02+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-28T09:31:47+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
-&lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">ADAM’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="ADAM's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">Adam’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="Adam's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -275,6 +275,8 @@ example (with $\mathcal{F} = [-1, 1]$, the optimal solution being $x=-1$):&lt;/p
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-convergence_curves.png&quot; alt=&quot;Convergence curves&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;p&gt;This example shows that AMSGrad works on the synthetic example where Adam fails
 to converge to the true solution, which is always a good sign, since it was why
 it was designed in the first place. But what about standard convergence
@@ -299,19 +301,19 @@ accuracy (what we care about in the end) he gets for both algorithm on CIFAR-10.
 
 &lt;h2 id=&quot;does-it-matter&quot;&gt;Does it matter?&lt;/h2&gt;
 
-&lt;p&gt;In my opinion, it seems pretty clear that the main interest of the paper lies
+&lt;p&gt;In my opinion, it is pretty clear that the main interest of the paper lies
 in pointing out the flaw in Adam’s proof, and how it affects the convergence
 behavior in some cases. AMSGrad sounded somewhat more like a hotfix than a real
 replacement, providing a sounder algorithm while maintaining Adam’s good
 performance. AMSGrad will not change the course of stochastic optimization’s
-(nor deep learning’s) history, may it even come to eventually replace Adam
+(nor deep learning’s) history, may it even come to someday replace Adam
 in practice. &lt;em&gt;In the end, it doesn’t even matter (that much)&lt;/em&gt; ; a true
 “breakthrough” replacement is yet to come.&lt;/p&gt;
 
 &lt;p&gt;What is more interesting is the meta-aspect of the proof-checking side of this
-paper. It is in my opinion very important that empirical observations of bad
+paper. It seems very important to me that empirical observations of bad
 convergence behavior are finally backed up by theoretical justifications, in
-other words, that &lt;em&gt;someone finally checked the maths&lt;/em&gt;. I find it actually
+other words, that &lt;strong&gt;someone finally checked the maths&lt;/strong&gt;. I find it actually
 surprising that despite its “reasonable” length of 4 pages, no one checked the
 proof and spotted this mistake, while in the meantime Adam got increasingly
 popular and widely used. Note that I barely ever read the proofs myself. I would
@@ -323,325 +325,7 @@ reproducibility crisis denounced by researchers like Joëlle Pineau
 (especially in reinforcement learning) is one example; the fact that everyone
 skips the proofs to go straight to the next exciting paper is another.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This finding is both very important, and not too worrisome in practice. It is
-very important that empirical observations of non-convergence are finally backed
-up by theoretical findings and justifications, and that &lt;em&gt;someone checked the
-maths&lt;/em&gt;. However, this is not too worrisome, since Adam &lt;em&gt;does&lt;/em&gt; nonetheless work
-very well in practice in most applications, especially real-world ones.
-Furthermore, the spotted issue can be easily patched, and the authors
-propose a variant of Adam with a more robust convergence proof, with the same
-performance level.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
-
-&lt;p&gt;ADAM has become completely dominant in deep learning over the past few years.
-This stochastic optimization algorithm is a variant of SGD, in the same vein
-as ADAGRAD, insofar that it adjusts the learning rate on a per-feature basis
-based on past gradients. However, ADAM specifically uses an exponential moving
-average of past gradients, limiting the reliance to the past few gradients.&lt;/p&gt;
-
-&lt;p&gt;The authors show that this sort-term memory makes the convergence proof of ADAM
-flawed. Intuitively, informative gradients that happen rarely are killed out
-too fast by the short-term memory. The authors provide a simple counterexample
-where ADAM converges to the worst solution possible.&lt;/p&gt;
-
-&lt;p&gt;Although it is of high importance, this result doesn’t change the fact that
-ADAM tends to work very well in deep learning, where data distribution
-is heuristically quite smooth. It seems that the variant provided by the authors
-(AMSGRAD) doesn’t translate into much better performance.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;i---introduction&quot;&gt;I - Introduction&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;SGD (Stochastic Gradient Descent)&lt;/strong&gt; : Update the parameters of a model by
-a step in the direction of the negative gradient of the loss evaluated
-on a &lt;em&gt;minibatch&lt;/em&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Due to the large amount of data involved, SGD is the dominant method to
-train deep neural networks (DNN) today.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;ADAGRAD (Adapative Gradient)&lt;/strong&gt; : Variant of SGD that scales coordinates
-of the gradient by square roots of some form of &lt;em&gt;averaging of past values&lt;/em&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SGD variants in ADAGRAD’s vein are popular and successful because they
-&lt;strong&gt;adjust the learning rate on a per-feature basis&lt;/strong&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;ADAGRAD’s performance falls in non-convex and dense settings: using &lt;em&gt;all&lt;/em&gt; past
-gradients makes the learning rate decay too quick, and early updates lose
-too much impact.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;ADAM (Adaptive Moment estimation)&lt;/strong&gt; : ADAGRAD idea + mitigate the rapid
-learning rate decay using an exponential moving average of squared past
-gradients (limit reliance to only the &lt;em&gt;past few gradients&lt;/em&gt;)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;This is also the idea of RMSPROP, ADADELTA, NADAM, …&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Empirically, &lt;strong&gt;ADAM fails to converge when important information happens
-rarely, because it is forgotten too fast&lt;/strong&gt;
-(“&lt;em&gt;when some minibatches provide large
-gradients but only quite rarely; although they are quite informative, their
-influence dies out rather quickly due to exponential moving average&lt;/em&gt;”)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In this paper :
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Counterexample of a convex optimization problem where ADAM
-does not converge&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Localization of the &lt;strong&gt;error in ADAM’s convergence proof&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;ADAM variants with &lt;strong&gt;long-term gradient memory&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;ii---preliminaries&quot;&gt;II - Preliminaries&lt;/h2&gt;
-
-&lt;h3 id=&quot;optimization-setup&quot;&gt;Optimization setup&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Online optimization problem in the full information feedback setting
-(minimize regret)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At each time step $t$ :&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Pick a point $x_t \in \mathcal{F}$
-&lt;strong&gt;(parameters of the model, e.g. weights)&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Gain access to a loss function $f_t$
-&lt;strong&gt;(loss of the model on the next minibatch)&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Incur loss $f_t (x_t)$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;SGD&lt;/strong&gt; : $x_{t+1} = \Pi_{\mathcal{F}} (x_t - \alpha_t g_t)$ with
-$g_t = \nabla f_t(x_t)$
-(gradient descent projected onto the set of feasible points)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;generic-adaptive-methods&quot;&gt;Generic adaptive methods&lt;/h3&gt;
-
-&lt;p&gt;&lt;br /&gt;Access&lt;/p&gt;
-
-&lt;!-- &lt;center&gt; --&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Gini_index_map.svg&quot; alt=&quot;lsfkj&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- ![Generic Adaptive Method Setup](pictures/01-generic_adaptive.png) --&gt;
-
-&lt;center&gt;
-
-&lt;b&gt;Generic framework for adaptive algorithms&lt;/b&gt;
-
-&lt;/center&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Additional notes :
-    &lt;ul&gt;
-      &lt;li&gt;$\alpha_t$ step size&lt;/li&gt;
-      &lt;li&gt;$\alpha_t V_t^{-1/2}$ learning rate&lt;/li&gt;
-      &lt;li&gt;Restriction to $V_t = \text{diag}(v_t)$&lt;/li&gt;
-      &lt;li&gt;Decreasing step size is required for convergence&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;sgd&quot;&gt;SGD&lt;/h4&gt;
-
-&lt;center&gt;
-
-![SGD phi and psi](pictures/01-SGD.png)
-
-**SGD - Specifications in the framework** &lt;/center&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Aggressive learning rate decay $\alpha / \sqrt{t}$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;adagrad&quot;&gt;ADAGRAD&lt;/h4&gt;
-
-&lt;center&gt;
-
-![ADAGRAD phi and psi](pictures/01-ADAGRAD.png)
-
-**ADAGRAD - Specifications in the framework** &lt;/center&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Modest learning rate decay $\alpha / \sqrt{\sum_i g_{i,j}^2}$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;adam&quot;&gt;ADAM&lt;/h4&gt;
-
-&lt;center&gt;
-
-![ADAM phi and psi](pictures/01-ADAM.png)
-
-**ADAM - Specifications in the framework (main formulation)** &lt;/center&gt;
-
-&lt;center&gt;
-
-![ADAM moment formulation](pictures/01-ADAM_moment.png)
-
-**ADAM - Moment update formulation (alternative formulation)** &lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;ADAGRAD with momentum (exponential moving average)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The momentum term with $\beta_1 &amp;gt; 0$ significantly boosts the performance,
-especially in deep learning.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;iii---the-non-convergence-of-adam&quot;&gt;III - The non-convergence of ADAM&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;The proof of convergence of ADAM (given in Kingma &amp;amp; Ba, 2015) is wrong.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;center&gt;
-
-![ADAM error](pictures/01-ADAM_error.png)
-
-**This quantity should be semi-definite positive.** &lt;br /&gt;
-**It is for SGD and ADAGRAD,
-but not for ADAM.** &lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The error essentially lies in the fact that the learning rate does not
-always decay.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;center&gt;
-
-![ADAM counterexample](pictures/01-ADAM_counterexample.png)
-
-**Simple counterexample where ADAM converges to the worst solution.** &lt;br /&gt;
-&lt;strong&gt; $\mathcal{F} = [-1,1]$, $\ \ C&amp;gt;2$, $\ \ \beta_1=0$,
-$\ \ \beta_2=1/(1+C^2)$ &lt;/strong&gt;
-&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;There is an online convex optimization problem where ADAM fails.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;One could think that adding a small constant $\epsilon$ to $v_t$ would solve
-the problem. Actually, although it helps, &lt;strong&gt;for any $\epsilon &amp;gt; 0$, there is
-an online convex optimization problem where ADAM fails.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;One could think that using a large $\beta_2$ would solve the problem.
-Actually, although it helps, &lt;strong&gt;for any $\beta_1, \beta_2 \in [0,1)$ such that
-$\beta_1 &amp;lt; \sqrt{\beta_2}$, there exists an online convex optimization problem
-where ADAM fails.&lt;/strong&gt; (Note that this condition is typically satisfied with
-suggested parameters)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;One could think that this problem is specific to online optimization problems,
-and that stochastic optimization problems would not be affected by this issue.
-Actually, although stochastic optimization is typically easier, &lt;strong&gt;for any
-$\beta_1, \beta_2 \in [0,1)$ such that $\beta_1 &amp;lt; \sqrt{\beta_2}$,
-there exists an online convex optimization problem where ADAM fails.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This means one has to use “problem-dependent” update hyper-parameters ;
-in high-dimensional settings, this typically means using different
-hyper-parameters for each dimension, which defeats the purpose of adaptive
-algorithms.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;iv---a-new-exponential-moving-average-variant--amsgrad&quot;&gt;IV - A new exponential moving average variant : AMSGRAD&lt;/h2&gt;
-
-&lt;center&gt;
-
-![AMSGRAD](pictures/01-AMSGRAD.png)
-
-&lt;/center&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The key difference between AMSGRAD and ADAM is that the former maintains
-the maximum of all previously seen $v_t$, and uses it to normalize the running
-average of the gradient instead of $v_t$ (ADAM).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In other words, &lt;strong&gt;to ensure a non-increasing learning rate, AMSGRAD uses
-the maximum value of the normalization term, instead of its current value.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Proof of convergence is provided, with a data-dependent ensured regret of
-&lt;strong&gt;$O(\sqrt{T})$&lt;/strong&gt;, which can be considerably &lt;strong&gt;better than $O(\sqrt{dT})$ of
-SGD.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Romain Girard</name></author><category term="ICLR" /><category term="ICLR 2018" /><summary type="html"></summary></entry><entry><title type="html">How I Rest From Work</title><link href="http://localhost:4000/how-i-rest-from-work/" rel="alternate" type="text/html" title="How I Rest From Work" /><published>2017-09-12T12:32:20+02:00</published><updated>2017-09-12T12:32:20+02:00</updated><id>http://localhost:4000/how-i-rest-from-work</id><content type="html" xml:base="http://localhost:4000/how-i-rest-from-work/">&lt;p&gt;Fam locavore snackwave bushwick +1 sartorial. Selfies portland knausgaard synth. Pop-up art party marfa deep v pitchfork subway tile 3 wolf moon. Ennui pinterest tumblr yr, adaptogen succulents copper mug twee. Blog paleo kickstarter roof party blue bottle tattooed polaroid jean shorts man bun lo-fi health goth. Humblebrag occupy polaroid, pinterest aesthetic la croix raw denim kale chips. 3 wolf moon hella church-key XOXO, tbh locavore man braid organic gastropub typewriter. Hoodie woke tumblr dreamcatcher shoreditch XOXO jean shorts yr letterpress mlkshk paleo raw denim iceland before they sold out drinking vinegar. Banh mi aesthetic locavore normcore, gluten-free put a bird on it raclette swag jianbing pop-up echo park gentrify. Stumptown brooklyn godard tumeric ethical. Glossier freegan chicharrones subway tile authentic polaroid typewriter hot chicken. Thundercats small batch heirloom meggings $\lambda^{-3}$.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="ICLR" /><category term="ICLR 2018" /><summary type="html"></summary></entry><entry><title type="html">How I Rest From Work</title><link href="http://localhost:4000/how-i-rest-from-work/" rel="alternate" type="text/html" title="How I Rest From Work" /><published>2017-09-12T12:32:20+02:00</published><updated>2017-09-12T12:32:20+02:00</updated><id>http://localhost:4000/how-i-rest-from-work</id><content type="html" xml:base="http://localhost:4000/how-i-rest-from-work/">&lt;p&gt;Fam locavore snackwave bushwick +1 sartorial. Selfies portland knausgaard synth. Pop-up art party marfa deep v pitchfork subway tile 3 wolf moon. Ennui pinterest tumblr yr, adaptogen succulents copper mug twee. Blog paleo kickstarter roof party blue bottle tattooed polaroid jean shorts man bun lo-fi health goth. Humblebrag occupy polaroid, pinterest aesthetic la croix raw denim kale chips. 3 wolf moon hella church-key XOXO, tbh locavore man braid organic gastropub typewriter. Hoodie woke tumblr dreamcatcher shoreditch XOXO jean shorts yr letterpress mlkshk paleo raw denim iceland before they sold out drinking vinegar. Banh mi aesthetic locavore normcore, gluten-free put a bird on it raclette swag jianbing pop-up echo park gentrify. Stumptown brooklyn godard tumeric ethical. Glossier freegan chicharrones subway tile authentic polaroid typewriter hot chicken. Thundercats small batch heirloom meggings $\lambda^{-3}$.&lt;/p&gt;
 
 &lt;p&gt;[
   x_i = \frac{5}{z}
