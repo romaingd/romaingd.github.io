@@ -1,5 +1,329 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-28T09:47:37+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
-</subtitle><author><name>Romain Girard</name></author><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-10T16:56:19+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+</subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;iclr-2018---2nd-article&quot;&gt;ICLR 2018 - 2nd article&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;In this series, we explore the 2018 edition of the International Conference
+on Learning Representations. Each oral paper is analyzed and
+commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This article is based on the paper&lt;/em&gt;
+&lt;a href=&quot;https://openreview.net/pdf?id=BJ8vJebC-&quot;&gt;Synthetic and natural noise both break Neural Machine Translation&lt;/a&gt;
+&lt;em&gt;by Yonatan Belinkov and Yonatan Bisk.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you asked people in the deep learning community what their favorite optimization
+algorithm is, you’d probably see &lt;a href=&quot;https://arxiv.org/pdf/1412.6980.pdf&quot;&gt;Adam&lt;/a&gt;
+in the top 2 (with Stochastic gradient descent + momentum),
+far ahead of alternatives like Adagrad or RMSProp (we’ll come to
+these in a minute). &lt;b&gt;Adam has become very popular in deep
+learning since it was proposed by Kingma &amp;amp; Ba in December 2014&lt;/b&gt;.
+The reasons are easy to
+understand: it exhibits impressive performance, uses many important ideas of
+previous works, comes with predefined settings that already work very well,
+and does not require careful hyper-parameter tuning.
+&lt;em&gt;Better performance with less work, what more do you want?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Naturally, great power comes with great responsibilities, even for optimization
+algorithms like Adam. At the very least, we expect some theoretical guarantees
+on the convergence properties, to make sure that the algorithm is actually doing
+its job when required. This is a necessary sanity check, confirming by
+the maths that we can legitimately have faith in its correctness.&lt;/p&gt;
+
+&lt;p&gt;The convergence proof was provided in the original Adam paper.
+However, our authors show in their paper that &lt;strong&gt;this original proof is flawed,
+and Adam does not correctly converge in all problems&lt;/strong&gt;, as illustrated by this
+theorem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 3.&lt;/strong&gt; [With mild assumptions on the parameters], there is a
+stochastic convex optimization problem for which Adam does not converge to the
+optimal solution.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;How did we reach this point, where the most widely used
+optimization algorithm in deep learning does not converge in some simple
+convex problems? Let’s go back some years, and see what lead us there.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gradient-descent-and-adaptive-methods&quot;&gt;Gradient descent and adaptive methods&lt;/h2&gt;
+
+&lt;p&gt;To facilitate analysis, let’s define our online optimization framework.
+At each time step $t$:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The algorithm picks a
+point $x_t$ (weights of the model) in the feasible set $\mathcal{F}$.&lt;/li&gt;
+  &lt;li&gt;We then
+get access to the next mini-batch, with the associated loss function $f_t$,
+and we incur the loss $f_t(x_t)$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usually, our goal is to find an optimal
+parameter $x$ such that the loss $f(x)$ on the entire training set is minimal
+(intermediate loss functions $f_t$ are used as stochastic approximations of
+$f$). Here, in the (equivalent) online setup, the goal
+is to &lt;strong&gt;minimize the total regret at time $T$&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;R_T = \sum_{i=1}^T f_t(x_t) - \min_{x \in
+\mathcal{F}} (\sum_{i=1}^T f_t(x))&lt;/script&gt;
+
+&lt;p&gt;A large number of optimization algorithms were proposed to achieve this goal.
+For a detailed and intuitive overview (and introduction to gradient descent),
+I recommend this excellent
+&lt;a href=&quot;http://ruder.io/optimizing-gradient-descent/index.html&quot;&gt;blog post&lt;/a&gt; by Sebastian
+Ruder. We will just quickly go over a couple major steps that lead us to Adam.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Mini-batch/Stochastic gradient descent&lt;/strong&gt; is the first variant of gradient
+descent that actually works decently well in deep learning. In our online setup,
+it is reframed as &lt;em&gt;online gradient descent&lt;/em&gt;, where the points $x_t$ are updated
+by moving in the opposite direction of the gradient $g_t = \nabla f_t(x_t)$,
+computed on the available mini-batch. The update size is determined by a
+learning rate $\alpha_t$ (typically $\alpha/\sqrt{t}$ for some $\alpha$),
+and the result is projected back to the feasible set thanks to the projection
+operator $\Pi_{\mathcal{F}}$. &lt;br /&gt;
+We thus get the &lt;strong&gt;update rule of SGD:
+$\ x_{t+1} = \Pi_\mathcal{F}(x_t - \alpha_t g_t)$&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Although the convergence of SGD requires a decreasing learning rate, choosing
+an adequate learning rate decrease schedule can be painful. Aggressive decays,
+such as $\alpha/\sqrt{t}$, or small learning rates, yield very slow convergence
+and mediocre performance. On the other hand, gentle decays and high learning
+rates yield very unstable training, even divergence sometimes. To overcome these
+issues, &lt;strong&gt;adaptive methods&lt;/strong&gt; have been developed around the key idea that &lt;strong&gt;each
+weight, that is each coordinate of $x_t$, should be updated using its own
+learning rate&lt;/strong&gt;, automatically computed based on the knowledge of past updates.
+This way, parameters that are frequently updated take only small steps (to avoid
+divergence), while parameters that are rarely updated take rather huge steps
+(to speed up convergence). This is summed up in the generic adaptive framework
+below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-adaptive-methods.png&quot; alt=&quot;Adaptive methods&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We call $\alpha_t$ the step size, $\alpha_t/\sqrt{V_t}$ the learning rate,
+and restrict ourselves to diagonal variants $V_t = \text{diag}(v_t)$.
+This framework essentially allows us to compute a different learning rate for
+each weight, by rescaling the step size (common to all weights) with a function
+of past gradients (of the loss function with respect to the considered weight,
+thus &lt;em&gt;weight-specific&lt;/em&gt;). Using this framework, we can follow the evolution of
+adaptive methods over time:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;https://en.wikipedia.org/wiki/Stochastic_gradient_descent&quot;&gt;SGD&lt;/a&gt;) Stochastic gradient descent&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = \mathbb{I}$&lt;/center&gt;
+    &lt;p&gt;SGD is also an adaptive method, with a specific strategy of not adapting at
+all: it forgets everything about the past of each weight, and relies only on
+the current gradient to perform the update, with a step size
+(and learning rate) $\alpha_t =\alpha/\sqrt{t}$, an aggressive decay.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf&quot;&gt;AdaGrad&lt;/a&gt;) Adaptive gradient descent&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}(\dfrac{1}{t} \sum_{i=1}^t g_i^2)}$&lt;/center&gt;
+    &lt;p&gt;With the same step size $\alpha_t = \alpha/\sqrt{t}$, this yields an adaptive
+and much more reasonable learning rate of $\alpha/\sqrt{\sum_i g_{ij}}$ for
+a the $j$-th weight. When the gradients ${g_{ij}}$ are sparse, i.e.
+the $j$-th weight is not frequently updated, this &lt;strong&gt;considerably speeds up
+convergence&lt;/strong&gt; (updates are still rare, but much bigger than with SGD).&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;https://www.coursera.org/lecture/neural-networks/rmsprop-divide-the-gradient-by-a-running-average-of-its-recent-magnitude-YQHki&quot;&gt;RMSProp&lt;/a&gt;)&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = g_t\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta)\sum_{i=1}^t \beta^{t-i} g_i^2)}$&lt;/center&gt;
+    &lt;p&gt;Despite its huge benefits in some settings, AdaGrad tends to shrink the
+learning rates of frequently updated parameters, very quickly to virtually
+zero. To overcome this issue, RMSProp restricts the average of past gradients
+to a fixed window, instead of the entire past, to avoid shrinking the
+learning rates to virtually zero too quickly. In practice, this is
+implemented by an &lt;strong&gt;exponentially moving average of past gradients&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;(&lt;a href=&quot;https://arxiv.org/pdf/1412.6980.pdf&quot;&gt;Adam&lt;/a&gt;) Adaptive momentum estimation&lt;/strong&gt;
+    &lt;center&gt;$\phi_t(g_1, ..., g_t) = (1-\beta_1)\sum_{i=1}^t \beta_1^{t-i} g_i^2{\ }\text{  }$ and
+$\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}((1-\beta_2)\sum_{i=1}^t \beta_2^{t-i} g_i^2)}$&lt;/center&gt;
+    &lt;p&gt;To further speed up the convergence, Adam adds to RMSProp the idea of
+&lt;strong&gt;momentum&lt;/strong&gt; (instead of moving in the direction
+of the current gradient only, move in a direction that is a weighted average
+of current gradient and previous update, like a rolling ball’s movement is
+is influenced by the both the current slope and its momentum; see
+&lt;a href=&quot;http://ruder.io/optimizing-gradient-descent/index.html&quot;&gt;Ruder’s post&lt;/a&gt;).
+The momentum parameter $\beta_1&amp;gt;0$ considerably
+improves the performance of the algorithm, especially in deep learning.
+Combining momentum with adaptive methods, Adam is very efficient, and
+immensely popular.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-non-convergence-of-adam&quot;&gt;The non-convergence of Adam&lt;/h2&gt;
+
+&lt;p&gt;So, what’s wrong with Adam? It turns out that in the convergence proof given
+by Kingma &amp;amp; Ba, a flaw resides in the consideration of a specific quantity,
+namely:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ \Gamma_{t+1} = \bigg(\dfrac{\sqrt{V_{t+1}}}{\alpha_{t+1}} -
+\dfrac{\sqrt{V_{t}}}{\alpha_{t}}\bigg)&lt;/script&gt;
+
+&lt;p&gt;Intuitively, $\Gamma_t$ measures the
+variations of the inverse of the learning rate. As we saw, convergence requires
+a &lt;strong&gt;non-increasing learning rate&lt;/strong&gt; (otherwise the algorithm oscillates too much,
+or even diverges), which directly translates to $\Gamma_t \succeq O$ (easy to
+see with a diagonal $V_t$). This is the case for both SGD ($v_t$ constant,
+$\alpha_t$ decreasing) and AdaGrad ($v_t$ non-decreasing,
+$\alpha_t$ decreasing). However, it is no longer the case for Adam (nor RMSProp)
+because of the exponentially moving average of past gradients.&lt;/p&gt;
+
+&lt;p&gt;This is actually a huge issue, meaning that in some cases Adam actually
+converges to the worst solution possible. Following the example provided by the
+authors, consider $C&amp;gt;2$ and $\mathcal{F} = [-1,1]$, and the following losses:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-ADAM_counterexample2.png&quot; alt=&quot;ADAM counterexample&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The optimal solution would be $x=-1$. However, choosing $\beta_1 = 0$ and
+$\beta_2 = {1}/{(1+C^2)}$, Adam actually converges to the worst possible point
+$x = +1$. The intuition for this behavior is the following: although the
+algorithm observes a large gradient $C$ every $3$ steps,
+&lt;strong&gt;it forgets (scales down) this large gradient too quickly (due to the
+exponential weights)&lt;/strong&gt; to counterbalance the wrong but most frequent updates.&lt;/p&gt;
+
+&lt;p&gt;So you thought Adam was reliable in all convex (“easy”) cases? Well, no:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 1.&lt;/strong&gt; There is an online convex optimization problem where Adam has
+non-zero average regret.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Wait, but this is for a specific choice of parameters. We allowed the choice of
+a very small $\beta_2$, and to quote the paper, “this example also provides
+intuition for why large $\beta_2$ is advisable […], and indeed in practice
+using large $\beta_2$ helps”. So maybe we are safe when using correctly chosen
+parameters? Well, no:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 2.&lt;/strong&gt; For any constant $\beta_1,\beta_2 \in [0,1)$ such that $\beta_1
+&amp;lt; \sqrt{\beta_2}$ [typically satisfied by default settings], there is an online
+convex optimization problem where Adam has non-zero average regret.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;All right, but this was in online optimization, where one could carefully design
+a sequence of loss functions to specifically fool Adam. We should be fine with
+stochastic optimization where such a design is impossible, right? Well, no:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem 3.&lt;/strong&gt; For any constant $\beta_1,\beta_2 \in [0,1)$ such that $\beta_1
+&amp;lt; \sqrt{\beta_2}$ [typically satisfied by default settings], there is
+a stochastic convex optimization problem for which Adam does not converge to the
+optimal solution.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now this is actually a major concern, since stochastic convex optimization is
+actually one of the simplest problems that we expect Adam to be able to solve
+(and deep learning consists mostly of non-convex stochastic optimization,
+which is reputed much harder). In practice, “fixing Adam” in cases of bad
+convergence behavior would typically require using different hyper-parameters
+for each dimension which, well, makes you wonder why you’re using adaptive
+methods in the first place (especially given the very high number of dimensions
+in typical deep learning applications).&lt;/p&gt;
+
+&lt;p&gt;Another important note is that this analysis remains valid for &lt;strong&gt;any adaptive
+method that is based on exponentially weighted moving averages (EWMA) of the
+gradients&lt;/strong&gt;, including RMSProp, AdaDelta and NAdam, which are therefore also
+flawed.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;amsgrad-a-new-and-fixed-variant&quot;&gt;AMSGrad, a new (and fixed) variant&lt;/h2&gt;
+
+&lt;p&gt;Now that the maths have spoken and revealed the problem with Adam,
+what can be done? EWMA-based algorithms
+have actually brought a lot in terms of performance improvement and robustness
+to hyper-parameters choice, and it would be quite a pity to simply throw it all
+away for just a hole discovered in the proof.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-AMSGRAD.png&quot; alt=&quot;AMSGrad&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To overcome this issue, the authors propose a new variant, AMSGrad, described
+in the algorithm above, that we explain in the next few lines.
+Remember that the issue with Adam resides in $\Gamma_t$, which should be
+semi-definite positive, while in some cases it is not because
+$\frac{v_{t+1, j}}{\alpha_{t+1}} - \frac{v_{t, j}}{\alpha_{t}} &amp;lt; 0$ for some
+index $j$. Well, a quick hotfix would be to replace $v_{t+1}$ by $\max(v_t,
+v_{t+1})$, which would ensure $\Gamma_t \succeq 0$. But this would bias our
+computations of the EWMA…
+However we can decouple the two processes by keeping
+two running variables: one “true” running variable $v_{t+1}$ used to accurately
+compute the EWMA (correctly accounting for the past), and one “used-in-updates”
+running variable ${\hat v_{t+1}} = {\max(v_{t+1}, \hat v_t)}$ used to ensure
+a non-increasing learning rate (hence the correctness of the algorithm).&lt;/p&gt;
+
+&lt;p&gt;Theoretical justifications of AMSGrad back up this claim: for reasonable choices
+of parameters, the regret is bounded in $O(\sqrt{T})$. Additionally, for a
+specific choice of momentum decay $\beta_{1t} = \beta_1 \lambda^{t-1}$, the
+authors prove a bound on the regret that can hugely benefit from sparse
+gradients, potentially “considerably better than $O(\sqrt{dT})$ regret of SGD”.&lt;/p&gt;
+
+&lt;p&gt;Does this translate into good empirical performance? The paper provides the
+convergence curves for a synthetic example that is close to the previous
+example (with $\mathcal{F} = [-1, 1]$, the optimal solution being $x=-1$):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-synthetic_example.png&quot; alt=&quot;Synthetic example&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-convergence_curves.png&quot; alt=&quot;Convergence curves&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This example shows that AMSGrad works on the synthetic example where Adam fails
+to converge to the true solution, which is always a good sign, since it was why
+it was designed in the first place. But what about standard convergence
+benchmarks on more interesting problems, like logistic regression or neural
+networks? Reddi et al. provide graphics that claim for AMSGrad
+equal or better performance compared to Adam for logistic regression,
+feed-forward neural net (1 hidden layer) on MNIST, and CIFARNET. However, in an
+independent
+&lt;a href=&quot;https://fdlm.github.io/post/amsgrad/&quot;&gt;implementation by Filip Korzeniowski&lt;/a&gt;
+tested in various settings (you should definitely check his post for extensive
+details and comparisons), the experiments do not support any claim of
+practical difference between Adam and AMSGrad. We show below the validation
+accuracy (what we care about in the end) he gets for both algorithm on CIFAR-10.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-comparison.png&quot; alt=&quot;Comparison&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt;Validation accuracy on CIFAR-10 (VGG-16).
+&lt;br /&gt;Adam in blue, AMSGrad in red.
+&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;does-it-matter&quot;&gt;Does it matter?&lt;/h2&gt;
+
+&lt;p&gt;In my opinion, it is pretty clear that the main interest of the paper lies
+in pointing out the flaw in Adam’s proof, and how it affects the convergence
+behavior in some cases. AMSGrad sounded somewhat more like a hotfix than a real
+replacement, providing a sounder algorithm while maintaining Adam’s good
+performance. AMSGrad will not change the course of stochastic optimization’s
+(nor deep learning’s) history, may it even come to someday replace Adam
+in practice. &lt;em&gt;In the end, it doesn’t even matter (that much)&lt;/em&gt; ; a true
+“breakthrough” replacement is yet to come.&lt;/p&gt;
+
+&lt;p&gt;What is more interesting is the meta-aspect of the proof-checking side of this
+paper. It seems very important to me that empirical observations of bad
+convergence behavior are finally backed up by theoretical justifications, in
+other words, that &lt;strong&gt;someone finally checked the maths&lt;/strong&gt;. I find it actually
+surprising that despite its “reasonable” length of 4 pages, no one checked the
+proof and spotted this mistake, while in the meantime Adam got increasingly
+popular and widely used. Note that I barely ever read the proofs myself. I would
+tend to link this phenomenon to a deeper trend in the machine/deep learning
+community: people (and scientists are people too) get really excited about the
+results, the performance and the new opportunities brought by an exponentially
+growing field, and we just forget how to do good science along the way. The
+reproducibility crisis denounced by researchers like Joëlle Pineau
+(especially in reinforcement learning) is one example; the fact that everyone
+skips the proofs to go straight to the next exciting paper is another.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="ICLR" /><category term="ICLR 2018" /><summary type="html"></summary></entry><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">Adam’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="Adam's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
