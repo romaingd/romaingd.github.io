@@ -1349,6 +1349,25 @@ a.newer-posts:hover {
   margin: 10px 0;
 }
 
+.post-content .post-tag {
+  text-align: right;
+}
+
+.post-content .post-tag a {
+  display: inline;
+  text-decoration: none;
+  font-size: 10px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  color: #263959;
+  text-transform: uppercase;
+  border: 1px solid #263959;
+}
+
+.post-content .post-tag a:hover {
+  text-decoration: underline;
+}
+
 .tags {
   margin: 0;
   padding: 10px;

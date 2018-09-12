@@ -3,12 +3,13 @@ layout: post
 title: Neural Machine Translation of the Cambridge meme
 date: 2018-09-10 00:00:00 +0100
 description: >
-  [ICLR 2018 - 2]
-  K
+  State-of-the-art NMT systems can't cope with even moderate amounts of noise.
+  It is time to call for more robust NMT training.
+  <br>
   ("Synthetic and natural noise both break Neural Machine Translation", Belinkov et al., 2018).
-img: 2018-08-19-ICLR-thumbnail.png
-fig-caption: An example where Adam fails to converge to the true solution
-tags: [ICLR, ICLR 2018]
+img: 2018-09-10-ICLR_2-nmt_cambridge_meme-thumbnail.png
+fig-caption: Google Translate example
+tags: [ICLR 2018, Neural Machine Translation, Noise, NLP, ICLR]
 ---
 
 
