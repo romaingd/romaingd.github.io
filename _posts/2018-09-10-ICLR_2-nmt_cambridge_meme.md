@@ -37,6 +37,60 @@ commented in an accessible way.*
 <br>
 
 
+If you are reading these lines, there is a good chance that you have been
+wandering the Internet for quite some time now. This means that there is also
+a good chance that you've stumbled upon the *Cambridge research* meme:
+
+<center>
+Aoccdrnig to a rscheearch at Cmabrigde Uinervtisy, it deosn't mttaer in waht
+oredr the ltteers in a wrod are, the olny iprmoetnt tihng is taht the frist and
+lsat ltteer be at the rghit pclae.
+</center>
+
+<br>
+
+There is even a greater chance that you have, for more or less legitimate
+reasons, used Google Translate (or even better, its European equivalent, DeepL).
+Of course, those automated translation systems have improved a lot in the past
+few years; what was laughable at a couple years ago is now quite reasonable for
+a number of languages. As shown in the table below, the translation of standard
+sentences is not only correct, it also feels quite natural.
+
+
+| Source | Sentence |
+|--------|--------|
+| Original French | Selon un chercheur de l'université Cambridge, l'ordre des lettres dans un mot n'a pas d'importance, la seule chose importante est que la première et la dernière lettres soient à la bonne place. |
+| Human translation | According to a researcher at Cambridge University, it doesn't matter in what order the letters in a word are, the only important thing is that the first and last letters are in the right place. |
+| Google Translate | According to a researcher at Cambridge University, the order of letters in a word does not matter, the only important thing is that the first and last letters are in the right place. |
+| DeepL | According to a Cambridge University researcher, the order of letters in a word does not matter, the only important thing is that the first and last letters are in the right place. |
+
+
+| Source | Sentence |
+|--------|--------|
+| Original French scrambled | Sleon un cehcruher de l’Uvinertisé de Cmabrigde, l’odrre des ltteers dnas un mot n’a pas d’ipmrotncae, la suele coshe ipmrotnate est que la pmeirère et la drenèire lteetrs sinoet à la bnnoe pclae. |
+| Human translation | According to a researcher at Cambridge University, it doesn't matter in what order the letters in a word are, the only important thing is that the first and last letters are in the right place. |
+| Google Translate | According to an opinion of the Uvinised of Cmabrigde, the name of the ltteers in one word does not have a name, but the name of the message is that the letter and the letter are very brief at the same time. |
+| DeepL | According to a cehcruher of the Uvinertized of Cmabrigde, the odd of the ltteers in a word has no ipmrotncae, the only coshe ipmrotnate is that the pmeirere and the drenere lteetrs sinoetrs in the bnnoe pclae. |
+
+
+Have you ever wondered how the latter performs on the former, that is how good
+Google Translate is on translating this meme? Let's try translating a French
+version into English.
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
 If you asked people in the deep learning community what their favorite optimization
 algorithm is, you'd probably see [Adam](https://arxiv.org/pdf/1412.6980.pdf)
 in the top 2 (with Stochastic gradient descent + momentum),
