@@ -72,10 +72,33 @@ version into English:
 | DeepL | According to a cehcruher of the Uvinertized of Cmabrigde, the odd of the ltteers in a word has no ipmrotncae, the only coshe ipmrotnate is that the pmeirere and the drenere lteetrs sinoetrs in the bnnoe pclae. |
 
 
+<br>
+
+
+This is quite unconvincing, to say the least. In other words, Google Translation
+and DeepL are both very sensitive to this type of noise, whereas humans
+seem impressively robust to it. This is just a symptom of the frailty of
+automated translation systems:
+
+> While typos and noise are not new to NLP, our systems are rarely trained to
+explicitly address them, as we instead hope that the relevant noise will occur
+in the training data.
+
+
+It turns out that this kind of wishful thinking leaves **Neural Machine 
+Translation (NMT) systems very
+brittle**, with their performance dropping quickly in presence of noise. How can
+we evaluate this lack of robustness to noise, and what can be done to improve
+our models? Let's jump into the paper.
+
+
+<br><br>
 
 
 
+## Evaluating the frailty of current models
 
+We would like to evaluate
 
 
 
