@@ -325,8 +325,9 @@ since “a” appears only once in the reference.</p>
   <li>
     <p>Multiply by a factor $\ \ \min(1, \exp (1 - \frac{\textrm{length of reference
 corpus}} {\textrm{length of candidate corpus}}))$. <br />Indeed, even with the
-previous modifications, the constructed score still favored short translations,
-see the first example.</p>
+previous modifications, the constructed score still favors short translations
+(see the first example). We therefore penalize translations that are shorter on
+average than the reference.</p>
   </li>
 </ol>
 
@@ -345,9 +346,83 @@ for our example sentences:</p>
 
 <p><br /></p>
 
-<h3 id="the-nmt-models-nematus-and-char2char">The NMT models: Nematus and char2char</h3>
+<h3 id="the-nmt-models-nematus-and-char2char">The NMT models: <strong>Nematus</strong> and <strong>char2char</strong></h3>
 
-<p>Now</p>
+<p>This will be much quicker. We want to see how state-of-the-art models
+with different architectures (and especially different accesses to words,
+sub-word units or characters) are able to cope with noise. The authors ran their
+experiments on three distinct models:</p>
+
+<ul>
+  <li>
+    <p><a href="https://arxiv.org/abs/1610.03017"><strong>char2char</strong></a> (Lee et al., 2017) - a
+sequence-to-sequence model with attention, trained on characters to characters
+(<a href="https://github.com/nyu-dl/dl4mt-c2c">implementation</a>).</p>
+  </li>
+  <li>
+    <p><a href="http://aclweb.org/anthology/E17-3017"><strong>Nematus</strong></a> (Sennrich et al., 2017) -
+a competition-winning sequence-to-sequence model with some architectural
+modifications that enable operating on sub-word units
+(<a href="http://data.statmt.org/rsennrich/wmt16_systems/">implementation</a>).</p>
+  </li>
+  <li>
+    <p><a href="https://arxiv.org/abs/1508.06615"><strong>charCNN</strong></a> (Kim et al., 2015) - an
+attentional sequence-to-sequence model based on a character convolutional
+neural network. To quote the authors, “this model retains the notion of a word
+but learns a character-dependent representation of words”, and “performs well on
+morphologically rich languages”
+(<a href="https://github.com/harvardnlp/seq2seq-attn">implementation</a>).</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="the-noise-nat-key-swap-mid-rand">The noise: Nat, Key, Swap, Mid, Rand</h3>
+
+<p>We finally need to define a number of noise types that we will use to perturb
+the models.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Original</strong></td>
+      <td>weather</td>
+      <td>Original correct word</td>
+    </tr>
+    <tr>
+      <td><strong>Nat</strong></td>
+      <td>whether</td>
+      <td>Natural noise, e.g. spelling mistake</td>
+    </tr>
+    <tr>
+      <td><strong>Key</strong></td>
+      <td>qeather</td>
+      <td>Replace a letter with an adjacent key (QWERTY keyboard)</td>
+    </tr>
+    <tr>
+      <td><strong>Swap</strong></td>
+      <td>wetaher</td>
+      <td>Swap two letters except the first and last ones</td>
+    </tr>
+    <tr>
+      <td><strong>Mid</strong></td>
+      <td>whaeter</td>
+      <td>Scramble the letters except the first and last ones</td>
+    </tr>
+    <tr>
+      <td><strong>Rand</strong></td>
+      <td>raewhte</td>
+      <td>Scramble all letters</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><br /></p>
 

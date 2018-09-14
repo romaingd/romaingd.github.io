@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-14T15:31:05+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-14T16:25:28+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -180,8 +180,9 @@ since “a” appears only once in the reference.&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;Multiply by a factor $\ \ \min(1, \exp (1 - \frac{\textrm{length of reference
 corpus}} {\textrm{length of candidate corpus}}))$. &lt;br /&gt;Indeed, even with the
-previous modifications, the constructed score still favored short translations,
-see the first example.&lt;/p&gt;
+previous modifications, the constructed score still favors short translations
+(see the first example). We therefore penalize translations that are shorter on
+average than the reference.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -200,9 +201,83 @@ for our example sentences:&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;the-nmt-models-nematus-and-char2char&quot;&gt;The NMT models: Nematus and char2char&lt;/h3&gt;
+&lt;h3 id=&quot;the-nmt-models-nematus-and-char2char&quot;&gt;The NMT models: &lt;strong&gt;Nematus&lt;/strong&gt; and &lt;strong&gt;char2char&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;Now&lt;/p&gt;
+&lt;p&gt;This will be much quicker. We want to see how state-of-the-art models
+with different architectures (and especially different accesses to words,
+sub-word units or characters) are able to cope with noise. The authors ran their
+experiments on three distinct models:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.03017&quot;&gt;&lt;strong&gt;char2char&lt;/strong&gt;&lt;/a&gt; (Lee et al., 2017) - a
+sequence-to-sequence model with attention, trained on characters to characters
+(&lt;a href=&quot;https://github.com/nyu-dl/dl4mt-c2c&quot;&gt;implementation&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://aclweb.org/anthology/E17-3017&quot;&gt;&lt;strong&gt;Nematus&lt;/strong&gt;&lt;/a&gt; (Sennrich et al., 2017) -
+a competition-winning sequence-to-sequence model with some architectural
+modifications that enable operating on sub-word units
+(&lt;a href=&quot;http://data.statmt.org/rsennrich/wmt16_systems/&quot;&gt;implementation&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1508.06615&quot;&gt;&lt;strong&gt;charCNN&lt;/strong&gt;&lt;/a&gt; (Kim et al., 2015) - an
+attentional sequence-to-sequence model based on a character convolutional
+neural network. To quote the authors, “this model retains the notion of a word
+but learns a character-dependent representation of words”, and “performs well on
+morphologically rich languages”
+(&lt;a href=&quot;https://github.com/harvardnlp/seq2seq-attn&quot;&gt;implementation&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-noise-nat-key-swap-mid-rand&quot;&gt;The noise: Nat, Key, Swap, Mid, Rand&lt;/h3&gt;
+
+&lt;p&gt;We finally need to define a number of noise types that we will use to perturb
+the models.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Source&lt;/th&gt;
+      &lt;th&gt;Example&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Original&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;weather&lt;/td&gt;
+      &lt;td&gt;Original correct word&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Nat&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;whether&lt;/td&gt;
+      &lt;td&gt;Natural noise, e.g. spelling mistake&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Key&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;qeather&lt;/td&gt;
+      &lt;td&gt;Replace a letter with an adjacent key (QWERTY keyboard)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Swap&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;wetaher&lt;/td&gt;
+      &lt;td&gt;Swap two letters except the first and last ones&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Mid&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;whaeter&lt;/td&gt;
+      &lt;td&gt;Scramble the letters except the first and last ones&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Rand&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;raewhte&lt;/td&gt;
+      &lt;td&gt;Scramble all letters&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -537,7 +612,7 @@ commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you asked people in the deep learning community what their favorite optimization
-algorithm is, you’d probably see &lt;a href=&quot;https://arxiv.org/pdf/1412.6980.pdf&quot;&gt;Adam&lt;/a&gt;
+algorithm is, you’d probably see &lt;a href=&quot;https://arxiv.org/abs/1412.6980&quot;&gt;Adam&lt;/a&gt;
 in the top 2 (with Stochastic gradient descent + momentum),
 far ahead of alternatives like Adagrad or RMSProp (we’ll come to
 these in a minute). &lt;b&gt;Adam has become very popular in deep

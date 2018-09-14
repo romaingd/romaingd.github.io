@@ -154,8 +154,9 @@ since "a" appears only once in the reference.
 
 3. Multiply by a factor $\ \ \min(1, \exp (1 - \frac{\textrm{length of reference
 corpus}} {\textrm{length of candidate corpus}}))$. <br>Indeed, even with the
-previous modifications, the constructed score still favored short translations,
-see the first example.
+previous modifications, the constructed score still favors short translations
+(see the first example). We therefore penalize translations that are shorter on
+average than the reference.
 
 <br>
 
@@ -176,9 +177,50 @@ $$
 <br>
 
 
-### The NMT models: Nematus and char2char
+### The NMT models: **Nematus** and **char2char**
 
-Now
+This will be much quicker. We want to see how state-of-the-art models
+with different architectures (and especially different accesses to words,
+sub-word units or characters) are able to cope with noise. The authors ran their
+experiments on three distinct models:
+
+* [**char2char**](https://arxiv.org/abs/1610.03017) (Lee et al., 2017) - a
+sequence-to-sequence model with attention, trained on characters to characters
+([implementation](https://github.com/nyu-dl/dl4mt-c2c)).
+
+
+* [**Nematus**](http://aclweb.org/anthology/E17-3017) (Sennrich et al., 2017) -
+a competition-winning sequence-to-sequence model with some architectural
+modifications that enable operating on sub-word units
+([implementation](http://data.statmt.org/rsennrich/wmt16_systems/)).
+
+* [**charCNN**](https://arxiv.org/abs/1508.06615) (Kim et al., 2015) - an
+attentional sequence-to-sequence model based on a character convolutional
+neural network. To quote the authors, "this model retains the notion of a word
+but learns a character-dependent representation of words", and "performs well on
+morphologically rich languages"
+([implementation](https://github.com/harvardnlp/seq2seq-attn)).
+
+
+<br>
+
+
+### The noise: Nat, Key, Swap, Mid, Rand
+
+We finally need to define a number of noise types that we will use to perturb
+the models.
+
+| Source | Example | Description |
+|--------|--------|--------|
+| **Original** | weather | Original correct word |
+| **Nat** | whether | Natural noise, e.g. spelling mistake |
+| **Key** | qeather | Replace a letter with an adjacent key (QWERTY keyboard) |
+| **Swap** | wetaher | Swap two letters except the first and last ones |
+| **Mid** | whaeter | Scramble the letters except the first and last ones |
+| **Rand** | raewhte | Scramble all letters |
+
+
+
 
 
 <br>
