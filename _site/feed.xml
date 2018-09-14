@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-13T16:40:40+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-14T15:31:05+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -80,7 +80,7 @@ explicitly address them, as we instead hope that the relevant noise will occur
 in the training data.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;It turns out that this kind of wishful thinking leaves &lt;strong&gt;Neural Machine 
+&lt;p&gt;It turns out that this kind of wishful thinking leaves &lt;strong&gt;Neural Machine
 Translation (NMT) systems very
 brittle&lt;/strong&gt;, with their performance dropping quickly in presence of noise. How can
 we evaluate this lack of robustness to noise, and what can be done to improve
@@ -88,9 +88,121 @@ our models? Let’s jump into the paper.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;evaluating-the-frailty-of-current-models&quot;&gt;Evaluating the frailty of current models&lt;/h2&gt;
+&lt;h2 id=&quot;evaluating-the-robustness-of-current-models&quot;&gt;Evaluating the robustness of current models&lt;/h2&gt;
 
-&lt;p&gt;We would like to evaluate&lt;/p&gt;
+&lt;p&gt;We would like to evaluate the performance of NMT models, and how it is affected
+by noise. To do that we will, unsurprisingly, have to answer 3 questions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Which performance metric?&lt;/li&gt;
+  &lt;li&gt;Which NMT models?&lt;/li&gt;
+  &lt;li&gt;Which kind of noise?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-performance-metric-bleu&quot;&gt;The performance metric: BLEU&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/BLEU&quot;&gt;BLEU&lt;/a&gt; (bilingual evaluation
+understudy)&lt;/strong&gt; is a popular metric to evaluate the similarity between the
+machine translation and a professional human translation. The idea behind it is
+fairly simple: it is a modification of precision, computed on candidate
+sentences (by comparison with reference sentences), and then averaged to produce
+a corpus-level score of the translation’s quality.&lt;/p&gt;
+
+&lt;p&gt;Let’s first remember why we don’t use precision as metric for this task.
+Consider a sentence $s$ to be translated, with human reference translation $r$
+and candidate translation $c$. Then precision is a score between 0 and 1
+computed as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\textrm{Precision}(c, r) =
+  \dfrac{\sum_{w \in W(c)} m_w(c) \cdot \mathbb{1}_{w \in W(r)}}
+    {\sum_{w \in W(c)} m_w(c)}&lt;/script&gt;
+
+&lt;p&gt;with $W(c)$ the set of unique words that appear in $c$, and $m_w(c)$ the number
+of occurences of $w$ in $c$. Precision essentially measures the proportion of
+words of the candidate translation that actually appear in the reference
+translation. To see why this is not sufficient, have a look at the table below.
+Usually precision is considered coupled with recall to overcome such issues;
+we don’t, because recall can be artificially inflated when considering multiple
+references (see &lt;a href=&quot;https://en.wikipedia.org/wiki/BLEU&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Reference&lt;/th&gt;
+      &lt;th&gt;Candidate&lt;/th&gt;
+      &lt;th&gt;Precision&lt;/th&gt;
+      &lt;th&gt;BLEU (bigram)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;“I like trains a lot”&lt;/td&gt;
+      &lt;td&gt;“I like”&lt;/td&gt;
+      &lt;td&gt;$\dfrac{1+1}{2} = 1$&lt;/td&gt;
+      &lt;td&gt;$\dfrac{1}{1} \cdot e^{1 - 2/5} = 0.55$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;“I like trains a lot”&lt;/td&gt;
+      &lt;td&gt;“a a a a a”&lt;/td&gt;
+      &lt;td&gt;$\dfrac{5}{5} = 1$&lt;/td&gt;
+      &lt;td&gt;$\dfrac{0}{4} \cdot 1 = 0$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;“I like trains a lot”&lt;/td&gt;
+      &lt;td&gt;“I like trains a a”&lt;/td&gt;
+      &lt;td&gt;$\dfrac{5}{5} = 1$&lt;/td&gt;
+      &lt;td&gt;$\dfrac{3}{4} \cdot 1 = 0.75$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;“It is raining cats and dogs”&lt;/td&gt;
+      &lt;td&gt;“It is pouring”&lt;/td&gt;
+      &lt;td&gt;$\dfrac{2}{3} = 0.66$&lt;/td&gt;
+      &lt;td&gt;$\dfrac{1}{2} \cdot e^{1 - 3/6} = 0.30$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;To solve those issues, the BLEU score brings a couple of modifications to the
+precision:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Consider the n-grams $G(c)$ instead of the words $W(c)$. &lt;br /&gt;This helps with
+the fluency of the translation: with words only, “trains lot I a like” gets the
+same score as “I like trains a lot”.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Replace $\ \ \textrm{ }m_w(c) \cdot 1_{w \in W(r)}\ \ \textrm{ }$ by $\ \
+\textrm{ }\min (m_w(c), m_w(r)) \cdot {1_{w \in W(r)}}$. &lt;br /&gt;This basically
+says that, in the second example, only the first “a” will be counted as correct,
+since “a” appears only once in the reference.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Multiply by a factor $\ \ \min(1, \exp (1 - \frac{\textrm{length of reference
+corpus}} {\textrm{length of candidate corpus}}))$. &lt;br /&gt;Indeed, even with the
+previous modifications, the constructed score still favored short translations,
+see the first example.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As illustrated in the last row of the table, even with these modifications the
+final score is not ideal, since a perfectly natural candidate translation gets
+a low score. It is, however, still much better than precision in a wide range
+of situations. In the end, the BLEU score takes the following form
+for our example sentences:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\textrm{BLEU}(c, r) =
+  \dfrac{\sum_{g \in G(c)} \min (m_g(r), m_g(c)) \cdot \mathbb{1}_{g \in G(r)}}
+    {\sum_{g \in G(c)} m_g(c)}
+  \cdot \min(1, \exp ({1 - \frac{\textrm{length}(r)}{\textrm{length}(c)}}))&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-nmt-models-nematus-and-char2char&quot;&gt;The NMT models: Nematus and char2char&lt;/h3&gt;
+
+&lt;p&gt;Now&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

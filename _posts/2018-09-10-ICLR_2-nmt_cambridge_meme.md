@@ -85,7 +85,7 @@ explicitly address them, as we instead hope that the relevant noise will occur
 in the training data.
 
 
-It turns out that this kind of wishful thinking leaves **Neural Machine 
+It turns out that this kind of wishful thinking leaves **Neural Machine
 Translation (NMT) systems very
 brittle**, with their performance dropping quickly in presence of noise. How can
 we evaluate this lack of robustness to noise, and what can be done to improve
@@ -96,10 +96,89 @@ our models? Let's jump into the paper.
 
 
 
-## Evaluating the frailty of current models
+## Evaluating the robustness of current models
 
-We would like to evaluate
+We would like to evaluate the performance of NMT models, and how it is affected
+by noise. To do that we will, unsurprisingly, have to answer 3 questions:
+* Which performance metric?
+* Which NMT models?
+* Which kind of noise?
 
+<br>
+
+### The performance metric: BLEU
+
+**[BLEU](https://en.wikipedia.org/wiki/BLEU) (bilingual evaluation
+understudy)** is a popular metric to evaluate the similarity between the
+machine translation and a professional human translation. The idea behind it is
+fairly simple: it is a modification of precision, computed on candidate
+sentences (by comparison with reference sentences), and then averaged to produce
+a corpus-level score of the translation's quality.
+
+Let's first remember why we don't use precision as metric for this task.
+Consider a sentence $s$ to be translated, with human reference translation $r$
+and candidate translation $c$. Then precision is a score between 0 and 1
+computed as:
+
+$$
+  \textrm{Precision}(c, r) =
+  \dfrac{\sum_{w \in W(c)} m_w(c) \cdot \mathbb{1}_{w \in W(r)}}
+    {\sum_{w \in W(c)} m_w(c)}
+$$
+
+with $W(c)$ the set of unique words that appear in $c$, and $m_w(c)$ the number
+of occurences of $w$ in $c$. Precision essentially measures the proportion of
+words of the candidate translation that actually appear in the reference
+translation. To see why this is not sufficient, have a look at the table below.
+Usually precision is considered coupled with recall to overcome such issues;
+we don't, because recall can be artificially inflated when considering multiple
+references (see [here](https://en.wikipedia.org/wiki/BLEU)).
+
+| Reference | Candidate | Precision | BLEU (bigram) |
+|------|------|------|------|
+| "I like trains a lot" | "I like" | $\dfrac{1+1}{2} = 1$ | $\dfrac{1}{1} \cdot e^{1 - 2/5} = 0.55$ |
+| "I like trains a lot" | "a a a a a" | $\dfrac{5}{5} = 1$ | $\dfrac{0}{4} \cdot 1 = 0$ |
+| "I like trains a lot" | "I like trains a a" | $\dfrac{5}{5} = 1$ | $\dfrac{3}{4} \cdot 1 = 0.75$ |
+| "It is raining cats and dogs" | "It is pouring" | $\dfrac{2}{3} = 0.66$ | $\dfrac{1}{2} \cdot e^{1 - 3/6} = 0.30$ |
+
+To solve those issues, the BLEU score brings a couple of modifications to the
+precision:
+1. Consider the n-grams $G(c)$ instead of the words $W(c)$. <br>This helps with
+the fluency of the translation: with words only, "trains lot I a like" gets the
+same score as "I like trains a lot".
+
+2. Replace $\ \ \textrm{ }m_w(c) \cdot 1_{w \in W(r)}\ \ \textrm{ }$ by $\ \
+\textrm{ }\min (m_w(c), m_w(r)) \cdot {1\_{w \in W(r)}}$. <br>This basically
+says that, in the second example, only the first "a" will be counted as correct,
+since "a" appears only once in the reference.
+
+3. Multiply by a factor $\ \ \min(1, \exp (1 - \frac{\textrm{length of reference
+corpus}} {\textrm{length of candidate corpus}}))$. <br>Indeed, even with the
+previous modifications, the constructed score still favored short translations,
+see the first example.
+
+<br>
+
+As illustrated in the last row of the table, even with these modifications the
+final score is not ideal, since a perfectly natural candidate translation gets
+a low score. It is, however, still much better than precision in a wide range
+of situations. In the end, the BLEU score takes the following form
+for our example sentences:
+
+$$
+  \textrm{BLEU}(c, r) =
+  \dfrac{\sum_{g \in G(c)} \min (m_g(r), m_g(c)) \cdot \mathbb{1}_{g \in G(r)}}
+    {\sum_{g \in G(c)} m_g(c)}
+  \cdot \min(1, \exp ({1 - \frac{\textrm{length}(r)}{\textrm{length}(c)}}))
+$$
+
+
+<br>
+
+
+### The NMT models: Nematus and char2char
+
+Now
 
 
 <br>
