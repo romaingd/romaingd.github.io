@@ -218,7 +218,7 @@ $f$). Here, in the (equivalent) online setup, the goal
 is to <strong>minimize the total regret at time $T$</strong>:</p>
 
 <script type="math/tex; mode=display">R_T = \sum_{i=1}^T f_t(x_t) - \min_{x \in
-\mathcal{F}} (\sum_{i=1}^T f_t(x))</script>
+\mathcal{F}} \left(\sum_{i=1}^T f_t(x)\right)</script>
 
 <p>A large number of optimization algorithms were proposed to achieve this goal.
 For a detailed and intuitive overview (and introduction to gradient descent),
@@ -314,8 +314,8 @@ immensely popular.</p>
 by Kingma &amp; Ba, a flaw resides in the consideration of a specific quantity,
 namely:</p>
 
-<script type="math/tex; mode=display">\ \Gamma_{t+1} = \bigg(\dfrac{\sqrt{V_{t+1}}}{\alpha_{t+1}} -
-\dfrac{\sqrt{V_{t}}}{\alpha_{t}}\bigg)</script>
+<script type="math/tex; mode=display">\ \Gamma_{t+1} = \left(\dfrac{\sqrt{V_{t+1}}}{\alpha_{t+1}} -
+\dfrac{\sqrt{V_{t}}}{\alpha_{t}}\right)</script>
 
 <p>Intuitively, $\Gamma_t$ measures the
 variations of the inverse of the learning rate. As we saw, convergence requires

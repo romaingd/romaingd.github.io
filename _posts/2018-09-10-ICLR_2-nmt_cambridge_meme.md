@@ -152,8 +152,8 @@ same score as "I like trains a lot".
 says that, in the second example, only the first "a" will be counted as correct,
 since "a" appears only once in the reference.
 
-3. Multiply by a factor $\ \ \min(1, \exp (1 - \frac{\textrm{length of reference
-corpus}} {\textrm{length of candidate corpus}}))$. <br>Indeed, even with the
+3. Multiply by a factor $\ \ \min\left(1, \exp \left(1 - \frac{\textrm{length of reference
+corpus}} {\textrm{length of candidate corpus}}\right)\right)$. <br>Indeed, even with the
 previous modifications, the constructed score still favors short translations
 (see the first example). We therefore penalize translations that are shorter on
 average than the reference.
@@ -170,7 +170,8 @@ $$
   \textrm{BLEU}(c, r) =
   \dfrac{\sum_{g \in G(c)} \min (m_g(r), m_g(c)) \cdot \mathbb{1}_{g \in G(r)}}
     {\sum_{g \in G(c)} m_g(c)}
-  \cdot \min(1, \exp ({1 - \frac{\textrm{length}(r)}{\textrm{length}(c)}}))
+  \cdot \min\left(1, \exp \left({1 -
+  \frac{\textrm{length}(r)}{\textrm{length}(c)}}\right)\right)
 $$
 
 

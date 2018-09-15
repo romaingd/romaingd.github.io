@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-14T16:25:28+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-15T16:55:03+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -178,8 +178,8 @@ says that, in the second example, only the first “a” will be counted as corr
 since “a” appears only once in the reference.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Multiply by a factor $\ \ \min(1, \exp (1 - \frac{\textrm{length of reference
-corpus}} {\textrm{length of candidate corpus}}))$. &lt;br /&gt;Indeed, even with the
+    &lt;p&gt;Multiply by a factor $\ \ \min\left(1, \exp \left(1 - \frac{\textrm{length of reference
+corpus}} {\textrm{length of candidate corpus}}\right)\right)$. &lt;br /&gt;Indeed, even with the
 previous modifications, the constructed score still favors short translations
 (see the first example). We therefore penalize translations that are shorter on
 average than the reference.&lt;/p&gt;
@@ -197,7 +197,8 @@ for our example sentences:&lt;/p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textrm{BLEU}(c, r) =
   \dfrac{\sum_{g \in G(c)} \min (m_g(r), m_g(c)) \cdot \mathbb{1}_{g \in G(r)}}
     {\sum_{g \in G(c)} m_g(c)}
-  \cdot \min(1, \exp ({1 - \frac{\textrm{length}(r)}{\textrm{length}(c)}}))&lt;/script&gt;
+  \cdot \min\left(1, \exp \left({1 -
+  \frac{\textrm{length}(r)}{\textrm{length}(c)}}\right)\right)&lt;/script&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -665,7 +666,7 @@ $f$). Here, in the (equivalent) online setup, the goal
 is to &lt;strong&gt;minimize the total regret at time $T$&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_T = \sum_{i=1}^T f_t(x_t) - \min_{x \in
-\mathcal{F}} (\sum_{i=1}^T f_t(x))&lt;/script&gt;
+\mathcal{F}} \left(\sum_{i=1}^T f_t(x)\right)&lt;/script&gt;
 
 &lt;p&gt;A large number of optimization algorithms were proposed to achieve this goal.
 For a detailed and intuitive overview (and introduction to gradient descent),
@@ -761,8 +762,8 @@ immensely popular.&lt;/p&gt;
 by Kingma &amp;amp; Ba, a flaw resides in the consideration of a specific quantity,
 namely:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ \Gamma_{t+1} = \bigg(\dfrac{\sqrt{V_{t+1}}}{\alpha_{t+1}} -
-\dfrac{\sqrt{V_{t}}}{\alpha_{t}}\bigg)&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ \Gamma_{t+1} = \left(\dfrac{\sqrt{V_{t+1}}}{\alpha_{t+1}} -
+\dfrac{\sqrt{V_{t}}}{\alpha_{t}}\right)&lt;/script&gt;
 
 &lt;p&gt;Intuitively, $\Gamma_t$ measures the
 variations of the inverse of the learning rate. As we saw, convergence requires
