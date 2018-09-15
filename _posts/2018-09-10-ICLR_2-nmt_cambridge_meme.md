@@ -72,8 +72,6 @@ version into English:
 | DeepL | According to a cehcruher of the Uvinertized of Cmabrigde, the odd of the ltteers in a word has no ipmrotncae, the only coshe ipmrotnate is that the pmeirere and the drenere lteetrs sinoetrs in the bnnoe pclae. |
 
 
-<br>
-
 
 This is quite unconvincing, to say the least. In other words, Google Translation
 and DeepL are both very sensitive to this type of noise, whereas humans
@@ -206,7 +204,7 @@ morphologically rich languages"
 <br>
 
 
-### The noise: Nat, Key, Swap, Mid, Rand
+### The noise types: Nat, Key, Swap, Mid, Rand
 
 We finally need to define a number of noise types that we will use to perturb
 the models.
