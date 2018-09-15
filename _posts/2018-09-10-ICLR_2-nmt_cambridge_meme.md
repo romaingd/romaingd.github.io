@@ -219,6 +219,118 @@ the models.
 | **Rand** | raewhte | Scramble all letters |
 
 
+<br>
+
+
+### Facing the truth - the (in)ability to translate noisy texts
+
+With all the tools in hand, it is now time to experiment and face the truth:
+how well are our NMT models able to cope with the different noise types? I'm
+definitely too lazy to run all the tests by myself, so I'll steal the paper's
+results instead.
+
+![Experiments with noise]({{site.baseurl}}/assets/img/2018-09-10-noise_results.png){: .center-image}
+
+![Performance decrease]({{site.baseurl}}/assets/img/2018-09-10-noise_plots.png){: .center-image}
+
+Whatever the language, noise has a striking effect on performance.
+As a quick note, the results presented in the table aren't comparable across
+noise types, since the noise intensity is not the same in all cases. For a fair
+comparison, have a look at the graphs (German to English): surprisingly enough,
+the Rand noise isn't much worse than Swap, despite yielding much more dramatic
+changes of the tokens. It is actually *very* surprising, since Swap is strictly
+included in Rand. This would mean that the NMT model (especially Nematus)
+is basically unable to recover a word with virtually any Swap mistake.
+Yet, the authors' conclusion still holds true:
+
+> The important thing to note is that even small amounts of noise lead to
+substantial drops in performance. [...] This is true for both natural noise and
+all kinds of synthetic noise. [...] The degradation in quality is especially
+severe in light of the humans' ability to understand noisy texts.
+
+
+
+<br><br>
+
+
+
+## Dealing with noise
+
+Now that we know where we are, what can be done to increase the robustness of
+our models? The authors propose two natural ideas, and show their effect on
+performance:
+1. All models presented rely on word structure to build a representation. This
+structure is, however, altered to some extent by most of the studied noise
+types (Swap, Mid, Rand). The idea is therefore to make some architectural
+modifications in order to learn a representation of words that is invariant to
+their structure.
+2. Training on noisy examples has been regularly reported to increase model
+robustness to noise. Let's try that too.
+
+
+<br>
+
+
+### Structure invariant representations
+
+As is clear in their architecture, all three of the models under study are
+*by design* sensitive to word structure, at a character level (due to
+convolutional layers or the sub-word units considered). There is a fair chance
+that a model that is *insensitive* to this structure would be more robust to
+noises that affect this structure; nothing groundbreaking there.
+
+> Perhaps the simplest such model is to take the average character embedding as
+a word representation. This model, referred to as meanChar, first generates a
+word representation by averaging character embeddings, and then proceeds
+with a word-level encoder similar to the charCNN model.
+
+Personal note:
+this model seems particularly *blunt*. While it is true that averaging
+all character embeddings removes the reliance on word structure, it also
+discards a huge part of the information brought by individual character. Unless
+you are using an embedding dimension that is the size of your alphabet, the
+signal transmitted to the convolutional layer dismisses *some* information
+about the *presence* of individual characters, in addition to throwing away
+all information about *order*.
+In other words, not only anagrams will get the same representation, but also
+some totally different words could by random chance.
+One could argue that, with a good encoding
+(e.g. simply using the powers of 2, which is basically cheating by pretending
+that a full-dimensional one-hot vector can be reduced to a 1-dimensional scalar
+value), we could always recover the presences; however I cannot think of one
+that would suit the convolutional structure of the next layer.
+
+I am pretty sure
+that a better word representation can be found, discarding only the structure
+while preserving the presence (instead of "jeter le bébé avec l'eau du bain",
+like we say in French). A first thought is a complete **graph of individual
+characters**, with a graph-convolutional layer that would follow.
+This seems to me like a more natural generalization of the previous models:
+thinking in terms of graphs where nodes are the characters, previous
+representations saw a word as a chain of characters, each of them linked only to
+the next one by a directed edge. Discarding structure would simply mean linking
+all nodes together by undirected edges.
+This could even
+be adapted to retain *some weak* information about the structure by weighting
+edges using the original order (the closer two characters in the original word,
+the higher the weight). This has a potential to make the model more robust to
+structure change, while retaining all information about the presence of
+individual characters and not forgetting all about structure like in meanChar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
