@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-16T01:17:49+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-16T13:46:01+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -342,11 +342,24 @@ word representation by averaging character embeddings, and then proceeds
 with a word-level encoder similar to the charCNN model.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Personal note:
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-meanchar_performance.png&quot; alt=&quot;meanChar performance&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt; Performance of meanChar in different settings. By design, Scr is the
+same as Vanilla for this model. &lt;/center&gt;
+
+&lt;p&gt;As is clear in the table, meanChar turns out to be pretty good for translating
+scrambled text (much better than charCNN). Note that, by design, this model
+sees no difference between vanilla and scrambled texts; the Scr performance
+reported can therefore be compared to the vanilla performance of other models.
+However, meanChar is still very sensitive to Nat and Key noise types, that do
+not resemble Rand.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Personal note&lt;/strong&gt;:
 this model seems particularly &lt;em&gt;blunt&lt;/em&gt;. While it is true that averaging
 all character embeddings removes the reliance on word structure, it also
 discards a huge part of the information brought by individual character. Unless
-you are using an embedding dimension that is the size of your alphabet, the
+you are using an embedding dimension that is of the order of the size of your
+alphabet, the
 signal transmitted to the convolutional layer dismisses &lt;em&gt;some&lt;/em&gt; information
 about the &lt;em&gt;presence&lt;/em&gt; of individual characters, in addition to throwing away
 all information about &lt;em&gt;order&lt;/em&gt;.
@@ -358,22 +371,46 @@ that a full-dimensional one-hot vector can be reduced to a 1-dimensional scalar
 value), we could always recover the presences; however I cannot think of one
 that would suit the convolutional structure of the next layer.&lt;/p&gt;
 
-&lt;p&gt;I am pretty sure
+&lt;p&gt;Have a look at Figures 2 and 3 below, depicting the charCNN vs. meanChar
+word representations. I am pretty sure
 that a better word representation can be found, discarding only the structure
 while preserving the presence (instead of “jeter le bébé avec l’eau du bain”,
 like we say in French). A first thought is a complete &lt;strong&gt;graph of individual
-characters&lt;/strong&gt;, with a graph-convolutional layer that would follow.
+characters&lt;/strong&gt; (see Figure 4), with a graph-convolutional layer that would follow.
 This seems to me like a more natural generalization of the previous models:
 thinking in terms of graphs where nodes are the characters, previous
 representations saw a word as a chain of characters, each of them linked only to
 the next one by a directed edge. Discarding structure would simply mean linking
 all nodes together by undirected edges.
 This could even
-be adapted to retain &lt;em&gt;some weak&lt;/em&gt; information about the structure by weighting
-edges using the original order (the closer two characters in the original word,
-the higher the weight). This has a potential to make the model more robust to
+be adapted to retain &lt;em&gt;some weak&lt;/em&gt; information about the structure by &lt;strong&gt;weighting
+edges&lt;/strong&gt; using the original order (the closer two characters in the original
+word, the higher the weight; see Figure 5).
+While not completely structure-invariant, this has a potential to make the
+model more robust to
 structure change, while retaining all information about the presence of
 individual characters and not forgetting all about structure like in meanChar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_chain.png&quot; alt=&quot;Graph chain&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt; &lt;strong&gt;Figure 2&lt;/strong&gt; - `charCNN` word representation
+as a chain of character embeddings. &lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_meanchar.png&quot; alt=&quot;Graph chain&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt; &lt;strong&gt;Figure 3&lt;/strong&gt; - `meanChar` word representation as an average
+of character embeddings. &lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_complete.png&quot; alt=&quot;Graph complete&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt; &lt;strong&gt;Figure 4&lt;/strong&gt; - `graphChar` word
+representation as a complete graph of character embeddings. &lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_weighted.png&quot; alt=&quot;Graph weighted&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt; &lt;strong&gt;Figure 5&lt;/strong&gt; - `w-graphChar` word
+representation as a weighted graph of character embeddings. The weights, here
+arbitrary, could reflect the structure to some extent. &lt;/center&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

@@ -487,11 +487,24 @@ word representation by averaging character embeddings, and then proceeds
 with a word-level encoder similar to the charCNN model.</p>
 </blockquote>
 
-<p>Personal note:
+<p><img src="/assets/img/2018-09-10-meanchar_performance.png" alt="meanChar performance" class="center-image" /></p>
+
+<center> Performance of meanChar in different settings. By design, Scr is the
+same as Vanilla for this model. </center>
+
+<p>As is clear in the table, meanChar turns out to be pretty good for translating
+scrambled text (much better than charCNN). Note that, by design, this model
+sees no difference between vanilla and scrambled texts; the Scr performance
+reported can therefore be compared to the vanilla performance of other models.
+However, meanChar is still very sensitive to Nat and Key noise types, that do
+not resemble Rand.</p>
+
+<p><strong>Personal note</strong>:
 this model seems particularly <em>blunt</em>. While it is true that averaging
 all character embeddings removes the reliance on word structure, it also
 discards a huge part of the information brought by individual character. Unless
-you are using an embedding dimension that is the size of your alphabet, the
+you are using an embedding dimension that is of the order of the size of your
+alphabet, the
 signal transmitted to the convolutional layer dismisses <em>some</em> information
 about the <em>presence</em> of individual characters, in addition to throwing away
 all information about <em>order</em>.
@@ -503,22 +516,46 @@ that a full-dimensional one-hot vector can be reduced to a 1-dimensional scalar
 value), we could always recover the presences; however I cannot think of one
 that would suit the convolutional structure of the next layer.</p>
 
-<p>I am pretty sure
+<p>Have a look at Figures 2 and 3 below, depicting the charCNN vs. meanChar
+word representations. I am pretty sure
 that a better word representation can be found, discarding only the structure
 while preserving the presence (instead of “jeter le bébé avec l’eau du bain”,
 like we say in French). A first thought is a complete <strong>graph of individual
-characters</strong>, with a graph-convolutional layer that would follow.
+characters</strong> (see Figure 4), with a graph-convolutional layer that would follow.
 This seems to me like a more natural generalization of the previous models:
 thinking in terms of graphs where nodes are the characters, previous
 representations saw a word as a chain of characters, each of them linked only to
 the next one by a directed edge. Discarding structure would simply mean linking
 all nodes together by undirected edges.
 This could even
-be adapted to retain <em>some weak</em> information about the structure by weighting
-edges using the original order (the closer two characters in the original word,
-the higher the weight). This has a potential to make the model more robust to
+be adapted to retain <em>some weak</em> information about the structure by <strong>weighting
+edges</strong> using the original order (the closer two characters in the original
+word, the higher the weight; see Figure 5).
+While not completely structure-invariant, this has a potential to make the
+model more robust to
 structure change, while retaining all information about the presence of
 individual characters and not forgetting all about structure like in meanChar.</p>
+
+<p><img src="/assets/img/2018-09-10-graph_chain.png" alt="Graph chain" class="center-image" /></p>
+
+<center> <strong>Figure 2</strong> - `charCNN` word representation
+as a chain of character embeddings. </center>
+
+<p><img src="/assets/img/2018-09-10-graph_meanchar.png" alt="Graph chain" class="center-image" /></p>
+
+<center> <strong>Figure 3</strong> - `meanChar` word representation as an average
+of character embeddings. </center>
+
+<p><img src="/assets/img/2018-09-10-graph_complete.png" alt="Graph complete" class="center-image" /></p>
+
+<center> <strong>Figure 4</strong> - `graphChar` word
+representation as a complete graph of character embeddings. </center>
+
+<p><img src="/assets/img/2018-09-10-graph_weighted.png" alt="Graph weighted" class="center-image" /></p>
+
+<center> <strong>Figure 5</strong> - `w-graphChar` word
+representation as a weighted graph of character embeddings. The weights, here
+arbitrary, could reflect the structure to some extent. </center>
 
 <p><br /></p>
 
