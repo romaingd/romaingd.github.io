@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-17T10:06:32+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-17T16:48:08+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -354,7 +354,7 @@ reported can therefore be compared to the vanilla performance of other models.
 However, meanChar is still very sensitive to Nat and Key noise types, that do
 not resemble Rand.&lt;/p&gt;
 
-&lt;h4 id=&quot;personal-notes-on-structure-invariant-and-graph-based-representations&quot;&gt;Personal notes on structure invariant and graph-based representations&lt;/h4&gt;
+&lt;h4 id=&quot;personal-notes-on-structure-invariant-and-graph-based-representations&quot;&gt;Personal notes on structure-invariant and graph-based representations&lt;/h4&gt;
 
 &lt;p&gt;To me, this model seems particularly &lt;em&gt;blunt&lt;/em&gt;. While it is true that averaging
 all character embeddings removes the reliance on word structure, it also
@@ -419,7 +419,80 @@ arbitrary, could reflect the structure to some extent. &lt;/center&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;training-on-noisy-texts&quot;&gt;Training on noisy texts&lt;/h3&gt;</content><author><name>Romain Girard</name></author><category term="ICLR 2018" /><category term="Neural Machine Translation" /><category term="Noise" /><category term="NLP" /><category term="ICLR" /><summary type="html"></summary></entry><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
+&lt;h3 id=&quot;training-on-noisy-texts&quot;&gt;Training on noisy texts&lt;/h3&gt;
+
+&lt;p&gt;Another natural idea is to expose the model to noisy texts during training. I am
+not too sure that we can adequately call this &lt;em&gt;black-box adversarial training&lt;/em&gt;
+like the authors did, but the concept remains the same: is the model
+systematically failing to handle a specific type of inputs? Fine, let’s train
+it on some of these specific inputs, and hope that it has the capacity to learn
+a relevant pattern.&lt;/p&gt;
+
+&lt;h4 id=&quot;with-meanchar---personal-doubts&quot;&gt;With meanChar - personal doubts&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-meanchar_noisy_training.png&quot; alt=&quot;meanChar noisy training&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is not very convincing. All in all, training on noise type A seems to
+improve performance when testing on type A noisy texts in French and German, but
+not in Czech. There is no conclusive result in this table. Note that we didn’t
+expect meanChar to deal well with Key and Nat noises anyway.&lt;/p&gt;
+
+&lt;p&gt;There is however something quite troubling with this table. Remember that
+meanChar is supposedly &lt;em&gt;invariant to word structure&lt;/em&gt;, and should therefore
+remain unaffected by Rand noise (scrambling), since the model &lt;em&gt;does not make any
+difference between the original word and the scrambled version&lt;/em&gt;. How comes there
+is such a huge difference in performance between training on Rand+Key and on Key
+alone? What’s more, this difference is not even consistent across languages.
+Rand is affecting the training way too much, which means &lt;strong&gt;one of the following
+is wrong: the implementation, the results (including their expected stability),
+or my understanding of the paper&lt;/strong&gt;. I’d rather it be the latter.&lt;/p&gt;
+
+&lt;h4 id=&quot;with-charcnn---insights-on-the-filters&quot;&gt;With charCNN - insights on the filters&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-charcnn_noisy_training.png&quot; alt=&quot;charCNN noisy training&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;More extensive experiments show that the more complicated charCNN is, generally
+speaking, &lt;strong&gt;robust to the noise types is was exposed to during training, and
+only those&lt;/strong&gt;. Additionally, except when trained on Nat noise alone, all charCNN
+models keep good performance on vanilla test texts. A model trained on all noise
+types mixed is not the best in any specific setting, but is the best on average.&lt;/p&gt;
+
+&lt;p&gt;From these results, the authors draw three major insights:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;When trained on a mix of different noise types, the charCNN is robust to all
+noise types that it has been exposed to. In particular, the model trained on
+Rand+Key+Nat shows good performance in all settings, and gives (according to
+the authors) a reasonable translation of the Cambridge meme:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;centeredquote&quot;&gt;
+According to a study of Cambridge University, it doesn't matter
+which technology in a word is going to get the letters in a word that is the
+only important thing for the first and last letter.
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;When trained on synthetic noise, no charCNN model was able to correctly handle
+natural noise. This is actually a huge problem, since natural noise is what we
+mostly care about, while synthetic noise is what we can easily generate. More
+on that in the next section.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is puzzling that, despite the sensitivity of convolutions to the structure
+of the input, charCNN is able to perform well on scrambled texts when trained
+on the corresponding noise.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let us dwell a bit more on the last point. The authors propose an interesting
+analysis of the convolution filters learned in different settings. They
+investigate, one dimension (out of the 25 of character embeddings) at a time,
+what the variance of the weights of the filters are. Their idea is the
+following: in the scrambled setting, their is no pattern to detect in the
+character ordering; therefore the variance of weights along a given dimension
+of the character embeddings should be low, i.e. those weights should lie close
+to one another.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="ICLR 2018" /><category term="Neural Machine Translation" /><category term="Noise" /><category term="NLP" /><category term="ICLR" /><summary type="html"></summary></entry><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">Adam’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="Adam's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

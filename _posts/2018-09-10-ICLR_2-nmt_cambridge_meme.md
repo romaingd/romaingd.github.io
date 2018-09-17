@@ -297,7 +297,7 @@ However, meanChar is still very sensitive to Nat and Key noise types, that do
 not resemble Rand.
 
 
-#### Personal notes on structure invariant and graph-based representations
+#### Personal notes on structure-invariant and graph-based representations
 
 To me, this model seems particularly *blunt*. While it is true that averaging
 all character embeddings removes the reliance on word structure, it also
@@ -366,3 +366,70 @@ arbitrary, could reflect the structure to some extent. </center>
 
 
 ### Training on noisy texts
+
+Another natural idea is to expose the model to noisy texts during training. I am
+not too sure that we can adequately call this *black-box adversarial training*
+like the authors did, but the concept remains the same: is the model
+systematically failing to handle a specific type of inputs? Fine, let's train
+it on some of these specific inputs, and hope that it has the capacity to learn
+a relevant pattern.
+
+#### With meanChar - personal doubts
+
+![meanChar noisy training]({{site.baseurl}}/assets/img/2018-09-10-meanchar_noisy_training.png){: .center-image}
+
+This is not very convincing. All in all, training on noise type A seems to
+improve performance when testing on type A noisy texts in French and German, but
+not in Czech. There is no conclusive result in this table. Note that we didn't
+expect meanChar to deal well with Key and Nat noises anyway.
+
+There is however something quite troubling with this table. Remember that
+meanChar is supposedly *invariant to word structure*, and should therefore
+remain unaffected by Rand noise (scrambling), since the model *does not make any
+difference between the original word and the scrambled version*. How comes there
+is such a huge difference in performance between training on Rand+Key and on Key
+alone? What's more, this difference is not even consistent across languages.
+Rand is affecting the training way too much, which means **one of the following
+is wrong: the implementation, the results (including their expected stability),
+or my understanding of the paper**. I'd rather it be the latter.
+
+
+#### With charCNN - insights on the filters
+
+![charCNN noisy training]({{site.baseurl}}/assets/img/2018-09-10-charcnn_noisy_training.png){: .center-image}
+
+More extensive experiments show that the more complicated charCNN is, generally
+speaking, **robust to the noise types is was exposed to during training, and
+only those**. Additionally, except when trained on Nat noise alone, all charCNN
+models keep good performance on vanilla test texts. A model trained on all noise
+types mixed is not the best in any specific setting, but is the best on average.
+
+From these results, the authors draw three major insights:
+* When trained on a mix of different noise types, the charCNN is robust to all
+noise types that it has been exposed to. In particular, the model trained on
+Rand+Key+Nat shows good performance in all settings, and gives (according to
+the authors) a reasonable translation of the Cambridge meme:
+
+<div class="centeredquote">
+According to a study of Cambridge University, it doesn't matter
+which technology in a word is going to get the letters in a word that is the
+only important thing for the first and last letter.
+</div>
+
+* When trained on synthetic noise, no charCNN model was able to correctly handle
+natural noise. This is actually a huge problem, since natural noise is what we
+mostly care about, while synthetic noise is what we can easily generate. More
+on that in the next section.
+
+* It is puzzling that, despite the sensitivity of convolutions to the structure
+of the input, charCNN is able to perform well on scrambled texts when trained
+on the corresponding noise.
+
+Let us dwell a bit more on the last point. The authors propose an interesting
+analysis of the convolution filters learned in different settings. They
+investigate, one dimension (out of the 25 of character embeddings) at a time,
+what the variance of the weights of the filters are. Their idea is the
+following: in the scrambled setting, their is no pattern to detect in the
+character ordering; therefore the variance of weights along a given dimension
+of the character embeddings should be low, i.e. those weights should lie close
+to one another. 
