@@ -515,7 +515,12 @@ One could argue that, with a good encoding
 (e.g. simply using the powers of 2, which is basically cheating by pretending
 that a full-dimensional one-hot vector can be reduced to a 1-dimensional scalar
 value), we could always recover the presences; however I cannot think of one
-that would suit the convolutional structure of the next layer.</p>
+that would suit the convolutional structure of the next layer. To be fair, the
+authors themselves conceded, in a response to a reviewer, that “meanChar may
+not be the ideal architecture for capturing noise, but it’s a simple,
+structure-invariant representation that works reasonably well. We have tried
+several other architectures, including a self-attention mechanism, but haven’t
+been able to improve beyond it.”</p>
 
 <p>Have a look at Figures 2 and 3 below, depicting the charCNN vs. meanChar
 word representations. I am pretty sure

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-18T15:17:29+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-18T21:04:38+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -370,7 +370,12 @@ One could argue that, with a good encoding
 (e.g. simply using the powers of 2, which is basically cheating by pretending
 that a full-dimensional one-hot vector can be reduced to a 1-dimensional scalar
 value), we could always recover the presences; however I cannot think of one
-that would suit the convolutional structure of the next layer.&lt;/p&gt;
+that would suit the convolutional structure of the next layer. To be fair, the
+authors themselves conceded, in a response to a reviewer, that “meanChar may
+not be the ideal architecture for capturing noise, but it’s a simple,
+structure-invariant representation that works reasonably well. We have tried
+several other architectures, including a self-attention mechanism, but haven’t
+been able to improve beyond it.”&lt;/p&gt;
 
 &lt;p&gt;Have a look at Figures 2 and 3 below, depicting the charCNN vs. meanChar
 word representations. I am pretty sure
