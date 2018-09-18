@@ -162,7 +162,7 @@ As illustrated in the last row of the table, even with these modifications the
 final score is not ideal, since a perfectly natural candidate translation gets
 a low score. It is, however, still much better than precision in a wide range
 of situations. In the end, the BLEU score takes the following form
-for our example sentences:
+(the higher the better) for our example sentences:
 
 $$
   \textrm{BLEU}(c, r) =
@@ -439,7 +439,73 @@ to one another.
 To test their hypothesis, the authors take, for each filter (out of 1000) and
 each embedding dimension (out of 25), the variance of the weights across the
 filter width (6 characters). Intuitively, we expect this variance to be small
-when the filter is close to being uniform, that is, the filter is actually
+when the filter is close to being uniform, that is, when the filter is actually
 performing an average of the embeddings over this specific dimension.
 They then average these variances across the
 filters, yielding 25 average variances, which are plotted above.
+
+These results tend to support the hypothesis, although I disagree with the
+authors' assertion that "low average variance means that different filters tend
+to learn similar behavior, while high average variance means that they learn
+different patterns". From my understanding, high average variance means that
+many filters tend to learn a non-uniform pattern, yielding many high individual
+variances, and a high average. For example, if all filters learned were
+$[1,2,3,4,5,6]$, the average variance would be equal to the individual variance
+of $2.9$, which is quite high; nonetheless, all filters learn the same exact
+pattern. I would also like to note that small variance does not always mean
+uniform behavior, and that variances can not be so easily compared. For example,
+if all filters learned were $[0.1,0.2,0.3,0.4,0.5,0.6]$, the variance would be
+$0.029$, which is much lower than the previous one; yet it is not obvious that
+the filters learned correspond to a more uniform pattern than the previous case.
+I doubt however that there is such a scale difference in the actual models
+trained, so I would buy the authors' interpretation:
+
+> [...] with random scrambling there are no patterns to detect in the data, so
+filters resort to close to uniform weights. [... Moreover], in the Rand model,
+the variance of variances [size of the box] is close to zero, indicating that in
+all character embedding dimensions the learned weights are of small variance;
+[...] the model learned to reproduce a representation similar to the meanChar
+model.
+
+
+
+<br><br>
+
+
+
+## In the end, a call for better noise
+
+Let's recap. In the major field of Neural Machine Translation, state-of-the-art
+models fail to correctly handle even a small amount of noise. This holds true
+for a variety of noise types, including altering the order of letters in a word,
+key swapping based on keyboard proximity, and natural noise. While scrambling
+noise can be correctly handled by structure invariant word representation, such
+as an average of character embeddings (see the meanChar model), it remains
+challenging to develop models that are robust to key swapping and natural noise.
+Training the model on noisy texts yields an increased robustness to the noise
+types that the model has been exposed to, but decreases general performance,
+calling for better representations, architectures and understanding of the
+effect of noise, in order to develop satisfyingly robust models, that could
+approach human insensitivity to noise in natural language processing.
+
+One point in particular stands out of the paper: natural noise can not be
+handled by training on synthetic noise. Moreover, it appears that the former
+qualitatively differs from the latter, being mostly composed of phonological
+mistakes, character omissions, and incorrect conjugations of verbs. This is a
+major issue, since natural noise is what we ultimately (in most cases) care
+about, and synthetic noise is what we are able to easily generate (hence to
+gather data on). The lack of mechanisms to generate realistic natural human
+errors in an automatic way remains a huge issue. All in all:
+
+> We believe that more work is necessary in order to immune NMT models against
+natural noise. As corpora with natural noise are limited, another approach to
+future work is to design better NMT architectures that would be robust to noise
+without seeing it in the training data.
+
+I personally trust that we will eventually find a good NMT model
+paradigm that will enable correct translation of both scrambling noise, through
+structure invariant (or less sensitive) word representation, and key swapping,
+by integrating a confusion matrix (built from the keyboard) to the character
+embeddings. However, I think it is still a long way until we find architectures
+that can handle natural noise without being previously trained on it, so I would
+vote for algorithms to generate more realistic synthetic noise.
