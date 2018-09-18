@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-17T20:26:02+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-18T10:33:56+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -356,7 +356,7 @@ not resemble Rand.&lt;/p&gt;
 
 &lt;h4 id=&quot;personal-notes-on-structure-invariant-and-graph-based-representations&quot;&gt;Personal notes on structure-invariant and graph-based representations&lt;/h4&gt;
 
-&lt;p&gt;To me, this model seems particularly &lt;em&gt;blunt&lt;/em&gt;. While it is true that averaging
+&lt;p&gt;To me, this model seems somewhat coarse. While it is true that averaging
 all character embeddings removes the reliance on word structure, it also
 discards a huge part of the information brought by individual character. Unless
 you are using an embedding dimension that is of the order of the size of your
@@ -387,7 +387,7 @@ all nodes together by undirected edges.&lt;/p&gt;
 &lt;p&gt;This could even
 be adapted to retain &lt;em&gt;some weak&lt;/em&gt; information about the structure by &lt;strong&gt;weighting
 edges&lt;/strong&gt; using the original order (the closer two characters in the original
-word, the higher the weight; see Figure 5). These weights will typically play
+word, the higher the weight; see Figure 5). These weights would for example play
 a role in interaction with regularization, for example $L_2$-regularization on
 the coefficients of the convolutional filters (for very low weights, it will
 be too expensive to take those into account unless there is a very good reason).
@@ -492,7 +492,17 @@ what the variance of the weights of the filters are. Their idea is the
 following: in the scrambled setting, their is no pattern to detect in the
 character ordering; therefore the variance of weights along a given dimension
 of the character embeddings should be low, i.e. those weights should lie close
-to one another.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="ICLR 2018" /><category term="Neural Machine Translation" /><category term="Noise" /><category term="NLP" /><category term="ICLR" /><summary type="html"></summary></entry><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
+to one another.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-weight_variances.png&quot; alt=&quot;Weight variances&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To test their hypothesis, the authors take, for each filter (out of 1000) and
+each embedding dimension (out of 25), the variance of the weights across the
+filter width (6 characters). Intuitively, we expect this variance to be small
+when the filter is close to being uniform, that is, the filter is actually
+performing an average of the embeddings over this specific dimension.
+They then average these variances across the
+filters, yielding 25 average variances, which are plotted above.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="ICLR 2018" /><category term="Neural Machine Translation" /><category term="Noise" /><category term="NLP" /><category term="ICLR" /><summary type="html"></summary></entry><entry><title type="html">The Gini coefficient is not the best inequality metric</title><link href="http://localhost:4000/gini-coefficient/" rel="alternate" type="text/html" title="The Gini coefficient is not the best inequality metric" /><published>2018-08-21T00:00:00+02:00</published><updated>2018-08-21T00:00:00+02:00</updated><id>http://localhost:4000/gini-coefficient</id><content type="html" xml:base="http://localhost:4000/gini-coefficient/">&lt;p&gt;Or is it?&lt;/p&gt;
 
 &lt;p&gt;I’d like this thing not to be included&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="Miscellaneous" /><category term="Econometrics" /><category term="Inequality" /><category term="Atkinson" /><summary type="html">Or is it?</summary></entry><entry><title type="html">Adam’s convergence proof is flawed</title><link href="http://localhost:4000/ICLR/" rel="alternate" type="text/html" title="Adam's convergence proof is flawed" /><published>2018-08-19T01:00:00+02:00</published><updated>2018-08-19T01:00:00+02:00</updated><id>http://localhost:4000/ICLR</id><content type="html" xml:base="http://localhost:4000/ICLR/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

@@ -299,7 +299,7 @@ not resemble Rand.
 
 #### Personal notes on structure-invariant and graph-based representations
 
-To me, this model seems particularly *blunt*. While it is true that averaging
+To me, this model seems somewhat coarse. While it is true that averaging
 all character embeddings removes the reliance on word structure, it also
 discards a huge part of the information brought by individual character. Unless
 you are using an embedding dimension that is of the order of the size of your
@@ -330,7 +330,7 @@ all nodes together by undirected edges.
 This could even
 be adapted to retain *some weak* information about the structure by **weighting
 edges** using the original order (the closer two characters in the original
-word, the higher the weight; see Figure 5). These weights will typically play
+word, the higher the weight; see Figure 5). These weights would for example play
 a role in interaction with regularization, for example $L_2$-regularization on
 the coefficients of the convolutional filters (for very low weights, it will
 be too expensive to take those into account unless there is a very good reason).
@@ -432,4 +432,14 @@ what the variance of the weights of the filters are. Their idea is the
 following: in the scrambled setting, their is no pattern to detect in the
 character ordering; therefore the variance of weights along a given dimension
 of the character embeddings should be low, i.e. those weights should lie close
-to one another. 
+to one another.
+
+![Weight variances]({{site.baseurl}}/assets/img/2018-09-10-weight_variances.png){: .center-image}
+
+To test their hypothesis, the authors take, for each filter (out of 1000) and
+each embedding dimension (out of 25), the variance of the weights across the
+filter width (6 characters). Intuitively, we expect this variance to be small
+when the filter is close to being uniform, that is, the filter is actually
+performing an average of the embeddings over this specific dimension.
+They then average these variances across the
+filters, yielding 25 average variances, which are plotted above.
