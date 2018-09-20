@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-18T21:04:38+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-20T17:38:46+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -6,7 +6,7 @@
 &lt;h4 id=&quot;iclr-2018---2nd-article&quot;&gt;ICLR 2018 - 2nd article&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;In this series, we explore the 2018 edition of the International Conference
-on Learning Representations. Each oral paper is analyzed and
+on Learning Representations. Oral papers are analyzed and
 commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This article is based on the paper&lt;/em&gt;
@@ -582,7 +582,7 @@ vote for algorithms to generate more realistic synthetic noise.&lt;/p&gt;</conte
 &lt;h4 id=&quot;iclr-2018---1st-article&quot;&gt;ICLR 2018 - 1st article&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;In this series, we explore the 2018 edition of the International Conference
-on Learning Representations. Each oral paper is analyzed and
+on Learning Representations. Oral papers are analyzed and
 commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This article is based on the paper&lt;/em&gt;
