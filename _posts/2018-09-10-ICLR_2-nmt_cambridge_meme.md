@@ -4,8 +4,7 @@ title: Neural Machine Translation of the Cambridge meme
 date: 2018-09-10 00:00:00 +0100
 description: >
   State-of-the-art NMT systems can't cope with even moderate amounts of noise.
-  It is time to call for more robust NMT training, and more realistic noise
-  synthesis.
+  It is time to call for more robust models, and more realistic noise synthesis.
   <br>
   ("Synthetic and natural noise both break Neural Machine Translation", Belinkov et al., 2018).
 img: 2018-09-10-ICLR_2-nmt_cambridge_meme-thumbnail.png
