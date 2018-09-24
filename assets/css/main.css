@@ -1396,10 +1396,11 @@ a.newer-posts:hover {
 
 .post-content .post-tag {
   text-align: right;
+  /* white-space: pre; */
 }
 
 .post-content .post-tag a {
-  display: inline;
+  display: inline;    /* Change this to inline-block for better wrapping */
   text-decoration: none;
   font-size: 10px;
   padding: 5px 10px;
@@ -1416,12 +1417,15 @@ a.newer-posts:hover {
 .tags {
   margin: 0;
   padding: 10px;
+  /* white-space: pre; */
+  /* border: 1px solid #263959; */
 }
 
 .tags li {
   display: inline-block;
   margin: 5px;
   list-style: none;
+  /* white-space: nowrap; */
 }
 
 .tags li a {
