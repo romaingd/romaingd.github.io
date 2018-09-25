@@ -1521,6 +1521,7 @@ a.newer-posts:hover {
 .page-cover-image {
   position: relative;
   display: block;
+  padding-top: 70px;
   /* padding: 0; */
   /* margin: auto auto auto auto; */
   margin-left: auto;
