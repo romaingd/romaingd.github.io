@@ -85,9 +85,9 @@ hr {
 hr.small {
   max-width: 100px;
   margin: 15px auto;
-  /* border-width: 4px;
-  border-color: inherit;
-  border-radius: 3px; */
+  border-width: 2px;
+  border-color: #e0dfdc;
+  border-radius: 0px;
 }
 
 /**
@@ -1276,7 +1276,9 @@ a.newer-posts:hover {
 .intro-header .page-heading h1 {
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   font-size: 92px;
-  padding: 80px 50px;
+  /* padding: 80px 50px; */
+  padding-top: 50px;
+  margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
@@ -1386,6 +1388,8 @@ a.newer-posts:hover {
   position: relative;
 }
 .intro-header .page-heading {
+  color: #e0dfdc;
+  background-color: #333;
   text-align: center;
   /* background-color: #770000; */
   padding-bottom: 20px;
@@ -1403,12 +1407,42 @@ a.newer-posts:hover {
 } */
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
-  font-size: 27px;
+  font-size: 21px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
   font-weight: 300;
-  margin: 25px 0 0;
+  margin: 25px 0 40px 0;
+  font-family: "Avant Garde", Avantgarde , "Century Gothic", CenturyGothic;
+  /* font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif; */
+  /* font-size: 92px; */
+  /* padding: 80px 50px; */
+  /* padding-top: 50px; */
+  /* margin-bottom: 25px; */
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .02em;
+  text-shadow:
+    0 -1px 0 #fff,
+    /* 0 1px 0 #2e2e2e,
+    0 2px 0 #2c2c2c,
+    0 3px 0 #2a2a2a,
+    0 4px 0 #282828,
+    0 5px 0 #262626,
+    0 6px 0 #242424,
+    0 7px 0 #222, */
+    /* 0 8px 0 #202020,
+    0 9px 0 #1e1e1e,
+    0 10px 0 #1c1c1c,
+    0 11px 0 #1a1a1a,
+    0 12px 0 #181818,
+    0 13px 0 #161616,
+    0 14px 0 #141414,
+    0 15px 0 #121212, */
+    0 22px 30px rgba(0, 0, 0, 0.9);
 }
 .intro-header .post-heading .post-subheading {
   margin-bottom: 20px;
