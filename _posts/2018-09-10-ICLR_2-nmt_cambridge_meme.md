@@ -8,7 +8,7 @@ description: >
   <br>
   ("Synthetic and natural noise both break Neural Machine Translation", Belinkov et al., 2018).
 img: 2018-09-10-ICLR_2-nmt_cambridge_meme-thumbnail.png
-fig-caption: Google Translate example
+<!-- fig-caption: Google Translate example -->
 tags: [ICLR 2018, Neural Machine Translation, Noise, NLP, ICLR]
 ---
 

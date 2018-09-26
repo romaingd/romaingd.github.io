@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Multi-Scale DenseNet
-date: 2018-09-10 00:00:00 +0100
+title: Multi-Scale DenseNet, a resource-aware CNN
+date: 2018-09-24 00:00:00 +0100
 description: >
-  Real-world applications require models to adapt to small or varying
+  Real-world applications require models to adapt to limited
   computational budgets. MSDNets enable feature re-use and early classification
   to preserve accuracy with low resources.
   <br>
   ("Multi-Scale Dense Networks for resource efficient image classification", Huang et al., 2018).
 img: 2018-09-24-thumbnail.png
-fig-caption: Google Translate example
+<!-- fig-caption: MSDNet architecture -->
 tags: [ICLR 2018, Resource efficiency, CNN, Network architecture, ICLR]
 ---
 
@@ -20,15 +20,16 @@ tags: [ICLR 2018, Resource efficiency, CNN, Network architecture, ICLR]
 
 
 
-#### ICLR 2018 - 2nd article
+#### ICLR 2018 - 3rd article
 
 *In this series, we explore the 2018 edition of the International Conference
 on Learning Representations. Oral papers are analyzed and
 commented in an accessible way.*
 
 *This article is based on the paper*
-[Synthetic and natural noise both break Neural Machine Translation](https://openreview.net/pdf?id=BJ8vJebC-)
-*by Yonatan Belinkov and Yonatan Bisk.*
+[Multi-Scale Dense Networks for resource efficient image classification](https://openreview.net/pdf?id=Hk2aImxAb)
+*by Gao Huang, Danlu Chen, Tianhong Li, Felix Wu, Laurens van der Maaten and
+Kilian Weinberger.*
 
 
 

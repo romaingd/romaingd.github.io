@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-25T23:37:32+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
-</subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-26T11:19:10+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+</subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet, a resource-aware CNN</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet, a resource-aware CNN" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h4 id=&quot;iclr-2018---2nd-article&quot;&gt;ICLR 2018 - 2nd article&lt;/h4&gt;
+&lt;h4 id=&quot;iclr-2018---3rd-article&quot;&gt;ICLR 2018 - 3rd article&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;In this series, we explore the 2018 edition of the International Conference
 on Learning Representations. Oral papers are analyzed and
 commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This article is based on the paper&lt;/em&gt;
-&lt;a href=&quot;https://openreview.net/pdf?id=BJ8vJebC-&quot;&gt;Synthetic and natural noise both break Neural Machine Translation&lt;/a&gt;
-&lt;em&gt;by Yonatan Belinkov and Yonatan Bisk.&lt;/em&gt;&lt;/p&gt;
+&lt;a href=&quot;https://openreview.net/pdf?id=Hk2aImxAb&quot;&gt;Multi-Scale Dense Networks for resource efficient image classification&lt;/a&gt;
+&lt;em&gt;by Gao Huang, Danlu Chen, Tianhong Li, Felix Wu, Laurens van der Maaten and
+Kilian Weinberger.&lt;/em&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
