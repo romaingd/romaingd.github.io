@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-26T11:19:10+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-27T17:21:46+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet, a resource-aware CNN</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet, a resource-aware CNN" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -15,6 +15,34 @@ commented in an accessible way.&lt;/em&gt;&lt;/p&gt;
 Kilian Weinberger.&lt;/em&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Have a look at the two pictures below. It probably took you an unnoticeable amount of time to recognize a horse on the left, and a very noticeable amount of time (say one second) to recognize a horse on the right. Naturally, we would expect models to face similar difficulties in classification of those images. Intuitively, it feels like a simple CNN with a couple layers (e.g. AlexNet) would be more than enough to classify the first picture, while the last one shall require a much more complex model for correct classification, being in the &lt;em&gt;tail&lt;/em&gt; of the “horse images” distribution (hence requiring a more precise approximation of this distribution by a neural network).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-24-horses.png&quot; alt=&quot;Two horses&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the same model to classify both pictures generally means that you have to choose &lt;strong&gt;beforehand, and once and for all&lt;/strong&gt; (when you implement the model), between low resource consumption and high accuracy. In other words:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Computationally intensive models are needed to classify such tail examples correctly, but are wasteful when applied to canonical images such as the left one.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now, generally speaking, we computer users don’t care, or at least this is not a question that we are used to ask. In the rare situations where we actually care about resource consumption (most of all about speed), we just define a lower bound for the inference speed, pick the best performing model that satisfies this constraint, and that’s basically it.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-tasks&quot;&gt;The tasks&lt;/h2&gt;
+
+&lt;h2 id=&quot;problems&quot;&gt;Problems&lt;/h2&gt;
+
+&lt;h3 id=&quot;early-classifiers-vs-dense-connections&quot;&gt;Early classifiers vs. dense connections&lt;/h3&gt;
+
+&lt;h3 id=&quot;coarse-features-vs-multiple-scales&quot;&gt;Coarse features vs. multiple scales&lt;/h3&gt;
+
+&lt;h2 id=&quot;the-architecture&quot;&gt;The architecture&lt;/h2&gt;
+
+&lt;h2 id=&quot;a-glance-at-the-results&quot;&gt;A glance at the results&lt;/h2&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

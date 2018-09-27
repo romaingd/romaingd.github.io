@@ -39,6 +39,37 @@ Kilian Weinberger.*
 <br>
 
 
+## Introduction
+
+Have a look at the two pictures below. It probably took you an unnoticeable amount of time to recognize a horse on the left, and a very noticeable amount of time (say one second) to recognize a horse on the right. Naturally, we would expect models to face similar difficulties in classification of those images. Intuitively, it feels like a simple CNN with a couple layers (e.g. AlexNet) would be more than enough to classify the first picture, while the last one shall require a much more complex model for correct classification, being in the *tail* of the "horse images" distribution (hence requiring a more precise approximation of this distribution by a neural network).
+
+![Two horses]({{site.baseurl}}/assets/img/2018-09-24-horses.png){: .center-image}
+
+Using the same model to classify both pictures generally means that you have to choose **beforehand, and once and for all** (when you implement the model), between low resource consumption and high accuracy. In other words:
+
+> Computationally intensive models are needed to classify such tail examples correctly, but are wasteful when applied to canonical images such as the left one.
+
+Now, generally speaking, we computer users don't care, or at least this is not a question that we are used to ask. In the rare situations where we actually care about resource consumption (most of all about speed), we just define a lower bound for the inference speed, pick the best performing model that satisfies this constraint, and that's basically it.
+
+
+## The tasks
+
+## Problems
+
+### Early classifiers vs. dense connections
+
+### Coarse features vs. multiple scales
+
+## The architecture
+
+## A glance at the results
+
+
+
+
+<br>
+
+
 If you are reading these lines, there is a good chance that you have been
 wandering the Internet for quite some time now. This means that there is also
 a good chance that you've stumbled upon the *Cambridge research* meme:
