@@ -49,10 +49,51 @@ Using the same model to classify both pictures generally means that you have to 
 
 > Computationally intensive models are needed to classify such tail examples correctly, but are wasteful when applied to canonical images such as the left one.
 
-Now, generally speaking, we computer users don't care, or at least this is not a question that we are used to ask. In the rare situations where we actually care about resource consumption (most of all about speed), we just define a lower bound for the inference speed, pick the best performing model that satisfies this constraint, and that's basically it.
+Now, generally speaking, we computer users don't care, or at least this is not a question that we are used to ask. In the rare situations where we actually care about resource consumption (most of all about speed), we just define a minimum acceptable inference speed, pick the best performing model that satisfies this constraint, and that's basically it. However, **we phone users and (future) Internet of Things users are very much likely to [care](https://www.iotforall.com/computer-vision-iot/)**. From photo deblurring to real-time action recognition, computer vision *will* become ubiquitous in everyday devices, that run on much lower resources than modern computers. Moreover, lower computational cost means **lower time energy consumption**, which is highly desirable for **ecological** (and economical) reasons.
+
+All in all, it feels frustrating not to recognize a horse on the right, so we use the winner of ImageNet 2017 (an ensemble of [Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507)); but it is ridiculous to waste [440 MB of parameters and 21 GFLOPs](https://github.com/albanie/convnet-burden) on recognizing a horse on the right while we probably only need 50 times less resources to do it (as a reference, Apple's iPhone 4 had a processor power of about 3 GFLOP/s, so it would actually take 7 seconds at 100% CPU to process each image). We feel torn between both issues, and nobody likes feeling [torn](https://music.youtube.com/watch?v=rIGAt5yvfmw&list=RDAMVMrIGAt5yvfmw).
+
+> This begs the question: **why do we choose between either wasting computational resources by applying an unnecessarily computationally expensive model to easy images, or making mistakes by using an efficient model that fails to recognize difficult images?** Ideally, our systems should automatically use small networks when test images are easy or computational resources limited, and use big networks when test images are hard or computation is abundant.
+
+This is why the authors propose the Multi-Scale Dense Network model (architecture below), which we will explore, that enables adaptive resource allocation for image classification thanks to the introduction of early classifiers in a feed-forward CNN structure. This way, easy images can be instantly classified, and harder ones can use more computational resources. Let's see how this works on real-world tasks.
+
+![MSDNet architecture]({{site.baseurl}}/assets/img/2018-09-24-MSDNet_architecture.png){: .center-image}
+
+*<center> The Multi-Scale Dense Network (MSDNet) architecture </center>*
 
 
-## The tasks
+<br><br>
+
+
+## Real-word tasks - classification on a (tight) budget
+
+Let's first define the situations where a resource-aware model is likely to be more useful than an off-the-shelf CNN. This will help us understand where and when exactly the new architecture helps. Computationally constrained tasks are numerous and diverse, and we will only focus on two major problems: anytime prediction, and budgeted batch classification.
+
+<br>
+
+### Anytime prediction
+
+In **anytime prediction**, the model can be forced to output a prediction, at any given point, possibly before the full computation is complete. Good performance levels are typically achieved by models that are able to give crude estimates very quickly, and refine them with time until the full model is run. For example, imagine an autonomous car equipped with a network to detect and handle obstacles on the road. You want your car to *instantly* detect and react to a pedestrian suddenly appearing in front of the car; there is no time to decide the precise distance at which it appears, whether it is an adult or a child, and at which speed it is going towards you. On the other hand, for distant and long-term obstacles, determining the precise distance between you and them enables better planning, smooth trajectories, better fuel management, etc.
+
+In a formal way, we assume that test samples $x$ and budgets $B$ are drawn from a joint distribution $P(x, B)$. The model outputs a prediction $f(x)$ within the computational budget $B$, and incurs a loss $L(f(x), B)$. The goal in anytime prediction is to find a model that minimizes the expected loss of individual prediction within (hard) budget constraint:
+
+$$
+  \min_f \ \mathbb{E}_{P(x, B)} [L(f(x)), B]
+$$
+
+Another example of anytime prediction is real-time video classification. You are filming a scene, and you want your phone to identify the various elements present in the video while filming. It is not unreasonable to ask for a refresh rate of 10 Hz, which means a prediction every 0.1 s, *whatever the computational budget available on your phone at that time*.
+
+<br>
+
+### Budgeted batch classification
+
+In **budgeted batch classification**, the model is granted a finite known computational budget to classify a set of examples, and can spend it freely across examples. Good performance levels are typically achieved by models that are able to quickly classify easy examples (left horse), in order to save some additional computation for harder examples (right horse). For example, imagine that you want to show your best friend all the pictures on your phone where both of you are present. Some pictures will be easily classified (you both clearly face the camera, no other people present), some will be much harder (you are in a crowd, disguised, wearing make-up or making funny faces). You don't care much about that, and you only want your phone to give you a decent search result in less than 5 seconds.
+
+Formally, we consider a set of examples $\mathcal{D}_ {test} = \\{ x_1, ..., x_M \\}$ and a computational budget $B$ that is known in advance. The model spends $B$ as it pleases across examples, outputs a set of predictions $f(\mathcal{D}_ {test})$ and incurs loss $L(f(\mathcal{D}_{test}), B)$. The goal in budgeted batch classification is to find a model that minimizes the expected loss of batch prediction within (soft) budget constraint:
+
+$$
+  \min_f \ \mathbb{E}_{P(x)} [L(f(\mathcal{D}_{test})), B]
+$$
 
 ## Problems
 

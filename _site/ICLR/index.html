@@ -280,7 +280,7 @@ the current gradient to perform the update, with a step size
 $\text{  }\psi_t(g_1, ..., g_t) = {\text{diag}(\dfrac{1}{t} \sum_{i=1}^t g_i^2)}$</center>
     <p>With the same step size $\alpha_t = \alpha/\sqrt{t}$, this yields an adaptive
 and much more reasonable learning rate of $\alpha/\sqrt{\sum_i g_{ij}}$ for
-a the $j$-th weight. When the gradients ${g_{ij}}$ are sparse, i.e.
+a the $j$-th weight. When the gradients $\{g_{ij}\}$ are sparse, i.e.
 the $j$-th weight is not frequently updated, this <strong>considerably speeds up
 convergence</strong> (updates are still rare, but much bigger than with SGD).<br /><br /></p>
   </li>
