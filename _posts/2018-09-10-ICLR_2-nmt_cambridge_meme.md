@@ -6,7 +6,9 @@ description: >
   State-of-the-art NMT systems can't cope with even moderate amounts of noise.
   It is time to call for more robust models, and more realistic noise synthesis.
   <br>
-  ("Synthetic and natural noise both break Neural Machine Translation", Belinkov et al., 2018).
+paper-title: Synthetic and natural noise both break Neural Machine Translation
+paper-author: Belinkov et al.
+paper-date: 2018
 img: 2018-09-10-ICLR_2-nmt_cambridge_meme-thumbnail.png
 <!-- fig-caption: Google Translate example -->
 tags: [ICLR 2018, Neural Machine Translation, Noise, NLP, ICLR]

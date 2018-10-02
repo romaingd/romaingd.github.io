@@ -14,6 +14,10 @@ include-header: True
   <div class="post-content">
     <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
     <p>{{ post.description }}</p>
+    {% if post.paper-title %}
+      <p style="margin-bottom:0em"><span class="post-paper"><b><i>{{ post.paper-title }}</b></i>,  {{ post.paper-author}}, {{ post.paper-date}}</span></p>
+    {% endif %}
+    <br>
     <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
     <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
     <span class="post-tag" style="float: right">
