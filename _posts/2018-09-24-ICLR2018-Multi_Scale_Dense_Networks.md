@@ -6,8 +6,9 @@ description: >
   Real-world applications require models to adapt to limited
   computational budgets. MSDNets enable feature re-use and early classification
   to preserve accuracy with low resources.
-  <br>
-  ("Multi-Scale Dense Networks for resource efficient image classification", Huang et al., 2018).
+paper-title: Multi-Scale Dense Networks for resource efficient image classification
+paper-author: Huang et al.
+paper-date: 2018
 img: 2018-09-24-thumbnail.png
 <!-- fig-caption: MSDNet architecture -->
 tags: [ICLR 2018, Resource efficiency, CNN, Network architecture, ICLR]
