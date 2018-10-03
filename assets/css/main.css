@@ -1836,4 +1836,10 @@ a.newer-posts:hover {
   .post .post-content .post-title a {
     font-size: 21px;
   }
+  .intro-header .page-heading h1 {
+    font-size: 35px;
+  }
+  .intro-header .page-heading .page-subheading {
+    font-size: 17px;
+  }
 }
