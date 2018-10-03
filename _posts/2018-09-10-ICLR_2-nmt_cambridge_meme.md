@@ -3,7 +3,7 @@ layout: post
 title: Neural Machine Translation of the Cambridge meme
 date: 2018-09-10 00:00:00 +0100
 description: >
-  State-of-the-art NMT systems can't cope with even moderate amounts of noise.
+  State-of-the-art NMT systems can't cope with even moderate amounts of noise, especially human mistakes.
   It is time to call for more robust models, and more realistic noise synthesis.
   <br>
 paper-title: Synthetic and natural noise both break Neural Machine Translation
