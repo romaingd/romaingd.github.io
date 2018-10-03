@@ -1735,6 +1735,9 @@ a.newer-posts:hover {
   .post .post-content .post-title a {
     font-size: 21px;
   }
+  .intro-header .page-heading h1 {
+    font-size: 65px;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -1796,6 +1799,13 @@ a.newer-posts:hover {
   }
   .contact-title, .copyright {
     display: none;
+  }
+  .intro-header {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .intro-header .page-heading h1 {
+    font-size: 50px;
   }
 }
 
