@@ -840,6 +840,26 @@ blockquote {
   color: #222;
 }
 
+.inpost-figure-caption {
+  display: block;
+  font-weight: 500;
+  margin: auto;
+  width: 60%;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 140%;
+}
+
+.inpost-figure-caption-centered {
+  display: block;
+  font-weight: 500;
+  margin: auto;
+  width: 60%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 140%;
+}
+
 pre {
   padding: 1rem 2rem;
   overflow: auto;
@@ -1506,6 +1526,7 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
   padding: 20px;
+  text-align: justify;
 }
 
 .header-page {

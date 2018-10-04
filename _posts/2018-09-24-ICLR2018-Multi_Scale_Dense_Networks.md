@@ -60,7 +60,7 @@ This is why the authors propose the Multi-Scale Dense Network model (architectur
 
 ![MSDNet architecture]({{site.baseurl}}/assets/img/2018-09-24-MSDNet_architecture.png){: .center-image}
 
-*<center> The Multi-Scale Dense Network (MSDNet) architecture </center>*
+<div class="inpost-figure-caption-centered">The Multi-Scale Dense Network (MSDNet) architecture</div>
 
 
 <br><br>
@@ -96,7 +96,19 @@ $$
   \min_f \ \mathbb{E}_{P(x)} [L(f(\mathcal{D}_{test})), B]
 $$
 
-## Problems
+
+<br><br>
+
+
+## The problems with early classification
+
+Let us think it through. The simplest, most natural answer to both these issues is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In *anytime prediction*, you simply output the prediction of the last network evaluated; in *batch budgeted classification*, you stop the evaluation once a classification with sufficient confidence level is reached. This is illustrated in the next figure:
+
+![Model sequence]({{site.baseurl}}/assets/img/2018-09-24-model_sequence.png){: .center-image}
+
+
+<span class="inpost-figure-caption"> A "sequence of models" solution, featuring AlexNet (A), GoogLeNet (G) and ResNet (R). Green $\gamma$ blocks denote selection policies. The input is first evaluated by AlexNet, and the selection policy determines whether evaluation by more complex models is needed. ([Source](https://arxiv.org/pdf/1702.07811.pdf)) </span>
+
 
 ### Early classifiers vs. dense connections
 
