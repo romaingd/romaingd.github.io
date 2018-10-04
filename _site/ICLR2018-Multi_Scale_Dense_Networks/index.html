@@ -223,13 +223,33 @@ Kilian Weinberger.</em></p>
 
 <h2 id="the-problems-with-early-classification">The problems with early classification</h2>
 
-<p>Let us think it through. The simplest, most natural answer to both these issues is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In <em>anytime prediction</em>, you simply output the prediction of the last network evaluated; in <em>batch budgeted classification</em>, you stop the evaluation once a classification with sufficient confidence level is reached. This is illustrated in the next figure:</p>
+<p>Let us think it through. The simplest, most natural answer to address both these situations is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In <em>anytime prediction</em>, you simply output the prediction of the last network evaluated; in <em>batch budgeted classification</em>, you stop the evaluation once a classification with sufficient confidence level is reached. This is illustrated in the next figure:</p>
 
 <p><img src="/assets/img/2018-09-24-model_sequence.png" alt="Model sequence" class="center-image" /></p>
 
 <p><span class="inpost-figure-caption"> A “sequence of models” solution, featuring AlexNet (A), GoogLeNet (G) and ResNet (R). Green $\gamma$ blocks denote selection policies. The input is first evaluated by AlexNet, and the selection policy determines whether evaluation by more complex models is needed. (<a href="https://arxiv.org/pdf/1702.07811.pdf">Source</a>) </span></p>
 
+<p>The problem with this approach is that, when the first network isn’t confident enough, we switch to the second network without re-using any feature previously computed: for complex examples, we completely <strong>waste</strong> the computational budget spent on the first networks. This is quite unsatisfying, and far from optimal.</p>
+
+<p>That’s when we think of the opposite solution: instead of building multiple networks with one classifier each, not sharing any feature, we could build one network as a cascade of multiple (early) classifiers along the depth, re-using previous features to build the more advanced predictions. This would look like the next figure:</p>
+
+<p><img src="/assets/img/2018-09-24-classifiers_cascade.png" alt="Cascade" class="center-image" /></p>
+
+<p><span class="inpost-figure-caption">A simple “cascade of classifiers” solution on a standard CNN architecture. Early classification of easy examples yields substantial savings in computational budget, that can be spend on the hard examples. (<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Ouyang_Chained_Cascade_Network_ICCV_2017_paper.pdf">Source</a>) </span></p>
+
+<p>Although this model doesn’t waste any feature, it leads to poor performance, for two distinct reasons:</p>
+<ul>
+  <li><strong>Early classifiers interfere with later classifiers</strong> - early classifiers tend to optimize the early features for the short-term, conflicting with the better performance achieved by long-term, late classifiers.</li>
+  <li><strong>Early classifiers lack coarse-level, global features</strong> - only fine-scale, local features are available at early stages.</li>
+</ul>
+
+<p>These two issues will drive the design of MSDNet through the inclusion of two specific components, that each address one issue.</p>
+
+<p><br /></p>
+
 <h3 id="early-classifiers-vs-dense-connections">Early classifiers vs. dense connections</h3>
+
+<p><br /></p>
 
 <h3 id="coarse-features-vs-multiple-scales">Coarse features vs. multiple scales</h3>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-04T11:46:08+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-04T15:52:27+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet, a resource-aware CNN</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet, a resource-aware CNN" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -76,13 +76,33 @@ Kilian Weinberger.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-problems-with-early-classification&quot;&gt;The problems with early classification&lt;/h2&gt;
 
-&lt;p&gt;Let us think it through. The simplest, most natural answer to both these issues is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In &lt;em&gt;anytime prediction&lt;/em&gt;, you simply output the prediction of the last network evaluated; in &lt;em&gt;batch budgeted classification&lt;/em&gt;, you stop the evaluation once a classification with sufficient confidence level is reached. This is illustrated in the next figure:&lt;/p&gt;
+&lt;p&gt;Let us think it through. The simplest, most natural answer to address both these situations is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In &lt;em&gt;anytime prediction&lt;/em&gt;, you simply output the prediction of the last network evaluated; in &lt;em&gt;batch budgeted classification&lt;/em&gt;, you stop the evaluation once a classification with sufficient confidence level is reached. This is illustrated in the next figure:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-24-model_sequence.png&quot; alt=&quot;Model sequence&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;inpost-figure-caption&quot;&gt; A “sequence of models” solution, featuring AlexNet (A), GoogLeNet (G) and ResNet (R). Green $\gamma$ blocks denote selection policies. The input is first evaluated by AlexNet, and the selection policy determines whether evaluation by more complex models is needed. (&lt;a href=&quot;https://arxiv.org/pdf/1702.07811.pdf&quot;&gt;Source&lt;/a&gt;) &lt;/span&gt;&lt;/p&gt;
 
+&lt;p&gt;The problem with this approach is that, when the first network isn’t confident enough, we switch to the second network without re-using any feature previously computed: for complex examples, we completely &lt;strong&gt;waste&lt;/strong&gt; the computational budget spent on the first networks. This is quite unsatisfying, and far from optimal.&lt;/p&gt;
+
+&lt;p&gt;That’s when we think of the opposite solution: instead of building multiple networks with one classifier each, not sharing any feature, we could build one network as a cascade of multiple (early) classifiers along the depth, re-using previous features to build the more advanced predictions. This would look like the next figure:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-24-classifiers_cascade.png&quot; alt=&quot;Cascade&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption&quot;&gt;A simple “cascade of classifiers” solution on a standard CNN architecture. Early classification of easy examples yields substantial savings in computational budget, that can be spend on the hard examples. (&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2017/papers/Ouyang_Chained_Cascade_Network_ICCV_2017_paper.pdf&quot;&gt;Source&lt;/a&gt;) &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Although this model doesn’t waste any feature, it leads to poor performance, for two distinct reasons:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Early classifiers interfere with later classifiers&lt;/strong&gt; - early classifiers tend to optimize the early features for the short-term, conflicting with the better performance achieved by long-term, late classifiers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Early classifiers lack coarse-level, global features&lt;/strong&gt; - only fine-scale, local features are available at early stages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These two issues will drive the design of MSDNet through the inclusion of two specific components, that each address one issue.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;early-classifiers-vs-dense-connections&quot;&gt;Early classifiers vs. dense connections&lt;/h3&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;coarse-features-vs-multiple-scales&quot;&gt;Coarse features vs. multiple scales&lt;/h3&gt;
 
