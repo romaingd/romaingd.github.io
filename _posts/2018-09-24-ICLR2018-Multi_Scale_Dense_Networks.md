@@ -102,7 +102,7 @@ $$
 
 ## The problems with early classification
 
-Let us think it through. The simplest, most natural answer to address both these situations is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In *anytime prediction*, you simply output the prediction of the last network evaluated; in *batch budgeted classification*, you stop the evaluation once a classification with sufficient confidence level is reached. This is illustrated in the next figure:
+Let us think it through. The simplest, most natural answer to address both these situations is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In *anytime prediction*, you simply output the prediction of the last network evaluated; in *batch budgeted classification*, you stop the evaluation once classification with sufficient confidence level is reached. This is illustrated in the next figure:
 
 ![Model sequence]({{site.baseurl}}/assets/img/2018-09-24-model_sequence.png){: .center-image}
 
@@ -111,7 +111,7 @@ Let us think it through. The simplest, most natural answer to address both these
 
 The problem with this approach is that, when the first network isn't confident enough, we switch to the second network without re-using any feature previously computed: for complex examples, we completely **waste** the computational budget spent on the first networks. This is quite unsatisfying, and far from optimal.
 
-That's when we think of the opposite solution: instead of building multiple networks with one classifier each, not sharing any feature, we could build one network as a cascade of multiple (early) classifiers along the depth, re-using previous features to build the more advanced predictions. This would look like the next figure:
+Then the opposite solution comes in mind: instead of building multiple networks with one classifier each, not sharing any feature, we could build one network as a cascade of multiple (early) classifiers along depth, re-using previous features to build the more advanced predictions. This would look like the next figure:
 
 ![Cascade]({{site.baseurl}}/assets/img/2018-09-24-classifiers_cascade.png){: .center-image}
 
@@ -121,13 +121,13 @@ Although this model doesn't waste any feature, it leads to poor performance, for
 * **Early classifiers lack coarse-level, global features** - only fine-scale, local features are available at early stages.
 * **Early classifiers interfere with later classifiers** - early classifiers tend to optimize the early features for the short-term, conflicting with the long-term optimization of late classifiers, that achieve better performance.
 
-These two issues will drive the design of MSDNet through the inclusion of two specific components, that each address one issue.
+These two issues will drive the design of MSDNet through the inclusion of two specific components, each addressing one issue.
 
 <br>
 
 ### Early classifiers vs. dense connections
 
-Let us take a common CNN architecture, [ResNet](https://arxiv.org/abs/1512.03385), and attach an intermediate classifier at a (more or less) early stage of the architecture. We then train both (final and intermediate) classifiers jointly (here on CIFAR-100), weighting their losses equally, and look at the accuracy of the final classifier, to see if the presence of the intermediate classifier has any influence on the final performance.
+Let us take a common CNN architecture, [ResNet](https://arxiv.org/abs/1512.03385), and attach an intermediate classifier at a (more or less) early stage of the architecture. We then train both (final and intermediate) classifiers jointly (here on CIFAR-100), weighting their losses equally, and look at the accuracy of the final classifier. If there a noticeable difference in performance with the standard setting, the presence of the intermediate classifier is likely to have an influence on the construction of the features.
 
 ![Final accuracy when intermediate classifier is attached]({{site.baseurl}}/assets/img/2018-09-24-final_acc_when_intermed.png){: .center-image}
 
@@ -135,21 +135,21 @@ As is clear from the figure, ResNet performance generally suffers a lot from the
 
 > We postulate that this accuracy degradation in the ResNet may be caused by the intermediate classifier influencing the early features to be optimized for the short-term and not for the final layers. This improves the accuracy of the intermediate classifier but collapses information required to generate high quality features in later layers.
 
-It would be interesting to visually examine the filters learned and the corresponding features in different cases, providing us with some insights regarding this (likely) hypothesis.
+This sounds like a reasonable and likely hypothesis. It would be interesting to visually examine the filters learned and the corresponding features for different locations of the intermediate classifier, providing us with some insights in this regard.
 
 #### Solution/Mitigation: Dense connections
 
-Dense connections were introduced by our authors one year earlier in [DenseNets](https://arxiv.org/abs/1608.06993), as a generalization of ResNets. Remember what a residual connection looks like? A residual block is displayed in the next figure: the signal is allowed to bypass the layer thanks to an identity connection, and addition with the layer's output.
+To mitigate this problem, the paper cites dense connections as an interesting line of work. Dense connections were introduced by our authors one year earlier in [DenseNets](https://arxiv.org/abs/1608.06993), as a generalization of residual connections, the building blocks of ResNets. Remember what a residual connection looks like? A residual block is displayed in the next figure: the signal can bypass the layer thanks to an identity connection, and addition with the layer's output.
 
 ![Residual block]({{site.baseurl}}/assets/img/2018-09-24-residual_block.png){: .center-image}
 <span class="inpost-figure-caption-centered">A residual block, the building foundation of ResNets. ([Source](https://arxiv.org/pdf/1512.03385.pdf))</span>
 
-Dense connections go one step further by connecting each layer directly with *all previous ones* (inside the same block), by concatenating all the previous features. The resulting dense block is illustrated in the next figure:
+Dense connections go one step further by connecting each layer directly with *all previous layers* (inside the same block). What's more, instead of being summed, the previous features are concatenated to enable direct re-use. The resulting dense block is illustrated in the next figure:
 
 ![Dense block]({{site.baseurl}}/assets/img/2018-09-24-dense_block.png){: .center-image}
 <span class="inpost-figure-caption">A dense block, the building foundation of DenseNets. At each stage, the features of all previous layers are concatenated to maximize information flow and allow layer bypassing as much as possible. ([Source](https://arxiv.org/pdf/1608.06993.pdf))</span>
 
-Now how will this help us? Compared to ResNets, DenseNets suffer much less from the introduction of intermediate classifiers at early levels. This is likely linked to the fact that the signal can bypass all layers, so that no layer results in a loss in information. Should an early layer get optimized for short-term classification, the original signal can still be recovered unperturbed by later layers. This greatly alleviates the influence between short-term and long-term optimization, and makes the final accuracy of DenseNets not too dependent on the location of the intermediate classifier, yielding a nice candidate to support early classifiers.
+Now how will this help us? Compared to ResNets, DenseNets suffer much less from the introduction of intermediate classifiers at early levels (see the figure some blocks above). This is likely linked to the fact that the signal can bypass all layers, so that no layer results in a loss in information. Should an early layer get optimized for short-term classification, the original signal can still be recovered unperturbed by later layers. This greatly alleviates the influence between short-term and long-term optimization, and makes the final accuracy of DenseNets not too dependent on the location of the intermediate classifier, yielding a nice candidate to support early classifiers.
 
 <br>
 
