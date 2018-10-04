@@ -848,6 +848,7 @@ blockquote {
   font-size: 15px;
   text-align: justify;
   line-height: 140%;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -859,6 +860,7 @@ blockquote {
   font-size: 15px;
   text-align: center;
   line-height: 140%;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
