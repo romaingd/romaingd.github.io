@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-04T11:17:34+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-04T11:46:08+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet, a resource-aware CNN</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet, a resource-aware CNN" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -993,8 +993,8 @@ with a word-level encoder similar to the charCNN model.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-meanchar_performance.png&quot; alt=&quot;meanChar performance&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;center&gt; Performance of meanChar in different settings. By design, Scr is the
-same as Vanilla for this model. &lt;/center&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption&quot;&gt;Performance of meanChar in different settings. By design, Scr is the
+same as Vanilla for this model. &lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;As is clear in the table, meanChar turns out to be pretty good for translating
 scrambled text (much better than charCNN). Note that, by design, this model
@@ -1052,24 +1052,24 @@ individual characters and not forgetting all about structure like in meanChar.&l
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_chain.png&quot; alt=&quot;Graph chain&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;center&gt; &lt;strong&gt;Figure 2&lt;/strong&gt; - `charCNN` word representation
-as a chain of character embeddings. &lt;/center&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt; &lt;strong&gt;Figure 2&lt;/strong&gt; - charCNN word representation
+as a chain of character embeddings. &lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_meanchar.png&quot; alt=&quot;Graph chain&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;center&gt; &lt;strong&gt;Figure 3&lt;/strong&gt; - `meanChar` word representation as an average
-of character embeddings. &lt;/center&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt; &lt;strong&gt;Figure 3&lt;/strong&gt; - meanChar word representation as an average
+of character embeddings. &lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_complete.png&quot; alt=&quot;Graph complete&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;center&gt; &lt;strong&gt;Figure 4&lt;/strong&gt; - `graphChar` word
-representation as a complete graph of character embeddings. &lt;/center&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt; &lt;strong&gt;Figure 4&lt;/strong&gt; - graphChar word
+representation as a complete graph of character embeddings. &lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-10-graph_weighted.png&quot; alt=&quot;Graph weighted&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;center&gt; &lt;strong&gt;Figure 5&lt;/strong&gt; - `w-graphChar` word
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption&quot;&gt; &lt;strong&gt;Figure 5&lt;/strong&gt; - wgraphChar word
 representation as a weighted graph of character embeddings. The weights, here
-arbitrary, could reflect the structure to some extent. &lt;/center&gt;
+arbitrary, could reflect the structure to some extent. &lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1516,9 +1516,9 @@ accuracy (what we care about in the end) he gets for both algorithm on CIFAR-10.
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/2018-08-19-comparison.png&quot; alt=&quot;Comparison&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;center&gt;Validation accuracy on CIFAR-10 (VGG-16).
-&lt;br /&gt;Adam in blue, AMSGrad in red.
-&lt;/center&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Validation accuracy on CIFAR-10
+(VGG-16). &lt;br /&gt;Adam in blue, AMSGrad in red.
+&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 

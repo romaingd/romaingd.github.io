@@ -288,8 +288,8 @@ with a word-level encoder similar to the charCNN model.
 
 ![meanChar performance]({{site.baseurl}}/assets/img/2018-09-10-meanchar_performance.png){: .center-image}
 
-<center> Performance of meanChar in different settings. By design, Scr is the
-same as Vanilla for this model. </center>
+<span class="inpost-figure-caption">Performance of meanChar in different settings. By design, Scr is the
+same as Vanilla for this model. </span>
 
 As is clear in the table, meanChar turns out to be pretty good for translating
 scrambled text (much better than charCNN). Note that, by design, this model
@@ -349,24 +349,24 @@ individual characters and not forgetting all about structure like in meanChar.
 
 ![Graph chain]({{site.baseurl}}/assets/img/2018-09-10-graph_chain.png){: .center-image}
 
-<center> <strong>Figure 2</strong> - `charCNN` word representation
-as a chain of character embeddings. </center>
+<span class="inpost-figure-caption-centered"> <strong>Figure 2</strong> - charCNN word representation
+as a chain of character embeddings. </span>
 
 ![Graph chain]({{site.baseurl}}/assets/img/2018-09-10-graph_meanchar.png){: .center-image}
 
-<center> <strong>Figure 3</strong> - `meanChar` word representation as an average
-of character embeddings. </center>
+<span class="inpost-figure-caption-centered"> <strong>Figure 3</strong> - meanChar word representation as an average
+of character embeddings. </span>
 
 ![Graph complete]({{site.baseurl}}/assets/img/2018-09-10-graph_complete.png){: .center-image}
 
-<center> <strong>Figure 4</strong> - `graphChar` word
-representation as a complete graph of character embeddings. </center>
+<span class="inpost-figure-caption-centered"> <strong>Figure 4</strong> - graphChar word
+representation as a complete graph of character embeddings. </span>
 
 ![Graph weighted]({{site.baseurl}}/assets/img/2018-09-10-graph_weighted.png){: .center-image}
 
-<center> <strong>Figure 5</strong> - `w-graphChar` word
+<span class="inpost-figure-caption"> <strong>Figure 5</strong> - wgraphChar word
 representation as a weighted graph of character embeddings. The weights, here
-arbitrary, could reflect the structure to some extent. </center>
+arbitrary, could reflect the structure to some extent. </span>
 
 
 <br>
