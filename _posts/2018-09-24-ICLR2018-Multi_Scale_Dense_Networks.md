@@ -155,6 +155,33 @@ Now how will this help us? Compared to ResNets, DenseNets suffer much less from 
 
 ### Coarse features vs. multiple scales
 
+![Feature levels]({{site.baseurl}}/assets/img/2018-09-24-feature_levels.png){: .center-image}
+
+<span class="inpost-figure-caption">Visualization of the features learned by a convolutional network along its depth, using DeconvNet. Low-level features match local and simple patterns, while higher level features retain incresingly global and complex patterns. ([Source](http://www.iro.umontreal.ca/~bengioy/talks/DL-Tutorial-NIPS2015.pdf))</span>
+
+You've probably seen this picture a couple times already, or one alike. This visualization of the features learned by the network along the depth was obtained thanks to a [visualization DeconvNet](https://arxiv.org/abs/1311.2901). It supports the claim that first layers correspond to local, fine-scale features (the feature maps learned are close to the size of the original image), whereas deep layers correspond to global, coarse-scale features (the feature maps learned are much smaller than the original image, condensing global information such as "there is a dog in this region").
+
+Now this is a problem for early classifiers. Image classification is much harder when you only have access to local features, matching only simple patterns such as straight lines in different directions, or circles of different sizes. To confirm this intuition, let us consider again our previous experiment: take a ResNet, attach an intermediate classifier at different locations along the depth of the network, but this time examine how this location influences the accuracy of the *intermediate* classifier. If classification based on local, fine-scale features was as easy as classification based on global, coarse-scale features, the impact on accuracy should not be too noticeable (and, as a side note, we woudln't need deep learning to begin with).
+
+![Intermediate accuracy]({{site.baseurl}}/assets/img/2018-09-24-intermed_acc_when_intermed.png){: .center-image}
+
+It hurts. Pretty badly. DenseNets are once again less sensitive to this effect, but the performance of the intermediate classifier is still unsatisfying.
+
+#### Solution/Mitigation: Multi-scale feature maps
+
+To mitigate this harmful effect, the authors suggest maintaining feature maps of multiple scales at all layers. This is pretty annoying to describe with words, so let's jump into the architecture to see how it is implemented.
+
+<br><br>
+
 ## The architecture
+
+As expected, the resulting design combines dense connections with multi-scale feature maps to yield the architecture of the Multi-Scale DenseNet, taking the following form:
+
+![MSDNet]({{site.baseurl}}/assets/img/2018-09-24-MSDNet_architecture.png){: .center-image}
+
+<span class="inpost-figure-caption">The MSDNet architecture. Each layer maintains feature maps at multiple scales, enabling early classifiers to operate on coarse-level features. The feature maps at a given scale and layer are the concatenation of two elements: the result (in blue) of strided convolution on the finer-scale features from the previous layer, and the result (in red) of regular convolution on the same scale features from multiple previous layers *via* dense connections. </span>
+
+
+<br><br>
 
 ## A glance at the results
