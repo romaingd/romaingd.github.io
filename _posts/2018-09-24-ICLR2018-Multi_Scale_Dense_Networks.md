@@ -188,7 +188,7 @@ As this is fairly new and complex, let's break it bit by bit: first the layers a
 
 #### Layers
 
-![MSDNet layers details]({{site.baseurl}}/assets/img/2018-09-24-layers_details.png){:center-image}
+![MSDNet layers details]({{site.baseurl}}/assets/img/2018-09-24-layers_details.png){: .center-image}
 
 As described in the picture, the input first goes through the first layer ($l=1$), which is quite unique. This layer indeed "seeds" all scales of the feature maps, by repeatedly applying strided convolution to the previous seed, starting from the coarsest feature map.
 
