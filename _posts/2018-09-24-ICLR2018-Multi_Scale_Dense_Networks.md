@@ -182,6 +182,16 @@ As expected, the resulting design combines dense connections with multi-scale fe
 <span class="inpost-figure-caption">The MSDNet architecture. Each layer maintains feature maps at multiple scales, enabling early classifiers to operate on coarse-level features. The feature maps at a given scale and layer are the concatenation of two elements: the result (in blue) of strided convolution on the finer-scale features from the previous layer, and the result (in red) of regular convolution on the same scale features from multiple previous layers *via* dense connections. </span>
 
 
+As this is fairly new and complex, let's break it bit by bit: first the layers and the connections, then the classifiers and their repartition, and finally the training details and the loss function. 
+
+<br>
+
+#### Layers
+
+![MSDNet layers details]({{site.baseurl}}/assets/img/2018-09-24-layers_details.png){:center-image}
+
+As described in the picture, the input first goes through the first layer ($l=1$), which is quite unique. This layer indeed "seeds" all scales of the feature maps, by repeatedly applying strided convolution to the previous seed, starting from the coarsest feature map.
+
 <br><br>
 
 ## A glance at the results
