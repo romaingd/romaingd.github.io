@@ -207,6 +207,22 @@ Following the same principle of dense connections, the classifiers take as input
 * In *anytime prediction*, the classifiers are evaluated sequentially until the budget is exhausted, and only the last prediction is output.
 * In *budgeted batch classification*, for each test example, the classifiers are evaluated sequentially until a sufficient level of confidence in prediction is found. However, determining the "sufficient level" part can be quite tricky, since you have to distribute a budget across multiple samples without knowing the difficulty of each. You cannot afford to fully evaluate the network on each one, yet you have to be confident enough in your prediction, while not knowing how long it is going to take for individual examples to reach this level of confidence. The authors therefore rely on a probabilistic model of the difficulty of the inputs to design the optimal threshold that wll determine whether or not we stop running a given input through the network.
 
+<br>
+
+#### Training details
+
+We now have a network with multiple classifiers that need to be trained jointly. To do so, we unsurprisingly use cross-entropy $L(f_k)$ for all classifiers $f_k$, but we still need to combine those losses to perform joint optimization. The most natural solution is to take a weighted sum of all the individual losses, such as the final loss of the model is:
+
+$$
+  L(f) = \sum_k w_k L(f_k)
+$$
+
+> If the budget distribution $P(B)$ is known, we can use the weights to incorporate prior knowledge about the budget $B$ in the learning. Empirically, we find that using uniform weights $\forall k, w_k=1$ works well in practice.
+
+
+
 <br><br>
+
+
 
 ## A glance at the results
