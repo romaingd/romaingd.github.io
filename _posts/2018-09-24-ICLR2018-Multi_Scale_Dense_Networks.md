@@ -182,7 +182,7 @@ As expected, the resulting design combines dense connections with multi-scale fe
 <span class="inpost-figure-caption">The MSDNet architecture. Each layer maintains feature maps at multiple scales, enabling early classifiers to operate on coarse-level features. The feature maps at a given scale and layer are the concatenation of two elements: the result (in blue) of strided convolution on the finer-scale features from the previous layer, and the result (in red) of regular convolution on the same scale features from multiple previous layers *via* dense connections. </span>
 
 
-As this is fairly new and complex, let's break it bit by bit: first the layers and the connections, then the classifiers and their repartition, and finally the training details and the loss function. 
+This is not your typical CNN architecture, so let's break it down bit by bit: first the layers and the connections, then the classifiers and their repartition, and finally the training details and the loss function. 
 
 <br>
 
@@ -190,7 +190,21 @@ As this is fairly new and complex, let's break it bit by bit: first the layers a
 
 ![MSDNet layers details]({{site.baseurl}}/assets/img/2018-09-24-layers_details.png){: .center-image}
 
-As described in the picture, the input first goes through the first layer ($l=1$), which is quite unique. This layer indeed "seeds" all scales of the feature maps, by repeatedly applying strided convolution to the previous seed, starting from the coarsest feature map.
+As described in the figures, the model is structured as a 2-dimensional grid $S \times L$, with $L$ the number of layers (analogous to the depth in standard networks) and $S$ the number of scales at each layer. 
+
+The first layer $l=1$ is quite unique, since it "seeds" all scales $s = 1, ..., S$ of the feature maps. The finer scale $s=1$ is the result of a regular convolution $h$ on the original image. For subsequent scales, the feature map at scale $s+1$ is the result of strided convolution $\tilde{h}$ (which is just really regular convolution with a stride of at least 2) to the features at scale $s$. Given that strided convolution results in downsampling of the input (like max pooling), the feature map at scale $s+1$ is smaller than the one at scale $s$. This enables coarser-level, global information to be encoded already in the first layer.
+
+The next layers maintain all scales that were previously seeded. The output of layer $l$ at scale $s$ is the concatenation of two elements:
+* The result of regular convolution $h$ on all previous feature maps at scale $s$ (in red).
+* The result of strided convolution $\tilde{h}$ on all previous feature maps at scale $s-1$ (in blue, to perform the usual downsampling of previous features that is common in CNNs).
+
+After each layer (except the first one), a concatenation of the current and previous outputs is performed, following the principle of dense connections, to enable a maximal flow of information and bypassing of layers.
+
+<br>
+
+#### Classifiers
+
+
 
 <br><br>
 

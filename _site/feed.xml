@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-06T19:56:47+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-07T18:17:59+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet, a resource-aware CNN</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet, a resource-aware CNN" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -158,15 +158,29 @@ Kilian Weinberger.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;inpost-figure-caption&quot;&gt;The MSDNet architecture. Each layer maintains feature maps at multiple scales, enabling early classifiers to operate on coarse-level features. The feature maps at a given scale and layer are the concatenation of two elements: the result (in blue) of strided convolution on the finer-scale features from the previous layer, and the result (in red) of regular convolution on the same scale features from multiple previous layers &lt;em&gt;via&lt;/em&gt; dense connections. &lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;As this is fairly new and complex, let’s break it bit by bit: first the layers and the connections, then the classifiers and their repartition, and finally the training details and the loss function.&lt;/p&gt;
+&lt;p&gt;This is not your typical CNN architecture, so let’s break it down bit by bit: first the layers and the connections, then the classifiers and their repartition, and finally the training details and the loss function.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;layers&quot;&gt;Layers&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-24-layers_details.png&quot; alt=&quot;MSDNet layers details&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-24-layers_details.png&quot; alt=&quot;MSDNet layers details&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As described in the picture, the input first goes through the first layer ($l=1$), which is quite unique. This layer indeed “seeds” all scales of the feature maps, by repeatedly applying strided convolution to the previous seed, starting from the coarsest feature map.&lt;/p&gt;
+&lt;p&gt;As described in the figures, the model is structured as a 2-dimensional grid $S \times L$, with $L$ the number of layers (analogous to the depth in standard networks) and $S$ the number of scales at each layer.&lt;/p&gt;
+
+&lt;p&gt;The first layer $l=1$ is quite unique, since it “seeds” all scales $s = 1, …, S$ of the feature maps. The finer scale $s=1$ is the result of a regular convolution $h$ on the original image. For subsequent scales, the feature map at scale $s+1$ is the result of strided convolution $\tilde{h}$ (which is just really regular convolution with a stride of at least 2) to the features at scale $s$. Given that strided convolution results in downsampling of the input (like max pooling), the feature map at scale $s+1$ is smaller than the one at scale $s$. This enables coarser-level, global information to be encoded already in the first layer.&lt;/p&gt;
+
+&lt;p&gt;The next layers maintain all scales that were previously seeded. The output of layer $l$ at scale $s$ is the concatenation of two elements:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The result of regular convolution $h$ on all previous feature maps at scale $s$ (in red).&lt;/li&gt;
+  &lt;li&gt;The result of strided convolution $\tilde{h}$ on all previous feature maps at scale $s-1$ (in blue, to perform the usual downsampling of previous features that is common in CNNs).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After each layer (except the first one), a concatenation of the current and previous outputs is performed, following the principle of dense connections, to enable a maximal flow of information and bypassing of layers.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;classifiers&quot;&gt;Classifiers&lt;/h4&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
