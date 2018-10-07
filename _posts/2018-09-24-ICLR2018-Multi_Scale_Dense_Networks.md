@@ -195,16 +195,17 @@ As described in the figures, the model is structured as a 2-dimensional grid $S 
 The first layer $l=1$ is quite unique, since it "seeds" all scales $s = 1, ..., S$ of the feature maps. The finer scale $s=1$ is the result of a regular convolution $h$ on the original image. For subsequent scales, the feature map at scale $s+1$ is the result of strided convolution $\tilde{h}$ (which is just really regular convolution with a stride of at least 2) to the features at scale $s$. Given that strided convolution results in downsampling of the input (like max pooling), the feature map at scale $s+1$ is smaller than the one at scale $s$. This enables coarser-level, global information to be encoded already in the first layer.
 
 The next layers maintain all scales that were previously seeded. The output of layer $l$ at scale $s$ is the concatenation of two elements:
-* The result of regular convolution $h$ on all previous feature maps at scale $s$ (in red).
-* The result of strided convolution $\tilde{h}$ on all previous feature maps at scale $s-1$ (in blue, to perform the usual downsampling of previous features that is common in CNNs).
+* The result of regular convolution $h$ on all previous feature maps (dense connection) at scale $s$ from layers $l'=1, ..., l-1$ (in red).
+* The result of strided convolution $\tilde{h}$ on all previous feature maps (dense connection) at scale $s-1$ from layers $l'=1, ..., l-1$ (in blue, performing the downsampling of finer-scale features that is common in CNNs).
 
-After each layer (except the first one), a concatenation of the current and previous outputs is performed, following the principle of dense connections, to enable a maximal flow of information and bypassing of layers.
 
 <br>
 
 #### Classifiers
 
-
+Following the same principle of dense connections, the classifiers take as input the concatenation of all coarse feature maps from all previous layers. In practice they are only attached to some intermediate layers, and their behavior depends on the task at hand:
+* In *anytime prediction*, the classifiers are evaluated sequentially until the budget is exhausted, and only the last prediction is output.
+* In *budgeted batch classification*, for each test example, the classifiers are evaluated sequentially until a sufficient level of confidence in prediction is found. However, determining the "sufficient level" part can be quite tricky, since you have to distribute a budget across multiple samples without knowing the difficulty of each. You cannot afford to fully evaluate the network on each one, yet you have to be confident enough in your prediction, while not knowing how long it is going to take for individual examples to reach this level of confidence. The authors therefore rely on a probabilistic model of the difficulty of the inputs to design the optimal threshold that wll determine whether or not we stop running a given input through the network.
 
 <br><br>
 

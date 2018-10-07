@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-07T18:17:59+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-07T23:41:10+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet, a resource-aware CNN</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet, a resource-aware CNN" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -172,15 +172,19 @@ Kilian Weinberger.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The next layers maintain all scales that were previously seeded. The output of layer $l$ at scale $s$ is the concatenation of two elements:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;The result of regular convolution $h$ on all previous feature maps at scale $s$ (in red).&lt;/li&gt;
-  &lt;li&gt;The result of strided convolution $\tilde{h}$ on all previous feature maps at scale $s-1$ (in blue, to perform the usual downsampling of previous features that is common in CNNs).&lt;/li&gt;
+  &lt;li&gt;The result of regular convolution $h$ on all previous feature maps (dense connection) at scale $s$ from layers $l’=1, …, l-1$ (in red).&lt;/li&gt;
+  &lt;li&gt;The result of strided convolution $\tilde{h}$ on all previous feature maps (dense connection) at scale $s-1$ from layers $l’=1, …, l-1$ (in blue, performing the downsampling of finer-scale features that is common in CNNs).&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;After each layer (except the first one), a concatenation of the current and previous outputs is performed, following the principle of dense connections, to enable a maximal flow of information and bypassing of layers.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;classifiers&quot;&gt;Classifiers&lt;/h4&gt;
+
+&lt;p&gt;Following the same principle of dense connections, the classifiers take as input the concatenation of all coarse feature maps from all previous layers. In practice they are only attached to some intermediate layers, and their behavior depends on the task at hand:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In &lt;em&gt;anytime prediction&lt;/em&gt;, the classifiers are evaluated sequentially until the budget is exhausted, and only the last prediction is output.&lt;/li&gt;
+  &lt;li&gt;In &lt;em&gt;budgeted batch classification&lt;/em&gt;, for each test example, the classifiers are evaluated sequentially until a sufficient level of confidence in prediction is found. However, determining the “sufficient level” part can be quite tricky, since you have to distribute a budget across multiple samples without knowing the difficulty of each. You cannot afford to fully evaluate the network on each one, yet you have to be confident enough in your prediction, while not knowing how long it is going to take for individual examples to reach this level of confidence. The authors therefore rely on a probabilistic model of the difficulty of the inputs to design the optimal threshold that wll determine whether or not we stop running a given input through the network.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
