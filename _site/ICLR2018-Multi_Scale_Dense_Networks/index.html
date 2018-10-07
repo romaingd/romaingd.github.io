@@ -349,6 +349,16 @@ Kilian Weinberger.</em></p>
 
 <h2 id="a-glance-at-the-results">A glance at the results</h2>
 
+<p>Now that we’ve gone so far, let’s just check that MSDNet performs well on the tasks it’s been designed to solve, namely <em>anytime prediction</em> and <em>budgeted batch classification</em>.</p>
+
+<p><br /></p>
+
+<h3 id="anytime-prediction-1">Anytime prediction</h3>
+
+<p><img src="/assets/img/2018-09-24-anytime_prediction.png" alt="Anytime prediction" class="center-image" /></p>
+
+<p>In anytime prediction, for each test example, the model is run until an unknown budget $B$ is exhausted, and is forced to output its latest prediction. As discussed earlier, typical baselines to compare against are ensembles of CNNs, here ensembles of ResNets and ensemble of DenseNets, that are evaluated sequentially until the budget is exhausted. Other baselines include <a href="http://proceedings.mlr.press/v38/lee15a.pdf">deeply supervised networks</a> (noted as $CNN^{MC}$) and <a href="https://arxiv.org/abs/1605.07648">FractalNet</a>. Going into details of these models is beyond the scope of this article, so I woudl refer you to the original papers to read about these interesting architectures.</p>
+
       <div class="page-footer">
         <div class="page-share">
           <a href="https://twitter.com/intent/tweet?text=Multi-Scale DenseNet, a resource-aware CNN&url=http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>

@@ -226,3 +226,13 @@ $$
 
 
 ## A glance at the results
+
+Now that we've gone so far, let's just check that MSDNet performs well on the tasks it's been designed to solve, namely *anytime prediction* and *budgeted batch classification*. 
+
+<br>
+
+### Anytime prediction
+
+![Anytime prediction]({{site.baseurl}}/assets/img/2018-09-24-anytime_prediction.png){: .center-image}
+
+In anytime prediction, for each test example, the model is run until an unknown budget $B$ is exhausted, and is forced to output its latest prediction. As discussed earlier, typical baselines to compare against are ensembles of CNNs, here ensembles of ResNets and ensemble of DenseNets, that are evaluated sequentially until the budget is exhausted. Other baselines include [deeply supervised networks](http://proceedings.mlr.press/v38/lee15a.pdf) (noted as $CNN^{MC}$) and [FractalNet](https://arxiv.org/abs/1605.07648). Going into details of these models is beyond the scope of this article, so I woudl refer you to the original papers to read about these interesting architectures.

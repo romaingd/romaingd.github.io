@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-07T23:51:39+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-08T00:12:07+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Multi-Scale DenseNet, a resource-aware CNN</title><link href="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/" rel="alternate" type="text/html" title="Multi-Scale DenseNet, a resource-aware CNN" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks</id><content type="html" xml:base="http://localhost:4000/ICLR2018-Multi_Scale_Dense_Networks/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -200,7 +200,17 @@ Kilian Weinberger.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;a-glance-at-the-results&quot;&gt;A glance at the results&lt;/h2&gt;</content><author><name>Romain Girard</name></author><category term="ICLR 2018" /><category term="Resource efficiency" /><category term="CNN" /><category term="Network architecture" /><category term="ICLR" /><summary type="html"></summary></entry><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;a-glance-at-the-results&quot;&gt;A glance at the results&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve gone so far, let’s just check that MSDNet performs well on the tasks it’s been designed to solve, namely &lt;em&gt;anytime prediction&lt;/em&gt; and &lt;em&gt;budgeted batch classification&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;anytime-prediction-1&quot;&gt;Anytime prediction&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-09-24-anytime_prediction.png&quot; alt=&quot;Anytime prediction&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In anytime prediction, for each test example, the model is run until an unknown budget $B$ is exhausted, and is forced to output its latest prediction. As discussed earlier, typical baselines to compare against are ensembles of CNNs, here ensembles of ResNets and ensemble of DenseNets, that are evaluated sequentially until the budget is exhausted. Other baselines include &lt;a href=&quot;http://proceedings.mlr.press/v38/lee15a.pdf&quot;&gt;deeply supervised networks&lt;/a&gt; (noted as $CNN^{MC}$) and &lt;a href=&quot;https://arxiv.org/abs/1605.07648&quot;&gt;FractalNet&lt;/a&gt;. Going into details of these models is beyond the scope of this article, so I woudl refer you to the original papers to read about these interesting architectures.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="ICLR 2018" /><category term="Resource efficiency" /><category term="CNN" /><category term="Network architecture" /><category term="ICLR" /><summary type="html"></summary></entry><entry><title type="html">Neural Machine Translation of the Cambridge meme</title><link href="http://localhost:4000/ICLR_2-nmt_cambridge_meme/" rel="alternate" type="text/html" title="Neural Machine Translation of the Cambridge meme" /><published>2018-09-10T01:00:00+02:00</published><updated>2018-09-10T01:00:00+02:00</updated><id>http://localhost:4000/ICLR_2-nmt_cambridge_meme</id><content type="html" xml:base="http://localhost:4000/ICLR_2-nmt_cambridge_meme/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
