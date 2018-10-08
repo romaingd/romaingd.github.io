@@ -235,4 +235,26 @@ Now that we've gone so far, let's just check that MSDNet performs well on the ta
 
 ![Anytime prediction]({{site.baseurl}}/assets/img/2018-09-24-anytime_prediction.png){: .center-image}
 
-In anytime prediction, for each test example, the model is run until an unknown budget $B$ is exhausted, and is forced to output its latest prediction. As discussed earlier, typical baselines to compare against are ensembles of CNNs, here ensembles of ResNets and ensemble of DenseNets, that are evaluated sequentially until the budget is exhausted. Other baselines include [deeply supervised networks](http://proceedings.mlr.press/v38/lee15a.pdf) (noted as $CNN^{MC}$) and [FractalNet](https://arxiv.org/abs/1605.07648). Going into details of these models is beyond the scope of this article, so I woudl refer you to the original papers to read about these interesting architectures.
+In anytime prediction, for each test example, the model is run until an unknown budget $B$ is exhausted, and is forced to output its latest prediction. As discussed earlier, typical baselines to compare against are ensembles of CNNs, here ensembles of ResNets and ensemble of DenseNets, that are evaluated sequentially until the budget is exhausted. Other baselines include [deeply supervised networks](http://proceedings.mlr.press/v38/lee15a.pdf) (here ResNet<sup>MC</sup> and DenseNet<sup>MC</sup>) and [FractalNet](https://arxiv.org/abs/1605.07648). Going into details of these models is beyond the scope of this article; check the original papers to read about these interesting architectures.
+
+MSDNet shows excellent performance compared to all other baselines across all budgets, except FractalNet in low budget, where the performances are comparable. Note that, in extremely low budgets, the ensembles have a significant advantage since the first network (the only one evaluated) is directly optimized for prediction; yet MSDNet performance remains very satisfying. The limitations of ensembles appear very quickly when the budget increases, since they waste a lot of computation.
+
+<br>
+
+### Budgeted batch classification
+
+![Budgeted batch]({{site.baseurl}}/assets/img/2018-09-24-budgeted_batch.png){: .center-image}
+
+In budgeted batch classification, the model is granted a finite known computational budget $B$ to classify a set of examples, and can spend it freely across examples. This encourages the use of *dynamic evaluation*, where easy examples are exited early while hard examples are run throughout the network until a sufficient level of confidence in classification is reached. The baselines are similar to the previous ones.
+
+Three MSDNets are trained with different depths, in order to cover a wide range of computational budgets, and the chosen model is selected depending on the budget, based on validation performance; this explains the three black curves. Once again, MSDNet prove very performant across all budgets, outperforming all baselines by a wide margin. In particular, MSDNet perform much better than deeply supervised networks, highlighting the importance of coarse-level features for classification at early stages.
+
+<br>
+
+### Bonus points - Visualization
+
+![Hard and easy examples]({{site.baseurl}}/assets/img/2018-09-24-hard_easy.png){: .center-image}
+
+<span class="inpost-figure-caption">Samples from ImageNet classes *red wine* and *volcano*. Thanks to the dynamic evaluation, "easy" examples are early-exited while "hard" examples are run through larger parts of the network.</span>
+
+To assess the relevance of dynamic evaluation and the calibration of confidence of the classifiers, it is interesting to examine which examples are early exited, and which ones are run through the entire network. As the figure above suggests, MSDNet seem able to quickly classify typical class examples, while non-typical images are granted a larger budget.
