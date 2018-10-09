@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+	<meta charset="utf-8">
+	<title>Building bridges - AMSGrad, brittle NMT, MSDNet - Divergences</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Divergences" property="og:site_name">
+  
+    <meta content="Building bridges - AMSGrad, brittle NMT, MSDNet" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="An effort to combine the ideas and insights of several papers. In this session, AMSGrad and Adam's flaw, the brittleness of NMT systems, and Multi-Scale DenseNet. 
+" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" property="og:url">
+  
+  
+    <meta content="2018-09-24T01:00:00+02:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/building_bridges.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Resource efficiency" property="article:tag">
+    
+    <meta content="Noise" property="article:tag">
+    
+    <meta content="Optimization" property="article:tag">
+    
+    <meta content="Mixing ideas" property="article:tag">
+    
+    <meta content="Personal work" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Building bridges - AMSGrad, brittle NMT, MSDNet">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">
+  
+  
+    <meta name="twitter:description" content="An effort to combine the ideas and insights of several papers. In this session, AMSGrad and Adam's flaw, the brittleness of NMT systems, and Multi-Scale DenseNet. 
+">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/building_bridges.jpg">
+  
+
+	<meta name="description" content="An effort to combine the ideas and insights of several papers. In this session, AMSGrad and Adam's flaw, the brittleness of NMT systems, and Multi-Scale DenseNet. 
+">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+ -->
+<body>
+  <div class="wrapper">
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+<aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/profile-picture.jpg" alt="Romain Girard"></a>
+      </div>
+      <div class="author-name">Romain Girard</div>
+      <p>I currently work as a <strong> data scientist </strong> at Implicity, where I develop machine learning techniques to study strokes and heart failure. <br><br> I am strongly interested in both <strong>data science for healthcare</strong> and <strong>theoretical machine learning</strong>. <br><br> I graduated in 2018 from École polytechnique, Paris. <br><br> I hold a M.Sc. degree from the MVA <i>(Mathématiques, Vision, Apprentissage)</i> master at ENS Paris-Saclay, with an emphasis on machine learning and statistics.
+</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        <!-- 
+          <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+         -->
+        
+          <li class="github"><a href="http://github.com/romaingd" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/romain-girard-4396ab11b/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:romain.girard+Divergences@polytechnique.edu"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; Romain Girard</p>
+      <p>Flexible Jekyll theme by Artem Sheludko</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/building_bridges.jpg alt="Building bridges - AMSGrad, brittle NMT, MSDNet">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Building bridges - AMSGrad, brittle NMT, MSDNet</h1>
+        <div class="page-date"><span>2018, Sep 24&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p><br /></p>
+
+<hr />
+
+<h4 id="building-bridges---first-article">Building bridges - First article</h4>
+
+<p><em>In this series, I try to mix the original ideas of several papers, in order to gain new insights or design concepts that are new to me. I do not claim that those are original or new to the community, as I may reinvent the wheel along the way. It is also possible that I unintentionally copy concepts that were already developped by somebody else.</em></p>
+
+<p><em>This article is based on the papers:</em></p>
+<ul>
+  <li><a href="https://openreview.net/pdf?id=ryQu7f-RZ">On the convergence of Adam and beyond</a> <em>by Sashank J. Reddi, Satyen Kale, and Sanjiv Kumar.</em></li>
+  <li><a href="https://openreview.net/pdf?id=BJ8vJebC-">Synthetic and natural noise both break Neural Machine Translation</a> <em>by Yonatan Belinkov and Yonatan Bisk.</em></li>
+  <li><a href="https://openreview.net/pdf?id=Hk2aImxAb">Multi-Scale Dense Networks for resource efficient image classification</a> <em>by Gao Huang, Danlu Chen, Tianhong Li, Felix Wu, Laurens van der Maaten and Kilian Weinberger.</em></li>
+</ul>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Have a look at the two pictures below. It probably took you an unnoticeable amount of time to recognize a horse on the left, and a very noticeable amount of time (say one second) to recognize a horse on the right. Naturally, we would expect models to face similar difficulties in classification of those images. Intuitively, it feels like a simple CNN with a couple layers (e.g. AlexNet) would be more than enough to classify the first picture, while the last one shall require a much more complex model for correct classification, being in the <em>tail</em> of the “horse images” distribution (hence requiring a more precise approximation of this distribution by a neural network).</p>
+
+<p><img src="/assets/img/2018-09-24-horses.png" alt="Two horses" class="center-image" /></p>
+
+<p>Using the same model to classify both pictures generally means that you have to choose <strong>beforehand, and once and for all</strong> (when you implement the model), between low resource consumption and high accuracy. In other words:</p>
+
+<blockquote>
+  <p>Computationally intensive models are needed to classify such tail examples correctly, but are wasteful when applied to canonical images such as the left one.</p>
+</blockquote>
+
+<p>Now, generally speaking, we computer users don’t care, or at least this is not a question that we are used to ask. In the rare situations where we actually care about resource consumption (most of all about speed), we just define a minimum acceptable inference speed, pick the best performing model that satisfies this constraint, and that’s basically it. However, <strong>we phone users and (future) Internet of Things users are very much likely to <a href="https://www.iotforall.com/computer-vision-iot/">care</a></strong>. From photo deblurring to real-time action recognition, computer vision <em>will</em> become ubiquitous in everyday devices, that run on much lower resources than modern computers. Moreover, lower computational cost means <strong>lower time energy consumption</strong>, which is highly desirable for <strong>ecological</strong> (and economical) reasons.</p>
+
+<p>All in all, it feels frustrating not to recognize a horse on the right, so we use the winner of ImageNet 2017 (an ensemble of <a href="https://arxiv.org/abs/1709.01507">Squeeze-and-Excitation Networks</a>); but it is ridiculous to waste <a href="https://github.com/albanie/convnet-burden">440 MB of parameters and 21 GFLOPs</a> on recognizing a horse on the right while we probably only need 50 times less resources to do it (as a reference, Apple’s iPhone 4 had a processor power of about 3 GFLOP/s, so it would actually take 7 seconds at 100% CPU to process each image). We feel torn between both issues, and nobody likes feeling <a href="https://music.youtube.com/watch?v=rIGAt5yvfmw&amp;list=RDAMVMrIGAt5yvfmw">torn</a>.</p>
+
+<blockquote>
+  <p>This begs the question: <strong>why do we choose between either wasting computational resources by applying an unnecessarily computationally expensive model to easy images, or making mistakes by using an efficient model that fails to recognize difficult images?</strong> Ideally, our systems should automatically use small networks when test images are easy or computational resources limited, and use big networks when test images are hard or computation is abundant.</p>
+</blockquote>
+
+<p>This is why the authors propose the Multi-Scale Dense Network model (architecture below), which we will explore, that enables adaptive resource allocation for image classification thanks to the introduction of early classifiers in a feed-forward CNN structure. This way, easy images can be instantly classified, and harder ones can use more computational resources. Let’s see how this works on real-world tasks.</p>
+
+<p><img src="/assets/img/2018-09-24-MSDNet_architecture.png" alt="MSDNet architecture" class="center-image" /></p>
+
+<div class="inpost-figure-caption-centered">The Multi-Scale Dense Network (MSDNet) architecture</div>
+
+<p><br /><br /></p>
+
+<h2 id="real-word-tasks---classification-on-a-tight-budget">Real-word tasks - classification on a (tight) budget</h2>
+
+<p>Let’s first define the situations where a resource-aware model is likely to be more useful than an off-the-shelf CNN. This will help us understand where and when exactly the new architecture helps. Computationally constrained tasks are numerous and diverse, and we will only focus on two major problems: anytime prediction, and budgeted batch classification.</p>
+
+<p><br /></p>
+
+<h3 id="anytime-prediction">Anytime prediction</h3>
+
+<p>In <strong>anytime prediction</strong>, the model can be forced to output a prediction, at any given point, possibly before the full computation is complete. Good performance levels are typically achieved by models that are able to give crude estimates very quickly, and refine them with time until the full model is run. For example, imagine an autonomous car equipped with a network to detect and handle obstacles on the road. You want your car to <em>instantly</em> detect and react to a pedestrian suddenly appearing in front of the car; there is no time to decide the precise distance at which it appears, whether it is an adult or a child, and at which speed it is going towards you. On the other hand, for distant and long-term obstacles, determining the precise distance between you and them enables better planning, smooth trajectories, better fuel management, etc.</p>
+
+<p>In a formal way, we assume that test samples $x$ and budgets $B$ are drawn from a joint distribution $P(x, B)$. The model outputs a prediction $f(x)$ within the computational budget $B$, and incurs a loss $L(f(x), B)$. The goal in anytime prediction is to find a model that minimizes the expected loss of individual prediction within (hard) budget constraint:</p>
+
+<script type="math/tex; mode=display">\min_f \ \mathbb{E}_{P(x, B)} [L(f(x)), B]</script>
+
+<p>Another example of anytime prediction is real-time video classification. You are filming a scene, and you want your phone to identify the various elements present in the video while filming. It is not unreasonable to ask for a refresh rate of 10 Hz, which means a prediction every 0.1 s, <em>whatever the computational budget available on your phone at that time</em>.</p>
+
+<p><br /></p>
+
+<h3 id="budgeted-batch-classification">Budgeted batch classification</h3>
+
+<p>In <strong>budgeted batch classification</strong>, the model is granted a finite known computational budget to classify a set of examples, and can spend it freely across examples. Good performance levels are typically achieved by models that are able to quickly classify easy examples (left horse), in order to save some additional computation for harder examples (right horse). For example, imagine that you want to show your best friend all the pictures on your phone where both of you are present. Some pictures will be easily classified (you both clearly face the camera, no other people present), some will be much harder (you are in a crowd, disguised, wearing make-up or making funny faces). You don’t care much about that, and you only want your phone to give you a decent search result in less than 5 seconds.</p>
+
+<p>Formally, we consider a set of examples $\mathcal{D}_ {test} = \{ x_1, …, x_M \}$ and a computational budget $B$ that is known in advance. The model spends $B$ as it pleases across examples, outputs a set of predictions $f(\mathcal{D}_ {test})$ and incurs loss $L(f(\mathcal{D}_{test}), B)$. The goal in budgeted batch classification is to find a model that minimizes the expected loss of batch prediction within (soft) budget constraint:</p>
+
+<script type="math/tex; mode=display">\min_f \ \mathbb{E}_{P(x)} [L(f(\mathcal{D}_{test})), B]</script>
+
+<p><br /><br /></p>
+
+<h2 id="the-problems-with-early-classification">The problems with early classification</h2>
+
+<p>Let us think it through. The simplest, most natural answer to address both these situations is to use multiple networks with increasing capacity (e.g. multiply the number of layers by a constant factor from one model to the next one), and evaluate them sequentially at test time. In <em>anytime prediction</em>, you simply output the prediction of the last network evaluated; in <em>batch budgeted classification</em>, you stop the evaluation once classification with sufficient confidence level is reached. This is illustrated in the next figure:</p>
+
+<p><img src="/assets/img/2018-09-24-model_sequence.png" alt="Model sequence" class="center-image" /></p>
+
+<p><span class="inpost-figure-caption"> A “sequence of models” solution, featuring AlexNet (A), GoogLeNet (G) and ResNet (R). Green $\gamma$ blocks denote selection policies. The input is first evaluated by AlexNet, and the selection policy determines whether evaluation by more complex models is needed. (<a href="https://arxiv.org/pdf/1702.07811.pdf">Source</a>) </span></p>
+
+<p>The problem with this approach is that, when the first network isn’t confident enough, we switch to the second network without re-using any feature previously computed: for complex examples, we completely <strong>waste</strong> the computational budget spent on the first networks. This is quite unsatisfying, and far from optimal.</p>
+
+<p>Then the opposite solution comes in mind: instead of building multiple networks with one classifier each, not sharing any feature, we could build one network as a cascade of multiple (early) classifiers along depth, re-using previous features to build the more advanced predictions. This would look like the next figure:</p>
+
+<p><img src="/assets/img/2018-09-24-classifiers_cascade.png" alt="Cascade" class="center-image" /></p>
+
+<p><span class="inpost-figure-caption">A simple “cascade of classifiers” solution on a standard CNN architecture. Early classification of easy examples yields substantial savings in computational budget, that can be spend on the hard examples. (<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Ouyang_Chained_Cascade_Network_ICCV_2017_paper.pdf">Source</a>) </span></p>
+
+<p>Although this model doesn’t waste any feature, it leads to poor performance, for two distinct reasons:</p>
+<ul>
+  <li><strong>Early classifiers lack coarse-level, global features</strong> - only fine-scale, local features are available at early stages.</li>
+  <li><strong>Early classifiers interfere with later classifiers</strong> - early classifiers tend to optimize the early features for the short-term, conflicting with the long-term optimization of late classifiers, that achieve better performance.</li>
+</ul>
+
+<p>These two issues will drive the design of MSDNet through the inclusion of two specific components, each addressing one issue.</p>
+
+<p><br /></p>
+
+<h3 id="early-classifiers-vs-dense-connections">Early classifiers vs. dense connections</h3>
+
+<p>Let us take a common CNN architecture, <a href="https://arxiv.org/abs/1512.03385">ResNet</a>, and attach an intermediate classifier at a (more or less) early stage of the architecture. We then train both (final and intermediate) classifiers jointly (here on CIFAR-100), weighting their losses equally, and look at the accuracy of the final classifier. If there a noticeable difference in performance with the standard setting, the presence of the intermediate classifier is likely to have an influence on the construction of the features.</p>
+
+<p><img src="/assets/img/2018-09-24-final_acc_when_intermed.png" alt="Final accuracy when intermediate classifier is attached" class="center-image" /></p>
+
+<p>As is clear from the figure, ResNet performance generally suffers a lot from the introduction of an intermediate classifier, especially at very early stages.</p>
+
+<blockquote>
+  <p>We postulate that this accuracy degradation in the ResNet may be caused by the intermediate classifier influencing the early features to be optimized for the short-term and not for the final layers. This improves the accuracy of the intermediate classifier but collapses information required to generate high quality features in later layers.</p>
+</blockquote>
+
+<p>This sounds like a reasonable and likely hypothesis. It would be interesting to visually examine the filters learned and the corresponding features for different locations of the intermediate classifier, providing us with some insights in this regard.</p>
+
+<h4 id="solutionmitigation-dense-connections">Solution/Mitigation: Dense connections</h4>
+
+<p>To mitigate this problem, the paper cites dense connections as an interesting line of work. Dense connections were introduced by our authors one year earlier in <a href="https://arxiv.org/abs/1608.06993">DenseNets</a>, as a generalization of residual connections, the building blocks of ResNets. Remember what a residual connection looks like? A residual block is displayed in the next figure: the signal can bypass the layer thanks to an identity connection, and addition with the layer’s output.</p>
+
+<p><img src="/assets/img/2018-09-24-residual_block.png" alt="Residual block" class="center-image" />
+<span class="inpost-figure-caption-centered">A residual block, the building foundation of ResNets. (<a href="https://arxiv.org/pdf/1512.03385.pdf">Source</a>)</span></p>
+
+<p>Dense connections go one step further by connecting each layer directly with <em>all previous layers</em> (inside the same block). What’s more, instead of being summed, the previous features are concatenated to enable direct re-use. The resulting dense block is illustrated in the next figure:</p>
+
+<p><img src="/assets/img/2018-09-24-dense_block.png" alt="Dense block" class="center-image" />
+<span class="inpost-figure-caption">A dense block, the building foundation of DenseNets. At each stage, the features of all previous layers are concatenated to maximize information flow and allow layer bypassing as much as possible. (<a href="https://arxiv.org/pdf/1608.06993.pdf">Source</a>)</span></p>
+
+<p>Now how will this help us? Compared to ResNets, DenseNets suffer much less from the introduction of intermediate classifiers at early levels (see the figure some blocks above). This is likely linked to the fact that the signal can bypass all layers, so that no layer results in a loss in information. Should an early layer get optimized for short-term classification, the original signal can still be recovered unperturbed by later layers. This greatly alleviates the influence between short-term and long-term optimization, and makes the final accuracy of DenseNets not too dependent on the location of the intermediate classifier, yielding a nice candidate to support early classifiers.</p>
+
+<p><br /></p>
+
+<h3 id="coarse-features-vs-multiple-scales">Coarse features vs. multiple scales</h3>
+
+<p><img src="/assets/img/2018-09-24-feature_levels.png" alt="Feature levels" class="center-image" /></p>
+
+<p><span class="inpost-figure-caption">Visualization of the features learned by a convolutional network along its depth, using DeconvNet. Low-level features match local and simple patterns, while higher level features retain incresingly global and complex patterns. (<a href="http://www.iro.umontreal.ca/~bengioy/talks/DL-Tutorial-NIPS2015.pdf">Source</a>)</span></p>
+
+<p>You’ve probably seen this picture a couple times already, or one alike. This visualization of the features learned by the network along the depth was obtained thanks to a <a href="https://arxiv.org/abs/1311.2901">visualization DeconvNet</a>. It supports the claim that first layers correspond to local, fine-scale features (the feature maps learned are close to the size of the original image), whereas deep layers correspond to global, coarse-scale features (the feature maps learned are much smaller than the original image, condensing global information such as “there is a dog in this region”).</p>
+
+<p>Now this is a problem for early classifiers. Image classification is much harder when you only have access to local features, matching only simple patterns such as straight lines in different directions, or circles of different sizes. To confirm this intuition, let us consider again our previous experiment: take a ResNet, attach an intermediate classifier at different locations along the depth of the network, but this time examine how this location influences the accuracy of the <em>intermediate</em> classifier. If classification based on local, fine-scale features was as easy as classification based on global, coarse-scale features, the impact on accuracy should not be too noticeable (and, as a side note, we woudln’t need deep learning to begin with).</p>
+
+<p><img src="/assets/img/2018-09-24-intermed_acc_when_intermed.png" alt="Intermediate accuracy" class="center-image" /></p>
+
+<p>It hurts. Pretty badly. DenseNets are once again less sensitive to this effect, but the performance of the intermediate classifier is still unsatisfying.</p>
+
+<h4 id="solutionmitigation-multi-scale-feature-maps">Solution/Mitigation: Multi-scale feature maps</h4>
+
+<p>To mitigate this harmful effect, the authors suggest maintaining feature maps of multiple scales at all layers. This is pretty annoying to describe with words, so let’s jump into the architecture to see how it is implemented.</p>
+
+<p><br /><br /></p>
+
+<h2 id="the-architecture">The architecture</h2>
+
+<p>As expected, the resulting design combines dense connections with multi-scale feature maps to yield the architecture of the Multi-Scale DenseNet, taking the following form:</p>
+
+<p><img src="/assets/img/2018-09-24-MSDNet_architecture.png" alt="MSDNet" class="center-image" /></p>
+
+<p><span class="inpost-figure-caption">The MSDNet architecture. Each layer maintains feature maps at multiple scales, enabling early classifiers to operate on coarse-level features. The feature maps at a given scale and layer are the concatenation of two elements: the result (in blue) of strided convolution on the finer-scale features from the previous layer, and the result (in red) of regular convolution on the same scale features from multiple previous layers <em>via</em> dense connections. </span></p>
+
+<p>This is not your typical CNN architecture, so let’s break it down bit by bit: first the layers and the connections, then the classifiers and their repartition, and finally the training details and the loss function.</p>
+
+<p><br /></p>
+
+<h4 id="layers">Layers</h4>
+
+<p><img src="/assets/img/2018-09-24-layers_details.png" alt="MSDNet layers details" class="center-image" /></p>
+
+<p>As described in the figures, the model is structured as a 2-dimensional grid $S \times L$, with $L$ the number of layers (analogous to the depth in standard networks) and $S$ the number of scales at each layer.</p>
+
+<p>The first layer $l=1$ is quite unique, since it “seeds” all scales $s = 1, …, S$ of the feature maps. The finer scale $s=1$ is the result of a regular convolution $h$ on the original image. For subsequent scales, the feature map at scale $s+1$ is the result of strided convolution $\tilde{h}$ (which is just really regular convolution with a stride of at least 2) to the features at scale $s$. Given that strided convolution results in downsampling of the input (like max pooling), the feature map at scale $s+1$ is smaller than the one at scale $s$. This enables coarser-level, global information to be encoded already in the first layer.</p>
+
+<p>The next layers maintain all scales that were previously seeded. The output of layer $l$ at scale $s$ is the concatenation of two elements:</p>
+<ul>
+  <li>The result of regular convolution $h$ on all previous feature maps (dense connection) at scale $s$ from layers $l’=1, …, l-1$ (in red).</li>
+  <li>The result of strided convolution $\tilde{h}$ on all previous feature maps (dense connection) at scale $s-1$ from layers $l’=1, …, l-1$ (in blue, performing the downsampling of finer-scale features that is common in CNNs).</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="classifiers">Classifiers</h4>
+
+<p>Following the same principle of dense connections, the classifiers take as input the concatenation of all coarse feature maps from all previous layers. In practice they are only attached to some intermediate layers, and their behavior depends on the task at hand:</p>
+<ul>
+  <li>In <em>anytime prediction</em>, the classifiers are evaluated sequentially until the budget is exhausted, and only the last prediction is output.</li>
+  <li>In <em>budgeted batch classification</em>, for each test example, the classifiers are evaluated sequentially until a sufficient level of confidence in prediction is found. However, determining the “sufficient level” part can be quite tricky, since you have to distribute a budget across multiple samples without knowing the difficulty of each. You cannot afford to fully evaluate the network on each one, yet you have to be confident enough in your prediction, while not knowing how long it is going to take for individual examples to reach this level of confidence. The authors therefore rely on a probabilistic model of the difficulty of the inputs to design the optimal threshold that wll determine whether or not we stop running a given input through the network.</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="training-details">Training details</h4>
+
+<p>We now have a network with multiple classifiers that need to be trained jointly. To do so, we unsurprisingly use cross-entropy $L(f_k)$ for all classifiers $f_k$, but we still need to combine those losses to perform joint optimization. The most natural solution is to take a weighted sum of all the individual losses, such as the final loss of the model is:</p>
+
+<script type="math/tex; mode=display">L(f) = \sum_k w_k L(f_k)</script>
+
+<blockquote>
+  <p>If the budget distribution $P(B)$ is known, we can use the weights to incorporate prior knowledge about the budget $B$ in the learning. Empirically, we find that using uniform weights $\forall k, w_k=1$ works well in practice.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h2 id="a-glance-at-the-results">A glance at the results</h2>
+
+<p>Now that we’ve gone so far, let’s just check that MSDNet performs well on the tasks it’s been designed to solve, namely <em>anytime prediction</em> and <em>budgeted batch classification</em>.</p>
+
+<p><br /></p>
+
+<h3 id="anytime-prediction-1">Anytime prediction</h3>
+
+<p><img src="/assets/img/2018-09-24-anytime_prediction.png" alt="Anytime prediction" class="center-image" /></p>
+
+<p>In anytime prediction, for each test example, the model is run until an unknown budget $B$ is exhausted, and is forced to output its latest prediction. As discussed earlier, typical baselines to compare against are ensembles of CNNs, here ensembles of ResNets and ensemble of DenseNets, that are evaluated sequentially until the budget is exhausted. Other baselines include <a href="http://proceedings.mlr.press/v38/lee15a.pdf">deeply supervised networks</a> (here ResNet<sup>MC</sup> and DenseNet<sup>MC</sup>) and <a href="https://arxiv.org/abs/1605.07648">FractalNet</a>. Going into details of these models is beyond the scope of this article; check the original papers to read about these interesting architectures.</p>
+
+<p>MSDNet shows excellent performance compared to all other baselines across all budgets, except FractalNet in low budget, where the performances are comparable. Note that, in extremely low budgets, the ensembles have a significant advantage since the first network (the only one evaluated) is directly optimized for prediction; yet MSDNet performance remains very satisfying. The limitations of ensembles appear very quickly when the budget increases, since they waste a lot of computation.</p>
+
+<p><br /></p>
+
+<h3 id="budgeted-batch-classification-1">Budgeted batch classification</h3>
+
+<p><img src="/assets/img/2018-09-24-budgeted_batch.png" alt="Budgeted batch" class="center-image" /></p>
+
+<p>In budgeted batch classification, the model is granted a finite known computational budget $B$ to classify a set of examples, and can spend it freely across examples. This encourages the use of <em>dynamic evaluation</em>, where easy examples are exited early while hard examples are run throughout the network until a sufficient level of confidence in classification is reached. The baselines are similar to the previous ones.</p>
+
+<p>Three MSDNets are trained with different depths, in order to cover a wide range of computational budgets, and the chosen model is selected depending on the budget, based on validation performance; this explains the three black curves. Once again, MSDNet prove very performant across all budgets, outperforming all baselines by a wide margin. In particular, MSDNet perform much better than deeply supervised networks, highlighting the importance of coarse-level features for classification at early stages.</p>
+
+<p><br /></p>
+
+<h3 id="bonus-points---visualization">Bonus points - Visualization</h3>
+
+<p><img src="/assets/img/2018-09-24-hard_easy.png" alt="Hard and easy examples" class="center-image" /></p>
+
+<p><span class="inpost-figure-caption">Samples from ImageNet classes <em>red wine</em> and <em>volcano</em>. Thanks to the dynamic evaluation, “easy” examples are early-exited while “hard” examples are run through larger parts of the network.</span></p>
+
+<p>To assess the relevance of dynamic evaluation and the calibration of confidence of the classifiers, it is interesting to examine which examples are early exited, and which ones are run through the entire network. As the figure above suggests, MSDNet seem able to quickly classify typical class examples, while non-typical images are granted a larger budget.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Building bridges - AMSGrad, brittle NMT, MSDNet&url=http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Resource efficiency" class="tag">&#35; Resource efficiency</a>
+          
+            <a href="/tags#Noise" class="tag">&#35; Noise</a>
+          
+            <a href="/tags#Optimization" class="tag">&#35; Optimization</a>
+          
+            <a href="/tags#Mixing ideas" class="tag">&#35; Mixing ideas</a>
+          
+            <a href="/tags#Personal work" class="tag">&#35; Personal work</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
+      displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</html>
