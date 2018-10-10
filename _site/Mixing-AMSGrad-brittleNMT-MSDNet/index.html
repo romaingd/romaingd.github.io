@@ -165,6 +165,126 @@
 
 <p><br /></p>
 
+<h2 id="key-insights-from-each-paper">Key insights from each paper</h2>
+
+<p>Let us break down each paper into key insights, which will help us combining them later on.</p>
+
+<h4 id="on-the-convergence-of-adam-and-beyond"><a href="https://openreview.net/pdf?id=ryQu7f-RZ">On the convergence of Adam and beyond</a></h4>
+
+<ul>
+  <li>
+    <p>Adam’s proof is flawed.</p>
+  </li>
+  <li>
+    <p>The most popular optimization algorithm in deep learning does not correctly converge in all settings.</p>
+  </li>
+  <li>
+    <p>The fact that Adam does not always converge does not matter too much</p>
+  </li>
+  <li>
+    <p>Adam does not always converge, since the proof wrongly assumed that the learning rate was non-increasing. A non-increasing learning rate seem to be required for convergence.</p>
+  </li>
+  <li>
+    <p>The online optimization framework, where you minimize the regret, is equivalent (algorithms can be transposed) to the usual loss minimization framework.</p>
+  </li>
+  <li>
+    <p>Adagrad works in theory, but remembers in practice too much of the past (average of all previous squared gradients), which shrinks the learning rates to zero too quickly.</p>
+  </li>
+  <li>
+    <p>Adam doesn’t work in theory, but works in practice (using an exponentially moving average / fixed window of past squared gradients), keeping reasonable learning rates.</p>
+  </li>
+  <li>
+    <p>Adam sometimes converges to the worst solution possible, and we generally do not care.</p>
+  </li>
+  <li>
+    <p>Adam forgets huge rare gradients, and favors small frequent ones.</p>
+  </li>
+  <li>
+    <p>Online convex optimization is harder than stochastic convex optimization.</p>
+  </li>
+  <li>
+    <p>You want a non-increasing quantity? Cap it using the max of previous values.</p>
+  </li>
+  <li>
+    <p>If you cheat with one quantity along the way, and it might bias your computations, then run the true computations in a hidden way, and compute the “cheated” quantities using the true ones.</p>
+  </li>
+  <li>
+    <p>We could quickfix Adam’s proof</p>
+  </li>
+  <li>
+    <p>Use sparse settings as soon as possible</p>
+  </li>
+  <li>
+    <p>Independent implementation of paper results may disprove (performance) claims</p>
+  </li>
+  <li>
+    <p>It takes a long time to check the math, even in optimization</p>
+  </li>
+</ul>
+
+<h4 id="synthetic-and-natural-noise-both-break-neural-machine-translation"><a href="https://openreview.net/pdf?id=BJ8vJebC-">Synthetic and natural noise both break Neural Machine Translation</a></h4>
+
+<ul>
+  <li>
+    <p>Data matters</p>
+  </li>
+  <li>
+    <p>We are unable to automatically generate quality natural noise</p>
+  </li>
+  <li>
+    <p>There are many noise types that humans are able to easily overcome</p>
+  </li>
+  <li>
+    <p>NMT is very brittle</p>
+  </li>
+  <li>
+    <p>Precision essentially measures the proportion of words of the candidate translation that actually appear in the reference translation.</p>
+  </li>
+  <li>
+    <p>Recall can be artificially inflated when considering multiple references</p>
+  </li>
+  <li>
+    <p>Sometimes it is better to consider the n-grams rather than raw words</p>
+  </li>
+  <li>
+    <p>If a model is biased, penalize it</p>
+  </li>
+  <li>
+    <p>Going form word embeddings to character embeddings is important, e.g. to reduce the storage need of the embedding matrix.</p>
+  </li>
+  <li>
+    <p>char2char accesses a sequence of characters embeddings (including spaces), Nematus accesses a sequence of sub-word units, charCNN accesses a sequence of words as sequences of character embeddings in an ordered structure (CNN).</p>
+  </li>
+  <li>
+    <p>SotA NMT models are unable to translate noisy texts.</p>
+  </li>
+  <li>
+    <p>System-breaking noise doesn’t need huge modifications, swap has the same effect than random scrambling.</p>
+  </li>
+  <li>
+    <p>Pay attention to variance/invariance to effects, sensitivity/insensitivity to structure.</p>
+  </li>
+  <li>
+    <p>meanChar removes all information about structure, but also potentially a large amount of information about presence</p>
+  </li>
+  <li>
+    <p>Graphs can flexibly retain or forget structure (using weighted edges on a complete graph), but retain presence given the importance of nodes.</p>
+  </li>
+  <li>
+    <p>If the model fails on some inputs, train it on them</p>
+  </li>
+  <li>
+    <p>Training on a mix of noises is OK</p>
+  </li>
+  <li>
+    <p>A convolution that relies on no structure cannot be anything else than averaging.</p>
+  </li>
+</ul>
+
+<hr />
+
+<p><br /></p>
+
 <h2 id="introduction">Introduction</h2>
 
 <p>Have a look at the two pictures below. It probably took you an unnoticeable amount of time to recognize a horse on the left, and a very noticeable amount of time (say one second) to recognize a horse on the right. Naturally, we would expect models to face similar difficulties in classification of those images. Intuitively, it feels like a simple CNN with a couple layers (e.g. AlexNet) would be more than enough to classify the first picture, while the last one shall require a much more complex model for correct classification, being in the <em>tail</em> of the “horse images” distribution (hence requiring a more precise approximation of this distribution by a neural network).</p>

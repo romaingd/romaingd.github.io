@@ -36,6 +36,92 @@ tags: [Resource efficiency, Noise, Optimization, Mixing ideas, Personal work]
 <br>
 
 
+## Key insights from each paper
+
+Let us break down each paper into key insights, which will help us combining them later on.
+
+
+#### [On the convergence of Adam and beyond](https://openreview.net/pdf?id=ryQu7f-RZ)
+
+* Adam's proof is flawed.
+
+* The most popular optimization algorithm in deep learning does not correctly converge in all settings.
+
+* The fact that Adam does not always converge does not matter too much
+
+* Adam does not always converge, since the proof wrongly assumed that the learning rate was non-increasing. A non-increasing learning rate seem to be required for convergence.
+
+* The online optimization framework, where you minimize the regret, is equivalent (algorithms can be transposed) to the usual loss minimization framework.
+
+* Adagrad works in theory, but remembers in practice too much of the past (average of all previous squared gradients), which shrinks the learning rates to zero too quickly. 
+
+* Adam doesn't work in theory, but works in practice (using an exponentially moving average / fixed window of past squared gradients), keeping reasonable learning rates.
+
+* Adam sometimes converges to the worst solution possible, and we generally do not care.
+
+* Adam forgets huge rare gradients, and favors small frequent ones.
+
+* Online convex optimization is harder than stochastic convex optimization.
+
+* You want a non-increasing quantity? Cap it using the max of previous values.
+
+* If you cheat with one quantity along the way, and it might bias your computations, then run the true computations in a hidden way, and compute the "cheated" quantities using the true ones.
+
+* We could quickfix Adam's proof
+
+* Use sparse settings as soon as possible
+
+* Independent implementation of paper results may disprove (performance) claims
+
+* It takes a long time to check the math, even in optimization
+
+
+#### [Synthetic and natural noise both break Neural Machine Translation](https://openreview.net/pdf?id=BJ8vJebC-)
+
+* Data matters
+
+* We are unable to automatically generate quality natural noise
+
+* There are many noise types that humans are able to easily overcome
+
+* NMT is very brittle
+
+* Precision essentially measures the proportion of words of the candidate translation that actually appear in the reference translation. 
+
+* Recall can be artificially inflated when considering multiple references
+
+* Sometimes it is better to consider the n-grams rather than raw words
+
+* If a model is biased, penalize it
+
+* Going form word embeddings to character embeddings is important, e.g. to reduce the storage need of the embedding matrix.
+
+* char2char accesses a sequence of characters embeddings (including spaces), Nematus accesses a sequence of sub-word units, charCNN accesses a sequence of words as sequences of character embeddings in an ordered structure (CNN).
+
+* SotA NMT models are unable to translate noisy texts. 
+
+* System-breaking noise doesn't need huge modifications, swap has the same effect than random scrambling.
+
+* Pay attention to variance/invariance to effects, sensitivity/insensitivity to structure.
+
+* meanChar removes all information about structure, but also potentially a large amount of information about presence
+
+* Graphs can flexibly retain or forget structure (using weighted edges on a complete graph), but retain presence given the importance of nodes. 
+
+* If the model fails on some inputs, train it on them
+
+* Training on a mix of noises is OK
+
+* A convolution that relies on no structure cannot be anything else than averaging.
+
+
+
+---
+
+
+<br>
+
+
 ## Introduction
 
 Have a look at the two pictures below. It probably took you an unnoticeable amount of time to recognize a horse on the left, and a very noticeable amount of time (say one second) to recognize a horse on the right. Naturally, we would expect models to face similar difficulties in classification of those images. Intuitively, it feels like a simple CNN with a couple layers (e.g. AlexNet) would be more than enough to classify the first picture, while the last one shall require a much more complex model for correct classification, being in the *tail* of the "horse images" distribution (hence requiring a more precise approximation of this distribution by a neural network).

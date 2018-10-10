@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-09T16:24:09+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-10T17:29:29+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -12,6 +12,126 @@
   &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=ryQu7f-RZ&quot;&gt;On the convergence of Adam and beyond&lt;/a&gt; &lt;em&gt;by Sashank J. Reddi, Satyen Kale, and Sanjiv Kumar.&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=BJ8vJebC-&quot;&gt;Synthetic and natural noise both break Neural Machine Translation&lt;/a&gt; &lt;em&gt;by Yonatan Belinkov and Yonatan Bisk.&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=Hk2aImxAb&quot;&gt;Multi-Scale Dense Networks for resource efficient image classification&lt;/a&gt; &lt;em&gt;by Gao Huang, Danlu Chen, Tianhong Li, Felix Wu, Laurens van der Maaten and Kilian Weinberger.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;key-insights-from-each-paper&quot;&gt;Key insights from each paper&lt;/h2&gt;
+
+&lt;p&gt;Let us break down each paper into key insights, which will help us combining them later on.&lt;/p&gt;
+
+&lt;h4 id=&quot;on-the-convergence-of-adam-and-beyond&quot;&gt;&lt;a href=&quot;https://openreview.net/pdf?id=ryQu7f-RZ&quot;&gt;On the convergence of Adam and beyond&lt;/a&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adam’s proof is flawed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The most popular optimization algorithm in deep learning does not correctly converge in all settings.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The fact that Adam does not always converge does not matter too much&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adam does not always converge, since the proof wrongly assumed that the learning rate was non-increasing. A non-increasing learning rate seem to be required for convergence.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The online optimization framework, where you minimize the regret, is equivalent (algorithms can be transposed) to the usual loss minimization framework.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adagrad works in theory, but remembers in practice too much of the past (average of all previous squared gradients), which shrinks the learning rates to zero too quickly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adam doesn’t work in theory, but works in practice (using an exponentially moving average / fixed window of past squared gradients), keeping reasonable learning rates.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adam sometimes converges to the worst solution possible, and we generally do not care.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adam forgets huge rare gradients, and favors small frequent ones.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Online convex optimization is harder than stochastic convex optimization.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You want a non-increasing quantity? Cap it using the max of previous values.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you cheat with one quantity along the way, and it might bias your computations, then run the true computations in a hidden way, and compute the “cheated” quantities using the true ones.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We could quickfix Adam’s proof&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use sparse settings as soon as possible&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Independent implementation of paper results may disprove (performance) claims&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It takes a long time to check the math, even in optimization&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;synthetic-and-natural-noise-both-break-neural-machine-translation&quot;&gt;&lt;a href=&quot;https://openreview.net/pdf?id=BJ8vJebC-&quot;&gt;Synthetic and natural noise both break Neural Machine Translation&lt;/a&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Data matters&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We are unable to automatically generate quality natural noise&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There are many noise types that humans are able to easily overcome&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;NMT is very brittle&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Precision essentially measures the proportion of words of the candidate translation that actually appear in the reference translation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Recall can be artificially inflated when considering multiple references&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sometimes it is better to consider the n-grams rather than raw words&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a model is biased, penalize it&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Going form word embeddings to character embeddings is important, e.g. to reduce the storage need of the embedding matrix.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;char2char accesses a sequence of characters embeddings (including spaces), Nematus accesses a sequence of sub-word units, charCNN accesses a sequence of words as sequences of character embeddings in an ordered structure (CNN).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SotA NMT models are unable to translate noisy texts.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;System-breaking noise doesn’t need huge modifications, swap has the same effect than random scrambling.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pay attention to variance/invariance to effects, sensitivity/insensitivity to structure.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;meanChar removes all information about structure, but also potentially a large amount of information about presence&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Graphs can flexibly retain or forget structure (using weighted edges on a complete graph), but retain presence given the importance of nodes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the model fails on some inputs, train it on them&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Training on a mix of noises is OK&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A convolution that relies on no structure cannot be anything else than averaging.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
