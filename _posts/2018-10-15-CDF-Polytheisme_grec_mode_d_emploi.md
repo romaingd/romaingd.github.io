@@ -46,7 +46,7 @@ Pour son premier cours au Collège de France, dans la traditionnelle chaire d'é
 
 <br>
 
-Le monde grec compte ainsi, au 4<sup>e</sup> siècle avant notre ère, plus d'un millier de cités, et la religion grecque se décline dans chacune sous une **forme propre**, dotée d'un panthéon et d'un calendrier spécifiques. Au coeur de ces contradictions, le travail du chercheur consiste justement à en comprendre **l'articulation**, à interroger ces diverses représentations.
+Le monde grec compte ainsi, au IV<sup>e</sup> siècle avant notre ère, plus d'un millier de cités, et la religion grecque se décline dans chacune sous une **forme propre**, dotée d'un panthéon et d'un calendrier spécifiques. Au coeur de ces contradictions, le travail du chercheur consiste justement à en comprendre **l'articulation**, à interroger ces diverses représentations.
 
 La figure d'Aphrodite en fournit un exemple frappant. Réduite un peu rapidement dans l'imaginaire occidental à la déesse de *l'amour*, Aphrodite est bien sûr très liée à la sexualité ; mais comment s'expliquer alors que les magistrats la remercient à l'issue de leur office ? Il faut pour cela invoquer la notion de *mélange*, à laquelle cette divinité préside dans la culture grecque ; mélange certes des corps dans la sexualité, mais aussi mélange sur l'agora de la parole persuasive pour les magistrats, mélange au combat des corps qui s'entrechoquent. Entre ces domaines qui nous paraissent si **hétérogènes**, les Grecs voyaient un **lien**, tant et si bien que si on se contente de résumer Aphrodite à son étiquette facile de déesse de l'amour, *on ne comprend pas le polythéisme grec*.
 
@@ -56,4 +56,33 @@ La figure d'Aphrodite en fournit un exemple frappant. Réduite un peu rapidement
 
 <span class="inpost-figure-caption-centered">Dédicace d'épistates (magistrats) à Aphrodite, Thasos. <br>La première ligne indique Ἐπισταται Ἀφροδιτηι, les lignes suivantes les noms des magistrats. ([Source](https://www.persee.fr/doc/bch_0007-4217_1958_num_82_1_2343))</span>
 
-Un dernier point nous permettra d'engager la réflexion sur nos sociétés contemporaines. **Le polythéisme grec ne prétend pas à la vérité**, et d'ailleurs ne raisonne pas en terme de vérité et d'erreur, préférant voir dans les différents systèmes polythéistes une pluralité de points de vue. Les dieux du voisin, pourvu qu'ils soient nombreux, ne posent pas de problèmes, et peuvent même combler certaines lacunes dans le panthéon local. Dans une époque marquée par des tensions religieuses qui restent fortes, cette approche ne peut pas manquer de faire réfléchir.
+Un dernier point nous permettra d'engager la réflexion sur nos sociétés contemporaines. **Le polythéisme grec ne prétend pas à la vérité**, et d'ailleurs ne raisonne pas en terme de vérité et d'erreur, préférant voir dans les différents systèmes polythéistes une pluralité de points de vue. Les dieux du voisin, pourvu qu'ils soient nombreux, ne posent pas de problèmes, et peuvent même combler certaines lacunes dans le panthéon local. Dans notre époque marquée par des tensions religieuses qui restent fortes, cette approche ne peut manquer de susciter la réflexion.
+
+<br>
+
+Si l'Antiquité classique représente une part majeure de notre **héritage culturel**, sa dimension religieuse polythéiste ne se laisse pas facilement appréhender par nos réflexes modernes, et nécessite une certaine distanciation. Les clefs du polythéisme grec ne se trouvent pas dans les statues ou les dictionnaires, et il nous faut nous méfier à la fois de notre fausse proximité ressentie à la religion, et de la tendance [apologétique chrétienne](https://www.universalis.fr/encyclopedie/apologetique/2-l-apologetique-chretienne-aux-premiers-siecles/) (centrée sur la défense méthodique du christianisme) qui a dominé les derniers siècles.
+
+Dans cette perspective, Vinciane Pirenne-Delforge emprunte un chemin qui suivra trois problématiques liées :
+<ol>
+    <li>Doit-on parler de religion grecque au singuler ou au pluriel ?</li>
+    <li>Les figures divines s'atomisent-elles dans la variété des lieux de culte, ou peut-on reconstituer un profil commun pour chacune d'elles ?</li>
+    <li>Les actes sacrificiels ne sont-ils fondés que sur des pratiques strictement locales, ou sont-elles liées par un fonds commun</li>
+</ol>
+
+
+<br><br>
+
+
+## Le mot et la chose : religion
+
+Le terme de **religion** est bien sûr culturellement très déterminé. Si l'acceptation moderne est relativement englobante, elle ne s'est cristallisée que vers la fin du XVI<sup>e</sup> siècle en Europe occidentale, aussi il est utile d'en parcourir l'histoire. Des références pour approfondir le sujet sont disponibles [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL565076454571035790_Pirenne_Cours_1_2018_Fevr_1.pdf).
+
+Le terme latin de *religio* renvoie à un **accomplissement scrupuleux des différentes actions nécessaires aux bonnes relations avec les dieux**, comme en témoigne Cicéron :
+
+<div class="centeredquote">
+<i>... religionem quae deorum cultu pio continentur, ...</i><br>
+... la religion qui revient à prendre soin des dieux de manière adéquate, ...</div>
+<span class="inpost-figure-caption-centered">Cicéron, <i>De natura deorum</i>, I, 117</span>
+
+
+Dans cette *religio* comme *cultus deorum*, les dieux font partie de la communauté à laquelle les hommes appartiennent, des cités, et on entre en relation avec eux de façon adéquate.

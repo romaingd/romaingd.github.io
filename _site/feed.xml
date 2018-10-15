@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-15T17:30:18+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-15T20:43:08+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Religion grecque, singulier ou pluriel ?</title><link href="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/" rel="alternate" type="text/html" title="Religion grecque, singulier ou pluriel ?" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi</id><content type="html" xml:base="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -29,7 +29,7 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Le monde grec compte ainsi, au 4&lt;sup&gt;e&lt;/sup&gt; siècle avant notre ère, plus d’un millier de cités, et la religion grecque se décline dans chacune sous une &lt;strong&gt;forme propre&lt;/strong&gt;, dotée d’un panthéon et d’un calendrier spécifiques. Au coeur de ces contradictions, le travail du chercheur consiste justement à en comprendre &lt;strong&gt;l’articulation&lt;/strong&gt;, à interroger ces diverses représentations.&lt;/p&gt;
+&lt;p&gt;Le monde grec compte ainsi, au IV&lt;sup&gt;e&lt;/sup&gt; siècle avant notre ère, plus d’un millier de cités, et la religion grecque se décline dans chacune sous une &lt;strong&gt;forme propre&lt;/strong&gt;, dotée d’un panthéon et d’un calendrier spécifiques. Au coeur de ces contradictions, le travail du chercheur consiste justement à en comprendre &lt;strong&gt;l’articulation&lt;/strong&gt;, à interroger ces diverses représentations.&lt;/p&gt;
 
 &lt;p&gt;La figure d’Aphrodite en fournit un exemple frappant. Réduite un peu rapidement dans l’imaginaire occidental à la déesse de &lt;em&gt;l’amour&lt;/em&gt;, Aphrodite est bien sûr très liée à la sexualité ; mais comment s’expliquer alors que les magistrats la remercient à l’issue de leur office ? Il faut pour cela invoquer la notion de &lt;em&gt;mélange&lt;/em&gt;, à laquelle cette divinité préside dans la culture grecque ; mélange certes des corps dans la sexualité, mais aussi mélange sur l’agora de la parole persuasive pour les magistrats, mélange au combat des corps qui s’entrechoquent. Entre ces domaines qui nous paraissent si &lt;strong&gt;hétérogènes&lt;/strong&gt;, les Grecs voyaient un &lt;strong&gt;lien&lt;/strong&gt;, tant et si bien que si on se contente de résumer Aphrodite à son étiquette facile de déesse de l’amour, &lt;em&gt;on ne comprend pas le polythéisme grec&lt;/em&gt;.&lt;/p&gt;
 
@@ -39,7 +39,33 @@
 
 &lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Dédicace d’épistates (magistrats) à Aphrodite, Thasos. &lt;br /&gt;La première ligne indique Ἐπισταται Ἀφροδιτηι, les lignes suivantes les noms des magistrats. (&lt;a href=&quot;https://www.persee.fr/doc/bch_0007-4217_1958_num_82_1_2343&quot;&gt;Source&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Un dernier point nous permettra d’engager la réflexion sur nos sociétés contemporaines. &lt;strong&gt;Le polythéisme grec ne prétend pas à la vérité&lt;/strong&gt;, et d’ailleurs ne raisonne pas en terme de vérité et d’erreur, préférant voir dans les différents systèmes polythéistes une pluralité de points de vue. Les dieux du voisin, pourvu qu’ils soient nombreux, ne posent pas de problèmes, et peuvent même combler certaines lacunes dans le panthéon local. Dans une époque marquée par des tensions religieuses qui restent fortes, cette approche ne peut pas manquer de faire réfléchir.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Un dernier point nous permettra d’engager la réflexion sur nos sociétés contemporaines. &lt;strong&gt;Le polythéisme grec ne prétend pas à la vérité&lt;/strong&gt;, et d’ailleurs ne raisonne pas en terme de vérité et d’erreur, préférant voir dans les différents systèmes polythéistes une pluralité de points de vue. Les dieux du voisin, pourvu qu’ils soient nombreux, ne posent pas de problèmes, et peuvent même combler certaines lacunes dans le panthéon local. Dans notre époque marquée par des tensions religieuses qui restent fortes, cette approche ne peut manquer de susciter la réflexion.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si l’Antiquité classique représente une part majeure de notre &lt;strong&gt;héritage culturel&lt;/strong&gt;, sa dimension religieuse polythéiste ne se laisse pas facilement appréhender par nos réflexes modernes, et nécessite une certaine distanciation. Les clefs du polythéisme grec ne se trouvent pas dans les statues ou les dictionnaires, et il nous faut nous méfier à la fois de notre fausse proximité ressentie à la religion, et de la tendance &lt;a href=&quot;https://www.universalis.fr/encyclopedie/apologetique/2-l-apologetique-chretienne-aux-premiers-siecles/&quot;&gt;apologétique chrétienne&lt;/a&gt; (centrée sur la défense méthodique du christianisme) qui a dominé les derniers siècles.&lt;/p&gt;
+
+&lt;p&gt;Dans cette perspective, Vinciane Pirenne-Delforge emprunte un chemin qui suivra trois problématiques liées :&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;Doit-on parler de religion grecque au singuler ou au pluriel ?&lt;/li&gt;
+    &lt;li&gt;Les figures divines s'atomisent-elles dans la variété des lieux de culte, ou peut-on reconstituer un profil commun pour chacune d'elles ?&lt;/li&gt;
+    &lt;li&gt;Les actes sacrificiels ne sont-ils fondés que sur des pratiques strictement locales, ou sont-elles liées par un fonds commun&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;le-mot-et-la-chose--religion&quot;&gt;Le mot et la chose : religion&lt;/h2&gt;
+
+&lt;p&gt;Le terme de &lt;strong&gt;religion&lt;/strong&gt; est bien sûr culturellement très déterminé. Si l’acceptation moderne est relativement englobante, elle ne s’est cristallisée que vers la fin du XVI&lt;sup&gt;e&lt;/sup&gt; siècle en Europe occidentale, aussi il est utile d’en parcourir l’histoire. Des références pour approfondir le sujet sont disponibles &lt;a href=&quot;https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL565076454571035790_Pirenne_Cours_1_2018_Fevr_1.pdf&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Le terme latin de &lt;em&gt;religio&lt;/em&gt; renvoie à un &lt;strong&gt;accomplissement scrupuleux des différentes actions nécessaires aux bonnes relations avec les dieux&lt;/strong&gt;, comme en témoigne Cicéron :&lt;/p&gt;
+
+&lt;div class=&quot;centeredquote&quot;&gt;
+&lt;i&gt;... religionem quae deorum cultu pio continentur, ...&lt;/i&gt;&lt;br /&gt;
+... la religion qui revient à prendre soin des dieux de manière adéquate, ...&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Cicéron, &lt;i&gt;De natura deorum&lt;/i&gt;, I, 117&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans cette &lt;em&gt;religio&lt;/em&gt; comme &lt;em&gt;cultus deorum&lt;/em&gt;, les dieux font partie de la communauté à laquelle les hommes appartiennent, des cités, et on entre en relation avec eux de façon adéquate.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
