@@ -77,7 +77,7 @@ Dans cette perspective, Vinciane Pirenne-Delforge emprunte un chemin qui suivra 
 
 Le terme de **religion** est bien sûr culturellement très déterminé. Si l'acceptation moderne est relativement englobante, elle ne s'est cristallisée que vers la fin du XVI<sup>e</sup> siècle en Europe occidentale, aussi il est utile d'en parcourir l'histoire. Des références pour approfondir le sujet sont disponibles [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL565076454571035790_Pirenne_Cours_1_2018_Fevr_1.pdf).
 
-Le terme latin de *religio* renvoie à un **accomplissement scrupuleux des différentes actions nécessaires aux bonnes relations avec les dieux**, comme en témoigne Cicéron :
+<br>
 
 <div class="centeredquote">
 <i>... religionem quae deorum cultu pio continentur, ...</i><br>
@@ -85,12 +85,37 @@ Le terme latin de *religio* renvoie à un **accomplissement scrupuleux des diff�
 <span class="inpost-figure-caption-centered">Cicéron, <i>De natura deorum</i>, I, 117</span>
 
 
-Dans cette *religio* comme *cultus deorum*, les dieux font partie de la communauté à laquelle les hommes appartiennent, des cités, et on entre en relation avec eux de façon adéquate. Si Cicéron élargit un peu plus tard le sens du terme à certaines relations scrupuleuses strictement humaines, par exemple entre enfant et parents, cet usage reste exceptionnel. La *religio*, en latin classique, regroupe ainsi à la fois **une attitude et des pratiques scrupuleuses à l'égard des dieux**.
+Le terme latin de *religio* renvoie à un **accomplissement scrupuleux des différentes actions nécessaires aux bonnes relations avec les dieux**, comme en témoigne [Cicéron](https://fr.wikipedia.org/wiki/Cic%C3%A9ron) ci-dessus. Dans cette *religio* comme *cultus deorum*, les dieux font partie de la communauté à laquelle les hommes appartiennent, des cités, et on entre en relation avec eux de façon adéquate. Si Cicéron élargit un peu plus tard le sens du terme à certaines relations scrupuleuses strictement humaines, par exemple entre enfant et parents, cet usage reste exceptionnel. La *religio*, en latin classique, regroupe ainsi à la fois **une attitude et des pratiques scrupuleuses à l'égard des dieux**.
 
-Toutefois, les intellectuels chrétiens des premiers siècle de notre ère, écrivant également en latin, investissent le terme de *religio* pour décrire *nostra religio*, "notre religion", infléchissant de manière nouvelle le sens du terme. Ainsi, prenant la défense de la foi chrétienne dans son *Apologétique*, Tertullien décrit au II<sup>e</sup> la "vraie religion du vrai Dieu" :
+<br>
+
+Toutefois, les intellectuels chrétiens des premiers siècle de notre ère, écrivant également en latin, investissent le terme de *religio* pour décrire *nostra religio*, "notre religion", infléchissant de manière nouvelle le sens du terme. Ainsi, prenant la défense de la foi chrétienne dans son *Apologétique*, [Tertullien](https://fr.wikipedia.org/wiki/Tertullien) décrit au II<sup>e</sup> la "vraie religion du vrai Dieu" :
 
 <div class="centeredquote">
-Tout cet aveu de vos dieux par lequel ils reconnaissent qu'ils ne sont pas dieux et attestent qu'il n'y a point d'autre dieu que celui-là seul auquel nous appartenons, est plus que suffisant pour repousser l'accusation de léser la religion publique, surtout la religion romaine (<i>crimen laesae publicae et maxime Romanae religionis</i>). Car s'il et certain que vos dieux n'existent pas, il est certain que votre religion n'existe pas non plus ; et s'il est certain que votre religion n'en est pas une, parce que vos dieux n'existent pas, il est certain aussi que nous ne sommes pas non plus coupables de lèse-religion. Mais au contraire, c'est sur vous que retombera le reproche que vous nous faites, sur vous qui adorez le mensonge et qui, non contents de négliger <b>la vraie religion du vrai Dieu (<i>veram religionem veri Dei</i>)</b>, allez jusqu'à la combattre, et qui vous rendez ainsi véritablemet coupables du crime d'une véritable irréligion (<i>crimen verae irreligiositatis</i>).</div>
+Car s'il et certain que vos dieux n'existent pas, il est certain que votre religion n'existe pas non plus ; et s'il est certain que votre religion n'en est pas une, parce que vos dieux n'existent pas, il est certain aussi que nous ne sommes pas non plus coupables de lèse-religion. Mais au contraire, c'est sur vous que retombera le reproche que vous nous faites, sur vous qui adorez le mensonge et qui, non contents de négliger <b>la vraie religion du vrai Dieu (<i>veram religionem veri Dei</i>)</b>, allez jusqu'à la combattre, et qui vous rendez ainsi véritablemet coupables du crime d'une véritable irréligion (<i>crimen verae irreligiositatis</i>).</div>
 <span class="inpost-figure-caption-centered">Tertullien, <i>Apologétique</i>, XXIV, 1-2 (trad. J.-P. Walzing)</span>
 
-Cette qualifiction par l'épithète *verus* de *religio* **n'est jamais attestée en latin classique (non chrétien),**, excepté dans un commentaire de Servius sur l'Énéide de Virgile. Dans ce commentaire, Servius donne à "l'ignorance des dieux anciens" deux sens, dont "la considération de toute religion comme vraie" ; mais cette explication s'entend davantage dans le sens "accueil large de manières d'honorer les dieux qui ne sont pas traditionnelles dans une cité", différent de l'opposition naturelle entre vérité et erreur. Cette qualification exceptionnelle par *verus* peut s'expliquer par l'influence grandissante du latin chrétien sur le vocabulaire employé à cette époque, celui-ci reprenant à son compte l'opposition classique entre *superstitio* (crainte excessive) et *religio* pour qualifier les religions polythéistes de *supertsitio*, et la religion chrétienne de *vera religio*.
+Cette qualification par l'épithète *verus* de *religio* **n'est jamais attestée en latin classique (non chrétien)**, excepté dans un commentaire de Servius sur l'Énéide de Virgile ; ce commentaire ne fait toutefois pas l'opposition entre vraie et fausse religion, et peut s'expliquer par l'influence grandissante du latin chrétien sur le vocabulaire employé à cette époque, celui-ci reprenant à son compte l'opposition classique entre *superstitio* (crainte excessive) et *religio* pour qualifier les religions polythéistes de *supertsitio*, et la religion chrétienne de *vera religio*.
+
+<br>
+
+![Augustin]({{site.baseurl}}/assets/img/2018-10-15-augustin.jpg){: .center-image height="600px"}
+
+<span class="inpost-figure-caption-centered"><i>Saint Augustin dans son cabinet de travail</i>, Botticelli, ~1480 ([Source](https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_050.jpg?uselang=fr))</span>
+
+
+Ce **transfert de mots** est très révélateur des changements religieux en arrière-plan. C'est ainsi qu'[Augustin d'Hippone](https://fr.wikipedia.org/wiki/Augustin_d%27Hippone) (ou Saint Augustin), évèque à l'époque de Servius, reprend la notion de "cité" (*civitas*, également "droit de cité") de manière subversive : ce n'est plus la *civitas* qui est le lien de la communauté et le fondement de la relation aux dieux, mais c'est le lien de piété personnelle entre les chrétiens et Dieu qui constitue ce lien, désinvestissant la *civitas*. 
+
+Augustin sent bien toutefois les limites des mots existants, et s'oblige à forger des usages qui conviennent mieux à ses idées. Dans sa *Cité de Dieu* par exemple, il montre que l'acceptation polythéiste traditionnelle de la *religio* en tant que "respect que nous avons de ce qui rapproche les hommes" ne correspond que mal à la conception chrétienne d'une transcendance verticale. L'influence chrétienne dessine ainsi une **distinction entre la sphère religieuse et la sphère sociale**, distinction qui n'est pas opérée par les polythéismes grec et romain. Les chrétiens hellénophones, quant à eux, s'emparent du mot θρησκεία pour décrire leur conception de la religion (proche de la nôtre) ; très peu usité dans la littérature polythéiste, il ne se multiplie que sous la plume des auteurs juifs et chrétiens.
+
+À partir du XVI<sup>e</sup> siècle, la compréhension moderne du terme de religion, comprenant diverses composantes comme la vénération, se cristallise. Au XVIII<sup>e</sup> siècle, la perspective apologétique s'éloigne et la question se pose d'une **religion naturelle**, fonds commun à tous, et dont les religions existantes seraient toutes des actualisations.
+
+<br>
+
+**Doit-on alors renoncer au terme de *religion* ?** Le déterminisme culturel attaché à ce terme, le poids de l'héritage empêcheraient les chercheurs occidentaux modernes d'étudier d'un oeil neutre les différents systèmes religieux du monde ; il faudrait supprimer ce terme de la boîte à outils conceptuels d'analyse. Cependant, malgré la nécessité d'un concept pour l'analyse, il n'existe pas d'autre option viable permettant d'éviter à la fois le jargon (porteur de ses propres déterminismes), les anachronismes et les termes *ad hoc* (natifs, empêchant la comparaison).
+
+> [Nous choisissons alors de maintenir] le terme de religion à titre de **concept opératoire**, qui est à repenser et à affiner sans cesse dans les contextes dans lesquels on l'applique.
+
+Vinciane Pirenne-Delforge propose alors de retenir, pour l'analyse, une définition de la religion modifiant légèrement celle donnée par Spiro en 1966 :
+
+<div class="centeredquote"><b>La religion est une institution qui régit, selon des modèles culturels, les relations avec la sphère supra-humaine dont cette culture postule l'existence.</b></div>
