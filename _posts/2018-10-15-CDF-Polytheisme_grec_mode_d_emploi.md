@@ -126,7 +126,7 @@ Vinciane Pirenne-Delforge propose alors de retenir, pour l'analyse, une définit
 
 ## Le mot et la chose : polythéisme
 
-Parcourons désormais l'histoire et les usages du terme de polythéisme, pour comparer à notre analyse précédente ; des références sont disponibles [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL971292917039606906_Pirenne_Cours_2_2018_Fevr_8.pdf). Là où religion s'enracine dans la langue latine, polythéisme s'enracine dans la langue grecque, renvoyant à la multiplicité (πολυς) des dieux (θεος). Toutefois, **on ne trouve pas en grec ancien (polythéiste) le terme πολυθεισμος**. 
+Parcourons désormais l'histoire et les usages du terme de polythéisme, pour comparer à notre analyse précédente ; des références sont disponibles [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL971292917039606906_Pirenne_Cours_2_2018_Fevr_8.pdf). Là où "religion" s'enracine dans la langue latine, "polythéisme" s'enracine dans la langue grecque, renvoyant à la multiplicité (πολυς) des dieux (θεος). Toutefois, **on ne trouve pas en grec ancien (polythéiste) le terme πολυθεος**. 
 
 <br>
 <div class="centeredquote">
@@ -155,11 +155,62 @@ La seule attestation avant notre ère de termes similaires se trouve dans les *S
     <li><b>βρετας</b> - les sièges des dieux sont leurs effigies, leurs statues</li>
 </ul>
 
+<br>
 
-Dans une culture, on ne spécifie pas forcément ce qui va de soi - le polythéisme étant largement majoritaire dans le bassin méditerranéen. Ce n'est qu'avec l'arrivée d'auteurs juifs que la distinction apparaît. Après la curiosité à l'égard des religions voisines manifestée par le polythéisme (traductions des noms des autres dieux, etc), les auteurs judéo-chrétiens expriment une franche hostilité pour les autres religions. Dans la traduction grecque de la Bible, on ne trouve pas le terme polutheos, mais bien souvent les mots eidolon et eidololatria, renvoyant à une pure apparence sensible qui peut tromper - illusion de la vénération des objets faits de main d'homme, et des dieux ainsi représentés. Moins que sur la pluralité des dieux, c'est sur l'illusion, l'erreur des polythéistes que l'eidololatria met l'accent. 
+Le polythéisme étant largement majoritaire dans le bassin méditerranéen, il va pendant longtemps "de soi" et n'est pas explicité. Ce n'est qu'avec l'arrivée d'**auteurs judéo-chrétiens**, exprimant une franche hostilité pour les autres religions (contrastant avec la curiosité polythéiste), que la distinction apparaît. Dans la [Septante](https://fr.wikipedia.org/wiki/Septante) (traduction grecque de la Bible hébraïque), on ne trouve pas encore le terme πολυθεος, mais bien souvent les mots εἴδωλον et εἰδωλολατρία (idole, idolâtrie), renvoyant à l'illusion de la vénération des objets faits de main d'homme, et des dieux ainsi représentés. Moins que sur la pluralité des dieux, c'est sur l'illusion, l'erreur des polythéistes que l'εἰδωλολατρία met l'accent. 
 
-Commentant le texte biblique grec dans un effort de rapprochement avec la brillante philosophie antique (qui, à son grand dam, s'est historiquement développée dans un contexte religieux qu'il perçoit comme fondamentalement erroné), Philon d'Alexandrie mentionne explicitement le terme de polutheos, tranchant avec la tradition. La pluralité est cette fois mise en avant, en contraste avec les principes du Décalogue ("Tu n'auras point d'autres dieux"). Le cosmos chrétien est une monarchie, qui s'oppose à l'ochlocratie (gouvernement de la masse) du ciel :
+<br>
 
-<div class="centeredquote">Citation Philon</div>
+![Philon]({{site.baseurl}}/assets/img/2018-10-15-philon.jpg){: .center-image height="400px"}
 
-Philon livre également une typologie de la croyance polythéiste, en trois étapes : adoration de l'univers et de ses parties, fabrication d'idoles, culte des animaux. Il associe ainsi le polythéisme aux idoles, mais aussi aux aphidrumata (lié à idruein) - ce par quoi on installe un culte, montrant que les dieux sont dans le polythéisme installés parmi les hommes. 
+<span class="inpost-figure-caption-centered">Philon d'Alexandrie ([Source](https://fr.wikipedia.org/wiki/Philon_d%27Alexandrie#/media/File:PhiloThevet.jpg))</span>
+
+
+Commentant la Septante dans un effort de rapprochement de la foi juive avec la philosophie antique (qui, à son grand dam, s'est développée dans un contexte polythéiste), [Philon d'Alexandrie](https://fr.wikipedia.org/wiki/Philon_d%27Alexandrie) mentionne explicitement le terme de πολυθεος, tranchant avec la tradition et le texte biblique. La pluralité est cette fois mise en avant, et opposée aux principes du [Décalogue](https://fr.wikipedia.org/wiki/D%C3%A9calogue) ("Tu n'auras point d'autres dieux") : à l'ochlocratie (gouvernement de la masse) du ciel grec s'oppose **le cosmos chrétien comme monarchie divine**. Philon livre également une typologie de la croyance polythéiste, en trois étapes : adoration de l'univers et de ses parties, fabrication d'idoles, culte des animaux. Il associe également le polythéisme aux ἀφιδρυμάτα (ce par quoi on installe un culte, lié à ἱδρυειν), montrant que **les dieux sont dans le polythéisme installés parmi les hommes**. 
+
+<br>
+
+![Massa]({{site.baseurl}}/assets/img/2018-10-15-massa.jpg){: .center-image height="300px"}
+
+<span class="inpost-figure-caption-centered">Francesco Massa ([Source](http://unige.academia.edu/FrancescoMassa))</span>
+
+Les auteurs grecs chrétiens et apologistes feront leur, en plus de l'opposition entre monarchie et ochlocratie, la dichotomie opérée par Philon entre vérité (ἀλήθεια) et erreur, fausse croyance (ψευδῆ δόξα). Ces auteurs ont été longuement étudiés, en particulier par [Francesco Massa](https://www.unige.ch/lettres/antic/unites/hr/enseignants/massa/). Celui-ci montre que, dans la civilisation grecque, la **recherche de la vérité était l'apanage de la philosophie**, et non de la religion ; les auteurs hellènes chrétiens verront donc le christianisme d'abord comme une philosophie, supérieure à toutes les autres. Par ailleurs, dans la société hellène d'alors, les groupes n'étaient pas identifiés par leur identité religieuse, comme [l'indique Massa](https://journals.openedition.org/rhr/8829) :
+
+> Les chrétiens ne constituaient pas un groupe religieux à part entière car ils n'appartenaient pas à un seul peuple. La seule catégorisation possible pour une communauté qui revendiquait pour elle un mode de vie particulier, sur la base d'un enseignement éthique et produisant une réflexion sur le divin, est celle d'*hairesis*, c'est-à-dire d'école philosophique.
+
+De la nécessité subséquente de se distinguer à la fois des juifs et des religions traditionnelles de la Méditerranée antique, naîtront les outils langagiers en -isme dont nous sommes familiers. C'est ainsi que l'*hellenismos* se détache peu à peu de sa signification de "grec" pour désigner majoritairement les polythéistes grecs (équivalent du **paganisme** latin), les différenciant des adeptes du *iudaismos* et du *christianismos*. Au III<sup>e</sup> siècle, [Eusèbe de Césarée](https://fr.wikipedia.org/wiki/Eus%C3%A8be_de_C%C3%A9sar%C3%A9e) voit dans la religion grecque une superstition issue de la théologie égyptienne et barbare, et qualifie la croyance en une multiplicité de dieux d'**athéisme** (et non plus de *polythéisme*), ce qui marquera longtemps la pensée chrétienne.
+
+<br>
+![Guillaume Budé]({{site.baseurl}}/assets/img/2018-10-15-guillaume_bude.jpg){: .center-image height="300px"}
+
+<span class="inpost-figure-caption-centered">Guillaume Budé ([Source](https://en.wikipedia.org/wiki/Guillaume_Bud%C3%A9#/media/File:Guillaume_Bud%C3%A9,_by_Jean_Clouet.jpg))</span>
+
+Avec les Grandes découvertes, les termes de paganisme et d'idolâtrie seront également mobilisés pour décrire les religions du Nouveau Monde. Le terme de "polythéisme" quant à lui suit une trajectoire plus lente et complexe. Après des siècles d'oubli (et de domination latine), les études grecques reviennent avec la fondation du Collège de France, au début du XVI<sup>e</sup> siècle, sous l'impulsion de [Guillaume Budé](https://fr.wikipedia.org/wiki/Guillaume_Bud%C3%A9). Ce dernier, humaniste, pose la question de la réconciliation de la culture (héritage antique) et de la foi (comme les Pères de l'Église à leur époque) : comment promouvoir l'humanisme sans contrevenir à la croyance chrétienne ? Dans sa défense des belles lettres contre les théologiens qui les rejetaient, **Budé exhume le terme de polythéisme en latin pour bien montrer qu'il faut chercher à s'en détacher** en le connaissant mieux :
+
+<div class="centeredquote">
+Qu'y a-t-il en effet de plus repoussant que de voir, après la condamnation du polythéisme - lequel tomba jadis dans l’athéisme - (<i>post damnatam illam polytheiam, quae pro atheia quondam haud dubie fefellit</i>), des hommes qui, pour avoir l’air savants et brillants, s’expriment encore comme si l’étude des bonnes lettres n’avait pas renié cette multitude de dieux d’en haut et d’en bas ?
+</div>
+<span class="inpost-figure-caption-centered">Guillaume Budé, <i>De Studio</i>, 1577</span>
+
+En outre, Budé note très justement dans le *De transitu* que l'arrivée du christianisme a pu non seulement "désacraliser les sanctuaires et les oracles des dieux", mais aussi "détruire les droits existants entre les peuples, entre les familles, entre les races". Autrement dit, le christianisme est venu remplacer les identités autres que l'identité religieuse : **en contexte polythéiste, il n'y a pas d'identité religieuse**.
+
+<br>
+![Jean Bodin]({{site.baseurl}}/assets/img/2018-10-15-jean_bodin.jpg){: .center-image height="300px"}
+
+<span class="inpost-figure-caption-centered">Jean Bodin ([Source](https://fr.wikipedia.org/wiki/Jean_Bodin#/media/File:Jean_Bodin.jpg))</span>
+
+
+Le terme français de *polythéisme* apparaît avec Jean Bodin, juriste, dans son traité *De la démonomanie des sorciers* de 1580 où il tente de déterminer quels types de divination par les sorciers sont licites ou démoniaques. Affirmant l'unicité du divin, il y critique les hérésies chrétiennes :
+
+<div class="centeredquote">
+Car comme le disoit Procle Académicien, le Polythéisme est un droit Athéisme, & qui met nombre pluriel, ou infini de Dieux s'efforce d'oster le vray Dieu, c'est-à-dire ἀπεῖριαν τὸν θεὸν ἀναιρεῖν [καὶ πολυθεότητα ἀθεότητα εἰναῖ] (l’ignorance détruit le dieu [et le polythéisme est un athéisme])
+</div>
+<span class="inpost-figure-caption-centered">Jean Bodin, <i>De la démonomanie des sorciers</i>, 1580</span>
+
+<br>
+
+À partir de la fin du XVII<sup>e</sup> siècle, le paradigme change et le terme de "polythéisme" apparaît de plus en plus (en même temps que naît "monothéisme") à mesure que l'histoire des religions se détache de la Bible. Au cours du XIX<sup>e</sup> siècle, le terme de "polythéisme" devient un concept commode désignant la pluralité des dieux, une étape majeure du développement religieux de l'humanité (pour Tylor, dans l'ordre animisme - polythéisme - monothéisme - science).
+
+Le terme reste peu usité par les hellénistes au XIX<sup>e</sup> siècle, ou uniquement en contraste aux autres systèmes religieux. Il faut attendre 1930 pour que le "polythéisme" caractérise, en tant que label à part entière (et non plus par contraste), la religion grecque antique. Sa spécificité s'affirme au fil du XX<sup>e</sup> siècle, jusqu'à la reconnaissance internationale, au début du XXI<sup>e</sup> siècle.
+
+Par rapport à notre définition précédente de la religion, **le polythéisme précise un certain profil pour la sphère supra-humaine dont il est question, non seulement en terme de pluralité des entités divines, mais aussi au niveau de la culture sous-jacente.**
