@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-18T00:03:05+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-18T21:37:47+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Religion grecque, singulier ou pluriel ?</title><link href="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/" rel="alternate" type="text/html" title="Religion grecque, singulier ou pluriel ?" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi</id><content type="html" xml:base="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -179,20 +179,61 @@ Qu'y a-t-il en effet de plus repoussant que de voir, après la condamnation du p
 
 &lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Jean Bodin (&lt;a href=&quot;https://fr.wikipedia.org/wiki/Jean_Bodin#/media/File:Jean_Bodin.jpg&quot;&gt;Source&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Le terme français de &lt;em&gt;polythéisme&lt;/em&gt; apparaît avec Jean Bodin, juriste, dans son traité &lt;em&gt;De la démonomanie des sorciers&lt;/em&gt; de 1580 où il tente de déterminer quels types de divination par les sorciers sont licites ou démoniaques. Affirmant l’unicité du divin, il y critique les hérésies chrétiennes :&lt;/p&gt;
-
-&lt;div class=&quot;centeredquote&quot;&gt;
-Car comme le disoit Procle Académicien, le Polythéisme est un droit Athéisme, &amp;amp; qui met nombre pluriel, ou infini de Dieux s'efforce d'oster le vray Dieu, c'est-à-dire ἀπεῖριαν τὸν θεὸν ἀναιρεῖν [καὶ πολυθεότητα ἀθεότητα εἰναῖ] (l’ignorance détruit le dieu [et le polythéisme est un athéisme])
-&lt;/div&gt;
-&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Jean Bodin, &lt;i&gt;De la démonomanie des sorciers&lt;/i&gt;, 1580&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;À partir de la fin du XVII&lt;sup&gt;e&lt;/sup&gt; siècle, le paradigme change et le terme de “polythéisme” apparaît de plus en plus (en même temps que naît “monothéisme”) à mesure que l’histoire des religions se détache de la Bible. Au cours du XIX&lt;sup&gt;e&lt;/sup&gt; siècle, le terme de “polythéisme” devient un concept commode désignant la pluralité des dieux, une étape majeure du développement religieux de l’humanité (pour Tylor, dans l’ordre animisme - polythéisme - monothéisme - science).&lt;/p&gt;
+&lt;p&gt;Le terme français de &lt;em&gt;polythéisme&lt;/em&gt; apparaît avec Jean Bodin, juriste, dans son traité &lt;em&gt;De la démonomanie des sorciers&lt;/em&gt; de 1580 ; il l’utilise toutefois uniquement pour dénoncer les hérésies chrétiennes qui ne respectent pas l’unicité du divin. À partir de la fin du XVII&lt;sup&gt;e&lt;/sup&gt; siècle, le paradigme change et le terme de “polythéisme” apparaît de plus en plus (en même temps que naît “monothéisme”) à mesure que l’histoire des religions se détache de la Bible. Au cours du XIX&lt;sup&gt;e&lt;/sup&gt; siècle, le terme de “polythéisme” devient un concept commode désignant la pluralité des dieux, une étape majeure du développement religieux de l’humanité (pour Tylor, dans l’ordre animisme - polythéisme - monothéisme - science).&lt;/p&gt;
 
 &lt;p&gt;Le terme reste peu usité par les hellénistes au XIX&lt;sup&gt;e&lt;/sup&gt; siècle, ou uniquement en contraste aux autres systèmes religieux. Il faut attendre 1930 pour que le “polythéisme” caractérise, en tant que label à part entière (et non plus par contraste), la religion grecque antique. Sa spécificité s’affirme au fil du XX&lt;sup&gt;e&lt;/sup&gt; siècle, jusqu’à la reconnaissance internationale, au début du XXI&lt;sup&gt;e&lt;/sup&gt; siècle.&lt;/p&gt;
 
-&lt;p&gt;Par rapport à notre définition précédente de la religion, &lt;strong&gt;le polythéisme précise un certain profil pour la sphère supra-humaine dont il est question, non seulement en terme de pluralité des entités divines, mais aussi au niveau de la culture sous-jacente.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Par rapport à notre définition précédente de la religion, &lt;strong&gt;le polythéisme précise un certain profil pour la sphère supra-humaine dont il est question, non seulement en terme de pluralité des entités divines, mais aussi au niveau de la culture sous-jacente.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hérodote-historien-des-religions-et-du-polythéisme&quot;&gt;Hérodote, “historien des religions et du polythéisme”&lt;/h2&gt;
+
+&lt;p&gt;Avant d’en arriver à l’étude d’Hérodote, rappelons-nous de notre problématique principale. Une fois accepté le terme de &lt;em&gt;religion&lt;/em&gt;, la question est de savoir s’il faut l’utiliser au singulier ou au pluriel, s’il faut distinguer &lt;strong&gt;une ou des religions grecques&lt;/strong&gt;. Lorsque la Grèce était formée d’une collection de centaines de cités, chacune d’entre elles disposait d’un panthéon, d’un calendrier et de rituels spécifiques. C’est pourquoi certains chercheurs ont proposé et préféré le pluriel, à l’instar de Simon Price, “to suggest the resulting variety, in both space and time” (&lt;em&gt;Religions of the Ancient Greeks&lt;/em&gt;). Cette tension entre le général (panhellénique) et le particulier (local) se retrouve dans le cadre plus large de la cité grecque, de la πολις ; cette fois cependant, les auteurs n’hésitent pas à employer largement le singulier, incités probablement par l’existence du terme exact en grec ancien (alors que θρησκεία reste très peu usité).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/2018-10-15-herodote.jpg&quot; alt=&quot;Hérodote&quot; class=&quot;center-image&quot; height=&quot;300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Hérodote (&lt;a href=&quot;https://en.wikipedia.org/wiki/Herodotus#/media/File:Herodotos_Met_91.8.jpg&quot;&gt;Source&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;C’est dans l’objectif de saisir cette tension, à la fois au niveau de la cité et de sa composante religieuse, qu’Hérodote apparaît comme une source privilégiée, et ce pour plusieurs raisons.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;L'ampleur du matériau disponible en matière de religion&lt;/li&gt;
+    &lt;li&gt;La posture spécifique adoptée par Hérodote à l'égard de la sphère religieuse. Dès l'Antiquité, Hérodote est vu comme un Homère en prose, décrivant à la fois une grande guerre (comme l'Iliade) et le monde connu, les sociétés qui l'entourent (comme l'Odyssée) afin de les préserver de l'oubli. Toutefois, il ne se prévaut pas de l'inspiration divine, et surtout il change de point de vue sur ce qui est accessible et dicible à propos des dieux.&lt;/li&gt;
+    &lt;li&gt;La traduction culturelle qu'il opère quand il décrit les traditions des autres peuples (ethnographie). Comme le dit François Hartog, &quot;[Hérodote] découpe le réel de l'autre selon des catégories grecques&quot; (&lt;i&gt;Le Miroir d'Hérodote&lt;/i&gt;) : la grille de lecture des données ethnographiques est helléno-centrée. Cela permet de découvrir, en creux, la représentation que les Grecs ont de leur propre religion.&lt;/li&gt;
+    &lt;li&gt;Le déploiement de la tension entre unité et diversité des figures divines grecques en parallèle de la description des Guerres médiques.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Comme il l’indique dès la préface, le travail d’Hérodote porte sur les faits mémorables des Grecs et des Barbares durant les Guerres médiques ; mais au fil de son &lt;em&gt;Enquête&lt;/em&gt;, il nous livre une description détaillée des traditions, coutumes et habitudes de vie des différentes populations engagées dans le conflit. Au sein de celles-ci, on trouve les diverses manières d’honorer les dieux, qui sont indissolublement liées aux pratiques traditionnelles sans posséder d’étiquette spécifique qui permette de les distinguer. C’est en fait le terme de &lt;strong&gt;νόμοι&lt;/strong&gt; qu’Hérodote emploie pour décrire les &lt;strong&gt;us et coutumes d’un peuple&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Le champ sémantique de νόμος renvoie à la division, la répartition selon l’usage, selon la convenance ; ce n’est pas une simple distribution, mais plutôt &lt;strong&gt;ce qui régit la vie en société&lt;/strong&gt;. Le terme apparaît pour la première fois non chez Homère, mais chez Hésiode :&lt;/p&gt;
+
+&lt;div class=&quot;centeredquote&quot;&gt;καὶ γὰρ νῦν, ὅτε πού τις ἐπιχθονίων ἀνθρώπων ἔρδων ἱερὰ καλὰ &lt;b&gt;κατὰ νόμον&lt;/b&gt; ἱλάσκηται, κικλήσκει Ἑκάτην.&lt;br /&gt;
+
+Aujourd'hui encore, tout humain d'ici-bas qui veut, par un beau sacrifice offert &lt;b&gt;selon la coutume&lt;/b&gt;, implorer une grâce invoque Hécate.&lt;/div&gt;
+
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Hésiode, &lt;i&gt;Théogonie&lt;/i&gt;, v. 416-417&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hérodote s’inscrit dans une réflexion qui lui est contemporaine, et qui pose la question des relation entre νόμος et φύσις, c’est-à-dire (grossièrement, suivant des critères anachroniques) entre &lt;em&gt;culture&lt;/em&gt; et &lt;em&gt;nature&lt;/em&gt; : comment s’opposent ou se lient les institutions humaines d’une part et la complexion du vivant, en développement indépendamment de l’initiative humaine, d’autre part ? Ce discours se retrouve de manière aiguë à l’époque d’Hésiode, à la fois chez les présocratiques et chez les disciples d’Hippocrate. La conscience qu’Hérodote a de cette opposition est manifeste dans le dialogue entre Démarate (roi déchu de Sparte, exilé en Perse) et Xerxès (roi des Perses), où ce dernier veut savoir si les Grecs oseront porter la main sur son armée surpuissante :&lt;/p&gt;
+
+&lt;div class=&quot;centeredquote&quot;&gt;
+La Grèce est nourrie dans la pauvreté (τῇ Ἑλλάδι πενίη μὲν αἰεί κοτε σύντροφός ἐστι), 
+[mais] la vertu est acquise, fruit de la sagesse et d’une loi rigoureuse (ἀρετὴ δὲ ἔπακτος ἐστι, ἀπό τε σοφίης κατεργασμένη καὶ νόμου ἰσχυροῦ)
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Hérodote, &lt;i&gt;Enquête&lt;/i&gt;, VII, 102-104&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;La dimension acquise et construite des νόμοι traverse l’ensemble de l’oeuvre : ce sont bien des &lt;strong&gt;constructions humaines qui se rapportent notamment à la sphère suprahumaine&lt;/strong&gt;. C’est ainsi qu’Hérodote décrit les νόμοι des Perses dès le premier livre :&lt;/p&gt;
+
+&lt;div class=&quot;centeredquote&quot; style=&quot;text-align: justify;&quot;&gt;
+Les Perses, à ma connaissance, observent les &lt;b&gt;coutumes&lt;/b&gt; suivantes (&lt;b&gt;νόμοισι&lt;/b&gt; τοιοισίδε χρεωμένους). Ils n’ont pas l’usage d’élever des statues ni des temples ni des autels (ἀγάλματα μὲν καὶ νηοὺς καὶ βωμοὺς οὐκ ἐν νόμῳ ποιευμένους ἱδρύεσθαι); tout au contraire, ils accusent de folie ceux qui le font; la raison en est, à mon avis, qu’ils n’ont jamais pensé, comme les Grecs, que les dieux soient de même complexion que les hommes (ὡς μὲν ἐμοὶ δοκέειν, ὅτι οὐκ ἀνθρωποφυέας ἐνόμισαν τοὺς θεοὺς κατά περ οἱ Ἕλληνες εἶναι). Leur coutume est de monter sur les plus hautes montagnes pour offrir des sacrifices à Zeus (οἱ δὲ νομίζουσι Διὶ μὲν ἐπὶ τὰ ὑψηλότατα τῶν ὀρέων ἀναβαίνοντες θυσίας ἔρδειν), dont ils donnent le nom à toute l’étendue circulaire du ciel. Ils sacrifient (θύουσι) au soleil, à la lune, à la terre, au feu, à l’eau, aux vents. Ce sont là les seuls dieux à qui ils sacrifient de toute antiquité; mais en outre ils ont appris (ἐπιμεμαθήκασι), des Assyriens et des Arabes, à sacrifier aussi à Aphrodite Ourania. Les Assyriens appellent cette déesse Mylitta, les Arabes, Alilat, les Perses, Mitra.
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Hérodote, &lt;i&gt;Enquête&lt;/i&gt;, I, 131&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;De cette description helléno-centrée, on peut tenter de reconstruire des aspects positifs de la religion grecque qui sont présents en creux. On retrouve la notion &lt;em&gt;d’installation&lt;/em&gt; des figures divines (ἱδρυειν), les actes à la fois individuels et collectifs pour entrer en relation avec les dieux, une capacité à donner des noms grecs aux dieux étrangers (témoin d’une certaine plasticité), et l’importance de l’interaction entre peuples dans la constitution des panthéons. On voit également poindre des pratiques sacrificielles ou rituelles. Englobant tous ces aspects, les νόμοι relèvent effectivement de la religion comme &lt;em&gt;pratique socialement sanctionnée&lt;/em&gt;.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 

@@ -200,17 +200,61 @@ En outre, Budé note très justement dans le *De transitu* que l'arrivée du chr
 <span class="inpost-figure-caption-centered">Jean Bodin ([Source](https://fr.wikipedia.org/wiki/Jean_Bodin#/media/File:Jean_Bodin.jpg))</span>
 
 
-Le terme français de *polythéisme* apparaît avec Jean Bodin, juriste, dans son traité *De la démonomanie des sorciers* de 1580 où il tente de déterminer quels types de divination par les sorciers sont licites ou démoniaques. Affirmant l'unicité du divin, il y critique les hérésies chrétiennes :
-
-<div class="centeredquote">
-Car comme le disoit Procle Académicien, le Polythéisme est un droit Athéisme, & qui met nombre pluriel, ou infini de Dieux s'efforce d'oster le vray Dieu, c'est-à-dire ἀπεῖριαν τὸν θεὸν ἀναιρεῖν [καὶ πολυθεότητα ἀθεότητα εἰναῖ] (l’ignorance détruit le dieu [et le polythéisme est un athéisme])
-</div>
-<span class="inpost-figure-caption-centered">Jean Bodin, <i>De la démonomanie des sorciers</i>, 1580</span>
-
-<br>
-
-À partir de la fin du XVII<sup>e</sup> siècle, le paradigme change et le terme de "polythéisme" apparaît de plus en plus (en même temps que naît "monothéisme") à mesure que l'histoire des religions se détache de la Bible. Au cours du XIX<sup>e</sup> siècle, le terme de "polythéisme" devient un concept commode désignant la pluralité des dieux, une étape majeure du développement religieux de l'humanité (pour Tylor, dans l'ordre animisme - polythéisme - monothéisme - science).
+Le terme français de *polythéisme* apparaît avec Jean Bodin, juriste, dans son traité *De la démonomanie des sorciers* de 1580 ; il l'utilise toutefois uniquement pour dénoncer les hérésies chrétiennes qui ne respectent pas l'unicité du divin. À partir de la fin du XVII<sup>e</sup> siècle, le paradigme change et le terme de "polythéisme" apparaît de plus en plus (en même temps que naît "monothéisme") à mesure que l'histoire des religions se détache de la Bible. Au cours du XIX<sup>e</sup> siècle, le terme de "polythéisme" devient un concept commode désignant la pluralité des dieux, une étape majeure du développement religieux de l'humanité (pour Tylor, dans l'ordre animisme - polythéisme - monothéisme - science).
 
 Le terme reste peu usité par les hellénistes au XIX<sup>e</sup> siècle, ou uniquement en contraste aux autres systèmes religieux. Il faut attendre 1930 pour que le "polythéisme" caractérise, en tant que label à part entière (et non plus par contraste), la religion grecque antique. Sa spécificité s'affirme au fil du XX<sup>e</sup> siècle, jusqu'à la reconnaissance internationale, au début du XXI<sup>e</sup> siècle.
 
 Par rapport à notre définition précédente de la religion, **le polythéisme précise un certain profil pour la sphère supra-humaine dont il est question, non seulement en terme de pluralité des entités divines, mais aussi au niveau de la culture sous-jacente.**
+
+
+<br><br>
+
+
+## Hérodote, "historien des religions et du polythéisme"
+
+Avant d'en arriver à l'étude d'Hérodote, rappelons-nous de notre problématique principale. Une fois accepté le terme de *religion*, la question est de savoir s'il faut l'utiliser au singulier ou au pluriel, s'il faut distinguer **une ou des religions grecques**. Lorsque la Grèce était formée d'une collection de centaines de cités, chacune d'entre elles disposait d'un panthéon, d'un calendrier et de rituels spécifiques. C'est pourquoi certains chercheurs ont proposé et préféré le pluriel, à l'instar de Simon Price, "to suggest the resulting variety, in both space and time" (*Religions of the Ancient Greeks*). Cette tension entre le général (panhellénique) et le particulier (local) se retrouve dans le cadre plus large de la cité grecque, de la πολις ; cette fois cependant, les auteurs n'hésitent pas à employer largement le singulier, incités probablement par l'existence du terme exact en grec ancien (alors que θρησκεία reste très peu usité).
+
+<br>
+![Hérodote]({{site.baseurl}}/assets/img/2018-10-15-herodote.jpg){: .center-image height="300px"}
+
+<span class="inpost-figure-caption-centered">Hérodote ([Source](https://en.wikipedia.org/wiki/Herodotus#/media/File:Herodotos_Met_91.8.jpg))</span>
+
+
+C'est dans l'objectif de saisir cette tension, à la fois au niveau de la cité et de sa composante religieuse, qu'Hérodote apparaît comme une source privilégiée, et ce pour plusieurs raisons.
+<ul>
+    <li>L'ampleur du matériau disponible en matière de religion</li>
+    <li>La posture spécifique adoptée par Hérodote à l'égard de la sphère religieuse. Dès l'Antiquité, Hérodote est vu comme un Homère en prose, décrivant à la fois une grande guerre (comme l'Iliade) et le monde connu, les sociétés qui l'entourent (comme l'Odyssée) afin de les préserver de l'oubli. Toutefois, il ne se prévaut pas de l'inspiration divine, et surtout il change de point de vue sur ce qui est accessible et dicible à propos des dieux.</li>
+    <li>La traduction culturelle qu'il opère quand il décrit les traditions des autres peuples (ethnographie). Comme le dit François Hartog, "[Hérodote] découpe le réel de l'autre selon des catégories grecques" (<i>Le Miroir d'Hérodote</i>) : la grille de lecture des données ethnographiques est helléno-centrée. Cela permet de découvrir, en creux, la représentation que les Grecs ont de leur propre religion.</li>
+    <li>Le déploiement de la tension entre unité et diversité des figures divines grecques en parallèle de la description des Guerres médiques.</li>
+</ul>
+
+Comme il l'indique dès la préface, le travail d'Hérodote porte sur les faits mémorables des Grecs et des Barbares durant les Guerres médiques ; mais au fil de son *Enquête*, il nous livre une description détaillée des traditions, coutumes et habitudes de vie des différentes populations engagées dans le conflit. Au sein de celles-ci, on trouve les diverses manières d'honorer les dieux, qui sont indissolublement liées aux pratiques traditionnelles sans posséder d'étiquette spécifique qui permette de les distinguer. C'est en fait le terme de **νόμοι** qu'Hérodote emploie pour décrire les **us et coutumes d'un peuple**.
+
+Le champ sémantique de νόμος renvoie à la division, la répartition selon l'usage, selon la convenance ; ce n'est pas une simple distribution, mais plutôt **ce qui régit la vie en société**. Le terme apparaît pour la première fois non chez Homère, mais chez Hésiode :
+
+<div class="centeredquote">καὶ γὰρ νῦν, ὅτε πού τις ἐπιχθονίων ἀνθρώπων ἔρδων ἱερὰ καλὰ <b>κατὰ νόμον</b> ἱλάσκηται, κικλήσκει Ἑκάτην.<br>
+
+Aujourd'hui encore, tout humain d'ici-bas qui veut, par un beau sacrifice offert <b>selon la coutume</b>, implorer une grâce invoque Hécate.</div>
+
+<span class="inpost-figure-caption-centered">Hésiode, <i>Théogonie</i>, v. 416-417</span>
+
+<br>
+
+Hérodote s'inscrit dans une réflexion qui lui est contemporaine, et qui pose la question des relation entre νόμος et φύσις, c'est-à-dire (grossièrement, suivant des critères anachroniques) entre *culture* et *nature* : comment s'opposent ou se lient les institutions humaines d'une part et la complexion du vivant, en développement indépendamment de l'initiative humaine, d'autre part ? Ce discours se retrouve de manière aiguë à l'époque d'Hésiode, à la fois chez les présocratiques et chez les disciples d'Hippocrate. La conscience qu'Hérodote a de cette opposition est manifeste dans le dialogue entre Démarate (roi déchu de Sparte, exilé en Perse) et Xerxès (roi des Perses), où ce dernier veut savoir si les Grecs oseront porter la main sur son armée surpuissante :
+
+<div class="centeredquote">
+La Grèce est nourrie dans la pauvreté (τῇ Ἑλλάδι πενίη μὲν αἰεί κοτε σύντροφός ἐστι), 
+[mais] la vertu est acquise, fruit de la sagesse et d’une loi rigoureuse (ἀρετὴ δὲ ἔπακτος ἐστι, ἀπό τε σοφίης κατεργασμένη καὶ νόμου ἰσχυροῦ)
+</div>
+<span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, VII, 102-104</span>
+
+<br>
+
+La dimension acquise et construite des νόμοι traverse l'ensemble de l'oeuvre : ce sont bien des **constructions humaines qui se rapportent notamment à la sphère suprahumaine**. C'est ainsi qu'Hérodote décrit les νόμοι des Perses dès le premier livre :
+
+<div class="centeredquote" style="text-align: justify;">
+Les Perses, à ma connaissance, observent les <b>coutumes</b> suivantes (<b>νόμοισι</b> τοιοισίδε χρεωμένους). Ils n’ont pas l’usage d’élever des statues ni des temples ni des autels (ἀγάλματα μὲν καὶ νηοὺς καὶ βωμοὺς οὐκ ἐν νόμῳ ποιευμένους ἱδρύεσθαι); tout au contraire, ils accusent de folie ceux qui le font; la raison en est, à mon avis, qu’ils n’ont jamais pensé, comme les Grecs, que les dieux soient de même complexion que les hommes (ὡς μὲν ἐμοὶ δοκέειν, ὅτι οὐκ ἀνθρωποφυέας ἐνόμισαν τοὺς θεοὺς κατά περ οἱ Ἕλληνες εἶναι). Leur coutume est de monter sur les plus hautes montagnes pour offrir des sacrifices à Zeus (οἱ δὲ νομίζουσι Διὶ μὲν ἐπὶ τὰ ὑψηλότατα τῶν ὀρέων ἀναβαίνοντες θυσίας ἔρδειν), dont ils donnent le nom à toute l’étendue circulaire du ciel. Ils sacrifient (θύουσι) au soleil, à la lune, à la terre, au feu, à l’eau, aux vents. Ce sont là les seuls dieux à qui ils sacrifient de toute antiquité; mais en outre ils ont appris (ἐπιμεμαθήκασι), des Assyriens et des Arabes, à sacrifier aussi à Aphrodite Ourania. Les Assyriens appellent cette déesse Mylitta, les Arabes, Alilat, les Perses, Mitra.
+</div>
+<span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, I, 131</span>
+
+De cette description helléno-centrée, on peut tenter de reconstruire des aspects positifs de la religion grecque qui sont présents en creux. On retrouve la notion *d'installation* des figures divines (ἱδρυειν), les actes à la fois individuels et collectifs pour entrer en relation avec les dieux, une capacité à donner des noms grecs aux dieux étrangers (témoin d'une certaine plasticité), et l'importance de l'interaction entre peuples dans la constitution des panthéons. On voit également poindre des pratiques sacrificielles ou rituelles. Englobant tous ces aspects, les νόμοι relèvent effectivement de la religion comme *pratique socialement sanctionnée*.
