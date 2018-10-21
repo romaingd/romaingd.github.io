@@ -220,7 +220,7 @@ Avant d'en arriver à l'étude d'Hérodote, rappelons-nous de notre problématiq
 <span class="inpost-figure-caption-centered">Hérodote ([Source](https://en.wikipedia.org/wiki/Herodotus#/media/File:Herodotos_Met_91.8.jpg))</span>
 
 
-C'est dans l'objectif de saisir cette tension, à la fois au niveau de la cité et de sa composante religieuse, qu'[Hérodote](https://fr.wikipedia.org/wiki/H%C3%A9rodote) apparaît comme une source privilégiée (voir approfondissements [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL8383353615914827232_Pirenne_Cours_3_2018_Fevr_15.pdf) et [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL1528485476435301551_Pirenne_Cours_4_2018_Fevr_22.pdf)), et ce pour plusieurs raisons.
+C'est dans l'objectif de saisir cette tension, à la fois au niveau de la cité et de sa composante religieuse, qu'[Hérodote](https://fr.wikipedia.org/wiki/H%C3%A9rodote), historien grec du V<sup>e</sup> avant notre ère, apparaît comme une source privilégiée (voir approfondissements [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL8383353615914827232_Pirenne_Cours_3_2018_Fevr_15.pdf) et [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL1528485476435301551_Pirenne_Cours_4_2018_Fevr_22.pdf)), et ce pour plusieurs raisons.
 <ul>
     <li>L'ampleur du matériau disponible en matière de religion</li>
     <li>La posture spécifique adoptée par Hérodote à l'égard de la sphère religieuse. Dès l'Antiquité, Hérodote est vu comme un Homère en prose, décrivant à la fois une grande guerre (comme l'Iliade) et le monde connu, les sociétés qui l'entourent (comme l'Odyssée) afin de les préserver de l'oubli. Toutefois, il ne se prévaut pas de l'inspiration divine, et surtout il change de point de vue sur ce qui est accessible et dicible à propos des dieux.</li>
@@ -294,3 +294,33 @@ Autrefois, à ce que j’ai entendu dire à Dodone, les Pélasges offraient tous
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, II, 50-52</span>
 
 Traduire ainsi οὐνόματα par *dénominations* plutôt que *noms* met l'accent sur un point important, rendant justice au texte : ce qui est passé des Égyptiens aux Pélasges, ces οὐνόματα, est moins le nom des dieux que **le fait d'identifier, en leur attribuant un nom spécifique, des profils divins au sein d'un ensemble de dieux jadis indifférenciés**. Ces profils sont ainsi bien davantage susceptibles de passer d'une culture à l'autre, après interprétation et avec transposition du nom lui-même. C'est aux poètes, Hésiode et Homère, qu'Hérodote attribue la constitution et la configuration du panthéon grec, en déployant la dénomination des dieux établie avant eux : **la créativité et les institutions humaines sont largement à l'oeuvre dans la représentation des dieux**, et on retrouve l'importance du νόμος.
+
+
+<br><br>
+
+
+## Dieux grecs ou dieux des Grecs ?
+
+Revenons plus précisément à la tension entre le général et le particulier, qui reste notre fil rouge. Quand on quitte les livres odysséens (ethnographiques) pour se plonger dans les livres iliadiques (récit des Guerres médiques), quelle image percevons-nous des dieux ? Les Grecs engagés dans le conflit partagent-ils une même vision du monde divin, comme le laisse entendre la section précédente, ou y a-t-il une fragmentation des divinités en fonction des cités particulières dans l'*Enquête* d'Hérodote ? **Autrement dit, doit-on parler de dieux grecs ou de dieux des Grecs ?**
+
+Commençons par définir ce que recouvre *le fait d'être grec*. Une des premières définition de ce qui constitue une communauté grecque se trouve dans un passage célèbre du livre VIII d'Hérodote. Donnons le contexte : après la bataille de Salamine, victoire maritime décisive contre les Perses, ceux-ci dépêchent un émissaire aux Athéniens pour les inciter à se détacher de la coalition grecque et à rejoindre l'empire perse. Les Athéniens refusent catégoriquement, et professent leur attachement à leurs alliés. La première raison qu'ils donnent pour justifier ce refus est "l'impérieux devoir de punir le plus sévèrement possible l'incendie, la réduction en un tas de décombres, des statues et des demeures des dieux (τῶν θεῶν τὰ ἀγάλματα καὶ τά οἰκήματα)". Après plusieurs pillages d'Athènes, il s'agit de punir l'arrogance des Perses. Le deuxième argument nous en apprend davantage :
+
+<div class="centeredquote">
+[...] αὖτις δὲ τὸ Ἑλληνικόν, ἐὸν ὅμαιμόν τε καὶ ὁμόγλωσσον, καὶ <b>θεῶν ἱδρύματά τε κοινὰ καὶ θυσίαι</b> ἤθεά τε ὁμότροπα [...]
+<br><p style="margin-top: -5px"></p>
+[Il est inconcevable de trahir] l’Hellenikon, même sang et même langue, <b>des établissements communs des dieux ainsi que des sacrifices</b>, des mœurs et des manières semblables
+</div>
+<span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, VIII, 144</span>
+
+Cette énumération ajoute des éléments qui précisent ce que regroupe la *grécité*, en particulier le fait de se retrouver dans des sanctuaires panhelléniques (Delphes, Olympie) où **les dieux sont installés, enracinés localement**. Une telle énumération ne permet cependant pas de faire de la religion un facteur d'unité de l'*Hellenikon*. Ce ne sont ainsi pas les dieux en eux-mêmes qui sont décrits comme communs, mais des lieux fondés par une décision commune. Il n'y a par ailleurs par de *territoire commun* au sens propre.
+
+Il faut ensuite attendre les *Antiquités romaines* de Denys d'Halicarnasse, au tournant du millénaire (près de quatre siècles après Hérodote), pour retrouver une définition de la grécité. Ce faisant, il évoque cette fois des dieux communs aux Grecs. Il s'agit pour lui d'exalter Rome comme cité idéale en l'enracinant dans la Grèce antique, inaltérée par le passage ultérieur des Barbares ; cette perspective téléologique l'inscrit dans une référence *culturelle* (par opposition à la référence *cultuelle* du texte d'Hérodote) et une certaine généralité dans le propos.
+
+<div class="centeredquote">
+ἐπεὶ ἄλλοι γε συχνοὶ ἐν βαρβάροις οἰκοῦντες ὀλίγου χρόνου διελθόντος ἅπαν τὸ Ἑλληνικὸν ἀπέμαθον, ὡς μήτε φωνὴν Ἑλλάδα φθέγγεσθαι μήτε ἐπιτηδεύμασιν Ἑλλήνων χρῆσθαι, μήτε θεοὺς τοὺς αὐτοὺς νομίζειν, μήτε νόμους τοὺς ἐπιεικεῖς, ᾧ μάλιστα διαλλάσσει φύσις Ἑλλὰς βαρβάρου, μήτε τῶν ἄλλων συμβολαίων μηδ ̓ ὁτιοῦν.
+<br><p style="margin-top: -5px"></p>
+Bien d'autres en effet, vivant au milieu des barbares, ont en peu de temps désappris tout l’Hellenikon au point de ne plus parler grec, de ne plus suivre les habitudes des Grecs, de ne pas reconnaître les mêmes dieux qu’eux, ni leurs lois tempérées – toutes choses qui principalement marquent la différence entre la nature grecque et la nature barbare –, ni même n’importe quel autre signe distinctif.
+</div>
+<span class="inpost-figure-caption-centered">Denys d'Halicarnasse, <i>Antiquités romaines</i>, I, 89, 4</span>
+
+Hérodote ne mentionne, quant à lui, qu'une seule fois des *dieux communs*.
