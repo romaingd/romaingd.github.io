@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-22T21:11:33+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-24T00:26:16+02:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Religion grecque, singulier ou pluriel ?</title><link href="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/" rel="alternate" type="text/html" title="Religion grecque, singulier ou pluriel ?" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi</id><content type="html" xml:base="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -334,6 +334,10 @@ Bien d'autres en effet, vivant au milieu des barbares, ont en peu de temps désa
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-10-15-stella_georgoudi.jpg&quot; alt=&quot;Stella Georgoudi&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Stella Georgoudi (&lt;a href=&quot;http://www.epirus-tv-news.gr/2017/03/blog-post_252.html&quot;&gt;Source&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;Revenant à la tension entre le général et le particulier, il est intéressant de dresser un parallèle avec la situation des douze dieux. Hérodote atteste en effet de l’existence dès son époque de cette sorte de panthéon réduit, dont les Grecs auraient hérité les noms des Égyptiens. De cette observation, &lt;a href=&quot;http://ephe.academia.edu/StellaGeorgoudi&quot;&gt;Stella Georgoudi&lt;/a&gt; tire (voir &lt;a href=&quot;https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL6258122956019020924_Pirenne_Cours_6_2018_Mars_8.pdf&quot;&gt;approfondissements&lt;/a&gt;) quatre constats :&lt;/p&gt;
 &lt;ul style=&quot;margin-top: -5px;&quot;&gt;
     &lt;li&gt;L'ensemble que forme le groupement générique des douze dieux peut être assumé comme tel par les Grecs, et mobilisé sur le plan cultuel, sans qu'il y ait d'identification obligatoire des dieux singuliers : &lt;b&gt;le groupe lui-même est utilisable&lt;/b&gt;&lt;/li&gt;
@@ -346,11 +350,20 @@ Bien d'autres en effet, vivant au milieu des barbares, ont en peu de temps désa
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Clarifions dès à présent un point central de nos considérations. Hérodote ne fait pas, comme on pourrait le penser, des dieux une figure purement théorique ; il n’opère pas de distinction entre les dieux des poètes, et ceux auxquels on adresse des sacrifices au temps des Pélasges. Cette distinction est en effet le sujet de débats, dans la communauté des chercheurs, entre deux positions :&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;La notion de &quot;dieux grecs&quot; ne forme qu'un arrière-plan théorique, décorrélé des pratiques cultuelles locales ; l'idée de dieux communs à tous les Grecs n'est qu'un leurre en dehors des sanctuaires majeurs.&lt;/li&gt;
-    &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Clarifions dès à présent un point central de nos considérations. Hérodote ne fait pas, comme on pourrait le penser, des dieux une figure purement théorique ; il n’opère pas de distinction entre les dieux des poètes, et ceux auxquels on adresse des sacrifices au temps des Pélasges. Cette distinction est en effet le sujet de débats, dans la communauté des chercheurs, entre deux positions qui rappellent la tension qui nous occupe :&lt;/p&gt;
+&lt;ul style=&quot;margin-top: -5px;&quot;&gt;
+    &lt;li&gt;La notion de &quot;dieux grecs&quot; ne forme qu'un arrière-plan rhétorique, décorrélé des pratiques cultuelles locales ; l'idée de dieux communs à tous les Grecs n'est qu'un leurre en dehors des sanctuaires majeurs.&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Il existe une continuité entre les dieux de la poésie et ceux des cultes&lt;/b&gt;, continuité qui reste à déterminer. C'est l'hypothèse favorisée par l'oeuvre d'Hérodote.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Il y a ainsi continuité entre le nom des dieux, partagés par tous les Grecs, et les déclinaisons locales des différents surnoms qui sont leur sont donnés. C’est ce qu’illustre un nouveau passsage du livre I de l’&lt;em&gt;Enquête&lt;/em&gt;, où Zeus est invoqué sous divers surnoms en même temps. &lt;strong&gt;Cette pluralité inhérente à chaque dieu est une des clefs fondamentales du polythéisme grec&lt;/strong&gt; ; mais jusqu’à quel point doit-on l’envisager ?&lt;/p&gt;
+
+&lt;div class=&quot;centeredquote&quot; style=&quot;text-align: justify;&quot;&gt;
+περιημεκτέων δὲ τῇ συμφορῇ δεινῶς ἐκάλεε μὲν Δία καθάρσιον, μαρτυρόμενος τὰ ὑπὸ τοῦ ξείνου πεπονθὼς εἴη, ἐκάλεε δὲ ἐπίστιόν τε καὶ ἑταιρήιον, τὸν αὐτὸν τοῦτον ὀνομάζων θεόν, τὸν μὲν ἐπίστιον καλέων, διότι δὴ οἰκίοισι ὑποδεξάμενος τὸν ξεῖνον φονέα τοῦ παιδὸς ἐλάνθανε βόσκων, τὸν δὲ ἑταιρήιον, ὡς φύλακον συμπέμψας αὐτὸν εὑρήκοι πολεμιώτατον.
+&lt;br /&gt;&lt;br /&gt;
+Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus comme patron des purifications, le prenant à témoin du mal que  l'étranger lui avait fait ; il l’invoquait comme protecteur du foyer et de  l'amitié – &lt;b&gt;c'était le même dieu qu'il appelait de ces noms&lt;/b&gt; –, comme protecteur du foyer, parce qu'après avoir accueilli l'étranger dans sa demeure il avait nourri sans le savoir le meurtrier de son fils ; comme protecteur de l'amitié, parce qu'après l'avoir envoyé avec Atys en guise de gardien, il avait trouvé en lui son pire ennemi .
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Hérodote, &lt;i&gt;Enquête&lt;/i&gt;, I, 44&lt;/span&gt;&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
