@@ -392,3 +392,12 @@ Il y a ainsi continuité entre le nom des dieux, partagés par tous les Grecs, e
 Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus comme patron des purifications, le prenant à témoin du mal que  l'étranger lui avait fait ; il l’invoquait comme protecteur du foyer et de  l'amitié – <b>c'était le même dieu qu'il appelait de ces noms</b> –, comme protecteur du foyer, parce qu'après avoir accueilli l'étranger dans sa demeure il avait nourri sans le savoir le meurtrier de son fils ; comme protecteur de l'amitié, parce qu'après l'avoir envoyé avec Atys en guise de gardien, il avait trouvé en lui son pire ennemi .
 </div>
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, I, 44</span>
+
+
+<br>
+
+Considérons les différents facteurs de multiplication inhérents à la sphère suprahumaine des Grecs.
+<ul style="margin-top: -5px;">
+    <li>Même si le terme de <i>polythéisme</i> évoque d'abord des divinités, le monde suprahumain est peuplé de dizaine de <b>héros</b>, destinataires d'hommages rituels ayant un ancrage local.</li>
+    <li>L'existence de dieux dont le <b>théonyme est un pluriel</b> : les Moires, les Muses, les Heures, etc. Ces collectifs sont généralement honorés en tant que tels, mais peuvent être déployés en individualités (en nombre non fixé).</li>
+</ul>
