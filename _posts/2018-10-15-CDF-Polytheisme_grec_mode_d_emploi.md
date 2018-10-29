@@ -389,7 +389,7 @@ Il y a ainsi continuité entre le nom des dieux, partagés par tous les Grecs, e
 <div class="centeredquote" style="text-align: justify;">
 περιημεκτέων δὲ τῇ συμφορῇ δεινῶς ἐκάλεε μὲν Δία καθάρσιον, μαρτυρόμενος τὰ ὑπὸ τοῦ ξείνου πεπονθὼς εἴη, ἐκάλεε δὲ ἐπίστιόν τε καὶ ἑταιρήιον, τὸν αὐτὸν τοῦτον ὀνομάζων θεόν, τὸν μὲν ἐπίστιον καλέων, διότι δὴ οἰκίοισι ὑποδεξάμενος τὸν ξεῖνον φονέα τοῦ παιδὸς ἐλάνθανε βόσκων, τὸν δὲ ἑταιρήιον, ὡς φύλακον συμπέμψας αὐτὸν εὑρήκοι πολεμιώτατον.
 <br><br>
-Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus comme patron des purifications, le prenant à témoin du mal que  l'étranger lui avait fait ; il l’invoquait comme protecteur du foyer et de  l'amitié – <b>c'était le même dieu qu'il appelait de ces noms</b> –, comme protecteur du foyer, parce qu'après avoir accueilli l'étranger dans sa demeure il avait nourri sans le savoir le meurtrier de son fils ; comme protecteur de l'amitié, parce qu'après l'avoir envoyé avec Atys en guise de gardien, il avait trouvé en lui son pire ennemi .
+Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus comme patron des purifications, le prenant à témoin du mal que  l'étranger lui avait fait ; il l’invoquait comme protecteur du foyer et de  l'amitié – <b>c'était ce même dieu qu'il dénommait</b> –, comme protecteur du foyer, parce qu'après avoir accueilli l'étranger dans sa demeure il avait nourri sans le savoir le meurtrier de son fils ; comme protecteur de l'amitié, parce qu'après l'avoir envoyé avec Atys en guise de gardien, il avait trouvé en lui son pire ennemi.
 </div>
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, I, 44</span>
 
@@ -399,5 +399,22 @@ Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus co
 Considérons les différents facteurs de multiplication inhérents à la sphère suprahumaine des Grecs.
 <ul style="margin-top: -5px;">
     <li>Même si le terme de <i>polythéisme</i> évoque d'abord des divinités, le monde suprahumain est peuplé de dizaine de <b>héros</b>, destinataires d'hommages rituels ayant un ancrage local.</li>
-    <li>L'existence de dieux dont le <b>théonyme est un pluriel</b> : les Moires, les Muses, les Heures, etc. Ces collectifs sont généralement honorés en tant que tels, mais peuvent être déployés en individualités (en nombre non fixé).</li>
+    <li>L'existence de dieux dont le <b>théonyme est un pluriel</b> : les Moires, les Muses, les Heures, etc. Ces collectifs sont généralement honorés en tant que tels, mais peuvent être déployés en individualités (en nombre non fixé : les Charites sont 3 chez Hésiode, 2 à Sparte d'après Pausanias). On sait par ailleurs que les douze dieux d'Olympie étaient honorés par paires (Zeus <i>Olympios</i>-Poséidon, Héra-Athéna, ...) dans certains sanctuaires ; le fait que l'une de ces paires soit constituée des Charites et de Dionysos contribue à asseoir l'unité des premières.</li>
+    <li>Le nom de certains dieux est régulièrement assorti d'une <a href="https://fr.wikipedia.org/wiki/%C3%89picl%C3%A8se_(Antiquit%C3%A9)">épiclèse</a> (épithète permettant de préciser l'aspect spécifique de la divinité invoquée, dans une démarche cultuelle ; voir par exemple <a href="http://www.brepols.net/Pages/ShowProduct.aspx?prod_id=IS-9782503516868-1"><i>Nommer les dieux</i></a>), comme le montre l'extrait précédent de l'<i>Enquête</i>. Parmi les plus connus, on trouve Zeus <i>Olympios</i> ou Athéna <i>Nikè</i>. Chaque dieu est ainsi pluriel, avec des profils différents dans chaque cité.</li>
 </ul>
+
+Quels liens peut-on alors tisser entre les différentes facettes d'un même dieu, Zeus ? Lorsque Hérodote précise que, malgré les trois épiclèses renvoyant à deux domaines de compétence différents, "c'était ce même dieu qu'il dénommait", ce n'est pas parce que ses lecteurs pourraient penser qu'il s'agit de dieux différents, mais qu'ils pourraient considérer qu'il ne s'agit plus de Zeus (le théonyme non répété appelant une clarification formelle). Cette unité, si elle est mise à mal par les extraits suivants, résiste à une analyse *dans le contexte* de ces derniers (**"les dieux sont des *puissances* et non des *personnes*"** (J.-P. Vernant) **, des entités dont les humains attendent qu'elles déploient leurs pouvoirs spécifiques à leur bénéfice**). Il s'agit de comprendre à quoi correspond chaque dénomination (regroupant plusieurs aspects ou facettes), par rapport aux autres divinités du panthéon. 
+
+<div class="centeredquote" style="text-align: justify;">
+εἰ μὲν οὖν μία ἐστὶν Ἀφροδίτη ἢ διτταί, Οὐρανία τε καὶ Πάνδημος, οὐκ οἶδα· καὶ γὰρ Ζεὺς ὁ αὐτὸς δοκῶν εἶναι πολλὰς ἐπωνυμίας ἔχει· ὅτι γε μέντοι χωρὶς ἑκατέρᾳ βωμοί τε καὶ ναοί εἰσι καὶ θυσίαι τῇ μὲν Πανδήμῳ ῥᾳδιουργότεραι, τῇ δὲ Οὐρανίᾳ ἁγνότεραι, οἶδα.
+<br><br>
+S’il existe une seule Aphrodite ou bien deux, Ourania et Pandèmos, je ne sais, car Zeus, qui paraît toujours le même, possède de nombreux noms. Ce que je sais, pourtant, c’est que, pour chacune des deux séparément, il existe des autels et des temples, et aussi des rites qui, pour la Pandèmos, sont pleins de relâchement, tandis qu’ils sont plus purs pour Ourania.
+</div>
+<span class="inpost-figure-caption-centered">Xénophon, <i>Banquet</i>, VIII, 9</span>
+
+<div class="centeredquote" style="text-align: justify;">
+τὰς Ἀφροδίτας – ἠ θεὸς γὰρ οὐ μία – ἠ Καστνιῆτις τῷ φρονεῖν ὑπερφέρει
+<br><br>
+Parmi les Aphrodites - car la déesse n'est pas une -, la Kastniètis l'emporte en sagesse.
+</div>
+<span class="inpost-figure-caption-centered">Callimaque, <i>Iambes</i>, 10</span>
