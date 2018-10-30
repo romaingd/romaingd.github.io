@@ -396,6 +396,11 @@ Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus co
 
 <br>
 
+![Les trois Grâces de Raphaël, ou Charites pour les Grecs]({{site.baseurl}}/assets/img/2018-10-15-raphael-charites.jpg){: .center-image}
+
+<span class="inpost-figure-caption-centered"><i>Les Trois Grâces</i> de Raphaël, adaptations latines des Charites grecques ([Source](https://en.wikipedia.org/wiki/Three_Graces_(Raphael)))</span>
+
+
 Considérons les différents facteurs de multiplication inhérents à la sphère suprahumaine des Grecs.
 <ul style="margin-top: -5px;">
     <li>Même si le terme de <i>polythéisme</i> évoque d'abord des divinités, le monde suprahumain est peuplé de dizaine de <b>héros</b>, destinataires d'hommages rituels ayant un ancrage local.</li>
@@ -418,3 +423,9 @@ S’il existe une seule Aphrodite ou bien deux, Ourania et Pandèmos, je ne sais
 Parmi les Aphrodites - car la déesse n'est pas une -, la Kastniètis l'emporte en sagesse.
 </div>
 <span class="inpost-figure-caption-centered">Callimaque, <i>Iambes</i>, 10</span>
+
+<br>
+
+L'étude des οὐνόματα des dieux dans l'*Enquête* renforce cette notion de puissance. Souvenons-nous en effet des différentes étapes décrites par Hérodote dans son histoire des dieux grecs.  Les dieux sont d'abord les **θεοι indifférenciés** honorés par les Pélasges. Ils empruntent ensuite (aux Égyptiens) des dénominations, identificant ainsi les **profils spécifiques** de certains dieux en leur attribuant des noms. Ce sont finalement les poètes qui donnent à ces profils des contours bien plus précis, en les inscrivant dans une véritable **société divine** ; décrivant cette société comme régie par des règles de fonctionnement, des νόμοι, empruntées au monde des hommes, ils dotent ainsi les dieux d'une **complexion humaine** (ἀνθρωποφυέας). 
+
+Peu importe le crédit historique à apporter à ces 3 étapes ; ce qui est intéressant, c'est la façon dont Hérodote, témoin intérieur de la culture grecque, se représente le système religieux auquel il appartient. Et ce que l'on y trouve, c'est que **les dieux sont d'abord des puissances, et que leur anthropomorphisme est surtout le fait des poètes qui leur ont appliqué des νόμοι humains**. La tension entre le général et le particulier est inhérente à la représentation des dieux grecs.

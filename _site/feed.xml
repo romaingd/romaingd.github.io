@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-29T17:19:25+01:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-30T15:50:53+01:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Religion grecque, singulier ou pluriel ?</title><link href="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/" rel="alternate" type="text/html" title="Religion grecque, singulier ou pluriel ?" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi</id><content type="html" xml:base="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -367,6 +367,10 @@ Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus co
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/img/2018-10-15-raphael-charites.jpg&quot; alt=&quot;Les trois Grâces de Raphaël, ou Charites pour les Grecs&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;&lt;i&gt;Les Trois Grâces&lt;/i&gt; de Raphaël, adaptations latines des Charites grecques (&lt;a href=&quot;https://en.wikipedia.org/wiki/Three_Graces_(Raphael)&quot;&gt;Source&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;Considérons les différents facteurs de multiplication inhérents à la sphère suprahumaine des Grecs.&lt;/p&gt;
 &lt;ul style=&quot;margin-top: -5px;&quot;&gt;
     &lt;li&gt;Même si le terme de &lt;i&gt;polythéisme&lt;/i&gt; évoque d'abord des divinités, le monde suprahumain est peuplé de dizaine de &lt;b&gt;héros&lt;/b&gt;, destinataires d'hommages rituels ayant un ancrage local.&lt;/li&gt;
@@ -388,7 +392,13 @@ S’il existe une seule Aphrodite ou bien deux, Ourania et Pandèmos, je ne sais
 &lt;br /&gt;&lt;br /&gt;
 Parmi les Aphrodites - car la déesse n'est pas une -, la Kastniètis l'emporte en sagesse.
 &lt;/div&gt;
-&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Callimaque, &lt;i&gt;Iambes&lt;/i&gt;, 10&lt;/span&gt;&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Callimaque, &lt;i&gt;Iambes&lt;/i&gt;, 10&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;L’étude des οὐνόματα des dieux dans l’&lt;em&gt;Enquête&lt;/em&gt; renforce cette notion de puissance. Souvenons-nous en effet des différentes étapes décrites par Hérodote dans son histoire des dieux grecs.  Les dieux sont d’abord les &lt;strong&gt;θεοι indifférenciés&lt;/strong&gt; honorés par les Pélasges. Ils empruntent ensuite (aux Égyptiens) des dénominations, identificant ainsi les &lt;strong&gt;profils spécifiques&lt;/strong&gt; de certains dieux en leur attribuant des noms. Ce sont finalement les poètes qui donnent à ces profils des contours bien plus précis, en les inscrivant dans une véritable &lt;strong&gt;société divine&lt;/strong&gt; ; décrivant cette société comme régie par des règles de fonctionnement, des νόμοι, empruntées au monde des hommes, ils dotent ainsi les dieux d’une &lt;strong&gt;complexion humaine&lt;/strong&gt; (ἀνθρωποφυέας).&lt;/p&gt;
+
+&lt;p&gt;Peu importe le crédit historique à apporter à ces 3 étapes ; ce qui est intéressant, c’est la façon dont Hérodote, témoin intérieur de la culture grecque, se représente le système religieux auquel il appartient. Et ce que l’on y trouve, c’est que &lt;strong&gt;les dieux sont d’abord des puissances, et que leur anthropomorphisme est surtout le fait des poètes qui leur ont appliqué des νόμοι humains&lt;/strong&gt;. La tension entre le général et le particulier est inhérente à la représentation des dieux grecs.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
