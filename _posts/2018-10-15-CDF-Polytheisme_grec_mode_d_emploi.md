@@ -429,3 +429,15 @@ Parmi les Aphrodites - car la déesse n'est pas une -, la Kastniètis l'emporte 
 L'étude des οὐνόματα des dieux dans l'*Enquête* renforce cette notion de puissance. Souvenons-nous en effet des différentes étapes décrites par Hérodote dans son histoire des dieux grecs.  Les dieux sont d'abord les **θεοι indifférenciés** honorés par les Pélasges. Ils empruntent ensuite (aux Égyptiens) des dénominations, identificant ainsi les **profils spécifiques** de certains dieux en leur attribuant des noms. Ce sont finalement les poètes qui donnent à ces profils des contours bien plus précis, en les inscrivant dans une véritable **société divine** ; décrivant cette société comme régie par des règles de fonctionnement, des νόμοι, empruntées au monde des hommes, ils dotent ainsi les dieux d'une **complexion humaine** (ἀνθρωποφυέας). 
 
 Peu importe le crédit historique à apporter à ces 3 étapes ; ce qui est intéressant, c'est la façon dont Hérodote, témoin intérieur de la culture grecque, se représente le système religieux auquel il appartient. Et ce que l'on y trouve, c'est que **les dieux sont d'abord des puissances, et que leur anthropomorphisme est surtout le fait des poètes qui leur ont appliqué des νόμοι humains**. La tension entre le général et le particulier est inhérente à la représentation des dieux grecs.
+
+
+<br><br>
+
+
+## Νομίζειν τοὺς θεούς : reconnaître et honorer les dieux
+
+Nous avons rencontré précédemment les νόμοι et le verbe νομίζειν, sans préciser explicitement ce que recouvrait ce dernier. Dans les passages de l'*Enquête* que nous avons déjà analysés, il prend différent sens complémentaires : "considérer que", "croire que" (proposition infinitive, cf ἐνόμισαν, I, 131) ; "avoir coutume de" (infinitif, cf νομίζουσι, I, 131) ; "avoir l'usage de" (avec un COD, cf νομίσαι, II, 4). Comment comprendre alors l'expression Νομίζειν τοὺς θεούς, qui apparaît régulièrement dans les textes ? C'est dans la traduction que l'on donne de cette expression qu'intervient la problématique de la croyance en Grèce antique. **Peut-on traduire Νομίζειν τοὺς θεούς par "croire aux dieux" ?**
+
+Replaçons cette problématique dans son contexte afin de saisir son ampleur historiographique et les enjeux des débats. Nous l'avons vu, l'acception moderne du terme *religion* nous est hérité d'une inflexion opérée par les penseurs chrétiens en latin, qui donnent à *religio* le sens de "lien vertical personnel à un Dieu unique dont le message fonde toute autorité". **Cela transforme la portée du terme, puisqu'il recouvrait majoritairement, dans un contexte polythéiste, une *pratique* plutôt qu'un *lien***.
+
+L'acception chrétienne de la religion a pleinement intégré la notion de *croyance*, et d'adhésion au message de Dieu, ce qui entérine l'idée de *conversion*.
