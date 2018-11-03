@@ -309,7 +309,7 @@ Commençons par définir ce que recouvre *le fait d'être grec*, à l'aide des [
 
 <div class="centeredquote">
 [...] αὖτις δὲ τὸ Ἑλληνικόν, ἐὸν ὅμαιμόν τε καὶ ὁμόγλωσσον, καὶ <b>θεῶν ἱδρύματά τε κοινὰ καὶ θυσίαι</b> ἤθεά τε ὁμότροπα [...]
-<br><br>
+<br><p style="margin-top: -5px"></p>
 [Il est inconcevable de trahir] l’Hellenikon, même sang et même langue, <b>des établissements communs des dieux ainsi que des sacrifices</b>, des mœurs et des manières semblables
 </div>
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, VIII, 144</span>
@@ -327,7 +327,7 @@ Il faut ensuite attendre les *Antiquités romaines* de Denys d'Halicarnasse, au 
 
 <div class="centeredquote" style="text-align: justify;">
 ἐπεὶ ἄλλοι γε συχνοὶ ἐν βαρβάροις οἰκοῦντες ὀλίγου χρόνου διελθόντος ἅπαν τὸ Ἑλληνικὸν ἀπέμαθον, ὡς μήτε φωνὴν Ἑλλάδα φθέγγεσθαι μήτε ἐπιτηδεύμασιν Ἑλλήνων χρῆσθαι, μήτε θεοὺς τοὺς αὐτοὺς νομίζειν, μήτε νόμους τοὺς ἐπιεικεῖς, ᾧ μάλιστα διαλλάσσει φύσις Ἑλλὰς βαρβάρου, μήτε τῶν ἄλλων συμβολαίων μηδ ̓ ὁτιοῦν.
-<br><br>
+<br><p style="margin-top: -5px"></p>
 Bien d'autres en effet, vivant au milieu des barbares, ont en peu de temps désappris tout l’Hellenikon au point de ne plus parler grec, de ne plus suivre les habitudes des Grecs, de ne pas reconnaître les mêmes dieux qu’eux, ni leurs lois tempérées – toutes choses qui principalement marquent la différence entre la nature grecque et la nature barbare –, ni même n’importe quel autre signe distinctif.
 </div>
 <span class="inpost-figure-caption-centered">Denys d'Halicarnasse, <i>Antiquités romaines</i>, I, 89, 4</span>
@@ -336,7 +336,7 @@ Hérodote ne mentionne, quant à lui, qu'une seule fois des *dieux communs* (θ�
 
 <div class="centeredquote" style="text-align: justify;">
 «ἐπιμαρτυρόμεθά τε ἐπικαλεόμενοι ὑμῖν <b>θεοὺς τοὺς Ἑλληνίους</b> μὴ κατιστάναι τυραννίδας ἐς τὰς πόλις. οὔκων παύσεσθε ἀλλὰ πειρήσεσθε παρὰ τὸ δίκαιον κατάγοντες Ἱππίην; ἴστεὑ μῖν Κορινθίους γε οὐ συναινέοντας.» Σωκλέης μὲν ἀπὸ Κορίνθου πρεσβεύων ἔλεξε τάδε, Ἱππίης δὲ αὐτὸν ἀμείβετο τοὺς αὐτοὺς θεοὺς ἐπικαλέσας ἐκείνῳ...
-<br><br>
+<br><p style="margin-top: -5px"></p>
 « Nous vous abjurons, au nom des <b>dieux des Grecs</b>, de ne pas établir de tyrans dans les villes. Ne renoncerez-vous pas à votre dessein ? Allez-vous entreprendre, contre toute justice, de ramener Hippias ? Sachez que, eux du moins, les Corinthiens ne vous approuvent pas.» (93) Ainsi parla Soclès, député de Corinthe. Et Hippias, invoquant les mêmes dieux qu’il avait évoqués, lui répondit ...
 </div>
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, V, 92-93</span>
@@ -351,7 +351,7 @@ Passons désormais à un autre élément du dossier des dieux grecs : la descrip
 
 <div class="centeredquote" style="text-align: justify;">
 τοῖσι δὲ μὴ βουλομένοισι αὐτῶν ἐνοικέειν, αὐτόσε δὲ ναυτιλλομένοισι ἔδωκε χώρους ἐνιδρύσασθαι βωμοὺς καὶ τεμένεα θεοῖσι. τὸ μέν νυν μέγιστον αὐτῶν τέμενος καὶ ὀνομαστότατον ἐὸν καὶ χρησιμώτατον, <b>καλεόμενον δὲ Ἑλλήνιον, αἵδε πόλιές εἰσι αἱ ἱδρυμέναι κοινῇ</b>· Ἰώνων μὲν Χίος καὶ Τέως καὶ Φώκαια καὶ Κλαζομεναί, Δωριέων δὲ Ῥόδος καὶ Κνίδος καὶ Ἁλικαρνησσὸς καὶ Φάσηλις, Αἰολέων δὲ ἡ Μυτιληναίων μούνη. τουτέων μέν ἐστι τοῦτο τὸ τέμενος, καὶ προστάτας τοῦ ἐμπορίου αὗται αἱ πόλιές εἰσι αἱ παρέχουσαι· <b>ὅσαι δὲ ἄλλαι πόλιες μεταποιεῦνται, οὐδέν σφι μετεὸν μεταποιεῦνται</b>. χωρὶς δὲ Αἰγινῆται ἐπὶ ἑωυτῶν ἱδρύσαντο τέμενος Διός, καὶ ἄλλο Σάμιοι ῞Ηρης, καὶ Μιλήσιοι Ἀπόλλωνος.
-<br><br>
+<br><p style="margin-top: -5px"></p>
 À ceux qui ne voulaient pas habiter là, mais que la navigation y amenait, il concéda des emplacements pour y établir des autels et des enceintes pour des dieux. La plus grande de ces enceintes sacrées, la plus célèbre et la plus fréquentée, <b>appelée Hellènion, a été établie en commun par les cités que voici</b> : les cités ioniennes de Chios, Téos, Phocée et Clazomènes ; les cités doriennes de Rhodes, Cnide, Halicarnasse, Phasélis ; et une seule cité éolienne, celle de Mytilène. Telles sont les cités à qui appartient l’enceinte sacrée, et ces mêmes cités sont celles qui fournissent les officiels du comptoir commercial ; <b>toutes les autres cités qui prétendent y avoir part le prétendent sans aucun droit</b>. Indépendamment, les Éginètes pour eux-mêmes ont fondé un sanctuaire de Zeus ; les Samiens, un autre d’Héra ; les Milésiens, un d’Apollon.
 </div>
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, II, 178</span>
@@ -388,7 +388,7 @@ Il y a ainsi continuité entre le nom des dieux, partagés par tous les Grecs, e
 
 <div class="centeredquote" style="text-align: justify;">
 περιημεκτέων δὲ τῇ συμφορῇ δεινῶς ἐκάλεε μὲν Δία καθάρσιον, μαρτυρόμενος τὰ ὑπὸ τοῦ ξείνου πεπονθὼς εἴη, ἐκάλεε δὲ ἐπίστιόν τε καὶ ἑταιρήιον, τὸν αὐτὸν τοῦτον ὀνομάζων θεόν, τὸν μὲν ἐπίστιον καλέων, διότι δὴ οἰκίοισι ὑποδεξάμενος τὸν ξεῖνον φονέα τοῦ παιδὸς ἐλάνθανε βόσκων, τὸν δὲ ἑταιρήιον, ὡς φύλακον συμπέμψας αὐτὸν εὑρήκοι πολεμιώτατον.
-<br><br>
+<br><p style="margin-top: -5px"></p>
 Dans l’excès d’affliction que lui causait son malheur, il invoquait Zeus comme patron des purifications, le prenant à témoin du mal que  l'étranger lui avait fait ; il l’invoquait comme protecteur du foyer et de  l'amitié – <b>c'était ce même dieu qu'il dénommait</b> –, comme protecteur du foyer, parce qu'après avoir accueilli l'étranger dans sa demeure il avait nourri sans le savoir le meurtrier de son fils ; comme protecteur de l'amitié, parce qu'après l'avoir envoyé avec Atys en guise de gardien, il avait trouvé en lui son pire ennemi.
 </div>
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, I, 44</span>
@@ -412,14 +412,14 @@ Quels liens peut-on alors tisser entre les différentes facettes d'un même dieu
 
 <div class="centeredquote" style="text-align: justify;">
 εἰ μὲν οὖν μία ἐστὶν Ἀφροδίτη ἢ διτταί, Οὐρανία τε καὶ Πάνδημος, οὐκ οἶδα· καὶ γὰρ Ζεὺς ὁ αὐτὸς δοκῶν εἶναι πολλὰς ἐπωνυμίας ἔχει· ὅτι γε μέντοι χωρὶς ἑκατέρᾳ βωμοί τε καὶ ναοί εἰσι καὶ θυσίαι τῇ μὲν Πανδήμῳ ῥᾳδιουργότεραι, τῇ δὲ Οὐρανίᾳ ἁγνότεραι, οἶδα.
-<br><br>
+<br><p style="margin-top: -5px"></p>
 S’il existe une seule Aphrodite ou bien deux, Ourania et Pandèmos, je ne sais, car Zeus, qui paraît toujours le même, possède de nombreux noms. Ce que je sais, pourtant, c’est que, pour chacune des deux séparément, il existe des autels et des temples, et aussi des rites qui, pour la Pandèmos, sont pleins de relâchement, tandis qu’ils sont plus purs pour Ourania.
 </div>
 <span class="inpost-figure-caption-centered">Xénophon, <i>Banquet</i>, VIII, 9</span>
 
-<div class="centeredquote" style="text-align: justify;">
+<div class="centeredquote">
 τὰς Ἀφροδίτας – ἠ θεὸς γὰρ οὐ μία – ἠ Καστνιῆτις τῷ φρονεῖν ὑπερφέρει
-<br><br>
+<br><p style="margin-top: -5px"></p>
 Parmi les Aphrodites - car la déesse n'est pas une -, la Kastniètis l'emporte en sagesse.
 </div>
 <span class="inpost-figure-caption-centered">Callimaque, <i>Iambes</i>, 10</span>
@@ -440,6 +440,12 @@ Nous avons rencontré précédemment les νόμοι et le verbe νομίζει
 
 Replaçons cette problématique dans son contexte (grâce aux approfondissements [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL7087729268303567609_Pirenne_Cours_7_2018_Mars_15.pdf)) afin de saisir son ampleur historiographique et les enjeux des débats. Nous l'avons vu, l'acception moderne du terme *religion* nous est hérité d'une inflexion opérée par les penseurs chrétiens en latin, qui donnent à *religio* le sens de "lien vertical personnel à un Dieu unique dont le message fonde toute autorité". **Cela transforme la portée du terme, puisqu'il recouvrait majoritairement, dans un contexte polythéiste, une *pratique* plutôt qu'un *lien***.
 
+<br>
+
+![Portrait d'Émile Durkheim]({{site.baseurl}}/assets/img/2018-10-15-durkheim.jpg){: .center-image}
+
+<span class="inpost-figure-caption-centered">Émile Durkheim ([Source](https://fr.wikipedia.org/wiki/%C3%89mile_Durkheim))</span>
+
 L'acception chrétienne de la religion a pleinement intégré la notion de *croyance*, et d'adhésion au message de Dieu, donnant un cadre à l'idée de *conversion*. Dès lors, quand les sciences humaines en construction s'emparent de la notion de religion, au milieu du XIX<sup>e</sup> siècle, elles associent à la fois pratiques et croyances à sa définition. Certains savants reconnaissent très vite qu'il est nécessaire de nuancer ce propos : ainsi Émile Durkheim, au tournant du XX<sup>e</sup> siècle, refuse de considérer que le divin est un élément constitutif de la religion, lui préférant l'idée de *choses sacrées*. Il garde cependant en bonne place les croyances et les pratiques dans la définition de *religion*, et explicite ce qu'il comprend dans celles-ci.
 
 <div class="centeredquote" style="text-align: justify;">
@@ -454,13 +460,17 @@ Ce questionnement est illustré par l'essai *Les Grecs ont-ils cru à leurs myth
 
 <br>
 
+![La mort de Socrate, par Jacques-Louis David]({{site.baseurl}}/assets/img/2018-10-15-mort_socrate.jpg){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered"><i>La mort de Socrate</i>, par Jacques-Louis David, 1787 ([Source](https://fr.wikipedia.org/wiki/%C3%89mile_Durkheim))</span>
+
 <div class="centeredquote" style="text-align: justify;">
 L’accusation portée contre lui était formulée en ces termes: « Socrate est coupable de ne pas reconnaître les dieux reconnus par la cité, et d’introduire d’autres divinités, nouvelles ; il est aussi coupable de corrompre les jeunes gens. » (ἀδικεῖ Σωκράτης οὓς μὲν ἡ πόλις νομίζει θεοὺς οὐ νομίζων, ἕτερα δὲ καινὰ δαιμόνια εἰσφέρων· ἀδικεῖ δὲ καὶ τοὺς νέους διαφθείρων). Premièrement, pour ce qui est du fait qu’il ne reconnaissait pas les dieux reconnus par la cité (ὡς οὐκ ἐνόμιζεν οὓς ἡ πόλις νομίζει θεούς), de quelle preuve disposaient-ils donc ? Car on le voyait souvent faire des sacrifices à la maison, de même que sur les autels publics de la cité, et ce n’était pas non plus un secret qu’il avait recours à la divination.
 </div>
 <span class="inpost-figure-caption-centered">Xénophon, <i>Mémorables</i>, I, 1-2</span>
 
 Cet extrait très célèbre de Xénophon montre encore différentes formes du verbe νομίζειν, et semble apporter de l'eau au moulin de Giordano (puisque seuls les rituels sont mentionnés pour la défense de Socrate). Il s'agit cependant d'être prudent, et d'examiner plus attentivement la disposition d'esprit induite par le νομίζειν : nous l'avons vu, la variété des significations apparaissant dans l'*Enquête* impose de considérer en première hypothèse à la fois la croyance (adhésion à une proposition formelle) et les pratiques (avoir l'usage de). L'étude de Pausanias offre alors un intérêt spécifique, pour trois raisons majeures :
-<ul>
+<ul style="margin-top: -5px">
     <li>L'intérêt de l'auteur tant pour les vestiges de la vie religieuse du passé que pour l'actualité des rites de son époque</li>
     <li>L'abondance du matériau disponible</li>
     <li>L'émulation entre la démarche de Pausanias et l'<i>Enquête</i> d'Hérodote, sept siècles plus tôt, qui lui servira de modèle.</li>
