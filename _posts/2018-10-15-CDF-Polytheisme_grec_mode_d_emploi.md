@@ -469,9 +469,27 @@ L’accusation portée contre lui était formulée en ces termes: « Socrate est
 </div>
 <span class="inpost-figure-caption-centered">Xénophon, <i>Mémorables</i>, I, 1-2</span>
 
-Cet extrait très célèbre de Xénophon montre encore différentes formes du verbe νομίζειν, et semble apporter de l'eau au moulin de Giordano (puisque seuls les rituels sont mentionnés pour la défense de Socrate). Il s'agit cependant d'être prudent, et d'examiner plus attentivement la disposition d'esprit induite par le νομίζειν : nous l'avons vu, la variété des significations apparaissant dans l'*Enquête* impose de considérer en première hypothèse à la fois la croyance (adhésion à une proposition formelle) et les pratiques (avoir l'usage de). L'étude de Pausanias offre alors un intérêt spécifique, pour trois raisons majeures :
+Cet extrait très célèbre de Xénophon montre encore différentes formes du verbe νομίζειν, et semble apporter de l'eau au moulin de Giordano (puisque seuls les rituels sont mentionnés pour la défense de Socrate). Il s'agit cependant d'être prudent, et d'examiner plus attentivement la disposition d'esprit induite par νομίζειν : nous l'avons vu, la variété des significations apparaissant dans l'*Enquête* impose de considérer en première hypothèse à la fois la croyance (adhésion à une proposition formelle) et les pratiques (avoir l'usage de). L'étude de l'oeuvre de Pausanias offre alors un intérêt spécifique, pour trois raisons majeures :
 <ul style="margin-top: -5px">
     <li>L'intérêt de l'auteur tant pour les vestiges de la vie religieuse du passé que pour l'actualité des rites de son époque</li>
     <li>L'abondance du matériau disponible</li>
     <li>L'émulation entre la démarche de Pausanias et l'<i>Enquête</i> d'Hérodote, sept siècles plus tôt, qui lui servira de modèle.</li>
 </ul>
+
+<br>
+
+<div class="centeredquote">
+... Μαρα θωνίοις γάρ, ὡς αὐτοὶ λέγουσιν, ̔ Ηρακλῆς ἐνομίσθη θεὸς πρώτοις.<br>
+... parce que, selon leurs propres dires, Héraclès fut reconnu comme dieu par les Marathoniens les premiers.<br><p style="margin-bottom: 0px"></p>
+
+... σέβονται δὲ οἱ Μαραθώνιοι ... ̔Ηρακλέα, φάμενοι πρώτοις ̔Ελλήνων σφίσιν ̔Ηρακλέα θεὸν νομισθῆναι ...<br>
+... les gens de Marathon vénèrent Héraclès, disant qu'il fut reconnu comme dieu par eux, les premiers parmi les Grecs<br><p style="margin-bottom: 0px"></p>
+
+θεὸν δὲ ̓Αμφιάραον πρώτοις ̓Ωρωπίοις κατέστη νομίζειν, ὕστερον δὲ καὶ οἱ πάντες ῞Ελληνες ἥγηνται.<br>
+C'est chez les gens d'Oropos les premiers q'il fut établi de reconnaître Amphiaraos comme dieu, et ensuite tous les Grecs ont suivi.<br><p style="margin-bottom: 0px"></p>
+</div>
+<span class="inpost-figure-caption-centered">Pausanias, I, 15, 3 - 32, 4 - 34, 2</span>
+
+On voit là qu'Héraclès et Amphiaraos ont subi un **changement de statut (vers le statut de dieux), qui justifie la traduction de reconnaître**. Ce processus n'est pas réservé aux héros : Ilithyie, d'abord honorée par les Déliens (puis dont le nom ὄνομα est transmis aux autres comme chez Hérodote), est également *reconnue comme déesse*. On constate par ailleurs dans la mise en scène des panthéons, tant chez Hérodote que chez Pausanias, que la dénomination d'un dieu est le *coeur* de l'identification du profil divin. De même, **la reconnaissance de ce profil est étroitement liée à l'établissement des honneurs dus à la figure divine**.
+
+Ce point éclaire la traduction de νομίζειν, qui devient, suivi d'un théonyme à l'accusatif, **reconnaître et honorer**. Il entremêle ainsi les registres des représentations et des cultes, en explicitant l'inscription officielle d'un dieu dans les νόμοι du groupe qui l'accueille. C'est également, nous l'aurons compris, la traduction de **νομίζειν τοὺς θεούς : reconnaître et honorer les dieux en s'inscrivant dans une tradition**. Il y a donc à a fois un processus cognitif et une démarche concrête ; c'est une combinaison, un phénomène que l'on retrouve de la même manière chez les Romains.

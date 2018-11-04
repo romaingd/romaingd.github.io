@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-03T16:34:07+01:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T23:30:46+01:00</updated><id>http://localhost:4000/</id><title type="html">Divergences</title><subtitle>Working in different directions
 </subtitle><author><name>Romain Girard</name></author><entry><title type="html">Religion grecque, singulier ou pluriel ?</title><link href="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/" rel="alternate" type="text/html" title="Religion grecque, singulier ou pluriel ?" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi</id><content type="html" xml:base="http://localhost:4000/CDF-Polytheisme_grec_mode_d_emploi/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -437,12 +437,30 @@ L’accusation portée contre lui était formulée en ces termes: « Socrate est
 &lt;/div&gt;
 &lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Xénophon, &lt;i&gt;Mémorables&lt;/i&gt;, I, 1-2&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Cet extrait très célèbre de Xénophon montre encore différentes formes du verbe νομίζειν, et semble apporter de l’eau au moulin de Giordano (puisque seuls les rituels sont mentionnés pour la défense de Socrate). Il s’agit cependant d’être prudent, et d’examiner plus attentivement la disposition d’esprit induite par le νομίζειν : nous l’avons vu, la variété des significations apparaissant dans l’&lt;em&gt;Enquête&lt;/em&gt; impose de considérer en première hypothèse à la fois la croyance (adhésion à une proposition formelle) et les pratiques (avoir l’usage de). L’étude de Pausanias offre alors un intérêt spécifique, pour trois raisons majeures :&lt;/p&gt;
+&lt;p&gt;Cet extrait très célèbre de Xénophon montre encore différentes formes du verbe νομίζειν, et semble apporter de l’eau au moulin de Giordano (puisque seuls les rituels sont mentionnés pour la défense de Socrate). Il s’agit cependant d’être prudent, et d’examiner plus attentivement la disposition d’esprit induite par νομίζειν : nous l’avons vu, la variété des significations apparaissant dans l’&lt;em&gt;Enquête&lt;/em&gt; impose de considérer en première hypothèse à la fois la croyance (adhésion à une proposition formelle) et les pratiques (avoir l’usage de). L’étude de l’oeuvre de Pausanias offre alors un intérêt spécifique, pour trois raisons majeures :&lt;/p&gt;
 &lt;ul style=&quot;margin-top: -5px&quot;&gt;
     &lt;li&gt;L'intérêt de l'auteur tant pour les vestiges de la vie religieuse du passé que pour l'actualité des rites de son époque&lt;/li&gt;
     &lt;li&gt;L'abondance du matériau disponible&lt;/li&gt;
     &lt;li&gt;L'émulation entre la démarche de Pausanias et l'&lt;i&gt;Enquête&lt;/i&gt; d'Hérodote, sept siècles plus tôt, qui lui servira de modèle.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;centeredquote&quot;&gt;
+... Μαρα θωνίοις γάρ, ὡς αὐτοὶ λέγουσιν, ̔ Ηρακλῆς ἐνομίσθη θεὸς πρώτοις.&lt;br /&gt;
+... parce que, selon leurs propres dires, Héraclès fut reconnu comme dieu par les Marathoniens les premiers.&lt;br /&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;&lt;/p&gt;
+
+... σέβονται δὲ οἱ Μαραθώνιοι ... ̔Ηρακλέα, φάμενοι πρώτοις ̔Ελλήνων σφίσιν ̔Ηρακλέα θεὸν νομισθῆναι ...&lt;br /&gt;
+... les gens de Marathon vénèrent Héraclès, disant qu'il fut reconnu comme dieu par eux, les premiers parmi les Grecs&lt;br /&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;&lt;/p&gt;
+
+θεὸν δὲ ̓Αμφιάραον πρώτοις ̓Ωρωπίοις κατέστη νομίζειν, ὕστερον δὲ καὶ οἱ πάντες ῞Ελληνες ἥγηνται.&lt;br /&gt;
+C'est chez les gens d'Oropos les premiers q'il fut établi de reconnaître Amphiaraos comme dieu, et ensuite tous les Grecs ont suivi.&lt;br /&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;inpost-figure-caption-centered&quot;&gt;Pausanias, I, 15, 3 - 32, 4 - 34, 2&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;On voit là qu’Héraclès et Amphiaraos ont subi un &lt;strong&gt;changement de statut (vers le statut de dieux), qui justifie la traduction de reconnaître&lt;/strong&gt;. Ce processus n’est pas réservé aux héros : Ilithyie, d’abord honorée par les Déliens (puis dont le nom ὄνομα est transmis aux autres comme chez Hérodote), est également &lt;em&gt;reconnue comme déesse&lt;/em&gt;. On constate par ailleurs dans la mise en scène des panthéons, tant chez Hérodote que chez Pausanias, que la dénomination d’un dieu est le &lt;em&gt;coeur&lt;/em&gt; de l’identification du profil divin. De même, &lt;strong&gt;la reconnaissance de ce profil est étroitement liée à l’établissement des honneurs dus à la figure divine&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ce point éclaire la traduction de νομίζειν, qui devient, suivi d’un théonyme à l’accusatif, &lt;strong&gt;reconnaître et honorer&lt;/strong&gt;. Il entremêle ainsi les registres des représentations et des cultes, en explicitant l’inscription officielle d’un dieu dans les νόμοι du groupe qui l’accueille. C’est également, nous l’aurons compris, la traduction de &lt;strong&gt;νομίζειν τοὺς θεούς : reconnaître et honorer les dieux en s’inscrivant dans une tradition&lt;/strong&gt;. Il y a donc à a fois un processus cognitif et une démarche concrête ; c’est une combinaison, un phénomène que l’on retrouve de la même manière chez les Romains.&lt;/p&gt;</content><author><name>Romain Girard</name></author><category term="College de France" /><category term="Religion" /><category term="Histoire" /><category term="Antiquite" /><category term="Notes de cours" /><summary type="html"></summary></entry><entry><title type="html">Building bridges - AMSGrad, brittle NMT, MSDNet</title><link href="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/" rel="alternate" type="text/html" title="Building bridges - AMSGrad, brittle NMT, MSDNet" /><published>2018-09-24T01:00:00+02:00</published><updated>2018-09-24T01:00:00+02:00</updated><id>http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet</id><content type="html" xml:base="http://localhost:4000/Mixing-AMSGrad-brittleNMT-MSDNet/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
