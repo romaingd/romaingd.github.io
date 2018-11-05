@@ -506,3 +506,29 @@ Nous parlons aussi bien des croyances pour évoquer des conceptions religieuses 
 Il n'y a pas, dans les religions grecques et romaines antiques, de croyance en ce sens, mais des représentations au sens de Durkheim ; ces représentations sont autant de manières d'identifier et de reconnaître les dieux que l'on honore et leurs manifestations. Les Grecs croyaient que les dieux étaient là et faisaient communauté avec les hommes ; les Grecs croyaient qu'il était bénéfique d'honorer les dieux. Il s'agit de la dimension cognitive du *croire que*, qui laisse fondamentalement la place au doute. Ce doute enclenche la dynamique spéculative qui donne naissance à la fois aux représentations multiples et aux rituels, qui sont autant d'expérimentation de l'efficacité et de la validité de la représentation. C'est tout cela qui est contenu dans l'expression νομίζειν τοὺς θεούς.
 
 Il paraît donc nécessaire d'abandonner les termes de *croire à*, *croire en*, ou *croyants* pour parler des religions grecques et romaines, sans pour autant les réduire à un ritualisme froid. Les Grecs pouvaient avoir *foi*, *confiance* dans le dieu qu'ils honoraient, mais non *pas avoir la foi*. **Dans la richesse de cette nouvelle acception de la relation aux dieux, les représentations et les hommages jouent un rôle majeur, sans que les Grecs puissent être qualifiés de croyants**.
+
+
+<br><br>
+
+
+## Νομίζειν τοὺς θεούς : les normes sacrificielles
+
+Après avoir étudié en détail la question des représentations, venons-en aux pratiques et aux sacrifices qui résident au coeur du dialogue instauré par les Grecs avec leurs dieux. L'articulation entre le général et le particulier concerne en effet l'ensemble du domaine religieux, et les rituels n'échappent pas aux questionnements précédents : **quelle est la part de ce qui unit les Grecs sur un arrière-plan partagé, et quelle est la part de ce qui les distingue ?** Si partage il y a, quel est le fondement de ce partage, en l'absence de toute autorité centralisée ?
+
+Comme pour les dieux de l'Olympe eux-mêmes, le rituel sacrificiel apparaît entièrement constitué dès l'Iliade et l'Odyssée, mettant en scène l'hommage aux dieux par la mise à mort d'un animal domestique. Les descriptions de ces sacrifices restent toutefois assez rares dans la tradition textuelle grecque, apparaissant surtout chez Homère, Aristophane et Ménandre. À quels sacrifices ces textes littéraires font-ils référence ? Plusieurs hypothèses s'offrent à nous :
+
+<ul>
+    <li>Ces descriptions sont un miroir à peine déformés de la réalité</li>
+    <li>Ces descriptions sont des constructions purement imaginaires, qui nous informent avant tout de l'intrigue dans laquelle elles prennent place</li>
+    <li>Le contrôle de l'auditoire de ces différents textes permet d'espérer saisir quelque chose de ce que les auteurs connaissaient des pratiques rituelles réelles </li>
+</ul>
+
+Les nombreux points de convergence entre les différentes évocations, malgré les siècles d'écart, dressent une **trame sacrificielle** en arrière-plan, c'est-à-dire **la structure minimale associée au mot de *sacrifice*, la θυσία**, quelque chose qui renvoie à la généralité de la pratique. Un extrait de l'*Enquête* d'Hérodote offre un premier portrait en creux du sacrifice chez les Grecs, en contraste avec celui des Perses.
+
+<div class="centeredquote" style="text-align: justify;">
+Quant au sacrifice en usage chez les Perses pour les dieux que je viens de citer, voici ce qu’il est (θυσίη δὲ τοῖσι Πέρσῃσι περὶ τοὺς εἰρημένους θεοὺς ἥδε κατέστηκε). Ils ne dressent pas d’autels, ils n’allument pas de feu quand ils doivent offrir un sacrifice; ils n’usent ni de libations, ni de flûte, ni de bandelettes, ni d’orge sacrée. Un Perse veut-ilsacrifier à l’un ou l’autre des dieux, il conduit la bête dans un lieu pur et il invoque le dieu (καλέει τὸν θεόν), portant sur sa tiare une couronne, de myrte de préférence. Il n’est pas permis à celui qui offre un sacrifice de se souhaiter du bien à lui seul en particulier ; il prie pour la prospérité de tous les Perses et du roi, lui-même étant compris dans l’ensemble des Perses. L’animal sacrificiel une fois découpé en menus morceaux et les chairs cuites (ἐπεὰν δὲ διαμιστύλας κατὰ μέρεα τὸ ἱρήιον ἑψήσῃ τὰ κρέα), il fait une litière d’herbe fraîche, de trèfle de préférence, et pose dessus tous les morceaux de viande. Lorsqu’il les a déposés, un mage, qui est là présent, psalmodie une théogonie (μάγος ἀνὴρ παρεστεὼς ἐπαείδει θεογονίην) – telle est d’après ce qu’ils disent la nature de ce chant – car la règle est chez eux de ne pas offrir de sacrifice sans un mage (ἄνευ γὰρ δὴ μάγου οὔ σφι νόμοςἐστὶ θυσίας ποιέεσθαι). Après quelques instants d’attente, celui qui a sacrifié emporte chez lui les viandes (ἀποφέρεται ὁ θύσας τὰ κρέα), et en use selon sa 
+volonté.
+</div>
+<span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, I, 132</span>
+
+
