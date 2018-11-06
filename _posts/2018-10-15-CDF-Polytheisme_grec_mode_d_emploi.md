@@ -513,7 +513,7 @@ Il paraît donc nécessaire d'abandonner les termes de *croire à*, *croire en*,
 
 ## Νομίζειν τοὺς θεούς : les normes sacrificielles
 
-Après avoir étudié en détail la question des représentations, venons-en aux pratiques et aux sacrifices qui résident au coeur du dialogue instauré par les Grecs avec leurs dieux. L'articulation entre le général et le particulier concerne en effet l'ensemble du domaine religieux, et les rituels n'échappent pas aux questionnements précédents : **quelle est la part de ce qui unit les Grecs sur un arrière-plan partagé, et quelle est la part de ce qui les distingue ?** Si partage il y a, quel est le fondement de ce partage, en l'absence de toute autorité centralisée ?
+Après avoir étudié en détail la question des représentations, venons-en aux pratiques et aux sacrifices qui résident au coeur du dialogue instauré par les Grecs avec leurs dieux, à l'aide des approfondissements [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL5578843972916289128_Pirenne_Cours_8_2018_Mars_22.pdf) et [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL1196339589358700882_Pirenne_Cours_9_2018_Mars_28.pdf). L'articulation entre le général et le particulier concerne en effet l'ensemble du domaine religieux, et les rituels n'échappent pas aux questionnements précédents : **quelle est la part de ce qui unit les Grecs sur un arrière-plan partagé, et quelle est la part de ce qui les distingue ?** Si partage il y a, quel est le fondement de ce partage, en l'absence de toute autorité centralisée ?
 
 Comme pour les dieux de l'Olympe eux-mêmes, le rituel sacrificiel apparaît entièrement constitué dès l'Iliade et l'Odyssée, mettant en scène l'hommage aux dieux par la mise à mort d'un animal domestique. Les descriptions de ces sacrifices restent toutefois assez rares dans la tradition textuelle grecque, apparaissant surtout chez Homère, Aristophane et Ménandre. À quels sacrifices ces textes littéraires font-ils référence ? Plusieurs hypothèses s'offrent à nous :
 
@@ -526,9 +526,27 @@ Comme pour les dieux de l'Olympe eux-mêmes, le rituel sacrificiel apparaît ent
 Les nombreux points de convergence entre les différentes évocations, malgré les siècles d'écart, dressent une **trame sacrificielle** en arrière-plan, c'est-à-dire **la structure minimale associée au mot de *sacrifice*, la θυσία**, quelque chose qui renvoie à la généralité de la pratique. Un extrait de l'*Enquête* d'Hérodote offre un premier portrait en creux du sacrifice chez les Grecs, en contraste avec celui des Perses.
 
 <div class="centeredquote" style="text-align: justify;">
-Quant au sacrifice en usage chez les Perses pour les dieux que je viens de citer, voici ce qu’il est (θυσίη δὲ τοῖσι Πέρσῃσι περὶ τοὺς εἰρημένους θεοὺς ἥδε κατέστηκε). Ils ne dressent pas d’autels, ils n’allument pas de feu quand ils doivent offrir un sacrifice; ils n’usent ni de libations, ni de flûte, ni de bandelettes, ni d’orge sacrée. Un Perse veut-ilsacrifier à l’un ou l’autre des dieux, il conduit la bête dans un lieu pur et il invoque le dieu (καλέει τὸν θεόν), portant sur sa tiare une couronne, de myrte de préférence. Il n’est pas permis à celui qui offre un sacrifice de se souhaiter du bien à lui seul en particulier ; il prie pour la prospérité de tous les Perses et du roi, lui-même étant compris dans l’ensemble des Perses. L’animal sacrificiel une fois découpé en menus morceaux et les chairs cuites (ἐπεὰν δὲ διαμιστύλας κατὰ μέρεα τὸ ἱρήιον ἑψήσῃ τὰ κρέα), il fait une litière d’herbe fraîche, de trèfle de préférence, et pose dessus tous les morceaux de viande. Lorsqu’il les a déposés, un mage, qui est là présent, psalmodie une théogonie (μάγος ἀνὴρ παρεστεὼς ἐπαείδει θεογονίην) – telle est d’après ce qu’ils disent la nature de ce chant – car la règle est chez eux de ne pas offrir de sacrifice sans un mage (ἄνευ γὰρ δὴ μάγου οὔ σφι νόμοςἐστὶ θυσίας ποιέεσθαι). Après quelques instants d’attente, celui qui a sacrifié emporte chez lui les viandes (ἀποφέρεται ὁ θύσας τὰ κρέα), et en use selon sa 
+Quant au sacrifice en usage chez les Perses pour les dieux que je viens de citer, voici ce qu’il est (θυσίη δὲ τοῖσι Πέρσῃσι περὶ τοὺς εἰρημένους θεοὺς ἥδε κατέστηκε). Ils ne dressent pas d’autels, ils n’allument pas de feu quand ils doivent offrir un sacrifice; ils n’usent ni de libations, ni de flûte, ni de bandelettes, ni d’orge sacrée. Un Perse veut-il sacrifier à l’un ou l’autre des dieux, il conduit la bête dans un lieu pur et il invoque le dieu (καλέει τὸν θεόν), portant sur sa tiare une couronne, de myrte de préférence. Il n’est pas permis à celui qui offre un sacrifice de se souhaiter du bien à lui seul en particulier ; il prie pour la prospérité de tous les Perses et du roi, lui-même étant compris dans l’ensemble des Perses. L’animal sacrificiel une fois découpé en menus morceaux et les chairs cuites (ἐπεὰν δὲ διαμιστύλας κατὰ μέρεα τὸ ἱρήιον ἑψήσῃ τὰ κρέα), il fait une litière d’herbe fraîche, de trèfle de préférence, et pose dessus tous les morceaux de viande. Lorsqu’il les a déposés, un mage, qui est là présent, psalmodie une théogonie (μάγος ἀνὴρ παρεστεὼς ἐπαείδει θεογονίην) – telle est d’après ce qu’ils disent la nature de ce chant – car la règle est chez eux de ne pas offrir de sacrifice sans un mage (ἄνευ γὰρ δὴ μάγου οὔ σφι νόμοςἐστὶ θυσίας ποιέεσθαι). Après quelques instants d’attente, celui qui a sacrifié emporte chez lui les viandes (ἀποφέρεται ὁ θύσας τὰ κρέα), et en use selon sa 
 volonté.
 </div>
 <span class="inpost-figure-caption-centered">Hérodote, <i>Enquête</i>, I, 132</span>
 
 
+La mise en regard de cet extrait avec les sacrifices décrit dans les comédies et les épopées permet d'esquisser le déroulement suivant, qui serait commun à tous, inscrit dans les νόμοι :
+
+<ol>
+    <li>Feu à l'autel en vue d'une combustion</li>
+    <li>Agent cultuel facultatif</li>
+    <li>Sacrifiants couronnés</li>
+    <li>Conduite de l'animal à l'autel, avec bandelette</li>
+    <li>Musique d'<i>aulos</i></li>
+    <li>Libations</li>
+    <li>Jet d'orges rituels</li>
+    <li>Invocation et prière, tant pour l'individu que pour la communauté</li>
+    <li>Mise à mort</li>
+    <li>Découpe en parts</li>
+    <li>Déposition de parts à l'autel, et éventuellement sur table</li>
+    <li>Enlèvement des parts restantes, et libre disposition de la viande (à cuire sur place ou à emporter)</li>
+</ol>
+
+Mais au-delà de la description des différentes étapes, il s'agit pour nous de déterminer le coeur, le noyau du sacrifice grec dans sa spécificité. **Quelle est la manière grecque de sacrifier ?** Pour répondre à cette question, il nous faut quitter les textes littéraires pour nous plonger dans une autre source de documentation : les inscriptions et prescriptions gravées sur divers supports, pierre ou métal, par différents groupes sacrifiants.
