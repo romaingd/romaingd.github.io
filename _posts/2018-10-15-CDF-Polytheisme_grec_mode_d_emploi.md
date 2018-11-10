@@ -553,4 +553,12 @@ La mise en regard de cet extrait avec les sacrifices décrit dans les comédies 
     <li>Enlèvement des parts restantes, et libre disposition de la viande (à cuire sur place ou à emporter)</li>
 </ol>
 
-Mais au-delà de la description des différentes étapes, il s'agit pour nous de déterminer le coeur, le noyau du sacrifice grec dans sa spécificité. **Quelle est la manière grecque de sacrifier ?** Pour répondre à cette question, il nous faut quitter les textes littéraires pour nous plonger dans une autre source de documentation : les inscriptions et prescriptions gravées sur divers supports, pierre ou métal, par différents groupes sacrifiants.
+Mais au-delà de la description des différentes étapes, il s'agit pour nous de déterminer le coeur, le noyau du sacrifice grec dans sa spécificité. **Quelle est la manière grecque de sacrifier ?** Pour répondre à cette question, il nous faut quitter les textes littéraires pour nous plonger dans une autre source de documentation : les inscriptions et prescriptions gravées sur divers supports, pierre ou métal, par différents groupes sacrifiants. **Si les textes *littéraires* nous permettent d'atteindre un certain degré de généralité dans la structure du sacrifice, peut-on déceler un tel arrière-plan dans la documentation épigraphique, ou n'y trouve-t-on que des variations sur la trame ?**
+
+<br>
+
+![Stèle de Larisa]({{site.baseurl}}/assets/img/2018-10-15-stele_larisa.png){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered">Stèle découverte à Larisa (Thessalie) en 2002, datée du II-III<sup>e</sup> siècle avant notre ère ([Source](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL5578843972916289128_Pirenne_Cours_8_2018_Mars_22.pdf))</span>
+
+Cette stèle de Larisa, découverte dans une décharge de gravillons, mentionne un sanctuaire (dont elle est probablement originelle) et une déesse centrale qui reste anonyme, entourée d'Artémis, d'autres dieux grecs, Men, et de dieux non grecs dont les noms ont été ou non traduits. Ce document majeur souligne la coexistence de groupes Grecs et non-Grecs dans la Grèce hellénistique.
