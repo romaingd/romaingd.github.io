@@ -596,4 +596,24 @@ Ayant dressé cet arrière-plan commun, il est désormais temps d'explorer la di
 
 La matière épigraphique étant abondante (plus de 500 textes), choisissons de nous pencher plus particulièrement sur l'une des composantes majeures de la découpe en parts dans le sacrifice grec : **les viscères, ou σπλάγχνα**. Elles étaient déjà mentionnées sur la stèle de Larisa, comme *parts sacrées* ou ἱερα, indiquant leur situation intermédiaire, sur la voie entre monde humain et monde divin. Lors du sacrifice, une fois que les viscères sont grillées, et que le sacrifiant y goûte, il y a symboliquement **commensalité** (fait de manger ensemble) et communication avec le destinataire divin (censé se repaître des fumées de combustion).
 
-Ces σπλάγχνα apparaissent surtout dans des documents réglant la vente des sacerdoces dans certaines cités des îles de l'Égée ou de la côte d'Asie mineure, par exemple à Chios, Milet, ou Halicarnasse.
+
+<div class="centeredquote" style="text-align: justify;">
+Que l’on donne au prêtre de Pelinaios les langues, les parts d’honneur, les offrandes à brûler dont on fait des fumigations, les viscères (placés) sur les genoux et les mains (de la statue), deux portions, la peau ; en cas d’absence du prêtre, que celui qui souhaite s’annoncer l’appelle trois fois à grands cris et qu’il accomplisse lui-même le sacrifice ; qu’on ne le permette à personne d’autre ; que celui qui transgresse l’un de ces règlements verse une amende de cinq statères.
+</div>
+<span class="inpost-figure-caption-centered">Vente du sacerdoce de Zeus Pelinaios, CGRN 36, Chios, fin du V<sup>e</sup> av. J.-C.</span>
+
+
+Ces σπλάγχνα apparaissent surtout dans des documents réglant la vente des sacerdoces dans certaines cités des îles de l'Égée ou de la côte d'Asie mineure, par exemple à Chios, Milet, ou Halicarnasse. **L'examen de ces prescriptions fait apparaître un certain nombre de variations entre les pratiques locales et la trame générale** : ainsi à Milet, on fait bouillir les dernières vertèbres et la queue, plutôt que de les griller comme en Attique ; de manière régionale, en Asie mineure, il semble que le prêtre reçoive un quart des viscères de l'animal sacrificiel. L'inscription de Chios ci-dessus montre que la déposition des parts a lieu non sur la table, mais sur les genoux et les mains de la statue, ce qui constitue un motif supplémentaire sur la trame générale. Les viscères restent toutefois, de manière consistante, une composante des ἱερα, vecteur de communication entre les hommes et les dieux.
+
+**Les viscères remplissent également, et cette considération est largement partagée par l'ensemble des Grecs, une fonction divinatoire**. Celle-ci s'illustre dans la bouche du Prométhée d'Eschyle, dans l'extrait ci-dessous, qui évoque l'art divinatoire parmi tous les bienfaits qu'il a dispensés à l'humanité. Aristote note, quant à lui, que ce sont les nombreuses anomalies susceptibles d'être présentes sur les différents organes, en particulier les reins, le foie, le poumon et la rate (calculs, tumeurs, abcès).
+
+
+<div class="centeredquote" style="text-align: justify;">
+Τρόπους τε πολλοὺς μαντικῆς ἐστοίχισα, κἄκρινα πρῶτος ἐξ ὀνειράτων ἃ χρὴ ὕπαρ γενέσθαι, κληδόνας τε δυσκρίτους ἐγνώρισ ̓ αὐτοῖς ἐνοδίους τε συμβόλους, γαμψωνύχων τε πτῆσιν οἰωνῶν σκεθρῶς διώρισ ̓, οἵτινές τε δεξιοὶ φύσιν εὐωνύμους τε, καὶ δίαιταν ἥντινα ἔχουσ ̓ ἕκαστοι, καὶ πρὸς ἀλλήλους τίνες ἔχθραι τε καὶ στέργηθρα καὶ συνεδρίαι,<b>σπλάγχνων τε λειότητα, καὶ χροιὰν τίνα ἔχοντ ̓ ἂν εἴη δαίμοσιν πρὸς ἡδονὴν, χολῆς λοβοῦ τε ποικίλην εὐμορφίαν, κνίσῃ τε κῶλα συγκαλυπτὰ καὶ μακρὰν ὀσφῦν</b> πυρώσας δυστέκμαρτον ἐς τέχνην ὥδωσα θνητούς καὶ φλογωπὰ σήματα ἐξωμμάτωσα πρόσθεν ὄντ ̓ ἐπάργεμα.
+<br><p style="margin-top: -5px"></p>
+Je classai aussi pour eux les mille formes de l’art divinatoire. Le premier je distinguai les songes que la veille doit réaliser et je leur éclairai les sons chargés d’obscures présages et les rencontres de la route. Je déterminai fermement ce que signifie le vol des rapaces, ceux qui sont favorables ou de mauvais augure, les mœurs de chacun, leurs haines entre eux, leurs affections, leurs rapprochements sur la même branche ; <b>et aussi le poli des viscères, les teintes qu’ils doivent avoir pour être agréables aux dieux, les divers aspects propices de la vésicule biliaire et du lobe du foie</b>. Je fis brûler les membres enveloppés de graisse et l’échine allongée, pour guider les mortels dans l’art obscur des présages, et je leur rendis clairs les signes de flamme jusque-là enveloppés d’ombre. 
+</div>
+<span class="inpost-figure-caption-centered">Eschyle, <i>Prométhée enchaîné</i>, 484-499</span>
+
+
+Par les choix opérés lors de leur manipulation, les parts sacrées permettent la communication des hommes vers les dieux, mais aussi la communication des dieux vers les hommes, illustrée par la pratique divinatoire. Les viscères offrent alors une interface particulièrement efficace dans ce type de dialogue. **Le statut des viscères comme ἱερα est la langue parlée par tous les Grecs ; les manipulations singulières sont comme une parole que chaque communauté prononce suivant ses traditions et ses besoins**.
