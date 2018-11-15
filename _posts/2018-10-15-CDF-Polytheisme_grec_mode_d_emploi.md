@@ -617,3 +617,35 @@ Je classai aussi pour eux les mille formes de l’art divinatoire. Le premier je
 
 
 Par les choix opérés lors de leur manipulation, les parts sacrées permettent la communication des hommes vers les dieux, mais aussi la communication des dieux vers les hommes, illustrée par la pratique divinatoire. Les viscères offrent alors une interface particulièrement efficace dans ce type de dialogue. **Le statut des viscères comme ἱερα est la langue parlée par tous les Grecs ; les manipulations singulières sont comme une parole que chaque communauté prononce suivant ses traditions et ses besoins**.
+
+
+<br><br>
+
+
+## Sacrifier comme aux héros : le cas des Tripatores
+
+La sphère supra-humaine grecque n'est pas seulement peuplée de dieux, mais aussi de divers héros. Nous n'avons, pour le moment, évoqué ces derniers qu'à l'occasion d'un passage de l'*Enquête* d'Hérodote, où ce dernier notait que "les Égyptiens ne rendent pas de culte aux héros". Il utilise à cette occasion ce même verbe νομίζειν, que nous avons abondamment commenté, dans un sens porté sur le *rendre hommage à*.
+
+Les héros sont nombreux en Grèce ancienne ; même en s'en tenant à ceux qui reçoivent un culte, le profil des figures héroïques est particulièrement variés, d'obscurs héros locaux aux figures largement attestées comme Héraklès ou Amphiaraos. Les évocations littéraires de ces derniers tend à montrer la **porosité entre le statut de héros et le statut de dieu**, porosité que nous allons étudier essentiellement à travers le filtre cultuel.
+
+
+<div class="centeredquote" style="text-align: justify;">
+το̑ν hιαρο̑ν hα θυσία πρὸ ϙοτυτίον καὶ τᾶς ἐχεχερίας πένπ[τοι]
+ϝέτει hο̑ιπερ hόκα hα Ὀλυνπιὰς ποτείε το̑ι Διὶ ∶ το̑ι Εὐμενεῖ θῦμα [καὶ]
+ταῖς ∶ Εὐμενίδεσι ∶ τέλεον καὶ το̑ι Διὶ ∶ το̑ι Μιλιχίοι το̑ι ∶ ἐν Μύσϙο ∶ τέλεον ∶ τοῖς Τρ-
+ιτοπατρεῦσι10 ∙ τοῖς ∙ μιαροῖς hόσπερ τοῖς hερόεσι, ϝοῖνον hυπολhεί-
+ψας ∙ δι’ ὀρόφο ∙ καὶ τᾶν μοιρᾶν ∙ τᾶν ἐνάταν ∙ κατακα-
+ίεν ∙ μίαν θυόντο θῦμα ∶ καὶ καταγιζόντο hοῖς hοσία ∙ καὶ περιρά-
+ναντες καταλινάντο ∶ κἔπειτα ∶ τοῖς κ⟨α⟩θαροῖς ∶ τέλεον θυόντο ∶ μελίκρατα hυπο-
+λείβον ∙ καὶ τράπεζαν καὶ κλίναν κἐνβαλέτο καθαρὸν hε̑μα καὶ στεφά-
+νος15 ἐλαίας καὶ μελίκρατα ἐν καιναῖς ποτερίδε[σ]ι καὶ ∶ πλάσματα καὶ κρᾶ κἀπ-
+αρξάμενοι κατακαάντο καὶ καταλινάντο τὰς ποτερίδας ἐνθέντες·
+θυόντο hόσπερ τοῖς θεοῖς τὰ πατρο̑ια ∶ το̑ι ἐν Εὐθυδάμο ∶ Μιλιχίοι ∶ κριὸν θ[υ]-
+όντο...
+<br><p style="margin-top: -5px"></p>
+(7) Le sacrifice d’offrandes avant les Kotytia et la trêve qui a lieu la cinquième année (c’est-à-dire tous les quatre ans) lorsque l’Olympiade prend cours ; à Zeus Eumenesun animal et aux Euménides un animal adulte et à Zeus Meilichios dans (le lieu ?) de Myskosun animal adulte ; aux (10) Tritopatores impurs comme aux héros, ayant versé du vin par le toit, des neufs portions en brûler une ; ceux à qui c’est religieusement permis sacrifieront un animal et feront la consécration (en brûlant) ; ayant fait une lustration (avec de l’eau ?), qu’ils oignent (l’autel ?), et aussitôt sacrifient un animal adulte aux Tritopatores purs ; versant un mélange de lait et de miel, une table est dressée et une banquette et qu’ils y mettent un tissu propre et des couronnes (15) et un mélange de lait et de miel dans de nouvelles coupes et des gâteaux et de la viande. Ayant offert des prémices, qu’ils les brûlent et oignent, ayant déposé les coupes (sur l’autel ?). Les sacrifices ancestraux sont faits comme aux dieux. À (Zeus) Meilichiosdans (le lieu ?) d’Euthydamos, qu’ils sacrifient un bélier non castré ...
+</div>
+<span class="inpost-figure-caption-centered">Sacrifice aux Tripatores, CGRN 13, Sélinonte, début du V<sup>e</sup> siècle av. J.-C.</span>
+
+
+Ce sont ainsi les normes rituelles correspondant au culte des héros que nous allons examiner, dans la continuité de la section précédente, avec cette première inscription découverte en Sicile et publiée en 1993.
