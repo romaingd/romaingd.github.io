@@ -408,7 +408,14 @@ Considérons les différents facteurs de multiplication inhérents à la sphère
     <li>Le nom de certains dieux est régulièrement assorti d'une <a href="https://fr.wikipedia.org/wiki/%C3%89picl%C3%A8se_(Antiquit%C3%A9)">épiclèse</a> (épithète permettant de préciser l'aspect spécifique de la divinité invoquée, dans une démarche cultuelle ; voir par exemple <a href="http://www.brepols.net/Pages/ShowProduct.aspx?prod_id=IS-9782503516868-1"><i>Nommer les dieux</i></a>), comme le montre l'extrait précédent de l'<i>Enquête</i>. Parmi les plus connus, on trouve Zeus <i>Olympios</i> ou Athéna <i>Nikè</i>. Chaque dieu est ainsi pluriel, avec des profils différents dans chaque cité.</li>
 </ul>
 
-Quels liens peut-on alors tisser entre les différentes facettes d'un même dieu, Zeus ? Lorsque Hérodote précise que, malgré les trois épiclèses renvoyant à deux domaines de compétence différents, "c'était ce même dieu qu'il dénommait", ce n'est pas parce que ses lecteurs pourraient penser qu'il s'agit de dieux différents, mais qu'ils pourraient considérer qu'il ne s'agit plus de Zeus (le théonyme non répété appelant une clarification formelle). Cette unité, si elle est mise à mal par les extraits suivants, résiste à une analyse *dans le contexte* de ces derniers (**"les dieux sont des *puissances* et non des *personnes*"** (J.-P. Vernant) **, des entités dont les humains attendent qu'elles déploient leurs pouvoirs spécifiques à leur bénéfice**). Il s'agit de comprendre à quoi correspond chaque dénomination (regroupant plusieurs aspects ou facettes), par rapport aux autres divinités du panthéon. 
+Quels liens peut-on alors tisser entre les différentes facettes d'un même dieu, Zeus ? Lorsque Hérodote précise que, malgré les trois épiclèses renvoyant à deux domaines de compétence différents, "c'était ce même dieu qu'il dénommait", ce n'est pas parce que ses lecteurs pourraient penser qu'il s'agit de dieux différents, mais qu'ils pourraient considérer qu'il ne s'agit plus de Zeus (le théonyme non répété appelant une clarification formelle). Cette unité, si elle est mise à mal par les extraits suivants, résiste à une analyse *dans le contexte* de ces derniers (**"les dieux sont des *puissances* et non des *personnes*"** d'après J.-P. Vernant, **des entités dont les humains attendent qu'elles déploient leurs pouvoirs spécifiques à leur bénéfice**). Il s'agit de comprendre à quoi correspond chaque dénomination (regroupant plusieurs aspects ou facettes), par rapport aux autres divinités du panthéon. 
+
+<br>
+
+![La naissance de Vénus, Sandro Boticelli]({{site.baseurl}}/assets/img/2018-10-15-venus_botticelli.jpg){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered"><i>La naissance de Vénus</i> Sandro Botticelli ([Source](https://fr.wikipedia.org/wiki/La_Naissance_de_V%C3%A9nus_(Botticelli)))</span>
+
 
 <div class="centeredquote" style="text-align: justify;">
 εἰ μὲν οὖν μία ἐστὶν Ἀφροδίτη ἢ διτταί, Οὐρανία τε καὶ Πάνδημος, οὐκ οἶδα· καὶ γὰρ Ζεὺς ὁ αὐτὸς δοκῶν εἶναι πολλὰς ἐπωνυμίας ἔχει· ὅτι γε μέντοι χωρὶς ἑκατέρᾳ βωμοί τε καὶ ναοί εἰσι καὶ θυσίαι τῇ μὲν Πανδήμῳ ῥᾳδιουργότεραι, τῇ δὲ Οὐρανίᾳ ἁγνότεραι, οἶδα.
@@ -424,9 +431,7 @@ Parmi les Aphrodites - car la déesse n'est pas une -, la Kastniètis l'emporte 
 </div>
 <span class="inpost-figure-caption-centered">Callimaque, <i>Iambes</i>, 10</span>
 
-<br>
-
-L'étude des οὐνόματα des dieux dans l'*Enquête* renforce cette notion de puissance. Souvenons-nous en effet des différentes étapes décrites par Hérodote dans son histoire des dieux grecs.  Les dieux sont d'abord les **θεοι indifférenciés** honorés par les Pélasges. Ils empruntent ensuite (aux Égyptiens) des dénominations, identificant ainsi les **profils spécifiques** de certains dieux en leur attribuant des noms. Ce sont finalement les poètes qui donnent à ces profils des contours bien plus précis, en les inscrivant dans une véritable **société divine** ; décrivant cette société comme régie par des règles de fonctionnement, des νόμοι, empruntées au monde des hommes, ils dotent ainsi les dieux d'une **complexion humaine** (ἀνθρωποφυέας). 
+L'étude des οὐνόματα des dieux dans l'*Enquête* renforce cette notion de puissance. Souvenons-nous en effet des différentes étapes décrites par Hérodote dans son histoire des dieux grecs. Les dieux sont d'abord les **θεοι indifférenciés** honorés par les Pélasges. Ils empruntent ensuite (aux Égyptiens) des dénominations, identificant ainsi les **profils spécifiques** de certains dieux en leur attribuant des noms. Ce sont finalement les poètes qui donnent à ces profils des contours bien plus précis, en les inscrivant dans une véritable **société divine** ; décrivant cette société comme régie par des règles de fonctionnement, des νόμοι, empruntées au monde des hommes, ils dotent ainsi les dieux d'une **complexion humaine** (ἀνθρωποφυέας). 
 
 Peu importe le crédit historique à apporter à ces 3 étapes ; ce qui est intéressant, c'est la façon dont Hérodote, témoin intérieur de la culture grecque, se représente le système religieux auquel il appartient. Et ce que l'on y trouve, c'est que **les dieux sont d'abord des puissances, et que leur anthropomorphisme est surtout le fait des poètes qui leur ont appliqué des νόμοι humains**. La tension entre le général et le particulier est inhérente à la représentation des dieux grecs.
 
