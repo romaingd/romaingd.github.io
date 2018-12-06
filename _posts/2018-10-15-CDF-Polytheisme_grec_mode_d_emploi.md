@@ -20,7 +20,7 @@ tags: [College de France, Religion, Histoire, Antiquite, Notes de cours]
 
 #### Collège de France - Premier cours
 
-*Dans cette série, je retranscris certains cours donnés au Collège de France à divers moments et sur divers sujets, sous la forme de notes de cours qui se veulent à la fois claires, concises et complètes, avec des redirections vers les approfondissements éventuels.*
+*Cette série a pour but de retranscrire certains cours donnés au Collège de France à divers moments et sur divers sujets, sous la forme de notes de cours avec des redirections vers les approfondissements éventuels.*
 
 *Ces notes sont basées sur le cours* [Polythéisme grec, mode d'emploi](https://www.college-de-france.fr/site/vinciane-pirenne-delforge/course-2017-2018.htm) *donné par Vinciane Pirenne-Delforge, titulaire de la chaire **Religion, histoire et société dans le monde grec antique**, sur l'année 2017-2018.* 
 
@@ -483,6 +483,10 @@ Cet extrait très célèbre de Xénophon montre encore différentes formes du ve
 
 <br>
 
+![Buste de Pausanias]({{site.baseurl}}/assets/img/2018-10-15-pausanias.jpeg){: .center-image}
+
+<span class="inpost-figure-caption-centered">Pausanias ([Source](https://www.babelio.com/auteur/-Pausanias/235718))</span>
+
 <div class="centeredquote">
 ... Μαρα θωνίοις γάρ, ὡς αὐτοὶ λέγουσιν, ̔ Ηρακλῆς ἐνομίσθη θεὸς πρώτοις.<br>
 ... parce que, selon leurs propres dires, Héraclès fut reconnu comme dieu par les Marathoniens les premiers.<br><p style="margin-bottom: 0px"></p>
@@ -531,6 +535,12 @@ Comme pour les dieux de l'Olympe eux-mêmes, le rituel sacrificiel apparaît ent
     <li>Ces descriptions sont des constructions purement imaginaires, qui nous informent avant tout de l'intrigue dans laquelle elles prennent place</li>
     <li>Le contrôle de l'auditoire de ces différents textes permet d'espérer saisir quelque chose de ce que les auteurs connaissaient des pratiques rituelles réelles </li>
 </ul>
+
+<br>
+
+![Scène d'offrande, grotte de Pitsa (Corinthie), période archaïque]({{site.baseurl}}/assets/img/2018-10-15-pitsa.jpg){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered">Scène d'offrande, grotte de Pitsa (Corinthie), période archaïque ([Source](http://www.arretetonchar.fr/wp-content/uploads/2013/IMG/archives/ico/Art%20grec/Art%20Grec/original/-520%20-500%20Tablette%20Votive,%20scene%20d%27offrandes,%20Bois%20peint%20decouvert%20dans%20la%20grotte%20de%20Pitsa.html))</span>
 
 Les nombreux points de convergence entre les différentes évocations, malgré les siècles d'écart, dressent une **trame sacrificielle** en arrière-plan, c'est-à-dire **la structure minimale associée au mot de *sacrifice*, la θυσία**, quelque chose qui renvoie à la généralité de la pratique. Un extrait de l'*Enquête* d'Hérodote offre un premier portrait en creux du sacrifice chez les Grecs, en contraste avec celui des Perses.
 
@@ -610,6 +620,13 @@ Que l’on donne au prêtre de Pelinaios les langues, les parts d’honneur, les
 
 Ces σπλάγχνα apparaissent surtout dans des documents réglant la vente des sacerdoces dans certaines cités des îles de l'Égée ou de la côte d'Asie mineure, par exemple à Chios, Milet, ou Halicarnasse. **L'examen de ces prescriptions fait apparaître un certain nombre de variations entre les pratiques locales et la trame générale** : ainsi à Milet, on fait bouillir les dernières vertèbres et la queue, plutôt que de les griller comme en Attique ; de manière régionale, en Asie mineure, il semble que le prêtre reçoive un quart des viscères de l'animal sacrificiel. L'inscription de Chios ci-dessus montre que la déposition des parts a lieu non sur la table, mais sur les genoux et les mains de la statue, ce qui constitue un motif supplémentaire sur la trame générale. Les viscères restent toutefois, de manière consistante, une composante des ἱερα, vecteur de communication entre les hommes et les dieux.
 
+<br>
+
+![Le devin Calchas en haruspice lisant les présages dans un foie]({{site.baseurl}}/assets/img/2018-10-15-miroir_calchas.jpg){: .center-image height="400"}
+
+<span class="inpost-figure-caption-centered">Le devin Calchas lisant les présages dans un foie, miroir étrusque, musée du Vatican ([Source](https://fr.wikipedia.org/wiki/Fichier:Miroirdecalchas.JPG))</span>
+
+
 **Les viscères remplissent également, et cette considération est largement partagée par l'ensemble des Grecs, une fonction divinatoire**. Celle-ci s'illustre dans la bouche du Prométhée d'Eschyle, dans l'extrait ci-dessous, qui évoque l'art divinatoire parmi tous les bienfaits qu'il a dispensés à l'humanité. Aristote note, quant à lui, que ce sont les nombreuses anomalies susceptibles d'être présentes sur les différents organes, en particulier les reins, le foie, le poumon et la rate (calculs, tumeurs, abcès).
 
 
@@ -632,6 +649,12 @@ Par les choix opérés lors de leur manipulation, les parts sacrées permettent 
 La sphère supra-humaine grecque n'est pas seulement peuplée de dieux, mais aussi de divers héros. Nous n'avons, pour le moment, évoqué ces derniers qu'à l'occasion d'un passage de l'*Enquête* d'Hérodote, où ce dernier notait que "les Égyptiens ne rendent pas de culte aux héros". Il utilise à cette occasion ce même verbe νομίζειν, que nous avons abondamment commenté, dans un sens porté sur le *rendre hommage à*.
 
 Les héros sont nombreux en Grèce ancienne ; même en s'en tenant à ceux qui reçoivent un culte, le profil des figures héroïques est particulièrement variés, d'obscurs héros locaux aux figures largement attestées comme Héraklès ou Amphiaraos. Les évocations littéraires de ces derniers tend à montrer la **porosité entre le statut de héros et le statut de dieu**, porosité que nous allons étudier essentiellement à travers le filtre cultuel, en s'appuyant sur les approfondissements [ici](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL7516563742710283597_Pirenne_Cours_10_2018_Avril_5.pdf).
+
+<br>
+
+![Tablette rituelle de Sélinonte]({{site.baseurl}}/assets/img/2018-10-15-selinonte_tablette.png){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered">Tablette rituelle de Sélinonte ([Source](https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL7516563742710283597_Pirenne_Cours_10_2018_Avril_5.pdf))</span>
 
 
 <div class="centeredquote" style="text-align: justify;">
@@ -695,6 +718,10 @@ S’étant rendus au tombeau ... ils invoquaient Achille. Après avoir couronné
 
 <br>
 
+![Entrée d'Héraklès à l'Olympe]({{site.baseurl}}/assets/img/2018-10-15-heracles_olympe.jpg){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered">Entrée d'Héraklès (tout à droite) ans l'Olympe, accueilli par Poséidon, Hermès et Athéna, vers 540 av. J.-C. ([Source](https://fr.wikipedia.org/wiki/H%C3%A9racl%C3%A8s))</span>
+
 Pausanias livre quant à lui une description similaire quant aux sacrifices offerts à Héraklès ; l'analyse jointe de ce document et de différentes autres prescriptions pour les sacrifices à Héraklès met en exergue *la combustion de la neuvième part*, que nous avions déjà trouvée dans l'inscription de Sélinonte. Cette pratique sacrificielle aux héros semble ainsi relever de la trame commune dont nous avons précédemment dressé l'ossature.
 
 Or la complexité de la figure d'Héraklès, dans toutes les cités où il est honoré, ne l'empêche pas d'être une seule et même figure, dont l'évolution du statut s'explique par les traditions narratives. Le cas des Tritopatores, groupe ancestral non clairement déterminé, n'est certes pas entièrement superposable au cas d'Héraklès ; mais au-delà de la similitude dans l'opération sacrificielle, la comparaison permet de nuancer le profil de ces ancêtres. Dans les textes en effet, Héraklès comme Achille sont **à la fois héros et dieux**. Les mythes expliquent leur changement de statut au travers de leur biographie divine, parce qu'ils en ont une ; le destinataire du sacrifice est toutefois le même, bien que la procédure change en fonction du statut.
@@ -722,6 +749,12 @@ Pour cette dernière étape de notre voyage, explorons la dimension **topique, c
 
 Cette question remet au premier plan la définition de l'*Hellenikon* donné par Hérodote au livre VIII : "l'*Hellenikon*, même sang et même langue, des établissements communs des dieux ainsi que des sacrifices, des moeurs et des manières semblables [...]". Comme nous l'avons vu lors de la première évocation de cet extrait, ces établissements communs ne font pas, à eux seuls, de la religion un facteur d'unité grecque ; ils renvoient en réalité aux sanctuaires panhelléniques où les Grecs se réunissaient pour offrir des sacrifices. Notre question trouve donc sa légitimité à l'échelle de la *polis*, où il ne s'agit plus d'opposer la Grèce aux autres civilisations, et où peut se manifester **la tension entre le général et le particulier**.
 
+<br>
+
+![Acropole d'Athènes]({{site.baseurl}}/assets/img/2018-10-15-acropole_athenes.jpg){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered">Acropole d'Athènes ([Source](https://fr.wikipedia.org/wiki/Polis))</span>
+
 <div class="centeredquote" style="text-align: justify;">
 Quand il monta sur l’Acropole, prêt à s’en rendre maître, il était sur le point de pénétrer au cœur du sanctuaire de la déesse pour s’adresser à elle (ὡς προσερέων); alors la prêtresse, se levant de son trône avant qu’il eût franchi la porte, lui dit : «Étranger de Lacédémone, fais demi-tour sans entrer dans ce sanctuaire; il n’est pas religieusement permis aux Doriens de se présenter là (οὐ θεμιτὸν Δωριεῦσι παριέναι ἐνθαῦτα); à quoi il avait répondu: «Femme, je ne suis pas Dorien, mais Achéen» (οὐ Δωριεύς εἰμι ἀλλ’Ἀχαιός). Sans tenir compte du présage, il avait tenté l’entreprise, et il dut alors retourner sur ses pas, chassé, avec les Lacédémoniens.
 </div>
@@ -742,6 +775,10 @@ L'une et l'autre scène jouent sur des presciptions sacrificielles bien connues 
 
 <br>
 
+![Tétradrachme athénien représentant Athéna]({{site.baseurl}}/assets/img/2018-10-15-tetradrachme_athena.jpg){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered">Tétradrachme athénien représentant Athéna ([Source](https://fr.wikipedia.org/wiki/Ath%C3%A9na))</span>
+
 Ces épisodes, et en particulier l'épisode athénien, nous fournissent des éléments de réflexion sur le polythéisme grec. Retenons-en deux : **l'interdiction opposée par la prêtresse, et le fait que Cléomène se revendique Achéen**.
 
 Penchons-nous tout d'abord sur le refus opposé par la prêtresse à Cléomène, lorsque ce dernier tente de s'adresser à la déesse Athéna en tant que protectrice d'Athènes. On sait par ailleurs que l'une des fonctions du personnel de culte était de faire respecter les règles en vigueur ; or l'entrée d'un certain nombre de sanctuaires était interdit à certaines catégories de personnes, de manière très variée et essentiellement locale. Certains de ces interdits sont liés à des contraintes de pureté ou d'initiation, circonstances précises ; laissant ceux-ci de côté, **trois composantes de la population sont susceptibles d'interdiction : les étrangers, les femmes et les esclaves**. Ce n'est pas une question de tabou ou d'accès à un sanctuaire particulier, mais une question de **statut**.
@@ -760,6 +797,11 @@ Le 12 Posideon, à Poséidon Temenitès, un bélier qui l’emporte par sa beaut
 L'inscription de Mykonos est exemplaire, puisqu'en dehors de l'interdiction adressée aux étrangers, elle fait partie de la dizaine de sources mentionnant une **interdiction adressée aux femmes**. D'autres sources sont moins claires, ou plus difficiles à interpréter car fractionnaires. Le profil du dieu permet probablement d'expliquer cette interdiction dans un certain nombre de cas. Ainsi, l'inscription de Mykonos mentionne l'interdiction aux femmes dans le cadre d'un sacrifice à Poséidon Phykios. Ce "dieu des algues" masculin reçoit en sacrifice un animal *non castré*, donc dont la dimension mâle est particulièrement soulignée ; cet animal est acheté sur la taxe des poissons, donc lié à l'activité de la pêche. Cet ensemble de caractéristiques lie particulièrement ce sacrifice à l'aspect masculin, et joue sans doute un rôle prédominant dans l'interdiction aux femmes de participer. Il reste malheureusement difficile de généraliser ce qui relève de choix spécifiques d'un groupe à un moment de son histoire.
 
 <br>
+
+![Le triomphe d'Achille]({{site.baseurl}}/assets/img/2018-10-15-triomphe_achille.jpg){: .center-image width="700px"}
+
+<span class="inpost-figure-caption-centered"><i>Le triomphe d'Achille</i>, fresque de l'Achilleion à Corfou, symbole de la victoire homérique des guerriers achéens ([Source](https://fr.wikipedia.org/wiki/Ath%C3%A9na))</span>
+
 
 Revenons-en à la question des étrangers, pour laquelle nous disposons au contraire de règles générales sur la place d'un Grec dans une cité qui n'est pas la sienne. Le ξένος est en effet *l'étranger avec lequel il est possible d'entrer en relation grâce à des références culturelles communes*, ne serait-ce que par la langue partagée : c'est avant tout un hôte, et essentiellement un Grec, ce qui est mal transmis par le terme français d'*étranger*. Le ξένος n'avait pas accès aux rouages politiques de la cité dont il n'était pas citoyen ; les cités prévoyaient alors des mécanismes d'intermédiation, pour la politique comme pour les institutions religieuses, et l'interdiction restait rare. Lorsqu'Hérodote la met en avant, c'est dans un contexte où un ξένος cherche à rentrer directement en contact avec la divinité tutélaire d'une ville : quand la prêtresse refuse à Cléomène le droit d'entrer, c'est non seulement d'entrer dans le sanctuaire d'Athéna, mais aussi d'entrer dans Athènes sur un plan symbolique.
 
