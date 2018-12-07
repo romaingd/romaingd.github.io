@@ -70,7 +70,11 @@ Dans cette perspective, Vinciane Pirenne-Delforge emprunte un chemin qui suivra 
 </ol>
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Le mot et la chose : religion
@@ -121,7 +125,11 @@ Vinciane Pirenne-Delforge propose alors de retenir, pour l'analyse, une définit
 <div class="centeredquote"><b>La religion est une institution qui régit, selon des modèles culturels, les relations avec la sphère supra-humaine dont cette culture postule l'existence.</b></div>
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Le mot et la chose : polythéisme
@@ -207,7 +215,11 @@ Le terme reste peu usité par les hellénistes au XIX<sup>e</sup> siècle, ou un
 Par rapport à notre définition précédente de la religion, **le polythéisme précise un certain profil pour la sphère supra-humaine dont il est question, non seulement en terme de pluralité des entités divines, mais aussi au niveau de la culture sous-jacente.**
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Hérodote, "historien des religions et du polythéisme"
@@ -296,7 +308,11 @@ Autrefois, à ce que j’ai entendu dire à Dodone, les Pélasges offraient tous
 Traduire ainsi οὐνόματα par *dénominations* plutôt que *noms* met l'accent sur un point important, rendant justice au texte : ce qui est passé des Égyptiens aux Pélasges, ces οὐνόματα, est moins le nom des dieux que **le fait d'identifier, en leur attribuant un nom spécifique, des profils divins au sein d'un ensemble de dieux jadis indifférenciés**. Ces profils sont ainsi bien davantage susceptibles de passer d'une culture à l'autre, après interprétation et avec transposition du nom lui-même. C'est aux poètes, Hésiode et Homère, qu'Hérodote attribue la constitution et la configuration du panthéon grec, en déployant la dénomination des dieux établie avant eux : **la créativité et les institutions humaines sont largement à l'oeuvre dans la représentation des dieux**, et on retrouve l'importance du νόμος.
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Dieux grecs ou dieux des Grecs ?
@@ -436,7 +452,11 @@ L'étude des οὐνόματα des dieux dans l'*Enquête* renforce cette notio
 Peu importe le crédit historique à apporter à ces 3 étapes ; ce qui est intéressant, c'est la façon dont Hérodote, témoin intérieur de la culture grecque, se représente le système religieux auquel il appartient. Et ce que l'on y trouve, c'est que **les dieux sont d'abord des puissances, et que leur anthropomorphisme est surtout le fait des poètes qui leur ont appliqué des νόμοι humains**. La tension entre le général et le particulier est inhérente à la représentation des dieux grecs.
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Νομίζειν τοὺς θεούς : reconnaître et honorer les dieux
@@ -521,7 +541,11 @@ Il n'y a pas, dans les religions grecques et romaines antiques, de croyance en c
 Il paraît donc nécessaire d'abandonner les termes de *croire à*, *croire en*, ou *croyants* pour parler des religions grecques et romaines, sans pour autant les réduire à un ritualisme froid. Les Grecs pouvaient avoir *foi*, *confiance* dans les dieux qu'ils honoraient, mais *non pas avoir la foi*. Dans la richesse de cette nouvelle acception de la relation aux dieux, **les représentations et les hommages jouent un rôle majeur, sans que les Grecs puissent être qualifiés de croyants**.
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Νομίζειν τοὺς θεούς : les normes sacrificielles
@@ -641,7 +665,11 @@ Je classai aussi pour eux les mille formes de l’art divinatoire. Le premier je
 Par les choix opérés lors de leur manipulation, les parts sacrées permettent la communication des hommes vers les dieux, mais aussi la communication des dieux vers les hommes, illustrée par la pratique divinatoire. Les viscères offrent alors une interface particulièrement efficace dans ce type de dialogue. **Le statut des viscères comme ἱερα est la langue parlée par tous les Grecs ; les manipulations singulières sont comme une parole que chaque communauté prononce suivant ses traditions et ses besoins**.
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Sacrifier comme aux héros : le cas des Tripatores
@@ -740,7 +768,11 @@ Il nous reste une question à résoudre : **comment comprendre que ces ancêtres
 Le monde supra-humain des Grecs est peuplée de figures nombreuses et complexes, dont le statut n'est pas figé selon une catégorisation rigide en dieux, héros, et humains mortels. **La plasticité du polythéisme est manifeste dans la fluidité des limites, sanctionnées par des rituels sacrificiels qui constituent un véritable langage de communication avec la sphère supra-humaine**. Par le prisme de la tension entre le général et le particulier, on constate que **des figures comme les Tritopatores sont ambivalentes partout où elles sont honorées, mais chaque communauté s'approprie cet arrière-plan commun pour le décliner selon des modalités qui lui sont propres** : ainsi à Sélinonte, les Tritopatores sont qualifiés par les épiclèses "purs" et "impurs", ce qui n'est pas le cas en Attique sans que nous puissions savoir pourquoi.
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## La religion grecque entre unité et diversité
@@ -808,7 +840,11 @@ Revenons-en à la question des étrangers, pour laquelle nous disposons au contr
 Ces différents points nous apportent un contexte important pour comprendre le deuxième point : pourquoi Cléomène se revendique-t-il Achéen ? Comprendre cette revendication va nous permettre d'affiner notre considération de l'ancrage local des divinités, et de leurs liens avec un imaginaire partagé. Dans le monde de l'époque de Cléomène, être Achéen signifie *venir de la partie nord du Pélopponèse*. Toutefois, rappelons-nous qu'Hérodote est considéré par les Grecs eux-mêmes comme le plus homérique des historiens ; l'épisode prend alors une autre tournure. Dans la tradition épique en effet, et tout particulièrement dans l'Iliade, c'est en tant qu'*Achéens* que le poète désigne majoritairement les Grecs faisant le siège de Troie ; on les identifie également, mais plus rarement comme Danéens. Les guerriers grecs homériques sont donc des Achéens ; ce serait alors cette référence qu'Hérodote ferait jouer dans la bouche de Cléomène, jouant sur l'imaginaire et les références culturelles partagées de ses lecteurs. Faisant un parallèle avec le chant VI de l'Iliade où Athéna refuse de protéger Troie malgré les prières de ses habitants, étant "hors-sol", Hérodote met en scène un Cléomène se prenant pour Agamemnon (lui aussi roi de Sparte), et venant quérir en guerrier victorieux le refus d'Athéna de protéger la ville. La différence est bien sûr qu'Athéna est cette fois **enracinée dans la cité d'Athènes**, et qu'elle n'abandonne pas sa communauté locale.
 
 
-<br><br>
+<br>
+<br>
+<hr align="center" width="50%" style="color: #fff">
+<br>
+<br>
 
 
 ## Conclusion
