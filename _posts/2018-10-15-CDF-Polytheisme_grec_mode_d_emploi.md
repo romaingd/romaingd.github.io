@@ -9,6 +9,7 @@ paper-author: Vinciane Pirenne-Delforge
 paper-date: 2017-2018
 img: 2018-10-15-thumbnail.jpg
 tags: [College de France, Religion, Histoire, Antiquite, Notes de cours]
+hide: True
 ---
 
 

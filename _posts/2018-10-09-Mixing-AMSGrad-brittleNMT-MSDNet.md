@@ -10,6 +10,7 @@ description: >
 img: building_bridges.jpg
 # fig-caption: MSDNet architecture
 tags: [Resource efficiency, Noise, Optimization, Mixing ideas, Personal work]
+hide: True
 ---
 
 
