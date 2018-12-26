@@ -33,3 +33,6 @@ gem 'jekyll-sitemap'
 gem 'jekyll-paginate'
 gem 'jemoji'
 gem 'redcarpet'
+
+# Search Engine Optimization
+gem 'jekyll-seo-tag'

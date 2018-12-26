@@ -91,6 +91,7 @@ DEPENDENCIES
   jekyll (~> 3.7.3)
   jekyll-feed (~> 0.6)
   jekyll-paginate
+  jekyll-seo-tag
   jekyll-sitemap
   jekyll-theme-cayman
   jemoji
