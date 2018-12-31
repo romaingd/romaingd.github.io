@@ -8,7 +8,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: Romain Girard # add your name
+author: Romain Girard - romaingd # add your name
+author-name: Romain Girard
 author-img: profile-picture.jpg # add your photo
 about-author: > # add description
   I currently work as a <strong> data scientist </strong> at Implicity,
