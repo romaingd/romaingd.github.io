@@ -1,14 +1,16 @@
 title: Divergences
 subtitle: Feeling closer in different ways
 description: > # this means to ignore newlines until "baseurl:"
-  Working in different directions
+  romaingd Romain Girard blog personal website github.io github pages
+  data science datascience healthcare medicine cardiology heart
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: Romain Girard # add your name
+author: Romain Girard - romaingd # add your name
+author-name: Romain Girard
 author-img: profile-picture.jpg # add your photo
 about-author: > # add description
   I currently work as a <strong> data scientist </strong> at Implicity,
@@ -39,6 +41,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
+  - jekyll-seo-tag        # Search Engine Optimization
 
 paginate: 8
 paginate_path: "/page/:num"

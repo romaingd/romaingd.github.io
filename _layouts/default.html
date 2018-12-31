@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- {% include head.html %} -->
-<body>
-  <div class="wrapper">
-    {{ content }}
-  </div>
-  {% include analytics.html %}
-</body>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
-      displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
-      processEscapes: true,
-    }
-  });
-</script>
-<script type="text/javascript"
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+    <head>
+        {% include head.html %}
+        {% seo %}
+    </head>
+    <body>
+    <div class="wrapper">
+        {{ content }}
+    </div>
+    {% include analytics.html %}
+    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+        equationNumbers: {
+            autoNumber: "AMS"
+        }
+        },
+        tex2jax: {
+        inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
+        displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+        processEscapes: true,
+        }
+    });
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </html>
