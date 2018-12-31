@@ -1,7 +1,8 @@
 title: Divergences
 subtitle: Feeling closer in different ways
 description: > # this means to ignore newlines until "baseurl:"
-  Working in different directions
+  romaingd Romain Girard blog personal website github.io github pages
+  data science datascience healthcare medicine cardiology heart
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
