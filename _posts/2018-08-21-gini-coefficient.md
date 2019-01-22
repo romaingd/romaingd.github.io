@@ -7,6 +7,7 @@ description: >
   However, it exhibits undesirable behavior, and better alternatives exist, such as the generalized entropy indices.
 img: Gini_index_map.svg
 tags: [Miscellaneous, Econometrics, Inequality, Atkinson]
+hide: True
 ---
 Or is it?
 
