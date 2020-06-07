@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-07T11:30:53+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Divergences</title><subtitle>romaingd Romain Girard blog personal website github.io github pages data science datascience healthcare medicine cardiology heart
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-07T11:37:44+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Divergences</title><subtitle>romaingd Romain Girard blog personal website github.io github pages data science datascience healthcare medicine cardiology heart
 </subtitle><author><name>Romain Girard - romaingd</name></author><entry><title type="html">Idées divergentes</title><link href="http://localhost:4000/idees/" rel="alternate" type="text/html" title="Idées divergentes" /><published>2020-06-01T01:00:00+02:00</published><updated>2020-06-01T01:00:00+02:00</updated><id>http://localhost:4000/idees</id><content type="html" xml:base="http://localhost:4000/idees/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -7,11 +7,15 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;5---contrôler-mécaniquement-le-cancer&quot;&gt;5 - Contrôler mécaniquement le cancer&lt;/h2&gt;
+
+&lt;h3 id=&quot;cage-mécanique-autour-des-cellules-nautorisant-quun-certain-nombre-de-divisions-cellulaires-avant-de-provoquer-la-mort-de-la-cellule-pour-réguler-une-tumeur&quot;&gt;“Cage” mécanique autour des cellules n’autorisant qu’un certain nombre de divisions cellulaires avant de provoquer la mort de la cellule pour réguler une tumeur&lt;/h3&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;4---quantifier-la-biochimie&quot;&gt;4 - Quantifier la biochimie&lt;/h2&gt;
 
-&lt;h3 id=&quot;êtablir-des-modèles-complets-décrivant-les-dynamiques-biochimiques-de-manière-quantifiée-dans-une-cellule-type&quot;&gt;Êtablir des modèles complets décrivant les dynamiques biochimiques de manière quantifiée dans une cellule type&lt;/h3&gt;
+&lt;h3 id=&quot;modèles-complets-décrivant-les-dynamiques-biochimiques-de-manière-quantifiée-dans-une-cellule-type&quot;&gt;Modèles complets décrivant les dynamiques biochimiques de manière quantifiée dans une cellule type&lt;/h3&gt;
 
 &lt;hr /&gt;
 
