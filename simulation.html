@@ -52,9 +52,6 @@ details.more{margin:.8em 0}details.more>summary{cursor:pointer;margin:.4em 0}
 <h2>Coût cumulé dans le temps</h2>
 <div class="box"><svg id="ch" viewBox="0 0 660 300" role="img" aria-label="Coût net cumulé par scénario"></svg><div id="leg" class="mut"></div></div>
 
-<details class="more"><summary>Détail des trois scénarios pour ma part</summary><div class="box"><table id="sum"></table></div>
-<p class="mut">Coûts, subventions et éco-PTZ (20 ans, plafond 50 000 € par copropriétaire) sont des données fixes.</p></details>
-<details class="more"><summary>Comment lire ces chiffres</summary><div class="box mut" id="expl"></div></details>
 <h2>Ajuster les hypothèses</h2>
 <div class="box">
 <div class="opt"><label class="sw2"><input type="checkbox" id="t_bank">Je finance mon apport par un prêt bancaire</label>
@@ -78,10 +75,17 @@ details.more{margin:.8em 0}details.more>summary{cursor:pointer;margin:.4em 0}
 <div class="mut">Les gains énergétiques sont des estimations ; ils ne s’appliquent qu’à la part chauffage de la facture.</div></details>
 </div>
 
+<h2>Détails</h2>
+<details class="more"><summary>Comment lire ces chiffres</summary><div class="box mut" id="expl"></div></details>
+
 <details class="more"><summary>Hypothèses et limites du calcul</summary><div class="box mut">
 <p>Chacun paie au prorata de ses tantièmes. Ma part = (coût − subvention) × tantièmes/1000 − mes aides individuelles. L’éco-PTZ (S1 et S2) finance min(ma part, 50 000 €) sans intérêt sur 20 ans. L’apport = le reste ; la part indiquée est financée par un prêt bancaire à mensualités constantes, le reste est payé comptant aujourd’hui.</p>
 <p>Économie de gaz de l’année 1 = facture × part chauffage × gain énergétique ; elle augmente ensuite avec le prix du gaz. Tous les flux sont comptés en fin d’année.</p>
 <p>Non pris en compte : valeur du bien à la vente, fiscalité (dont celle de l’épargne), appels de fonds échelonnés. Simulation indicative, pas un devis ; l’éligibilité et le plafond de l’éco-PTZ sont à confirmer avec la banque.</p></div></details>
+
+<details class="more"><summary>Détail des trois scénarios pour ma part</summary><div class="box"><table id="sum"></table></div>
+<p class="mut">Coûts, subventions et éco-PTZ (20 ans, plafond 50 000 € par copropriétaire) sont des données fixes.</p></details>
+
 <details class="more"><summary>Détail année par année (euros constants)</summary><div class="box"><table id="yr"></table></div></details>
 </main>
 <script>
