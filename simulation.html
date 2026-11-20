@@ -38,8 +38,12 @@ details.more{margin:.8em 0}details.more>summary{cursor:pointer;margin:.4em 0}
 <label>Ma facture de gaz (€/an)<input type="number" data-k="gas" value="2000" step="50" min="0"></label>
 <label>Part du chauffage dans la facture de gaz (%)<input type="number" data-k="chp" value="70" step="5" min="0" max="100"></label>
 </div>
+<div class="opt"><label class="sw2"><input type="checkbox" id="t_sale">Je prévois de vendre mon logement</label>
+<div class="grid" id="f_sale" hidden>
+<label>Vente dans (ans)<input type="number" data-k="sale" value="10" step="1" min="1" max="30"></label></div>
+<div class="mut" id="n_sale" hidden>Après la vente, vous ne payez plus le gaz mais vous continuez à rembourser les prêts.</div></div>
 <div class="opt"><label class="sw2"><input type="checkbox" id="t_bank">Je finance mon apport par un prêt bancaire</label>
-<details class="opt"><summary>Financement de ma quote-part</summary>
+<details class="opt"><summary>Hypothèses de financement de ma quote-part</summary>
 <div class="grid">
 <label>Aide individuelle, S1 (€)<input type="number" data-k="aid0" value="0" step="500" min="0"></label>
 <label>Aide individuelle, S2 (€)<input type="number" data-k="aid1" value="0" step="500" min="0"></label>
@@ -48,10 +52,6 @@ details.more{margin:.8em 0}details.more>summary{cursor:pointer;margin:.4em 0}
 <label>Taux du prêt (%/an)<input type="number" data-k="rate" value="5" step="0.1" min="0"></label>
 <label>Durée du prêt (ans)<input type="number" data-k="bankN" value="5" step="1" min="1" max="30"></label></div>
 <div class="mut">Les aides individuelles (selon les revenus) se déduisent de ma part ; l’éco-PTZ finance ensuite le reste, dans la limite du plafond. Les paramètres du prêt ne servent que si la case « je finance mon apport par un prêt bancaire » est cochée.</div></details></div>
-<div class="opt"><label class="sw2"><input type="checkbox" id="t_sale">Je prévois de vendre mon logement</label>
-<div class="grid" id="f_sale" hidden>
-<label>Vente dans (ans)<input type="number" data-k="sale" value="10" step="1" min="1" max="30"></label></div>
-<div class="mut" id="n_sale" hidden>Après la vente, vous ne payez plus le gaz mais vous continuez à rembourser les prêts.</div></div>
 <details class="opt"><summary>Hypothèses économiques et énergétiques</summary>
 <div class="grid">
 <label>Inflation générale (%/an)<input type="number" data-k="inf" value="2" step="0.5" min="0"></label>
