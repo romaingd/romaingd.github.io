@@ -90,7 +90,7 @@ details.more{margin:.8em 0}details.more>summary{cursor:pointer;margin:.4em 0}
 </main>
 <script>
 const PTZN=20,CAP=50000,H=[10,20,30],v={};let hz=20,hy=null,lastM=[],lastKey="rl";
-const S=[{n:"S1 : toiture + isolation ext. + ravalement",cost:2600000,sub:500000,el:1,gain:50,c:"--c1"},{n:"S2 : isolation ext. + ravalement",cost:1700000,sub:400000,el:1,gain:35,c:"--c2"},{n:"S3 : ravalement seul",cost:900000,sub:0,el:0,gain:0,c:"--c3"}];
+const S=[{n:"S1 : toiture + isolation ext. + ravalement",cost:2582000,sub:548000,el:1,gain:50,c:"--c1"},{n:"S2 : isolation ext. + ravalement",cost:1708000,sub:400000,el:1,gain:35,c:"--c2"},{n:"S3 : ravalement seul",cost:922000,sub:0,el:0,gain:0,c:"--c3"}];
 const $=id=>document.getElementById(id),eur=x=>(x<0?"−":"")+Math.round(Math.abs(x)).toLocaleString("fr-FR")+"\u00a0€",cl=x=>x<0?"neg":"";
 function model(s,i){const net=Math.max(0,(s.cost-s.sub)*v.share/1000-v["aid"+i]),ptz=s.el?Math.min(net,CAP):0,app=net-ptz,bank=app*v.fpct/100,cash=app-bank,mp=ptz/PTZN/12,r=v.rate/1200,nb=v.bankN*12,mb=bank?(r?bank*r/(1-Math.pow(1+r,-nb)):bank/nb):0,sav=v.gas*v.chp/100*s.gain/100;
 const nom=[cash],rl=[cash],k=(1+v.ry/100)/(1+v.inf/100);for(let y=1;y<=30;y++){const out=(y<=PTZN?12*mp:0)+(y<=v.bankN?12*mb:0),sv=(!v.sale||y<=v.sale)?sav*Math.pow(1+v.g/100,y-1):0,d=out-sv;nom.push(nom[y-1]*(1+v.ry/100)+d);rl.push(rl[y-1]*k+d/Math.pow(1+v.inf/100,y))}
